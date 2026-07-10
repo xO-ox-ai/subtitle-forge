@@ -1,0 +1,1294 @@
+[
+  {
+    "phrase": "come on",
+    "zh": "高频口语，常按语气译成行了吧/得了吧/拜托/快点，别机械译成来吧。"
+  },
+  {
+    "phrase": "give me a break",
+    "zh": "通常是饶了吧/少来了/别闹了，不是字面让我休息一下。"
+  },
+  {
+    "phrase": "cut me some slack",
+    "zh": "通常是放我一马/别这么苛刻/通融一下。"
+  },
+  {
+    "phrase": "get over yourself",
+    "zh": "口语里多为别太把自己当回事/别这么自恋，不要直译成克服自己。"
+  },
+  {
+    "phrase": "i'm good",
+    "zh": "常按语境译成不用了/我没事/我挺好，不要总译成我很好。"
+  },
+  {
+    "phrase": "i hear you",
+    "zh": "通常是我懂你意思/我明白，不是我听见你了。"
+  },
+  {
+    "phrase": "fair enough",
+    "zh": "通常译成有道理/也行/这倒也是。"
+  },
+  {
+    "phrase": "what do you want me to say",
+    "zh": "口语里常是那你要我怎么说/我还能说什么。"
+  },
+  {
+    "phrase": "own it",
+    "zh": "通常是认了吧/坦然承认/别躲，别译成拥有它。"
+  },
+  {
+    "phrase": "screw up",
+    "zh": "通常是搞砸/犯浑/出岔子。"
+  },
+  {
+    "phrase": "get a room",
+    "zh": "调侃口吻通常是要不你俩开个房去/注意点影响，不是单纯去找房间。"
+  },
+  {
+    "phrase": "do me a favor",
+    "zh": "常按语气译成帮我个忙/拜托你了；有时也是否定口气的得了吧。"
+  },
+  {
+    "phrase": "play nice",
+    "zh": "通常是客气点/别闹/好好相处，不是玩得开心。"
+  },
+  {
+    "phrase": "hold my spot",
+    "zh": "通常是给我留个位置/先替我占着。"
+  },
+  {
+    "phrase": "cut a record",
+    "zh": "音乐行业里通常指录唱片/录专辑，不是切唱片。"
+  },
+  {
+    "phrase": "cut vocals",
+    "zh": "录音语境通常指录人声/录主唱，不是切分声轨。"
+  },
+  {
+    "phrase": "rough demo",
+    "zh": "通常是粗 demo/小样/初版试唱，不要直译成粗糙演示。"
+  },
+  {
+    "phrase": "radio single",
+    "zh": "通常指主打电台单曲/送电台主打歌。"
+  },
+  {
+    "phrase": "lead single",
+    "zh": "通常指首支主打单曲/先行单曲。"
+  },
+  {
+    "phrase": "showcase",
+    "zh": "音乐行业里常指展示演出/试演场/行业 showcase，不是陈列柜。"
+  },
+  {
+    "phrase": "soundcheck",
+    "zh": "演出语境通常是试音/彩排试音，不是声音检查。"
+  },
+  {
+    "phrase": "write with",
+    "zh": "写歌语境通常是跟某人一起写歌/合写，不是写给。"
+  },
+  {
+    "phrase": "record deal",
+    "zh": "行业表达通常是唱片合约/签约机会，整句要译得像口语。"
+  },
+  {
+    "phrase": "publishing deal",
+    "zh": "音乐行业里通常是版权发行合约/出版约，不是出版交易。"
+  },
+  {
+    "phrase": "get dropped",
+    "zh": "行业里常指被公司放弃/被解约/被撤下，不是掉下来。"
+  },
+  {
+    "phrase": "backup singer",
+    "zh": "通常是伴唱/和声歌手，不是后备歌手。"
+  },
+  {
+    "phrase": "headliner",
+    "zh": "演出语境通常是主咖/压轴/领衔艺人。"
+  },
+  {
+    "phrase": "lineup",
+    "zh": "演出语境通常是阵容/演出名单/排班，不是排成一列。"
+  },
+  {
+    "phrase": "back home",
+    "zh": "标题或包装语境通常是回家/重返家乡，不必译成生硬的回到家中。"
+  },
+  {
+    "phrase": "number one single",
+    "zh": "榜单语境通常是冠军单曲/单曲登顶，不宜硬译成单曲冠军。"
+  },
+  {
+    "phrase": "number one spot",
+    "zh": "通常是登顶/拿下榜首，不要总译成第一名位置。"
+  },
+  {
+    "phrase": "claimed the number one single spot",
+    "zh": "新闻口吻通常是单曲登顶/拿下单曲榜冠军。"
+  },
+  {
+    "phrase": "previously on",
+    "zh": "前情提要"
+  },
+  {
+    "phrase": "the future of",
+    "zh": "下一个"
+  },
+  {
+    "phrase": "move records",
+    "zh": "卖唱片"
+  },
+  {
+    "phrase": "protect your voice",
+    "zh": "保护好嗓子"
+  },
+  {
+    "phrase": "plug it in",
+    "zh": "插电"
+  },
+  {
+    "phrase": "off on the wrong foot",
+    "zh": "一开始就不太对付"
+  },
+  {
+    "phrase": "owe someone a record",
+    "zh": "欠某人一张专辑"
+  },
+  {
+    "phrase": "buy yourself out",
+    "zh": "花钱赎身"
+  },
+  {
+    "phrase": "get stood up",
+    "zh": "被放鸽子"
+  },
+  {
+    "phrase": "give us a minute",
+    "zh": "回避一下"
+  },
+  {
+    "phrase": "take some of the pressure off",
+    "zh": "减轻一些压力"
+  },
+  {
+    "phrase": "singing somebody else's hits",
+    "zh": "唱别人的热门歌"
+  },
+  {
+    "phrase": "fresh, new talent",
+    "zh": "新鲜血液"
+  },
+  {
+    "phrase": "reboot of the label",
+    "zh": "重启厂牌"
+  },
+  {
+    "phrase": "shake hands with some suits",
+    "zh": "跟一些高管打交道"
+  },
+  {
+    "phrase": "get them excited about",
+    "zh": "让他们看好、支持"
+  },
+  {
+    "phrase": "There she is.",
+    "zh": "她来了。"
+  },
+  {
+    "phrase": "You obviously have your priorities.",
+    "zh": "看来你有更要紧的事。"
+  },
+  {
+    "phrase": "get back in the studio",
+    "zh": "回录音室"
+  },
+  {
+    "phrase": "make something of",
+    "zh": "把……活出点名堂/做出点成果"
+  },
+  {
+    "phrase": "court-appointed attorney",
+    "zh": "法院指派的律师"
+  },
+  {
+    "phrase": "throw my hat in the ring",
+    "zh": "参选；加入竞争"
+  },
+  {
+    "phrase": "poll numbers are up",
+    "zh": "民调支持率上升"
+  },
+  {
+    "phrase": "push a date",
+    "zh": "改期；推迟档期"
+  },
+  {
+    "phrase": "plug a new label",
+    "zh": "为新厂牌宣传；给新厂牌站台"
+  },
+  {
+    "phrase": "lost my voice",
+    "zh": "歌手语境下常指失去嗓音，不是抽象的“声音”"
+  },
+  {
+    "phrase": "be up for it",
+    "zh": "有意愿；状态允许"
+  },
+  {
+    "phrase": "write someone off",
+    "zh": "不管某人；放弃某人"
+  },
+  {
+    "phrase": "plead guilty",
+    "zh": "认罪"
+  },
+  {
+    "phrase": "recant",
+    "zh": "翻供；收回证词"
+  },
+  {
+    "phrase": "read the instruction booklet",
+    "zh": "自然译为“研究一下说明书/看看说明书”，不宜生硬译“阅读小册子”"
+  },
+  {
+    "phrase": "it feels tight",
+    "zh": "身体或嗓音状态可译“发紧”"
+  },
+  {
+    "phrase": "healing is halted by anxiety",
+    "zh": "自然译为“焦虑会影响恢复/康复”"
+  },
+  {
+    "phrase": "live in the moment",
+    "zh": "活在当下"
+  },
+  {
+    "phrase": "get rid of her",
+    "zh": "按语境可译“甩掉她/摆脱她”"
+  },
+  {
+    "phrase": "she's overthinking it",
+    "zh": "她想多了"
+  },
+  {
+    "phrase": "make my entrance",
+    "zh": "舞台语境译“出场/登场”"
+  },
+  {
+    "phrase": "goodwill from the fans",
+    "zh": "粉丝的好感/善意"
+  },
+  {
+    "phrase": "tip of the iceberg",
+    "zh": "冰山一角"
+  },
+  {
+    "phrase": "red carpet stuff",
+    "zh": "红毯的事"
+  },
+  {
+    "phrase": "smooth it over",
+    "zh": "摆平/把事情圆过去"
+  },
+  {
+    "phrase": "get wind of",
+    "zh": "得知风声/听到消息"
+  },
+  {
+    "phrase": "gag order",
+    "zh": "封口令"
+  },
+  {
+    "phrase": "co-conspirator",
+    "zh": "共谋者"
+  },
+  {
+    "phrase": "take the deal",
+    "zh": "接受这笔交易/接受条件"
+  },
+  {
+    "phrase": "To what do I owe the pleasure of your company?",
+    "zh": "自然口语可译“什么风把你吹来了？”"
+  },
+  {
+    "phrase": "be my own boss",
+    "zh": "自己当老板"
+  },
+  {
+    "phrase": "twirl your hair",
+    "zh": "用手指卷头发"
+  },
+  {
+    "phrase": "come off as aloof",
+    "zh": "显得高冷/不好接近"
+  },
+  {
+    "phrase": "give it up for",
+    "zh": "把掌声送给"
+  },
+  {
+    "phrase": "if you'll have us",
+    "zh": "如果你愿意接纳我们"
+  },
+  {
+    "phrase": "highest honor",
+    "zh": "最高荣誉/莫大的荣幸"
+  },
+  {
+    "phrase": "come out on the road",
+    "zh": "跟着一起巡演"
+  },
+  {
+    "phrase": "get booked as",
+    "zh": "被安排为；接到……演出"
+  },
+  {
+    "phrase": "featured performer",
+    "zh": "特邀表演嘉宾"
+  },
+  {
+    "phrase": "pre-opener",
+    "zh": "最早的暖场歌手"
+  },
+  {
+    "phrase": "Nashville tastemakers",
+    "zh": "纳什维尔的行家／业内意见领袖"
+  },
+  {
+    "phrase": "buyout offer",
+    "zh": "买断报价"
+  },
+  {
+    "phrase": "assets have been frozen",
+    "zh": "资产被冻结"
+  },
+  {
+    "phrase": "old money",
+    "zh": "老钱；老牌富豪阶层"
+  },
+  {
+    "phrase": "rub elbows with",
+    "zh": "与……套近乎；结交"
+  },
+  {
+    "phrase": "not at liberty to comment",
+    "zh": "不便置评"
+  },
+  {
+    "phrase": "by the book",
+    "zh": "完全合规；按规矩办"
+  },
+  {
+    "phrase": "pleaded not guilty",
+    "zh": "表示不认罪"
+  },
+  {
+    "phrase": "bail hearing",
+    "zh": "保释听证会"
+  },
+  {
+    "phrase": "unknown quantity",
+    "zh": "没什么知名度；前景难料的人"
+  },
+  {
+    "phrase": "take a chance",
+    "zh": "冒险给机会"
+  },
+  {
+    "phrase": "stay tuned for your chance to win",
+    "zh": "继续收听，就有机会赢取奖品或门票"
+  },
+  {
+    "phrase": "see it in writing",
+    "zh": "看到白纸黑字"
+  },
+  {
+    "phrase": "swing by and say hello",
+    "zh": "顺路来打个招呼"
+  },
+  {
+    "phrase": "kill it",
+    "zh": "表现出色、惊艳全场"
+  },
+  {
+    "phrase": "play by their rules",
+    "zh": "按他们的规矩来"
+  },
+  {
+    "phrase": "show of support",
+    "zh": "表态支持"
+  },
+  {
+    "phrase": "go out on the road",
+    "zh": "去巡演"
+  },
+  {
+    "phrase": "on the road with",
+    "zh": "跟……一起巡演"
+  },
+  {
+    "phrase": "opening for",
+    "zh": "给……当开场嘉宾"
+  },
+  {
+    "phrase": "tour bus",
+    "zh": "巡演巴士"
+  },
+  {
+    "phrase": "knock boots with",
+    "zh": "和……上床"
+  },
+  {
+    "phrase": "drop down to A",
+    "zh": "降到A调"
+  },
+  {
+    "phrase": "fit my brand",
+    "zh": "贴合我的品牌形象"
+  },
+  {
+    "phrase": "open the doors",
+    "zh": "开门放观众进场"
+  },
+  {
+    "phrase": "get back to somebody",
+    "zh": "回复某人的消息"
+  },
+  {
+    "phrase": "hired hand",
+    "zh": "雇工"
+  },
+  {
+    "phrase": "put me on speakerphone",
+    "zh": "开免提"
+  },
+  {
+    "phrase": "collect call",
+    "zh": "对方付费电话"
+  },
+  {
+    "phrase": "headline",
+    "zh": "担任压轴；压轴演出"
+  },
+  {
+    "phrase": "acts performing",
+    "zh": "演出的艺人/组合"
+  },
+  {
+    "phrase": "make the space for someone",
+    "zh": "给某人安排位置/名额"
+  },
+  {
+    "phrase": "build a life together",
+    "zh": "一起过日子"
+  },
+  {
+    "phrase": "Here's the thing.",
+    "zh": "是这样。"
+  },
+  {
+    "phrase": "pull the plug",
+    "zh": "叫停；中止"
+  },
+  {
+    "phrase": "girl code",
+    "zh": "姐妹规矩；女生之间的规矩"
+  },
+  {
+    "phrase": "play games",
+    "zh": "玩感情游戏"
+  },
+  {
+    "phrase": "be worth your while",
+    "zh": "不会让你后悔；值得你花时间"
+  },
+  {
+    "phrase": "play the festival",
+    "zh": "在音乐节演出"
+  },
+  {
+    "phrase": "come on board",
+    "zh": "加入；参与进来"
+  },
+  {
+    "phrase": "pull some strings",
+    "zh": "托关系；动用关系"
+  },
+  {
+    "phrase": "get the message",
+    "zh": "明白对方的意思；识趣"
+  },
+  {
+    "phrase": "have merit",
+    "zh": "有根据"
+  },
+  {
+    "phrase": "screw someone over",
+    "zh": "摆某人一道；坑某人"
+  },
+  {
+    "phrase": "run the numbers",
+    "zh": "算过账；核算过"
+  },
+  {
+    "phrase": "make my quarter",
+    "zh": "完成我这个季度的业绩"
+  },
+  {
+    "phrase": "back up",
+    "zh": "退后"
+  },
+  {
+    "phrase": "take this personally",
+    "zh": "往心里去"
+  },
+  {
+    "phrase": "left a couple messages",
+    "zh": "留了几条留言"
+  },
+  {
+    "phrase": "be swamped",
+    "zh": "忙得不可开交"
+  },
+  {
+    "phrase": "up to speed on everything",
+    "zh": "了解全部情况"
+  },
+  {
+    "phrase": "new material",
+    "zh": "新歌；新作品"
+  },
+  {
+    "phrase": "skim the surface",
+    "zh": "浮于表面；浅尝辄止"
+  },
+  {
+    "phrase": "get this verse down",
+    "zh": "把这段歌词记下来"
+  },
+  {
+    "phrase": "return my calls",
+    "zh": "回我电话"
+  },
+  {
+    "phrase": "record my song",
+    "zh": "录我的歌"
+  },
+  {
+    "phrase": "website up",
+    "zh": "网站上线"
+  },
+  {
+    "phrase": "put out a blurb",
+    "zh": "发通稿；发声明"
+  },
+  {
+    "phrase": "sequence the album",
+    "zh": "给专辑排曲序"
+  },
+  {
+    "phrase": "the record comes out",
+    "zh": "专辑发行"
+  },
+  {
+    "phrase": "number one party",
+    "zh": "冠军单曲庆功派对"
+  },
+  {
+    "phrase": "unique tweets",
+    "zh": "提到某人的不同推文"
+  },
+  {
+    "phrase": "get to sleep in my own bed",
+    "zh": "终于能睡自己的床"
+  },
+  {
+    "phrase": "write some time",
+    "zh": "改天一起写歌"
+  },
+  {
+    "phrase": "grab a room",
+    "zh": "找个房间"
+  },
+  {
+    "phrase": "make noise in this marketplace",
+    "zh": "在这个市场闹出点动静"
+  },
+  {
+    "phrase": "break out",
+    "zh": "打出名堂"
+  },
+  {
+    "phrase": "press tour",
+    "zh": "媒体宣传"
+  },
+  {
+    "phrase": "lay something down",
+    "zh": "先录点东西"
+  },
+  {
+    "phrase": "work around your schedule",
+    "zh": "配合你的时间"
+  },
+  {
+    "phrase": "get my album on the shelf",
+    "zh": "让我的专辑上架"
+  },
+  {
+    "phrase": "give them a nod",
+    "zh": "冲他们点个头"
+  },
+  {
+    "phrase": "stay off the grid",
+    "zh": "断联一阵子；不宜直译为离网"
+  },
+  {
+    "phrase": "shoestring budget",
+    "zh": "预算很紧"
+  },
+  {
+    "phrase": "dry run",
+    "zh": "排一遍；预演"
+  },
+  {
+    "phrase": "take someone on",
+    "zh": "跟某人一较高下"
+  },
+  {
+    "phrase": "pale in comparison",
+    "zh": "相比之下黯然失色"
+  },
+  {
+    "phrase": "let someone walk",
+    "zh": "就这么放了某人；让某人逍遥法外"
+  },
+  {
+    "phrase": "bounce off the walls",
+    "zh": "太闹腾；兴奋过头"
+  },
+  {
+    "phrase": "smother someone",
+    "zh": "围着某人不放；过度关照"
+  },
+  {
+    "phrase": "be in your corner",
+    "zh": "站在你这边；支持你"
+  },
+  {
+    "phrase": "media blackout",
+    "zh": "媒体封锁；拒绝接受媒体曝光"
+  },
+  {
+    "phrase": "keep under wraps",
+    "zh": "暂时保密"
+  },
+  {
+    "phrase": "sold out the Bluebird",
+    "zh": "在蓝鸟咖啡馆演出满场"
+  },
+  {
+    "phrase": "booking agent",
+    "zh": "演出经纪人"
+  },
+  {
+    "phrase": "dinky little dive",
+    "zh": "破小酒吧"
+  },
+  {
+    "phrase": "wouldn't touch someone with a barge pole",
+    "zh": "对某人避之不及"
+  },
+  {
+    "phrase": "bounce a check",
+    "zh": "支票跳票；开空头支票"
+  },
+  {
+    "phrase": "jump on the bandwagon",
+    "zh": "跟风；蹭热度"
+  },
+  {
+    "phrase": "right off the bat",
+    "zh": "一上来；一开始就"
+  },
+  {
+    "phrase": "something came up",
+    "zh": "临时有事"
+  },
+  {
+    "phrase": "can't make it",
+    "zh": "去不了；来不了"
+  },
+  {
+    "phrase": "be good for it",
+    "zh": "肯定会付；有能力支付"
+  },
+  {
+    "phrase": "discretion on that",
+    "zh": "替这件事保密"
+  },
+  {
+    "phrase": "take someone on the road",
+    "zh": "带某人去巡演"
+  },
+  {
+    "phrase": "book a gig",
+    "zh": "订演出"
+  },
+  {
+    "phrase": "hit the ground running",
+    "zh": "一开始就全速推进"
+  },
+  {
+    "phrase": "make a big splash",
+    "zh": "高调造势；大张旗鼓地宣传"
+  },
+  {
+    "phrase": "play our cards right",
+    "zh": "把牌打好；安排得当"
+  },
+  {
+    "phrase": "bad blood",
+    "zh": "闹僵；结下梁子"
+  },
+  {
+    "phrase": "keep this casual",
+    "zh": "别太当回事；保持轻松随意"
+  },
+  {
+    "phrase": "stamp of approval",
+    "zh": "背书；认可"
+  },
+  {
+    "phrase": "get back into everybody's good graces",
+    "zh": "重新赢回大家的好感"
+  },
+  {
+    "phrase": "hold off on talking about",
+    "zh": "暂时先别提"
+  },
+  {
+    "phrase": "spice things up",
+    "zh": "添点情趣；增加新鲜感"
+  },
+  {
+    "phrase": "make a strong case for oneself",
+    "zh": "把自己推销得很到位；有力证明自己"
+  },
+  {
+    "phrase": "the name of the game",
+    "zh": "这就是行规"
+  },
+  {
+    "phrase": "blow over",
+    "zh": "平息过去"
+  },
+  {
+    "phrase": "out of pocket",
+    "zh": "自掏腰包"
+  },
+  {
+    "phrase": "best man",
+    "zh": "伴郎"
+  },
+  {
+    "phrase": "travel day",
+    "zh": "赶路日"
+  },
+  {
+    "phrase": "make some noise",
+    "zh": "闹出点声势"
+  },
+  {
+    "phrase": "he's a ham",
+    "zh": "他很会抢镜"
+  },
+  {
+    "phrase": "cover for someone",
+    "zh": "替某人打掩护"
+  },
+  {
+    "phrase": "dead room",
+    "zh": "空场、冷场"
+  },
+  {
+    "phrase": "take it down",
+    "zh": "删掉；撤下"
+  },
+  {
+    "phrase": "let it speak for itself",
+    "zh": "让表现说明一切"
+  },
+  {
+    "phrase": "be a united front",
+    "zh": "口径一致；统一立场"
+  },
+  {
+    "phrase": "on a bender",
+    "zh": "喝得烂醉；酗酒放纵"
+  },
+  {
+    "phrase": "wide-eyed hick from the sticks",
+    "zh": "没见过世面的乡下土包子"
+  },
+  {
+    "phrase": "good riddance",
+    "zh": "走了也好"
+  },
+  {
+    "phrase": "slow news day",
+    "zh": "没新闻可报"
+  },
+  {
+    "phrase": "get the job done",
+    "zh": "能用；管用"
+  },
+  {
+    "phrase": "off limits",
+    "zh": "不能牵扯；不许碰"
+  },
+  {
+    "phrase": "national television",
+    "zh": "全国电视"
+  },
+  {
+    "phrase": "save the day",
+    "zh": "救场；挽回局面"
+  },
+  {
+    "phrase": "get checked out",
+    "zh": "做检查"
+  },
+  {
+    "phrase": "real hospital",
+    "zh": "正规医院"
+  },
+  {
+    "phrase": "keep someone away from the press",
+    "zh": "让某人避开媒体"
+  },
+  {
+    "phrase": "ride with someone",
+    "zh": "陪某人坐车；跟某人一起去"
+  },
+  {
+    "phrase": "got this under control",
+    "zh": "能处理好；局面在掌控中"
+  },
+  {
+    "phrase": "take it back to the top",
+    "zh": "从头再来；回到开头"
+  },
+  {
+    "phrase": "downplay it",
+    "zh": "淡化处理"
+  },
+  {
+    "phrase": "trust fund guy",
+    "zh": "信托基金少爷"
+  },
+  {
+    "phrase": "first available flight",
+    "zh": "最早的一班航班"
+  },
+  {
+    "phrase": "off the road",
+    "zh": "不用巡演；结束巡演"
+  },
+  {
+    "phrase": "pick up where you left off",
+    "zh": "从停下的地方接着来"
+  },
+  {
+    "phrase": "let alone",
+    "zh": "更别说"
+  },
+  {
+    "phrase": "all set",
+    "zh": "都好了；都准备好了"
+  },
+  {
+    "phrase": "spend the night with someone",
+    "zh": "在某人那儿过夜"
+  },
+  {
+    "phrase": "shook me up",
+    "zh": "让我很受冲击"
+  },
+  {
+    "phrase": "kick this thing off on the right foot",
+    "zh": "开个好头"
+  },
+  {
+    "phrase": "get bumped from",
+    "zh": "通告或档期被取消，不是被解雇"
+  },
+  {
+    "phrase": "promise someone the moon",
+    "zh": "许下天大的好处"
+  },
+  {
+    "phrase": "launch week",
+    "zh": "专辑发行周"
+  },
+  {
+    "phrase": "get the word out",
+    "zh": "把消息放出去"
+  },
+  {
+    "phrase": "wait for my cue",
+    "zh": "等我信号"
+  },
+  {
+    "phrase": "come through for someone",
+    "zh": "帮某人解围或兑现承诺"
+  },
+  {
+    "phrase": "hit the charts",
+    "zh": "冲上榜单"
+  },
+  {
+    "phrase": "the future of [artist]",
+    "zh": "下一个某某；有望成为某某那样的人"
+  },
+  {
+    "phrase": "get stood up at the airport",
+    "zh": "在机场被放鸽子"
+  },
+  {
+    "phrase": "deliver the album",
+    "zh": "交出/交付专辑，履行唱片合约"
+  },
+  {
+    "phrase": "see the place",
+    "zh": "参观一下；作客场景不要直译为看这个地方"
+  },
+  {
+    "phrase": "can't get enough of this song",
+    "zh": "这首歌怎么都听不够"
+  },
+  {
+    "phrase": "Here's [artist]",
+    "zh": "电台介绍歌曲时可译为“下面请听[艺人]”"
+  },
+  {
+    "phrase": "catch up",
+    "zh": "叙旧，聊聊近况"
+  },
+  {
+    "phrase": "press thing",
+    "zh": "媒体活动"
+  },
+  {
+    "phrase": "blow off",
+    "zh": "放鸽子，临时推掉"
+  },
+  {
+    "phrase": "courting you",
+    "zh": "讨好你，巴结你"
+  },
+  {
+    "phrase": "get your band together",
+    "zh": "组好你的乐队"
+  },
+  {
+    "phrase": "be covered",
+    "zh": "有人顶上，有人帮忙撑场"
+  },
+  {
+    "phrase": "one more",
+    "zh": "再来一首"
+  },
+  {
+    "phrase": "dedicate this one to",
+    "zh": "把这首献给"
+  },
+  {
+    "phrase": "push my set back",
+    "zh": "拖慢我的布景进度"
+  },
+  {
+    "phrase": "have a show to do",
+    "zh": "还要演出"
+  },
+  {
+    "phrase": "keep herself busy",
+    "zh": "够她忙的"
+  },
+  {
+    "phrase": "talk someone into doing something",
+    "zh": "劝某人做某事"
+  },
+  {
+    "phrase": "get going",
+    "zh": "该走了"
+  },
+  {
+    "phrase": "sack out on the couch",
+    "zh": "睡沙发"
+  },
+  {
+    "phrase": "bad influence",
+    "zh": "带坏人的人"
+  },
+  {
+    "phrase": "back to work",
+    "zh": "接着干活"
+  },
+  {
+    "phrase": "hit the trades",
+    "zh": "上行业媒体；被行业媒体报道"
+  },
+  {
+    "phrase": "spin it like",
+    "zh": "把话说成；包装成"
+  },
+  {
+    "phrase": "what single we're gonna use",
+    "zh": "要主打哪首单曲"
+  },
+  {
+    "phrase": "clear one's head",
+    "zh": "散散心；冷静一下"
+  },
+  {
+    "phrase": "cross that bridge when we come to it",
+    "zh": "到时候再说"
+  },
+  {
+    "phrase": "crack the charts",
+    "zh": "上榜"
+  },
+  {
+    "phrase": "be all over someone",
+    "zh": "缠着某人不放；紧追某人"
+  },
+  {
+    "phrase": "tightening the chain",
+    "zh": "把人管得更紧"
+  },
+  {
+    "phrase": "big ticket outfits",
+    "zh": "大公司；大机构"
+  },
+  {
+    "phrase": "wave from the audience",
+    "zh": "坐在观众席挥手"
+  },
+  {
+    "phrase": "good for it",
+    "zh": "有能力付钱；肯定会付"
+  },
+  {
+    "phrase": "keep your phone close",
+    "zh": "手机别离身"
+  },
+  {
+    "phrase": "get called away to another project",
+    "zh": "被叫去忙另一个项目"
+  },
+  {
+    "phrase": "be gone a whole lot",
+    "zh": "最近老是不在家"
+  },
+  {
+    "phrase": "grades have been slipping",
+    "zh": "成绩最近有点下滑"
+  },
+  {
+    "phrase": "positive influence",
+    "zh": "正面影响"
+  },
+  {
+    "phrase": "charm offensive",
+    "zh": "亲和攻势"
+  },
+  {
+    "phrase": "sign on with",
+    "zh": "签约加入"
+  },
+  {
+    "phrase": "win back country",
+    "zh": "赢回乡村音乐市场"
+  },
+  {
+    "phrase": "get back on track",
+    "zh": "重回正轨"
+  },
+  {
+    "phrase": "make a strong case for himself",
+    "zh": "把自己推销得很到位"
+  },
+  {
+    "phrase": "open for someone",
+    "zh": "给某人当开场嘉宾；给某人暖场"
+  },
+  {
+    "phrase": "go back out on the road",
+    "zh": "重新出去巡演"
+  },
+  {
+    "phrase": "tour dates",
+    "zh": "巡演场次"
+  },
+  {
+    "phrase": "crank out [song]",
+    "zh": "唱/演奏某首歌"
+  },
+  {
+    "phrase": "the opera",
+    "zh": "乡村音乐语境中若指Opry，应译为大奥普里，不要译作歌剧"
+  },
+  {
+    "phrase": "one city at a time",
+    "zh": "一座城市一座城市地"
+  },
+  {
+    "phrase": "Didn't mean anything.",
+    "zh": "那根本不算什么。"
+  },
+  {
+    "phrase": "We're done.",
+    "zh": "我们完了。"
+  },
+  {
+    "phrase": "The thing is",
+    "zh": "其实"
+  },
+  {
+    "phrase": "get crazy",
+    "zh": "失控"
+  },
+  {
+    "phrase": "take advantage of the time off",
+    "zh": "利用这段休假"
+  },
+  {
+    "phrase": "stop trying to push this",
+    "zh": "别再逼这件事了"
+  },
+  {
+    "phrase": "it doesn't seem like an unreasonable request",
+    "zh": "这要求也不算过分"
+  },
+  {
+    "phrase": "be dangerously close to stalking",
+    "zh": "都快成跟踪了"
+  },
+  {
+    "phrase": "train has left the station",
+    "zh": "事情已经启动；这趟车已经开动了"
+  },
+  {
+    "phrase": "bust my balls",
+    "zh": "找我茬；刁难我"
+  },
+  {
+    "phrase": "call the cops kind of situation",
+    "zh": "需要报警的情况"
+  },
+  {
+    "phrase": "ill will toward",
+    "zh": "对……心怀怨恨"
+  },
+  {
+    "phrase": "be in the zone",
+    "zh": "正来灵感；进入状态"
+  },
+  {
+    "phrase": "dig deep",
+    "zh": "往深了挖；深入挖掘内心"
+  },
+  {
+    "phrase": "take the girls home",
+    "zh": "把孩子们送回家"
+  },
+  {
+    "phrase": "cash poor",
+    "zh": "有资产但手头现金紧"
+  },
+  {
+    "phrase": "kiss the ring",
+    "zh": "拜码头；向权威人物示好"
+  },
+  {
+    "phrase": "fall off the turnip truck",
+    "zh": "刚进城的傻子；别把我当傻子"
+  },
+  {
+    "phrase": "be nice",
+    "zh": "态度好点；友好点"
+  },
+  {
+    "phrase": "get us in",
+    "zh": "带我们进去；帮我们入场"
+  },
+  {
+    "phrase": "I write poetry",
+    "zh": "我写诗"
+  },
+  {
+    "phrase": "somebody's got to work around here",
+    "zh": "家里总得有人工作"
+  },
+  {
+    "phrase": "bad manners to talk about money",
+    "zh": "谈钱不礼貌"
+  },
+  {
+    "phrase": "you're burning it up out there",
+    "zh": "你在台上很火"
+  },
+  {
+    "phrase": "you probably got to go on soon",
+    "zh": "你快该上场了吧"
+  },
+  {
+    "phrase": "drop out of the race",
+    "zh": "退出竞选"
+  },
+  {
+    "phrase": "get leaked to the press",
+    "zh": "被捅给媒体"
+  },
+  {
+    "phrase": "get it over with",
+    "zh": "赶紧弄完"
+  },
+  {
+    "phrase": "back on",
+    "zh": "恢复进行"
+  },
+  {
+    "phrase": "give someone a piece of my mind",
+    "zh": "跟某人理论理论"
+  },
+  {
+    "phrase": "sleep on it",
+    "zh": "睡一觉再考虑"
+  },
+  {
+    "phrase": "hit the road with someone",
+    "zh": "跟某人一起巡演"
+  },
+  {
+    "phrase": "hang up his strap",
+    "zh": "退下来；不再巡演"
+  },
+  {
+    "phrase": "dirty up the vocals",
+    "zh": "让人声更粗粝一点"
+  },
+  {
+    "phrase": "the real deal",
+    "zh": "来真的；真有本事的人"
+  },
+  {
+    "phrase": "holler at you real quick",
+    "zh": "单独聊两句"
+  },
+  {
+    "phrase": "that's my man",
+    "zh": "这才是我的哥们"
+  }
+]

@@ -1,0 +1,27 @@
+# Generated subtitles, logs, media, and caches
+*.ass
+*.srt
+*.ssa
+*.vtt
+*.mkv
+*.mp4
+*.m4v
+*.avi
+*.mov
+*.wav
+*.mp3
+*.flac
+*.aac
+*.log
+*.err.log
+*.pid
+*.7z
+temp/
+overrides/
+__pycache__/
+.pytest_cache/
+
+# Local runtime state
+subtitle_status.txt
+subtitle_run.log
+pipeline_manifest.json

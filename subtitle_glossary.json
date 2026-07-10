@@ -1,0 +1,3966 @@
+{
+  "version": "subtitle-glossary-curated-20260707-v1",
+  "updated_at": "2026-07-09 11:39:53",
+  "review_policy": "保留真正需要文化背景的影视、音乐、宗教、历史、科学、体育和流行文化引用；删除普通词、短缩写、OCR碎片、演职员表、店招和主角名。Qwen新增词条会以reviewed=false写入，并由step09后端收尾复审。",
+  "terms": [
+    {
+      "term": "Wonder Years",
+      "zh": "美国成长喜剧剧集《纯真年代》，常被用来指带怀旧旁白的童年回忆叙事。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Night Moves",
+      "zh": "鲍勃·西格1976年的经典摇滚歌曲，歌词带有青春、暧昧和怀旧意味。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Jay Leno",
+      "zh": "美国知名深夜脱口秀主持人，长期主持《今夜秀》，常被当作电视喜剧文化符号。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Taco Bell",
+      "zh": "美国墨西哥风味快餐连锁，价格亲民、校园感强，常被美剧拿来做日常笑料。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Saturday Night Live",
+      "zh": "美国长寿直播喜剧节目，以政治讽刺和明星短剧闻名，是流行文化的重要来源。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "SNL",
+      "zh": "《周六夜现场》的常用简称，美国直播喜剧节目，擅长时事讽刺和明星恶搞。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "The Tonight Show",
+      "zh": "美国经典深夜脱口秀品牌，多代主持人接棒，是电视访谈和喜剧表演重镇。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "The Tonight Showband",
+      "zh": "《今夜秀》的现场伴奏乐队，代表美国深夜脱口秀的棚内音乐传统。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Rambo III",
+      "zh": "《第一滴血3》，史泰龙主演的80年代动作片，代表冷战时代硬汉电影气质。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Gin Rummy",
+      "zh": "英美流行的双人纸牌游戏，规则强调配牌和算分，常见于家庭或酒吧场景。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Good Samaritan",
+      "zh": "源自《圣经》的‘好撒马利亚人’故事，英语中指主动帮助陌生人的善心人。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Dallas Cowboys",
+      "zh": "达拉斯牛仔队，美国NFL最知名球队之一，在得州文化里几乎是身份象征。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Dallas Cowboy",
+      "zh": "达拉斯牛仔队球员或球迷的单数说法，常带有得州橄榄球文化意味。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Raquel Welch",
+      "zh": "美国影星拉蔻儿·薇芝，60至70年代性感偶像，常被用作复古美人参照。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Texas Monthly",
+      "zh": "得州本地知名杂志，报道政治、饮食和乡土文化，常代表得州地方身份。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Lyndon Johnson",
+      "zh": "林登·约翰逊，美国第36任总统，得州出身，常与南方政治和民权时代相连。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Girl Scout cookies",
+      "zh": "美国女童子军年度义卖饼干，既是筹款活动，也是美国社区生活的固定风景。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Girl Scout badge",
+      "zh": "女童子军徽章，代表完成特定技能或服务任务，带有美国青少年组织文化。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Thin Mint",
+      "zh": "女童子军饼干的薄荷巧克力口味，销量很高，是美国人熟悉的怀旧零食。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Men Are from Mars, Women Are from Venus",
+      "zh": "90年代两性关系畅销书，主张男女沟通方式不同，常被美剧拿来调侃情侣和婚姻矛盾。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:39:48"
+    },
+    {
+      "term": "Women Are from Venus",
+      "zh": "出自《男人来自火星，女人来自金星》的标题梗，用来调侃两性差异。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Tango & Cash",
+      "zh": "1989年动作喜剧片，史泰龙和库尔特·拉塞尔搭档，带有夸张硬汉片风格。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Sylvester Stallone",
+      "zh": "西尔维斯特·史泰龙，美国动作片明星，代表作有《洛奇》和《第一滴血》。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Yom Kippur",
+      "zh": "犹太教赎罪日，一年中最庄严的节日，信徒通常禁食、祈祷并反省过错。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Clint Eastwood",
+      "zh": "克林特·伊斯特伍德，美国西部片和硬汉电影代表人物，后来也成为著名导演。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Judas Priest",
+      "zh": "英国重金属乐队，以高音主唱和皮革造型闻名，是经典金属文化代表。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Dave Coulier",
+      "zh": "美国喜剧演员，因《欢乐满屋》走红，90年代家庭情景喜剧观众很熟悉。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Reality Bites",
+      "zh": "1994年电影《四个毕业生》，常被看作X世代迷茫和90年代青年文化的代表。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "O Great and Powerful Oz",
+      "zh": "《绿野仙踪》中对奥兹大王的称呼，常用来讽刺装腔作势的权威。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Wicked Witch of the West",
+      "zh": "《绿野仙踪》的西方坏女巫，是美国流行文化里经典反派形象。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "TUMS",
+      "zh": "美国常见抗酸咀嚼片品牌，常被用来表现胃酸、紧张或吃坏肚子的日常笑点。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "NASCAR",
+      "zh": "美国纳斯卡赛车，南方和得州文化中很有存在感，强调速度、车队和赞助商。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Bryant Gumbel",
+      "zh": "美国电视新闻和体育节目主持人，曾主持《今日秀》，是90年代电视熟脸。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Conan",
+      "zh": "柯南·奥布莱恩，美国深夜脱口秀主持人，以怪诞幽默和自嘲风格闻名。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "OJ trial",
+      "zh": "O.J.辛普森谋杀案审判，90年代美国全民关注的电视化司法事件。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Al Roker",
+      "zh": "美国天气节目主持人，因NBC《今日秀》广为人知，常被当作电视天气员代表。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Bob Seger",
+      "zh": "鲍勃·西格是美国摇滚歌手，作品常写蓝领生活和青春怀旧，《Night Moves》尤其有代表性。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:39:48"
+    },
+    {
+      "term": "Labor Day",
+      "zh": "美国劳动节在九月第一个星期一，也常被视为暑假结束和开学季的节点。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Three Little Pigs",
+      "zh": "西方童话《三只小猪》，美国儿童很熟悉，常被用来比喻防备和偷懒。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "HERA",
+      "zh": "赫拉是希腊神话中的天后、婚姻女神，常和嫉妒、权威妻子形象相连。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "BLUEBELL",
+      "zh": "Blue Bell是得州起家的冰淇淋品牌，在美国南方有很强的地方怀旧感。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "CROCK-POT",
+      "zh": "Crock-Pot是美国慢炖锅代表品牌，常和家庭料理、教会聚餐和郊区生活相连。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "EASTER EGG",
+      "zh": "复活节彩蛋原指节日彩蛋，后来也指影视或游戏里隐藏的小惊喜。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "DUNE",
+      "zh": "弗兰克·赫伯特的科幻小说《沙丘》及其影视改编，设定庞大、宗教和政治意味浓。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "The Golden Girls",
+      "zh": "80年代美国情景喜剧《黄金女郎》，讲述几位老年女性合住生活，影响很广。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Vanna White",
+      "zh": "美国《幸运轮盘》节目长期字母揭示员，是电视游戏节目里的标志性人物。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Soft Kitty",
+      "zh": "《生活大爆炸》里谢尔顿生病时爱听的安慰歌，是该系列最有名的角色梗之一。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Steely Dan",
+      "zh": "美国摇滚乐队，以复杂爵士和声、精密录音和讽刺歌词闻名。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Toy Story",
+      "zh": "皮克斯动画《玩具总动员》，开创电脑动画长片时代，也是90年代童年记忆。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Die Hard",
+      "zh": "《虎胆龙威》系列，以约翰·麦克莱恩为主角，是美国动作片经典代表。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Die Hard 2",
+      "zh": "《虎胆龙威2》，约翰·麦克莱恩再度卷入机场危机，是90年代动作片代表。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Great Stalacpipe Organ",
+      "zh": "卢雷洞穴的钟乳石管风琴，利用洞内石笋发声，是美国著名奇观。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Steve McQueen",
+      "zh": "史蒂夫·麦奎因，美国60至70年代硬汉影星，以冷峻气质和动作片闻名。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Ali MacGraw",
+      "zh": "艾丽·麦古奥，美国女演员，因电影《爱情故事》成为70年代银幕偶像。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Total Recall",
+      "zh": "1990年科幻动作片《全面回忆》，施瓦辛格主演，融合记忆、火星和身份悬疑。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Puerto Rico",
+      "zh": "波多黎各是美国海外自治领地，文化上融合加勒比、西班牙语和美国影响。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "BORIKEN",
+      "zh": "Borikén是波多黎各的泰诺语旧称，常被用来强调当地原住民文化根源。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Playboy",
+      "zh": "《花花公子》是美国成人杂志品牌，也代表20世纪男性杂志和兔女郎文化。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Meg Ryan",
+      "zh": "梅格·瑞恩，美国浪漫喜剧代表女星，90年代因《当哈利遇到莎莉》等走红。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Cher",
+      "zh": "雪儿，美国流行歌手和演员，以低沉嗓音、夸张造型和长寿演艺生涯闻名。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Prince",
+      "zh": "Prince是美国流行音乐巨星，融合放克、摇滚和R&B，以个性造型和舞台魅力著称。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Mother's Day",
+      "zh": "母亲节在美国是重要家庭节日，常伴随贺卡、鲜花和家庭聚餐。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Virginia Slims",
+      "zh": "面向女性营销的美国香烟品牌，广告口号曾强调女性独立，带有时代印记。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Hamburger Helper",
+      "zh": "美国盒装速食调料品牌，用少量肉做成家庭晚餐，象征省钱的家常食品。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Grape Nuts",
+      "zh": "美国老牌早餐麦片，口感偏硬、健康感强，常被拿来调侃朴素饮食。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Star Trek",
+      "zh": "《星际迷航》是美国经典科幻系列，粉丝文化浓厚，常被用来表现理工宅兴趣。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Star Trek: The next generation",
+      "zh": "《星际迷航：下一代》是该系列重要剧集，皮卡德舰长和数据少校都出自其中。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "next generation",
+      "zh": "在《星际迷航》语境下常指《下一代》，是80至90年代科幻电视代表作。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Wesley Crusher",
+      "zh": "《星际迷航：下一代》的少年角色，常被科幻粉丝拿来调侃聪明少年形象。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Commander Data",
+      "zh": "《星际迷航：下一代》的仿生人军官，常用来讨论逻辑、人性和情感。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Patrick Stewart",
+      "zh": "帕特里克·斯图尔特因饰演皮卡德舰长闻名，也是英国舞台剧演员。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Enterprise",
+      "zh": "企业号是《星际迷航》的核心星舰名称，象征探索未知宇宙的理想。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Future Worf",
+      "zh": "沃夫是《星际迷航》中的克林贡角色，未来版本常指科幻时间线玩笑。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Deep Space Nine",
+      "zh": "《星际迷航：深空九号》以空间站为舞台，政治和战争叙事更重。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "TOS",
+      "zh": "TOS是《星际迷航：原初系列》的粉丝简称，指1960年代柯克、史波克那版最早剧集。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:39:48"
+    },
+    {
+      "term": "United Federation of Planets",
+      "zh": "《星际迷航》中的星际联邦，代表理性、外交和多文明合作理想。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Denorios Belt",
+      "zh": "《星际迷航：深空九号》中的德诺里奥斯带，是虫洞附近的重要设定。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Eminiar VII",
+      "zh": "《星际迷航：原初系列》中的虚构星球，出自关于计算机化战争的剧集。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Kirk",
+      "zh": "詹姆斯·柯克是《星际迷航》原初系列舰长，代表冒险型太空英雄。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Spock",
+      "zh": "史波克是《星际迷航》的瓦肯人角色，以逻辑冷静和尖耳形象闻名。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Vulcans",
+      "zh": "瓦肯人是《星际迷航》中的外星种族，以压抑情感、崇尚逻辑著称。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "kolinahr",
+      "zh": "Kolinahr是《星际迷航》中瓦肯人清除情感、追求纯逻辑的修行，体现瓦肯文化核心。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:39:48"
+    },
+    {
+      "term": "Gene Roddenberry",
+      "zh": "吉恩·罗登贝瑞是《星际迷航》创作者，其系列承载乐观科幻和人文理想。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Star Trek II: The Wrath of Khan",
+      "zh": "《星际迷航2：可汗怒吼》是该系列最受推崇的电影之一，反派可汗很经典。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "the devil in the dark",
+      "zh": "《黑暗中的魔鬼》是《星际迷航》原初系列名集，常被老粉引用为理解异族生命的例子。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:39:48"
+    },
+    {
+      "term": "TO: BOLDLY GO WHERE",
+      "zh": "‘大胆前往无人到过之处’是《星际迷航》开场名句，象征探索精神。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "FRANKHERBERT",
+      "zh": "弗兰克·赫伯特是《沙丘》作者，他的作品常把科幻、宗教和政治写在一起。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Johnny Appleseed",
+      "zh": "美国民间传说人物，因四处播种苹果树而闻名，象征拓荒和朴素善行。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Albert Einstein",
+      "zh": "爱因斯坦提出相对论，是现代物理代表人物，常被用作天才的代名词。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "King Kong",
+      "zh": "金刚是电影史经典巨兽形象，常象征巨大力量、异域冒险和悲剧怪物。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Green Lantern",
+      "zh": "绿灯侠是DC超级英雄，靠能量戒指把意志力变成实体武器，绿色形象很醒目。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:39:48"
+    },
+    {
+      "term": "Green Arrow",
+      "zh": "绿箭侠是DC超级英雄，以弓箭和街头正义形象闻名，常被视作平民版义警。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "The Hulk",
+      "zh": "浩克是漫威超级英雄，愤怒时变成绿色巨人，常被用来形容暴怒失控。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "BAT'MAN",
+      "zh": "蝙蝠侠是DC超级英雄，靠财富、侦探能力和装备打击犯罪，是哥谭市义警象征。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:39:48"
+    },
+    {
+      "term": "Arkham Asylum",
+      "zh": "阿卡姆疯人院是蝙蝠侠故事中的精神病院，常关押他的经典反派。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Justice League back scratchers",
+      "zh": "正义联盟是DC超级英雄团队，用在抓痒器上带有廉价周边的喜剧感。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Doom Patrol and Suicide Squad Special #1",
+      "zh": "DC漫画特别刊标题，提到具体期号通常是资深漫画迷式炫耀。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Secret Wars #8",
+      "zh": "漫威《秘密战争》第8期，黑色蜘蛛战衣首次出现，收藏价值和粉丝意义都高。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Spider-Man",
+      "zh": "蜘蛛侠是漫威超级英雄，彼得·帕克的普通少年身份让他特别有亲近感。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Peter Parker",
+      "zh": "彼得·帕克是蜘蛛侠本名，常代表普通学生与超级英雄身份的双重生活。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Spidey-sense",
+      "zh": "蜘蛛感应是蜘蛛侠预知危险的能力，英语里也可泛指直觉警报。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "New Teen Titans #42",
+      "zh": "DC《新少年泰坦》第42期，具体期号梗通常服务于漫画收藏和宅文化。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "New Mutants #87",
+      "zh": "漫威《新变种人》第87期因角色Cable首次亮相而被漫画迷看重，收藏价值较高。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:39:48"
+    },
+    {
+      "term": "X-MEN",
+      "zh": "X战警是漫威变种人英雄团队，常与青春异类、歧视和身份认同主题相连。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "The Joker",
+      "zh": "小丑是蝙蝠侠最经典反派，代表混乱、犯罪和黑色幽默，也是流行文化常见恶人符号。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:39:48"
+    },
+    {
+      "term": "TWO-FACE",
+      "zh": "双面人是蝙蝠侠反派，靠硬币决定善恶行动，象征分裂人格和命运偶然。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Robin",
+      "zh": "罗宾是蝙蝠侠的少年搭档称号，常代表超级英雄故事里的助手角色。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Frodo and Sam",
+      "zh": "弗罗多和山姆是《指环王》核心搭档，象征友情、忠诚和艰难远征。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "TOLKIEN",
+      "zh": "托尔金是《霍比特人》和《指环王》作者，现代奇幻文学的奠基人物。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "J.R.R.TOLKIEN",
+      "zh": "J.R.R.托尔金创造了中土世界，《指环王》的语言和神话体系影响深远。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "MORDOR",
+      "zh": "魔多是《指环王》中的黑暗之地，常被用来形容阴森危险的地方。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "ALOHA",
+      "zh": "Aloha是夏威夷语问候和告别语，也代表夏威夷友善、悠闲的文化想象。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "ASCII",
+      "zh": "ASCII是早期英文字符编码标准，理工语境里常被拿来表现计算机基础知识。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Very Darwinian",
+      "zh": "达尔文式说法指适者生存，常用来调侃竞争残酷或弱肉强食。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Blond Ambition tour",
+      "zh": "麦当娜1990年的金发野心巡演，以挑衅舞台设计和流行文化影响闻名。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Spanish Inquisition",
+      "zh": "西班牙宗教裁判所因严苛审讯闻名，英语里常被用来夸张形容逼问。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Big Bang",
+      "zh": "宇宙大爆炸理论解释宇宙起源，也是《生活大爆炸》剧名背后的科学梗。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Paul Bunyan",
+      "zh": "保罗·班扬是美国民间传说中的巨人伐木工，象征夸张的拓荒神话。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Look Who's Talking",
+      "zh": "1989年喜剧片《看谁在说话》，以婴儿内心旁白为卖点，90年代很流行。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "LOST",
+      "zh": "《迷失》是美国悬疑剧，以荒岛、闪回和复杂谜团带动2000年代追剧热。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Looney Tunes",
+      "zh": "华纳经典动画系列《乐一通》，兔八哥、达菲鸭等角色广为人知。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "The Flintstones",
+      "zh": "《摩登原始人》是美国经典动画，把郊区家庭喜剧搬到石器时代。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Flintstones",
+      "zh": "《摩登原始人》的简称，把现代郊区家庭喜剧搬到石器时代，美国观众很熟悉。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:39:48"
+    },
+    {
+      "term": "Red Vines",
+      "zh": "Red Vines是美国红色甘草糖品牌，常出现在电影院、便利店和怀旧零食语境里。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:39:48"
+    },
+    {
+      "term": "BEETEJUICE",
+      "zh": "应指《阴间大法师》Beetlejuice，蒂姆·伯顿的怪诞喜剧电影，造型和台词很经典。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:39:48"
+    },
+    {
+      "term": "Beetlejuice",
+      "zh": "《阴间大法师》是蒂姆·伯顿1988年的怪诞喜剧电影，角色造型很有辨识度。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Lone Star",
+      "zh": "孤星是得州别称，也是一种得州啤酒名，常带有本地自豪感。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "THE LONE STAR",
+      "zh": "孤星州是得克萨斯的别称，来自州旗上的单颗星，常象征得州身份。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Basic Instinct",
+      "zh": "《本能》是1992年情色惊悚片，莎朗·斯通的审讯戏成为流行文化名场面。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Michael Douglas",
+      "zh": "迈克尔·道格拉斯是美国演员，常与80至90年代惊悚片和商业片相连。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "El Jefe Grande",
+      "zh": "西班牙语‘大老板’，在英语对白中常带戏谑的权威或黑帮口吻。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Richard Feynman",
+      "zh": "理查德·费曼是诺贝尔物理学家，以量子电动力学和风趣讲课风格闻名。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Fatal Attraction",
+      "zh": "《致命诱惑》是1987年惊悚片，常被用来指危险婚外情和纠缠失控的后果。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:39:48"
+    },
+    {
+      "term": "The Last Temptation of Christ",
+      "zh": "马丁·斯科塞斯执导的争议宗教电影，因重新想象耶稣人性而引发抗议。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "The Singing Nun",
+      "zh": "《修女传歌星》源自60年代唱片现象，修女歌手意外走红曾轰动一时。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Jesus Christ Superstar",
+      "zh": "《耶稣基督万世巨星》是摇滚音乐剧，用现代音乐重述耶稣受难故事。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Dirty Dancing",
+      "zh": "《辣身舞》是1987年爱情舞蹈片，‘没人能把Baby放角落’成为美国影迷熟悉台词。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:39:48"
+    },
+    {
+      "term": "Patrick Swayze",
+      "zh": "帕特里克·斯威兹因《辣身舞》《人鬼情未了》走红，兼具硬汉和浪漫形象。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "The Goonies",
+      "zh": "《七宝奇谋》是80年代冒险电影，孩子寻宝设定成为一代美国童年回忆。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Goonies",
+      "zh": "《七宝奇谋》的常用简称，代表80年代孩子冒险片和怀旧流行文化。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "PG-13",
+      "zh": "美国电影分级，建议13岁以下儿童需家长指导，常暗示内容比儿童片更刺激。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Little Mermaid",
+      "zh": "迪士尼动画《小美人鱼》开启90年代迪士尼复兴，音乐和公主形象影响很大。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:39:48"
+    },
+    {
+      "term": "Bill Gates",
+      "zh": "比尔·盖茨是微软联合创始人，90年代常被当作电脑天才和超级富豪象征。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Steve Jobs",
+      "zh": "史蒂夫·乔布斯是苹果联合创始人，代表个人电脑和消费电子创新神话。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "NASA",
+      "zh": "美国国家航空航天局，负责载人航天和太空探索，常象征高科技与宇宙梦想。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "John Candy",
+      "zh": "约翰·坎迪是加拿大喜剧演员，80至90年代美国喜剧片里的亲切胖大叔形象。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Pauly Shore",
+      "zh": "保利·肖尔是90年代美国喜剧演员，常代表夸张、傻气的青年喜剧风格。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Weight Watchers",
+      "zh": "美国减重互助品牌，靠积分饮食和小组支持闻名，常被用于节食笑话。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "LETHAL WEAPON",
+      "zh": "《致命武器》是经典警探动作片系列，搭档互怼和爆炸场面很有代表性。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Princess Bride",
+      "zh": "《公主新娘》是奇幻喜剧电影，台词和角色在美国粉丝中很受欢迎。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Breakfast Club",
+      "zh": "《早餐俱乐部》是80年代青春片经典，用一天留校展现不同学生群体。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Pretty in Pink",
+      "zh": "《红粉佳人》是80年代青春爱情片，带有阶层差异和校园恋爱主题。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "EXORCIST",
+      "zh": "《驱魔人》是1973年恐怖片经典，附身和驱魔形象影响了后世恐怖电影。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "The Smiths",
+      "zh": "英国独立摇滚乐队，莫里西的忧郁歌词和另类气质影响了很多青年文化。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Troy Aikman",
+      "zh": "特洛伊·艾克曼是达拉斯牛仔队名宿四分卫，90年代带队夺冠，是得州球迷熟脸。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:39:48"
+    },
+    {
+      "term": "Frank Miller",
+      "zh": "弗兰克·米勒是美国漫画作者，以《黑暗骑士归来》和黑色硬派风格闻名。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Dinosaurs",
+      "zh": "《恐龙家族》是90年代美国情景喜剧式木偶剧，用史前家庭讽刺现代生活。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "The Honeymooners",
+      "zh": "《蜜月夫妇》是50年代美国情景喜剧经典，影响了后来的家庭喜剧模式。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Dustin Hoffman",
+      "zh": "达斯汀·霍夫曼是美国演员，代表作包括《毕业生》《雨人》，以细腻表演著称。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "DARE",
+      "zh": "D.A.R.E.是美国校园禁毒教育项目，80至90年代常进学校宣讲，也常被影视调侃。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:39:48"
+    },
+    {
+      "term": "Mary Jane",
+      "zh": "Mary Jane是英语里大麻的俚称，在青少年、反毒教育或双关笑话中经常出现。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:39:48"
+    },
+    {
+      "term": "Gamma Kappa house",
+      "zh": "Gamma Kappa像大学兄弟会或姐妹会名称，常和美国校园社交组织文化有关。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "GAMMA KAPPA XI",
+      "zh": "Gamma Kappa Xi是希腊字母式学生社团名，带有美国大学兄弟会、派对和校园身份意味。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:39:48"
+    },
+    {
+      "term": "Luke Skywalker and Princess Leia",
+      "zh": "卢克和莱娅是《星球大战》核心角色，兄妹身份也常被拿来做关系笑点。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "World Wide Web",
+      "zh": "万维网是互联网网页系统，90年代被视为新科技浪潮的标志。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Maury Povich",
+      "zh": "莫里·波维奇是美国日间脱口秀主持人，亲子鉴定桥段尤其出名。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Fred Astaire",
+      "zh": "弗雷德·阿斯泰尔是好莱坞黄金时代舞王，以优雅踢踏舞和音乐片闻名。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Swing Time",
+      "zh": "《摇摆时光》是1936年阿斯泰尔主演音乐片，代表好莱坞经典歌舞片传统。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Gustaf Dalen",
+      "zh": "古斯塔夫·达伦是瑞典发明家，因航标灯相关发明获得诺贝尔物理学奖。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Beverly Hills, 90210",
+      "zh": "《飞越比佛利》是90年代青春剧经典，邮编90210也成了富裕青春生活象征。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Luke Perry",
+      "zh": "卢克·佩里因《飞越比佛利》走红，是90年代美国青少年偶像，形象带有叛逆帅哥感。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:39:48"
+    },
+    {
+      "term": "Carmen Miranda",
+      "zh": "卡门·米兰达是葡萄牙裔巴西歌舞明星，水果帽形象非常经典。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Jack Nicklaus",
+      "zh": "杰克·尼克劳斯是高尔夫传奇，被称为‘金熊’，大满贯成绩极突出。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Axl Rose",
+      "zh": "埃克索·罗斯是枪与玫瑰主唱，代表80至90年代硬摇滚的叛逆形象。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Nobel Prize",
+      "zh": "诺贝尔奖是国际顶级学术和和平奖项，在科学语境里常象征最高荣誉。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Point Break",
+      "zh": "《惊爆点》是1991年动作片，基努·里维斯主演，冲浪和卧底警探设定很经典。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Keanu Reeves",
+      "zh": "基努·里维斯是加拿大演员，因《黑客帝国》《疾速追杀》等成为流行文化人物。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Lionel MPC-era O-gauge",
+      "zh": "Lionel是美国经典火车模型品牌，O轨规格常见于收藏和怀旧玩具圈。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Professor Proton",
+      "zh": "质子教授是《生活大爆炸》和《小谢尔顿》里的虚构科学节目主持人。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Auf Wiedersehen",
+      "zh": "德语‘再见’，英语对白中使用时常带夸张的德国风味或戏谑语气。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Bart Simpson",
+      "zh": "巴特·辛普森是《辛普森一家》里的淘气男孩，90年代美国青少年反叛符号。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Dmitri Mendeleev",
+      "zh": "门捷列夫是俄国化学家，元素周期表奠基人，常出现在科学教育语境。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Pierre-Simon Laplace",
+      "zh": "拉普拉斯是法国数学家和天文学家，对概率论和天体力学影响深远。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Walker, Texas Ranger",
+      "zh": "《德州巡警》是查克·诺里斯主演动作剧，代表90年代硬派电视英雄。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Geez Louise!",
+      "zh": "美国委婉感叹语，用来表达惊讶或烦躁，比直接说脏话更温和。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Heidelberg Palace",
+      "zh": "海德堡宫是德国著名城堡遗迹，常与浪漫主义风景和大学城文化相连。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Schloss Schwetzingen",
+      "zh": "施韦青根宫是德国巴洛克宫殿，以花园、宫廷剧院和海德堡周边观光路线闻名。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:39:48"
+    },
+    {
+      "term": "Showcase Showdown",
+      "zh": "《价格猜猜猜》里的经典环节，参赛者转大轮盘争取进入最终展示赛。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Slim Jim",
+      "zh": "美国肉条零食品牌，广告风格夸张，常象征便利店式垃圾食品。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Calabi-Yau manifold",
+      "zh": "卡拉比-丘流形是弦理论常用的高维几何结构，属于硬核理论物理梗。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Julia Roberts and Lyle Lovett",
+      "zh": "朱莉娅·罗伯茨和莱尔·洛维特曾短暂结婚，90年代娱乐新闻关注度很高。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "WINDOWS NT SERVER",
+      "zh": "Windows NT Server是微软90年代服务器系统，带有早期企业网络和电脑房时代感。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:39:48"
+    },
+    {
+      "term": "MTV",
+      "zh": "MTV最初以音乐录影带频道走红，强烈影响80至90年代流行音乐和青年文化。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Methodists",
+      "zh": "卫理公会是基督教新教重要宗派，在美国南方和社区教会文化中很常见。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "IRS",
+      "zh": "美国国税局，负责联邦税务征收；在美剧里常代表查税、罚款和官僚压力。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Periodic Table of the Elements",
+      "zh": "元素周期表是化学基础工具，也常被理科角色当作知识炫耀点。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Raisin Bran",
+      "zh": "美国葡萄干麦片品牌，常被视为朴素、健康但不太酷的早餐选择。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Maxwell House",
+      "zh": "麦斯威尔是美国老牌咖啡品牌，广告语和家庭咖啡形象深入人心。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Times SquareT.M.",
+      "zh": "时代广场是纽约商业和剧院核心地标，霓虹广告和跨年倒计时尤其著名。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Grand Canyon",
+      "zh": "科罗拉多大峡谷是美国自然地标，常象征壮阔风景和公路旅行。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Dogs Playing Poker",
+      "zh": "《狗打扑克》是一组美国通俗画作，常被当作俗气客厅装饰的代表。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Vincent \"The Chin\" Gigante",
+      "zh": "文森特·‘下巴’·吉甘特是纽约黑帮头目，装疯躲避司法追查的故事很有名。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Donny Osmond",
+      "zh": "唐尼·奥斯蒙德是美国歌手和电视艺人，70年代少年偶像形象很强。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "TARDIS",
+      "zh": "TARDIS是《神秘博士》的蓝色电话亭时间机器，内部比外部大是经典设定。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Doctor Who",
+      "zh": "《神秘博士》是英国长寿科幻剧，主角会重生，粉丝文化非常庞大。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "MIT",
+      "zh": "麻省理工学院是美国顶尖理工大学，常被用来代表天才、工程和硬核科学。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Caltech",
+      "zh": "加州理工学院是美国顶尖理工院校，《生活大爆炸》的科学家角色就在此工作。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "California Institute of Technology",
+      "zh": "加州理工学院以物理和航天研究闻名，在科学剧中常象征顶级学术圈。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Stephen Hawking",
+      "zh": "史蒂芬·霍金是英国理论物理学家，以黑洞研究和科普作品闻名。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Professor Hawking",
+      "zh": "霍金教授是理论物理和科普文化的标志人物，常被理工角色崇拜。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "John Kennedy",
+      "zh": "约翰·肯尼迪是美国第35任总统，遇刺事件和60年代政治形象影响深远。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Franklin Roosevelt",
+      "zh": "富兰克林·罗斯福是美国第32任总统，领导新政并经历二战时期。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Ruth Bader Ginsburg",
+      "zh": "金斯伯格是美国最高法院大法官，因女权立场和文化偶像化形象广受关注。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Damn Yankees",
+      "zh": "《该死的洋基队》是棒球题材音乐剧，也可影射对纽约扬基队的调侃。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Henry Kendall",
+      "zh": "亨利·肯德尔是诺贝尔物理学奖得主，因深度非弹性散射研究获奖。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "University of Heidelberg",
+      "zh": "海德堡大学是德国历史悠久的名校，常与欧洲学术传统相连。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Texas Tech",
+      "zh": "得克萨斯理工大学是得州公立大学，体育和地方身份在得州语境里很明显。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Ricki Lake",
+      "zh": "瑞奇·莱克是美国演员和日间脱口秀主持人，90年代电视观众很熟悉。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Teddy Ruxpin",
+      "zh": "Teddy Ruxpin是80年代会讲故事的电子玩具熊，代表那代人的童年玩具记忆。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "New Testament / Old Testament",
+      "zh": "新约和旧约构成基督教《圣经》主要部分，常用于宗教或道德玩笑。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Dewey Decimal System",
+      "zh": "杜威十进分类法是图书馆常用分类系统，常被书呆子角色认真对待。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Ace Ventura: Pet Detective",
+      "zh": "《神探飞机头》是金·凯瑞主演喜剧片，以夸张肢体表演和怪诞笑点闻名。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Ed Witten",
+      "zh": "爱德华·威滕是著名理论物理学家，弦理论和数学物理领域影响巨大。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Dr Pepper",
+      "zh": "胡椒博士是美国老牌碳酸饮料，味道独特，在南方和校园文化里很常见。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Pepto Bismol",
+      "zh": "美国常见胃药品牌，粉红色药液很有辨识度，常用于恶心或消化不良笑点。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "BENGAY",
+      "zh": "Bengay是美国止痛膏品牌，常和运动拉伤、老年酸痛的气味笑话相连。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "SHAKESPEARE AND COMPANY",
+      "zh": "莎士比亚书店是巴黎著名英文书店，常与文学朝圣和流亡作家传统相连。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "San Diego Comic-Con",
+      "zh": "圣迭戈动漫展是美国最大流行文化展会之一，影视、漫画和粉丝活动集中登场。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Six Flags",
+      "zh": "六旗是美国连锁主题公园品牌，过山车和家庭出游形象很典型。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Moose Lodge",
+      "zh": "Moose Lodge是美国兄弟会式社区俱乐部，常见于小镇社交和慈善活动。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Sour Patch Kid",
+      "zh": "Sour Patch Kids是美国酸甜软糖品牌，‘先酸后甜’广告语让它成为儿童零食代表。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:39:48"
+    },
+    {
+      "term": "FBI",
+      "zh": "美国联邦调查局，负责联邦犯罪调查；在剧中常象征严肃执法和特工形象。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "IBM ThinkPad",
+      "zh": "ThinkPad是IBM推出的经典笔记本电脑系列，90年代商务和技术人员标配感很强。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "HANS BETHE",
+      "zh": "汉斯·贝特是诺贝尔物理学家，参与曼哈顿计划并解释恒星能量来源。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Jurassic Park",
+      "zh": "《侏罗纪公园》是斯皮尔伯格科幻冒险片，恐龙特效和主题公园设定影响巨大。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Gina Lollobrigida",
+      "zh": "吉娜·劳洛勃丽吉达是意大利影星，50年代欧洲银幕美人代表。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Bob Barker",
+      "zh": "鲍勃·巴克是《价格猜猜猜》长期主持人，美国电视游戏节目代表人物。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Super Bowl",
+      "zh": "超级碗是NFL年度冠军赛，也是美国广告、派对和流行文化盛事。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "BEETHOVEN",
+      "zh": "贝多芬是德国古典音乐作曲家，作品常代表严肃音乐和天才形象。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Becthoven Eroica Mvt. 2 Reduction",
+      "zh": "应指贝多芬《英雄交响曲》第二乐章改编，常带古典音乐课堂语境。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Tony Danza",
+      "zh": "托尼·丹扎是美国演员，因情景喜剧《谁是老板》成为80年代电视熟脸。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Take Me Out To The Ball Game",
+      "zh": "《带我去看棒球赛》是美国棒球场经典合唱曲，常在第七局伸展时唱。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Hit the Road Jack",
+      "zh": "雷·查尔斯经典歌曲《Hit the Road Jack》，标题也常被当作‘快走吧、别回来’的俏皮说法。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:39:48"
+    },
+    {
+      "term": "Tom Selleck",
+      "zh": "汤姆·塞立克是美国演员，以《夏威夷神探》和标志性胡子形象闻名。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Rodeo Drive",
+      "zh": "罗迪欧大道是比佛利山庄奢侈品购物街，象征好莱坞式富贵消费。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "First Corinthians",
+      "zh": "《哥林多前书》是《新约》书卷，其中关于爱的章节常在婚礼和道德讨论中被引用。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:39:48"
+    },
+    {
+      "term": "First Timothy",
+      "zh": "《提摩太前书》是《新约》书卷，常涉及教会秩序和信徒行为规范。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Kentucky Derby",
+      "zh": "肯塔基德比是美国著名赛马赛事，以大帽子、薄荷酒和南方社交传统闻名。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Catholic Church",
+      "zh": "天主教会是基督教最大宗派之一，在美国文化里常与学校、忏悔和仪式相连。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Little Orphan Annie",
+      "zh": "孤女安妮是美国漫画和音乐剧角色，红发、乐观和孤儿院故事很有辨识度。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Hard-Knock Life",
+      "zh": "《Hard-Knock Life》是音乐剧《安妮》名曲，歌词把孤儿院生活唱成夸张的艰苦日子。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:39:48"
+    },
+    {
+      "term": "Murder, She Wrote",
+      "zh": "《女作家与谋杀案》是美国长寿悬疑剧，主角靠业余侦探能力破案。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Leonids",
+      "zh": "狮子座流星雨是周期性天文现象，流星数量高时会成为观测热点。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Chihuahuan Desert",
+      "zh": "奇瓦瓦沙漠横跨美国西南和墨西哥北部，是北美重要荒漠地貌。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "The Bully Pulpit",
+      "zh": "‘bully pulpit’指总统职位的话语影响力，也是一部罗斯福时代政治书名。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Duke University",
+      "zh": "杜克大学是美国顶尖私立大学，篮球传统强，在南方教育语境里很知名。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Yasmine Bleeth",
+      "zh": "雅丝敏·布里兹因《海滩救护队》走红，是90年代电视性感偶像之一。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Jim Carrey",
+      "zh": "金·凯瑞是加拿大裔喜剧明星，以夸张表情和肢体喜剧风格闻名。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Stephen King",
+      "zh": "斯蒂芬·金是美国恐怖小说大师，作品大量改编影视，几乎成了现代恐怖故事代名词。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:39:48"
+    },
+    {
+      "term": "Shawshank Redemption",
+      "zh": "《肖申克的救赎》是斯蒂芬·金小说改编电影，常被视为影迷经典。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Rocky",
+      "zh": "《洛奇》是史泰龙主演拳击电影系列，代表小人物逆袭和励志训练蒙太奇。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Pearl Jam",
+      "zh": "珍珠果酱是西雅图垃圾摇滚代表乐队，90年代另类摇滚文化核心之一。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Charles Manson",
+      "zh": "查尔斯·曼森是美国臭名昭著的邪教头目，其案件震动60年代末美国社会。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "This Little Light of Mine",
+      "zh": "美国传统福音歌曲，常与民权运动、教会合唱和鼓舞人心的场景相连。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "DMV",
+      "zh": "美国机动车管理部门，因排队和办事慢常成为官僚低效笑话。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "UPS",
+      "zh": "美国联合包裹服务公司，棕色制服和快递车形象很有辨识度。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "AARP",
+      "zh": "美国退休人员协会，面向50岁以上人群，常被用来调侃年龄增长。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Spare the rod, spoil the child",
+      "zh": "英语谚语源自宗教化教育观，意为不管教孩子就会宠坏孩子。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Satan Barbie",
+      "zh": "把人称作‘撒旦芭比’是在讽刺外表甜美却气场邪恶或难缠。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "AOL disc",
+      "zh": "美国在线早年大量邮寄上网光盘，成为90年代互联网启蒙和垃圾邮件式营销记忆。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "The Simpsons",
+      "zh": "《辛普森一家》是美国长寿动画，以讽刺家庭、政治和流行文化著称。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "MONKEES",
+      "zh": "The Monkees是60年代美国流行乐队和电视组合，带有早期偶像包装和轻喜剧色彩。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:39:48"
+    },
+    {
+      "term": "The Eagles",
+      "zh": "老鹰乐队是美国经典摇滚乐队，《Hotel California》让他们成为70年代西海岸摇滚标志。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:39:48"
+    },
+    {
+      "term": "Alcoholics Anonymous",
+      "zh": "匿名戒酒会是国际互助组织，成员以十二步法戒酒，常简称AA。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "THE AMERICAN DREAM",
+      "zh": "美国梦指靠努力实现阶层跃升和个人成功，常被影视作品赞美或讽刺。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "HOLY BIBLE",
+      "zh": "《圣经》是基督教核心经典，美国南方家庭和教会语境中常被引用。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Beanie Babies",
+      "zh": "Beanie Babies是90年代流行毛绒玩具，曾引发收藏炒作热潮，后来也成泡沫笑谈。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:39:48"
+    },
+    {
+      "term": "Dr. Demento",
+      "zh": "Dr. Demento是美国怪歌和讽刺歌曲电台主持人，捧红过‘怪艾尔’，代表另类广播趣味。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:39:48"
+    },
+    {
+      "term": "Axolotl",
+      "zh": "墨西哥钝口螈以再生能力闻名，常在生物学或怪奇科学语境中出现。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Weird Al",
+      "zh": "‘怪艾尔’扬科维奇是美国恶搞歌曲大师，专门改编流行金曲做 parody，喜剧辨识度很高。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:39:48"
+    },
+    {
+      "term": "St. Louis Arch",
+      "zh": "圣路易斯拱门是美国中西部地标，象征向西部拓荒的门户。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Mount Rushmore",
+      "zh": "拉什莫尔山总统雕像刻有四位美国总统头像，是美国政治地标。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Frank Zappa's album The Grand Wazoo",
+      "zh": "《The Grand Wazoo》是弗兰克·扎帕爵士摇滚专辑，名字怪诞，符合他先锋幽默风格。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:39:48"
+    },
+    {
+      "term": "The Grand Wazoo",
+      "zh": "The Grand Wazoo是弗兰克·扎帕专辑名，也像夸张头衔，带有他爵士摇滚式的荒诞幽默感。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:40:45"
+    },
+    {
+      "term": "Baptist Sunday school",
+      "zh": "浸礼会主日学校是教会儿童和青少年宗教教育活动，美国南方尤其常见。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Sunday school",
+      "zh": "主日学校是基督教会周日宗教教育，常与儿童背经文和教会生活相连。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Bon Jovi",
+      "zh": "邦·乔维是美国摇滚乐队，以体育场摇滚和《Livin' on a Prayer》闻名，80年代气质很强。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:39:48"
+    },
+    {
+      "term": "Rodney Dangerfield in Caddyshack",
+      "zh": "罗德尼·丹杰菲尔德在《高尔夫球也疯狂》中饰演粗鲁暴发户，是经典喜剧形象。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Happy Gilmore",
+      "zh": "《高尔夫球也疯狂》是亚当·桑德勒喜剧，主角把冰球脾气带进高尔夫。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Arnold Palmer",
+      "zh": "阿诺德·帕尔默是高尔夫传奇；同名饮料由冰茶和柠檬水混合而成。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Shirley Temple",
+      "zh": "秀兰·邓波儿是美国童星；同名无酒精鸡尾酒常给孩子点，带有甜美怀旧感。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:39:48"
+    },
+    {
+      "term": "Lucky Charms",
+      "zh": "Lucky Charms是美国儿童早餐麦片，以彩色棉花糖和小精灵广告形象闻名。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Golden Grahams",
+      "zh": "Golden Grahams是美国早餐麦片，蜂蜜全麦方块口味，常和儿童早餐、甜麦片文化相连。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:39:48"
+    },
+    {
+      "term": "Benjamin Franklin",
+      "zh": "本杰明·富兰克林是美国开国元勋之一，也是百元美钞头像人物。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Doogie Howser",
+      "zh": "《天才小医生》主角是少年医生，常用来调侃年纪小却专业得过分的人。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "bimbo",
+      "zh": "Bimbo是英语贬义词，指外表性感但被认为头脑空空的女性，语气冒犯。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Nancy Kerrigan and Tonya Harding",
+      "zh": "两位美国花滑选手因1994年袭击丑闻闻名，成为体育八卦和竞争黑幕代名词。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "The Hoff",
+      "zh": "The Hoff是大卫·哈塞尔霍夫昵称，带有《海滩救护队》和80年代电视偶像色彩。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "What Would Jesus Do?",
+      "zh": "‘耶稣会怎么做’是美国基督徒常用道德提醒，90年代手环文化很流行。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Knight Rider",
+      "zh": "《霹雳游侠》是80年代科幻动作剧，主角和会说话的智能跑车KITT搭档。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "NSA",
+      "zh": "美国国家安全局，负责信号情报和网络安全，常和监听、秘密机构笑话相连。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "GATSBY",
+      "zh": "盖茨比是《了不起的盖茨比》主角，常象征财富幻梦和美国梦破灭。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "HAMLET ACT4, 5c.4",
+      "zh": "指莎士比亚《哈姆雷特》第四幕相关段落，常出现在文学课堂或戏剧排练里。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "IAMBIC PENTAMETER",
+      "zh": "抑扬五步格是英语诗歌常见格律，莎士比亚作品大量使用。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "TINKERTOY",
+      "zh": "Tinkertoy是美国经典拼装玩具，木棍和圆盘结构常被视作老式儿童工程玩具。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:39:48"
+    },
+    {
+      "term": "Meson Octet (Pseudoscalars)",
+      "zh": "赝标量介子八重态是粒子物理分类，属于很专业的高能物理知识。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Baryon Decuplet (5=3/2)",
+      "zh": "重子十重态是粒子物理分类，和夸克模型及自旋量子数有关。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "HURRICANE JERRY",
+      "zh": "杰里飓风是美国命名风暴名，用在得州语境中常带天气灾害记忆。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "THE NEW YORK TIMES BESTSELLER",
+      "zh": "《纽约时报》畅销书榜是美国出版业重要营销标签，常被书封大字标出。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "The Drake equation",
+      "zh": "德雷克方程用于估算银河系中可通信文明数量，是搜寻外星智慧的经典公式。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "George Herbert Walker Bush",
+      "zh": "乔治·赫伯特·沃克·布什是美国第41任总统，也曾任副总统和中央情报局局长。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Socrates",
+      "zh": "苏格拉底是古希腊哲学家，以提问式辩论和被雅典处死的故事闻名。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Winston Churchill",
+      "zh": "丘吉尔是英国二战首相，以演说、顽强抗战形象和诺贝尔文学奖闻名。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "New York Yankees",
+      "zh": "纽约扬基队是美国职棒豪门，冠军众多，也常被非纽约球迷调侃。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "SUPERNOVA",
+      "zh": "超新星是恒星爆炸现象，在科幻和天文学语境中常象征巨大能量。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "CALVIN CYCLE",
+      "zh": "卡尔文循环是光合作用中固定二氧化碳的化学过程，属于生物课知识点。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "PHOTOSYNTHESIS",
+      "zh": "光合作用是植物利用光能制造有机物的过程，常见于基础科学课堂。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Nelson Mandela",
+      "zh": "曼德拉是南非反种族隔离领袖和前总统，象征自由、和解与长期抗争。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "FREE RADICALS",
+      "zh": "自由基是活性很高的分子或原子团，常见于化学、生物和保健品话术。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "THE CODFATHER MarTO PuZO",
+      "zh": "应指马里奥·普佐《教父》，黑帮家族叙事是美国流行文化经典。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "WWE",
+      "zh": "世界摔角娱乐是美国职业摔角联盟，表演性强，兼具体育和肥皂剧剧情。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "CRAPS",
+      "zh": "Craps是赌场掷骰子游戏，规则热闹复杂，常见于拉斯维加斯场景。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Froot Loops",
+      "zh": "Froot Loops是美国彩色水果味麦片，广告吉祥物和儿童早餐形象很强。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Henry Kendall, Jerome Friedman",
+      "zh": "肯德尔和弗里德曼因夸克结构相关实验获诺贝尔物理学奖。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Richard Taylor",
+      "zh": "理查德·泰勒因证明质子和中子内部结构的实验获得诺贝尔物理学奖。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "quarks",
+      "zh": "夸克是构成质子和中子的基本粒子，是粒子物理核心概念。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "LITTLE HOUSE",
+      "zh": "《草原小屋》是美国儿童文学和电视剧经典，代表拓荒家庭生活想象。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Nikola Tesla",
+      "zh": "尼古拉·特斯拉是发明家和电气工程师，交流电系统让他成为科技传奇人物。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Phobic Neurosis",
+      "zh": "恐惧性神经症是旧式心理学术语，指以特定恐惧和回避为主的焦虑障碍。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "ouija board",
+      "zh": "通灵板是一种字母板占卜工具，在美国恐怖片和青少年灵异游戏中常见。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "OUIJA",
+      "zh": "Ouija是通灵板品牌名，常被当作召唤灵魂的道具，在美国恐怖片和青少年灵异游戏中常见。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:39:48"
+    },
+    {
+      "term": "TOLSTOY",
+      "zh": "托尔斯泰是俄国文学巨匠，代表作《战争与和平》《安娜·卡列尼娜》篇幅宏大。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "INDICA",
+      "zh": "Indica指印度大麻品系，流行文化里常和放松、嗜睡效果联系在一起。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "MORSE CODE",
+      "zh": "摩尔斯电码用点划组合传递字母，是电报时代经典通信方式。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Nolan Ryan",
+      "zh": "诺兰·莱恩是美国职棒传奇投手，以超快球和三振纪录闻名。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "James Bond",
+      "zh": "詹姆斯·邦德是英国特工电影主角，代表西装、间谍装备和花花公子式冒险。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Boy George",
+      "zh": "Boy George是英国歌手，因文化俱乐部乐队和雌雄莫辨造型成为80年代流行偶像。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Trapper Keeper",
+      "zh": "Trapper Keeper是美国学生常用活页夹品牌，彩色封面和魔术贴设计有很强90年代校园记忆。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:39:48"
+    },
+    {
+      "term": "Beastie Boys",
+      "zh": "野兽男孩是美国嘻哈组合，把朋克和说唱融合进主流青年文化。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Chemical Magic·Invisible Inks",
+      "zh": "‘化学魔术：隐形墨水’像儿童科学实验主题，常用于展示酸碱或氧化还原反应。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "David Hasselhoff",
+      "zh": "大卫·哈塞尔霍夫因《霹雳游侠》《海滩救护队》走红，也是德国流行文化奇观。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "George Michael",
+      "zh": "乔治·迈克尔是英国流行歌手，曾属Wham!，个人作品兼具偶像和灵魂乐气质。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "The Powers of Ten",
+      "zh": "《十的次方》是经典科普短片，通过尺度缩放展示宇宙和微观世界。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "PBS",
+      "zh": "美国公共电视网，以教育、纪录片和儿童节目闻名，常带公共文化气质。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "New Orleans",
+      "zh": "新奥尔良以爵士乐、克里奥尔饮食和狂欢节闻名，是美国南方文化重镇。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "sweat lodges",
+      "zh": "蒸汗屋是部分美洲原住民传统净化仪式场所，涉及祈祷和群体疗愈。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "whirling dervishes",
+      "zh": "旋转托钵僧是苏菲派宗教舞蹈修行者，通过旋转进入冥想状态。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Nancy Reagan",
+      "zh": "南希·里根是美国前第一夫人，‘Just Say No’反毒品运动让她和80年代禁毒宣传紧密相连。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:39:48"
+    },
+    {
+      "term": "TED",
+      "zh": "TED演讲以科技、娱乐和设计主题闻名，短演讲形式常被视作精英科普舞台。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "THOTH",
+      "zh": "托特是古埃及智慧、书写和知识之神，常和文字、魔法及学问相连。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Cindy Crawford",
+      "zh": "辛迪·克劳馥是90年代超级名模，脸上的美人痣是标志性特征。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "Jessica Rabbit",
+      "zh": "杰西卡兔是《谁陷害了兔子罗杰》的动画角色，夸张性感形象很有名。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260707-v1",
+      "reviewed_at": "2026-07-07 18:37:35"
+    },
+    {
+      "term": "BBC",
+      "zh": "英国广播公司，英国国家公共广播机构，全球最具影响力的新闻媒体之一。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "BEN-HUR",
+      "zh": "《宾虚》，1959年史诗电影，改编自华莱士小说，讲述犹太王子复仇，曾获11项奥斯卡奖，影史经典。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "Andy Rooney",
+      "zh": "安迪·鲁尼，美国 CBS《60分钟》资深评论员，以幽默犀利地点评日常琐事与社会现象闻名。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "60 minutes",
+      "zh": "美国哥伦比亚广播公司（CBS）老牌新闻调查节目，1968年开播，以深度专访和调查报道著称。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "Michael Jackson",
+      "zh": "迈克尔·杰克逊，美国流行乐巨星，被誉为“流行音乐之王”，以《Thriller》等专辑和标志性舞步风靡全球。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "Judas",
+      "zh": "犹大，《圣经》中为三十枚银币出卖耶稣的使徒，西方文化里背叛与叛徒的代名词。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "The Bible",
+      "zh": "《圣经》，基督教根本经典，分《旧约》《新约》，是西方文化、律法与文学的重要根源。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "OLD TESTAMENT",
+      "zh": "《旧约》，《圣经》前半部分，记载创世、律法与犹太民族历史，是犹太教与基督教的共同经典。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "NOAH",
+      "zh": "诺亚，《圣经》中洪水传说的先知，奉神命建造方舟，拯救家人与各种动物免于灭世洪水，是犹太教、基督教、伊斯兰教共有的重要人物。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "ABRAHAM",
+      "zh": "亚伯拉罕，犹太教、基督教和伊斯兰教共同尊崇的人物，常被视为三教共同源头与信仰象征。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "HE HATTH RISEN!",
+      "zh": "应为基督教常用复活节颂词He hath risen，意为耶稣已复活，是纪念基督复活的核心表达。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "PSALMS&PROVERBS",
+      "zh": "指《圣经》中的《诗篇》和《箴言》，前者多为赞美与祈祷诗歌，后者以劝诫和智慧格言著称。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "JESUS",
+      "zh": "耶稣，基督教核心人物，被信徒视为上帝之子与救世主；英语感叹中也常借其名表达震惊或无奈。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "Max Planck",
+      "zh": "马克斯·普朗克，德国物理学家，量子论奠基人之一，提出能量量子化概念，获1918年诺贝尔物理学奖。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "CHEVROLET",
+      "zh": "雪佛兰是通用汽车旗下美国汽车品牌，常被视为美式大众车型代表，字幕中出现多半是在交代品牌偏好或车辆阶层感。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "AMERICAS PASTIME",
+      "zh": "美国常用说法，直译为“美国的消遣”，通常特指棒球，强调其长期被视为最具代表性的国民运动。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "PROUD TO BE AMERICAN",
+      "zh": "美国常见的爱国表达，意为“以身为美国人自豪”，常见于歌曲、政治宣传和公共庆典语境。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "RAND MCNALLY",
+      "zh": "兰德麦克纳利，美国老牌地图与旅行指南出版商，在美国文化里常作为公路旅行、纸质地图和路线规划的代表。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "Peter Pan ride at Disneyland",
+      "zh": "迪士尼乐园经典项目“彼得潘天空之旅”，以《彼得潘》故事为主题，常被视为园内代表性怀旧游乐设施。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "TVB",
+      "zh": "TVB是香港电视广播有限公司简称，香港最具影响力的商业电视台之一，以粤语电视剧和综艺节目闻名。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "Mary Magdalene",
+      "zh": "抹大拉的马利亚，《圣经》中追随耶稣的重要女性门徒，见证其受难与复活，在基督教传统和后世文艺作品中常被反复诠释。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "the Montana Jordan",
+      "zh": "蒙塔纳·乔丹，美国演员，因出演《小谢尔顿》中的乔治“乔吉”·库珀而被观众熟知。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "BRASCIOLE",
+      "zh": "Braciole，意大利家常卷肉菜，常把薄切牛肉卷入香草、奶酪或面包屑慢炖，在家庭聚餐场景里很常见。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "First Baptist Church of Medford",
+      "zh": "“梅德福德第一浸信会教堂”，美国马萨诸塞州梅德福德的基督教浸信会教堂，属当地历史性宗教机构。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "BIBLE STUDY",
+      "zh": "查经班，基督徒以研读和讨论《圣经》来学习教义、交流信仰体验的常见宗教活动。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "WORSHIP SERVICE",
+      "zh": "基督教会的礼拜聚会，通常包括祈祷、唱诗、读经和讲道，在宗教场景中常用来交代信仰背景。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "EINSTEIN'S LEGACY",
+      "zh": "指爱因斯坦留下的科学遗产，主要包括相对论等对现代物理学影响深远的理论与思想。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "Star Trek: Next Generation",
+      "zh": "《星际迷航：下一代》是1987年开播的经典美剧，延续《星际迷航》宇宙设定，在英语影视中常被当作科幻文化符号引用。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "Beau Bridges",
+      "zh": "博·布里奇斯，美国资深演员导演，出身演员世家，杰夫·布里吉斯之兄，曾获艾美奖与金球奖。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "FBD - Freebody diagram",
+      "zh": "FBD 指自由体图，是力学中把物体单独画出并标明各受力方向与大小的分析方法，常用于物理教学和工程计算。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "Antonie Van Leeuwenhoek",
+      "zh": "安东尼·范·列文虎克，17世纪荷兰科学家，率先用自制显微镜观察到细菌和原生动物，常被视为微生物学先驱。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "Carl Sagan",
+      "zh": "卡尔·萨根，美国天文学家与科普作家，主持纪录片《宇宙》，以深入浅出的科学传播影响深远。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "When It Rains, It Pours",
+      "zh": "英语常用谚语，字面为一下雨就是倾盆大雨，多指倒霉事或麻烦不会单独来，往往接二连三地发生。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "Richard Simmons",
+      "zh": "理查德·西蒙斯是美国知名健身教练和电视名人，以夸张热情的有氧健身节目与减肥励志形象在美国流行文化中广为人知。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "Bob Ross",
+      "zh": "鲍勃·罗斯是美国电视画家，主持《绘画的乐趣》以温和口吻现场作画闻名，常被用来指代轻松治愈的绘画教学风格。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "Oxford English Dictionary",
+      "zh": "《牛津英语词典》常简称OED，牛津大学出版社编纂的权威英语历史词典，以追溯词源和用法演变著称。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "Bee Gees",
+      "zh": "比吉斯乐队，活跃于20世纪60至70年代的著名流行乐组合，以高辨识度和声与《周末夜狂热》原声歌曲闻名。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "bell-bottoms",
+      "zh": "喇叭裤，裤脚从膝下向外张开，60至70年代欧美流行服饰，常与嬉皮士、迪斯科等复古文化联系在一起。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "Studio 54",
+      "zh": "纽约传奇夜店“54俱乐部”，1970年代美国名流、艺术家与流行文化圈的标志性社交场所，常用来指代纸醉金迷的迪斯科时代。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "Beverly Hills",
+      "zh": "比弗利山庄是洛杉矶著名富人区，以豪宅、名流和奢华消费闻名，在影视里常被当作财富与上流生活的象征。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "PRAYER WALL",
+      "zh": "祈祷墙常见于教堂、圣地或活动现场，供人写下祈愿、忏悔或代祷内容，体现基督宗教中的公共祈祷文化。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "HAPPY HOUR",
+      "zh": "Happy Hour指酒吧或餐厅的限时优惠时段，酒水小食常降价，在欧美社交和下班聚会场景中很常见。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "First Baptist",
+      "zh": "“第一浸信会”是美国常见的浸信会教堂名称，常见于地名或教会名中，能提示角色所处的基督教社群背景。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "Mary Kay",
+      "zh": "玫琳凯，美国化妆品直销品牌，以粉色凯迪拉克奖励制度和女性销售网络闻名。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "trouble with tribbles",
+      "zh": "《星际迷航》经典集特里布尔烦恼，讲企业号遭遇会疯狂繁殖的毛球生物，是该系列最知名喜剧篇章之一。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "William Shatner",
+      "zh": "威廉·夏特纳，加拿大演员，因在经典科幻剧《星际迷航》中饰演柯克舰长而成为流行文化代表人物。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "lost in space",
+      "zh": "《迷失太空》是1965年开播的美国经典科幻剧，讲鲁滨逊一家在太空遇险流浪，属早期太空冒险代表作。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "Star Trek: Next Gen",
+      "zh": "通常指美剧《星际迷航：下一代》，1987年开播的经典科幻剧，是《星际迷航》系列影响力极大的续作。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "THE LONE STAR STATE",
+      "zh": "孤星之州是美国得克萨斯州的著名别称，源于州旗上的单星，常用来强调其独立历史与强烈的地方认同。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "MUSIC TELEVISION",
+      "zh": "即MTV，美国以播放音乐录像带起家的电视品牌，曾深刻影响流行音乐、青年文化与真人秀电视的发展。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "COMIC BOOK CONVENTION",
+      "zh": "漫画展会，指漫画迷、创作者与出版商聚集交流的大型活动，常有新作发布、签售、周边贩售与角色扮演。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "DC SUPER-STARS",
+      "zh": "指美国DC漫画旗下的经典超级英雄群体，如超人、蝙蝠侠、神奇女侠等，是全球流行文化中的标志性漫画与影视IP。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "TITANS",
+      "zh": "指DC漫画的“泰坦”超级英雄团队，常与“少年泰坦”相关，核心成员包括夜翼等角色。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "AQUAMAN",
+      "zh": "海王，DC漫画超级英雄，亚特兰蒂斯王者，能操控海洋并与海洋生物沟通，中文观众通常也直接称其为“海王”。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "SCOUSE",
+      "zh": "Scouse指利物浦地区英语口音与方言，在英国流行文化和足球语境中辨识度很高，常用来强调当地身份。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "David Copperfield",
+      "zh": "大卫·科波菲尔，美国著名魔术师，以自由女神像消失等大型幻术表演闻名，曾长期活跃于电视特别节目与拉斯维加斯舞台。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "James Tiberius Kirk",
+      "zh": "詹姆斯·T·柯克，《星际迷航》初代企业号舰长，欧美流行文化中极具代表性的科幻角色之一。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "IBM Watson research center",
+      "zh": "IBM沃森研究中心是其重要科研机构，以人工智能、超级计算和计算机科学研究闻名。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 11:39:53"
+    },
+    {
+      "term": "HIIT",
+      "zh": "HIIT指高强度间歇训练，以短时冲刺和休息交替进行，是近年很流行的高效健身方式。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 11:39:53"
+    },
+    {
+      "term": "NCC-1701",
+      "zh": "NCC-1701是星际迷航初代企业号星舰注册编号，对粉丝来说是极具代表性的系列标志。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 11:39:53"
+    },
+    {
+      "term": "Random House",
+      "zh": "兰登书屋是美国老牌大型出版社，出版过大量文学名著与畅销书，在英语出版界影响很大。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 11:39:53"
+    },
+    {
+      "term": "jazz funeral",
+      "zh": "爵士葬礼是新奥尔良著名传统，送葬队伍会以爵士乐演奏，在哀悼中融入庆祝生命的意味。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 11:39:53"
+    },
+    {
+      "term": "AAA card",
+      "zh": "AAA卡指美国汽车协会会员卡，可提供道路救援、拖车和旅行服务，在美国公路文化中很常见。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 11:39:53"
+    },
+    {
+      "term": "AAA triptik",
+      "zh": "Triptik是美国汽车协会过去常发的纸本路线规划手册，导航普及前很多自驾游客都会依赖它。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 11:39:53"
+    },
+    {
+      "term": "Ronald McDonald",
+      "zh": "麦当劳叔叔是麦当劳长期使用的小丑形象吉祥物，过去常出现在儿童广告和品牌宣传活动中。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 11:39:53"
+    },
+    {
+      "term": "Radio Shack",
+      "zh": "RadioShack是美国老牌电子产品连锁店，曾是买电池、线材和DIY电子零件的代表性门店。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 11:39:53"
+    },
+    {
+      "term": "CHINESE CHECKERS",
+      "zh": "中国跳棋是一种多人棋类游戏，其实起源于欧洲，并非中国传统棋，英文名常让人误会。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 11:39:53"
+    },
+    {
+      "term": "CANTINA",
+      "zh": "cantina在西语语境里常指酒馆或小餐馆，在美国影视中也常带有边境地区或拉美风情意味。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 11:39:53"
+    },
+    {
+      "term": "UT AUSTIN",
+      "zh": "UT Austin指得州大学奥斯汀分校，是美国知名公立大学，工程、计算机和理科实力尤其突出。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 11:39:53"
+    },
+    {
+      "term": "IN DE SITTER SPACE",
+      "zh": "德西特空间是广义相对论中的一种时空模型，常用于讨论宇宙膨胀、宇宙学常数等理论问题。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 11:39:53"
+    },
+    {
+      "term": "QUANTUM GRAVITY",
+      "zh": "量子引力是试图统一量子力学与引力理论的前沿课题，涉及黑洞和宇宙起源等根本问题。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 11:39:53"
+    },
+    {
+      "term": "ETON",
+      "zh": "伊顿公学，英国顶尖寄宿男校，常被视为上流社会与政商精英教育的象征。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "Isaac Asimov",
+      "zh": "艾萨克·阿西莫夫，美国科幻大师，以“机器人三定律”和《基地》系列闻名。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "TETRIS",
+      "zh": "《俄罗斯方块》：1984年苏联诞生的经典益智游戏，全球流行，是电子游戏史标志作品。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "OILERS",
+      "zh": "休斯敦油人队，原NFL球队，1990年代迁至田纳西，后来改名田纳西泰坦队。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "Leonard Nimoy",
+      "zh": "伦纳德·尼莫伊，美国演员，因在《星际迷航》中饰演斯波克成为科幻文化标志。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "Rick James",
+      "zh": "里克·詹姆斯，美国放克与灵魂乐歌手，代表作《Super Freak》，形象张扬，常被流行文化引用。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "DEA",
+      "zh": "美国缉毒局，隶属美国司法部，专责打击毒品犯罪和跨境贩毒。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "ASTOR",
+      "zh": "阿斯特家族是美国显赫富豪家族，19世纪靠地产和皮草贸易崛起，常象征纽约上流社会。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "codex-config",
+      "reviewed_at": "2026-07-09 10:52:01"
+    }
+  ],
+  "review_prompt_version": "glossary-review-20260707-v1"
+}
