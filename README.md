@@ -1,95 +1,138 @@
-# Subtitle Workflow
+# Subtitle Forge
 
-Local subtitle production workflow for extracting, translating, rendering, and polishing bilingual TV subtitles.
+`subtitle-forge` 是一套用于生成中英双语 ASS 字幕的本地流水线。它可以从视频、内嵌字幕、外部单语字幕或已有双语 ASS 出发，完成音频转写、说话人分离、音乐/歌词识别、OCR 屏幕文字翻译、本地大模型翻译、文化注解、ASS 渲染，以及后端大模型最终调优。
 
-## Main Entry
+目标输出是可直接播放的中英双语 `.ass` 字幕。
 
-Run the full auto workflow from the subtitle/video directory:
+## 主入口
+
+在视频或字幕所在目录运行：
 
 ```powershell
 python .\run_all.py .
 ```
 
-The auto mode groups inputs by current subtitle state:
+自动流程会按素材状态分组：
 
-- videos with no embedded or external subtitles: Step 1 to Step 8, then Step 9
-- videos with embedded subtitles but no external subtitles: Step 0, then Step 6 to Step 8, then Step 9
-- videos with external monolingual subtitles: Step 6 to Step 8, then Step 9
-- existing bilingual ASS subtitles: Step 9 only
+- 没有内嵌字幕、也没有外部字幕的视频：跑 Step 1 到 Step 8，再跑 Step 9
+- 没有外部字幕、但有内嵌字幕的视频：先跑 Step 0 提取字幕，再跑 Step 6 到 Step 8，最后跑 Step 9
+- 已有外部单语字幕的视频：跑 Step 6 到 Step 8，再跑 Step 9
+- 已有双语 ASS 字幕：只跑 Step 9 调优
 
-Intermediate files are preserved by default. Step 10 cleanup is opt-in.
+默认保留中间文件。Step 10 清理缓存不会默认执行，需要显式调用。
 
-## Environment
+## 环境准备
 
-This workflow is Windows-first and expects PowerShell plus Python 3.10-style virtual environments.
+本项目优先面向 Windows + PowerShell。建议使用 Python 3.10 系列环境，并按不同工具拆分虚拟环境，因为 Demucs、WhisperX/pyannote、Whisper-AT、PaddleOCR 的依赖栈经常互相冲突。
 
-Required command-line tools:
+需要提前准备的命令行工具：
 
-- `ffmpeg.exe` and `ffprobe.exe`
-- `llama-server.exe` from llama.cpp, used by Step 7 for local Qwen translation
-- `whisper-server.exe` from whisper.cpp, used by Step 3 transcription
-- `codex.exe` or an OpenAI-compatible API key, used by Step 9 backend polish
+- `ffmpeg.exe` 和 `ffprobe.exe`
+- llama.cpp 的 `llama-server.exe`，用于 Step 7 本地 Qwen 翻译
+- whisper.cpp 的 `whisper-server.exe`，用于 Step 3 英文转写
+- `codex.exe`，或一个 OpenAI-compatible API，用于 Step 9 后端调优
 
-Default tool/model locations can be overridden with environment variables:
-
-```powershell
-$env:FFMPEG_DIR = "C:\ffmpeg\bin"
-$env:LLAMA_DIR = "C:\llama"
-$env:LLAMA_SERVER_EXE = "C:\llama\llama-server.exe"
-$env:WHISPER_SERVER_EXE = "C:\whisper.cpp\whisper-server.exe"
-```
-
-Python environments are intentionally split because Demucs, WhisperX/pyannote, Whisper-AT, and PaddleOCR often need different dependency stacks:
+工具路径可以通过环境变量指定。下面都使用 `X:` 作为示例盘符，请按自己的实际安装位置修改：
 
 ```powershell
-$env:SUB_PYTHON_EXE = "C:\Python\Python310\python.exe"
-$env:SUB_DEMUCS_SCRIPTS = "C:\Python\Python310\demucs\Scripts"
-$env:SUB_WHISPERX_SCRIPTS = "C:\Python\Python310\whisperx\Scripts"
-$env:SUB_WHISPER_AT_SCRIPTS = "C:\Python\Python310\whisper-at\Scripts"
-$env:SUB_PADDLEOCR_SCRIPTS = "C:\Python\Python310\paddleocr\Scripts"
+$env:FFMPEG_DIR = "X:\ffmpeg\bin"
+$env:LLAMA_DIR = "X:\llama"
+$env:LLAMA_SERVER_EXE = "X:\llama\llama-server.exe"
+$env:WHISPER_SERVER_EXE = "X:\whisper.cpp\whisper-server.exe"
 ```
 
-Cache locations:
+Python 环境示例：
 
 ```powershell
-$env:HF_HOME = "C:\Python\hf-cache"
-$env:HF_HUB_CACHE = "C:\Python\hf-cache\hub"
-$env:TORCH_HOME = "C:\Python\hf-cache\torch"
-$env:PIP_CACHE_DIR = "C:\Python\pip-cache"
-$env:PIP_FIND_LINKS = "C:\Python\wheel-cache"
+$env:SUB_PYTHON_EXE = "X:\Python\Python310\python.exe"
+$env:SUB_DEMUCS_SCRIPTS = "X:\Python\Python310\demucs\Scripts"
+$env:SUB_WHISPERX_SCRIPTS = "X:\Python\Python310\whisperx\Scripts"
+$env:SUB_WHISPER_AT_SCRIPTS = "X:\Python\Python310\whisper-at\Scripts"
+$env:SUB_PADDLEOCR_SCRIPTS = "X:\Python\Python310\paddleocr\Scripts"
 ```
 
-If a proxy is needed for model downloads:
+缓存目录示例：
 
 ```powershell
-$env:SUB_PROXY = "http://127.0.0.1:7897"
+$env:HF_HOME = "X:\Python\hf-cache"
+$env:HF_HUB_CACHE = "X:\Python\hf-cache\hub"
+$env:TORCH_HOME = "X:\Python\hf-cache\torch"
+$env:PIP_CACHE_DIR = "X:\Python\pip-cache"
+$env:PIP_FIND_LINKS = "X:\Python\wheel-cache"
 ```
 
-The pipeline sets UTF-8 related Python environment defaults itself, but setting them globally is still harmless:
+项目会自动设置常见 UTF-8 相关变量；如果想提前固定，也可以这样写：
 
 ```powershell
 $env:PYTHONUTF8 = "1"
 $env:PYTHONIOENCODING = "utf-8"
 ```
 
-## Models To Prepare
+## 需要提前准备的模型
 
-Local Qwen model for Step 7:
+Step 7 本地翻译模型：
 
-- Default model alias: `qwen3-32b`
-- Default GGUF filename: `Qwen3-32B-Q4_K_M.gguf`
-- Put it next to `llama-server.exe`, under `LLAMA_DIR`, or set `QWEN_GGUF`.
+- 默认模型别名：`qwen3-32b`
+- 默认 GGUF 文件名：`Qwen3-32B-Q4_K_M.gguf`
+- 可以把模型放在 `llama-server.exe` 同目录、`LLAMA_DIR` 下，或直接设置 `QWEN_GGUF`
 
 ```powershell
-$env:QWEN_GGUF = "C:\llama\models\Qwen3-32B-Q4_K_M.gguf"
+$env:QWEN_GGUF = "X:\llama\models\Qwen3-32B-Q4_K_M.gguf"
 $env:QWEN_MODEL = "qwen3-32b"
 $env:QWEN_BASE_URL = "http://127.0.0.1:8080/v1"
 ```
 
-Useful Qwen runtime knobs:
+Step 3 Whisper.cpp 转写模型：
+
+- 默认文件名：`ggml-large-v3.bin`
+- 可以放在 `whisper-server.exe` 同目录，或设置 `WHISPER_MODEL` / `WHISPER_CPP_MODEL`
+
+```powershell
+$env:WHISPER_MODEL = "X:\whisper.cpp\models\ggml-large-v3.bin"
+$env:WHISPER_LANGUAGE = "en"
+$env:WHISPER_SERVER_PORT = "8091"
+```
+
+Step 4 说话人分离模型：
+
+- 默认模型：`pyannote/speaker-diarization-3.1`
+- 如果模型没有提前缓存，或 Hugging Face 模型需要授权，需要设置 `HF_TOKEN`
+
+```powershell
+$env:DIARIZATION_MODEL = "pyannote/speaker-diarization-3.1"
+$env:HF_TOKEN = "hf_..."
+```
+
+Step 5 音乐/歌词识别：
+
+- 脚本会加载 Whisper-AT `large-v2`
+- 缓存目录可用 `WHISPER_AT_CACHE` 指定
+
+```powershell
+$env:WHISPER_AT_CACHE = "X:\Python\hf-cache\whisper-at"
+```
+
+Step 6 OCR：
+
+- 默认 OCR 版本：`PP-OCRv6`
+- 默认语言：`en`
+- 默认设备：`gpu`
+
+```powershell
+$env:OCR_LANG = "en"
+$env:PADDLEOCR_DEVICE = "gpu"
+$env:PADDLEOCR_VERSION = "PP-OCRv6"
+$env:OCR_MIN_CONFIDENCE = "0.45"
+```
+
+## 常用参数和硬件建议
+
+Qwen / llama.cpp 参数：
 
 ```powershell
 $env:QWEN_CTX_SIZE = "8192"
+$env:QWEN_BATCH_SIZE = "2048"
+$env:QWEN_UBATCH_SIZE = "512"
 $env:QWEN_THREADS = "20"
 $env:QWEN_THREADS_BATCH = "20"
 $env:QWEN_GPU_LAYERS = "all"
@@ -99,62 +142,73 @@ $env:QWEN_CACHE_TYPE_V = "q8_0"
 $env:QWEN_REASONING = "off"
 ```
 
-Whisper.cpp model for Step 3:
+这些参数的含义：
 
-- Default filename: `ggml-large-v3.bin`
-- Put it next to `whisper-server.exe`, or set `WHISPER_MODEL` / `WHISPER_CPP_MODEL`.
+- `QWEN_CTX_SIZE`：上下文长度。8192 适合当前按单条/小批字幕翻译的流程；调大能容纳更多上下文，但显存和内存占用会上升。
+- `QWEN_GPU_LAYERS`：GPU 承载层数。显存充足时用 `all`；显存不够时可以改成较小数字，甚至 `0` 走 CPU。
+- `QWEN_BATCH_SIZE` / `QWEN_UBATCH_SIZE`：影响吞吐和显存峰值。显存不足时优先降低 `QWEN_UBATCH_SIZE`。
+- `QWEN_THREADS` / `QWEN_THREADS_BATCH`：CPU 线程数。一般接近物理核心数或略低即可，过高可能反而抢占系统资源。
+- `QWEN_CACHE_TYPE_K` / `QWEN_CACHE_TYPE_V`：KV cache 精度。`q8_0` 比 `f16` 省显存，质量通常够用。
+- `QWEN_REASONING`：本流程默认 `off`。字幕翻译更需要稳定、简洁、快，通常不需要显式推理模式。
+
+大致硬件参考：
+
+- 24GB 以上显存：更适合 `Qwen3-32B-Q4_K_M.gguf` 全量 GPU offload，`QWEN_GPU_LAYERS=all` 更稳。
+- 12GB 到 16GB 显存：可以尝试降低 `QWEN_GPU_LAYERS` 和 `QWEN_UBATCH_SIZE`，让一部分层走 CPU；速度会慢。
+- 8GB 显存或纯 CPU：仍可运行部分步骤，但 Qwen 32B 会很慢，建议换更小 GGUF 或只对少量字幕测试。
+- 内存建议 32GB 起步，64GB 更舒服；如果 Qwen 部分 CPU offload 较多，内存压力会明显增加。
+
+Whisper.cpp 参数：
 
 ```powershell
-$env:WHISPER_MODEL = "C:\whisper.cpp\models\ggml-large-v3.bin"
-$env:WHISPER_LANGUAGE = "en"
-$env:WHISPER_SERVER_PORT = "8091"
 $env:WHISPER_THREADS = "16"
+$env:WHISPER_PROCESSORS = "1"
+$env:WHISPER_BEST_OF = "5"
+$env:WHISPER_BEAM_SIZE = "5"
+$env:WHISPER_DEVICE = "CUDA0"
 ```
 
-Pyannote diarization model for Step 4:
+- `WHISPER_THREADS`：CPU 线程数，CPU 转写时影响明显。
+- `WHISPER_DEVICE`：如果 whisper.cpp 支持 GPU，可指定设备；不设置则按 whisper.cpp 默认行为。
+- `WHISPER_BEST_OF` / `WHISPER_BEAM_SIZE`：数值越高可能更稳，但速度更慢。
 
-- Default model: `pyannote/speaker-diarization-3.1`
-- Set `HF_TOKEN` if the model is not already cached or if Hugging Face access is gated.
+Demucs 参数：
 
 ```powershell
-$env:DIARIZATION_MODEL = "pyannote/speaker-diarization-3.1"
-$env:HF_TOKEN = "hf_..."
+$env:DEMUCS_BATCH_SIZE = "1"
+$env:DEMUCS_SHIFTS = "2"
+$env:DEMUCS_OVERLAP = "0.25"
+$env:DEMUCS_JOBS = "1"
 ```
 
-Whisper-AT model for Step 5:
+- 显存紧张时保持 `DEMUCS_BATCH_SIZE=1`。
+- `DEMUCS_SHIFTS` 越高通常越慢，也更耗资源。
 
-- The script loads Whisper-AT `large-v2`.
-- Cache defaults to `C:\Python\hf-cache\whisper-at`, or set `WHISPER_AT_CACHE`.
-
-```powershell
-$env:WHISPER_AT_CACHE = "C:\Python\hf-cache\whisper-at"
-```
-
-PaddleOCR for Step 6:
-
-- Default OCR version: `PP-OCRv6`
-- Default OCR language: `en`
-- Default device: `gpu`
+PaddleOCR 参数：
 
 ```powershell
-$env:OCR_LANG = "en"
 $env:PADDLEOCR_DEVICE = "gpu"
-$env:PADDLEOCR_VERSION = "PP-OCRv6"
 $env:OCR_MIN_CONFIDENCE = "0.45"
 ```
 
-Step 9 backend polish:
+- 4GB 到 8GB 显存通常足够处理 OCR，但具体取决于分辨率和 PaddleOCR 版本。
+- `OCR_MIN_CONFIDENCE` 提高会减少误识别，也可能漏掉真实屏幕文字；降低则相反。
 
-- Default provider is `codex-cli`, using the local Codex CLI configuration.
-- To use an OpenAI-compatible API instead, set provider/base URL/API key.
+Step 9 后端调优：
 
 ```powershell
 $env:SUB_POLISH_PROVIDER = "codex-cli"
 $env:SUB_POLISH_CODEX_COMMAND = "codex"
 $env:SUB_POLISH_CODEX_REASONING_EFFORT = "medium"
+$env:SUB_POLISH_BATCH_SIZE = "48"
+$env:SUB_POLISH_TIMEOUT = "180"
 ```
 
-OpenAI-compatible alternative:
+- 默认使用 `codex-cli`，也就是本地 Codex CLI 配置。
+- `SUB_POLISH_BATCH_SIZE` 越大，请求次数越少，但单次失败影响也更大；网络或后端不稳定时可以降到 25 或 10。
+- `SUB_POLISH_TIMEOUT` 是单次后端请求超时秒数。
+
+OpenAI-compatible 后端示例：
 
 ```powershell
 $env:SUB_POLISH_PROVIDER = "openai"
@@ -163,19 +217,33 @@ $env:SUB_POLISH_BASE_URL = "https://api.openai.com/v1"
 $env:SUB_POLISH_API_KEY = "sk-..."
 ```
 
-## Model Flow
+`run_all.py` 常用参数：
 
-- Step 7 uses the local Qwen model for dialogue, lyrics, OCR translation, and cultural notes.
-- Step 9 uses the backend model for final polish, OCR cleanup, and reusable hint extraction.
-- Step 9 hint files are fed back into Step 7 by matching only guidance relevant to the current segment.
+```powershell
+python .\run_all.py . --dry-run
+python .\run_all.py . --target-stem "Nashville.S01E01"
+python .\run_all.py . --no-polish
+python .\run_all.py . --cleanup
+```
 
-## Reusable Hint Files
+- `--dry-run`：只打印计划执行的步骤，不真正跑流程。
+- `--target-stem`：只处理指定文件名主干，可重复传入。
+- `--no-polish`：跳过 Step 9 后端大模型调优，只做合并和过滤。
+- `--cleanup`：显式执行清理；默认不会清理中间文件。
 
-- `subtitle_glossary.json`: names, terms, and cultural-note glossary
-- `common_mistranslation_hints.json`: recurring proper-noun, phrase, and mistranslation traps
-- `common_phrase_correction_hints.json`: reusable colloquial or industry phrase guidance
-- `ocr_low_value_short_texts.json`: OCR fragments that should usually be dropped when shown alone
+## 模型流程
 
-## Notes
+- Step 7 使用本地 Qwen 模型翻译对白、歌词、OCR，并生成文化注解。
+- Step 9 使用后端大模型做最终润色、OCR 去噪和可复用 hint 提取。
+- Step 9 沉淀出的 hint 会回流给 Step 7；Step 7 只按当前台词检索相关提示，不会全量塞进 prompt。
 
-Do not commit generated subtitles, logs, media, or `temp/` cache files. They are ignored by `.gitignore`.
+## 可复用字典文件
+
+- `subtitle_glossary.json`：人名、术语和文化注解词库
+- `common_mistranslation_hints.json`：常见误译、专名和固定搭配提示
+- `common_phrase_correction_hints.json`：口语短语和行业表达修正提示
+- `ocr_low_value_short_texts.json`：单独出现时通常应删除的低价值 OCR 碎片
+
+## 注意事项
+
+不要提交生成后的字幕、日志、视频、缓存或 `temp/` 中间文件。这些内容已经在 `.gitignore` 中忽略。
