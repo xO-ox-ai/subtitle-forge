@@ -42,6 +42,10 @@ CREDIT_EN_RE = re.compile(
 DEDUP_OVERLAY_STYLES = ("OCR_TRANSLATION", "EXPLANATION_NOTE")
 DEDUP_KEY_RE = re.compile(r"[^0-9A-Za-z\u4e00-\u9fff]+")
 EPISODE_CODE_RE = re.compile(r"s\d{2}e\d{2}", re.IGNORECASE)
+KNOWN_TARGET_SUFFIXES = {
+    ".ass", ".srt", ".vtt", ".ssa", ".sub",
+    ".mkv", ".mp4", ".m4v", ".mov", ".avi", ".webm", ".ts",
+}
 ASS_TIME_RE = re.compile(r"(?P<h>\d+):(?P<m>\d{2}):(?P<s>\d{2})\.(?P<cs>\d{2})")
 OCR_MAX_DISPLAY_SECONDS = 6.0
 OCR_SUBSUME_TIME_EPSILON = 0.06
@@ -57,15 +61,16 @@ def normalize_selector_text(value: str | Path) -> str:
 
 
 def path_matches_selector(path: Path, selector: str) -> bool:
-    selector_key = normalize_selector_text(Path(selector).stem or selector)
+    selector_ep = episode_code(selector)
+    if selector_ep:
+        return selector_ep == episode_code(path.name)
+    selector_path = Path(selector)
+    selector_text = selector_path.stem if selector_path.suffix.lower() in KNOWN_TARGET_SUFFIXES else selector_path.name
+    selector_key = normalize_selector_text(selector_text or selector)
     if not selector_key:
         return True
     path_keys = {normalize_selector_text(path.name), normalize_selector_text(path.stem)}
-    selector_ep = episode_code(selector)
-    return (
-        any(selector_key in item or item in selector_key for item in path_keys)
-        or bool(selector_ep and selector_ep == episode_code(path.name))
-    )
+    return any(selector_key in item or item in selector_key for item in path_keys)
 
 
 def selected_ass_files(base_dir: Path, chunk: str, target_stems: list[str] | None) -> list[Path]:
@@ -312,7 +317,8 @@ def _ass_play_res(ass_text: str) -> tuple[int, int]:
 def overlay_ass(ass_file: Path, ocr_file: Path, notes_file: Path) -> int:
     if not ocr_file.exists() and not notes_file.exists():
         return 0
-    ass_text = ass_file.read_text(encoding="utf-8-sig")
+    original_text = ass_file.read_text(encoding="utf-8-sig")
+    ass_text = original_text
     ass_text = insert_styles_v2(ass_text)
     header, base_events = split_ass_sections(ass_text)
     # Make the overlay idempotent: drop any previously-merged OCR/NOTE overlay
@@ -330,7 +336,8 @@ def overlay_ass(ass_file: Path, ocr_file: Path, notes_file: Path) -> int:
     all_events = base_events + overlay_events
     all_events.sort(key=lambda line: line.split(",", 3)[1] if line.startswith("Dialogue:") else "")
     output = "\n".join(header + all_events) + "\n"
-    ass_file.write_text(output, encoding="utf-8-sig")
+    if output != original_text:
+        ass_file.write_text(output, encoding="utf-8-sig")
     return len(overlay_events)
 
 
@@ -601,28 +608,33 @@ def main() -> None:
                 record["removed"] += removed_after
                 record["credits"] += credits_after
 
-        static_hint_stats = curate_static_hint_files(
-            [polish_cache_dir / f"{record['ass_file'].stem}.json" for record in file_stats],
-            provider=args.polish_provider,
-            model=args.polish_model,
-            base_url=args.polish_base_url,
-            api_key=args.polish_api_key,
-            timeout=args.polish_timeout,
-            temperature=args.polish_temperature,
-            cache_dir=polish_cache_dir,
-            cwd=base_dir,
-            codex_command=args.polish_codex_command,
-            codex_reasoning_effort=args.polish_codex_reasoning_effort,
-        )
-        if static_hint_stats["samples"]:
-            print(
-                "[static-hints] "
-                f"samples={static_hint_stats['samples']}, "
-                f"mistranslation_added={static_hint_stats['mistranslation_added']}, "
-                f"phrase_added={static_hint_stats['phrase_added']}, "
-                f"ocr_low_value_added={static_hint_stats['ocr_low_value_added']}, "
-                f"failed={static_hint_stats['failed']}"
+        polish_failures = sum(record["polish_stats"].get("failed", 0) for record in file_stats)
+        if polish_failures:
+            print(f"[static-hints] skipped because polish_failed={polish_failures}")
+        else:
+            static_hint_stats = curate_static_hint_files(
+                [polish_cache_dir / f"{record['ass_file'].stem}.json" for record in file_stats],
+                provider=args.polish_provider,
+                model=args.polish_model,
+                base_url=args.polish_base_url,
+                api_key=args.polish_api_key,
+                timeout=args.polish_timeout,
+                temperature=args.polish_temperature,
+                cache_dir=polish_cache_dir,
+                cwd=base_dir,
+                codex_command=args.polish_codex_command,
+                codex_reasoning_effort=args.polish_codex_reasoning_effort,
             )
+            if static_hint_stats["samples"]:
+                print(
+                    "[static-hints] "
+                    f"samples={static_hint_stats['samples']}, "
+                    f"mistranslation_added={static_hint_stats['mistranslation_added']}, "
+                    f"phrase_added={static_hint_stats['phrase_added']}, "
+                    f"ocr_low_value_added={static_hint_stats['ocr_low_value_added']}, "
+                    f"failed={static_hint_stats['failed']}, "
+                    f"skipped={static_hint_stats.get('skipped', 0)}"
+                )
 
     for record in file_stats:
         ass_file = record["ass_file"]

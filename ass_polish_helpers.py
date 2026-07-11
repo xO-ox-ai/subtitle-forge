@@ -14,10 +14,12 @@ from ass_filter_helpers import has_chinese
 from ass_overlay_helpers import ass_escape, break_zh, load_json
 
 
-PROMPT_VERSION = "ass-polish-20260709-v5"
+PROMPT_VERSION = "ass-polish-20260711-v6"
 GLOSSARY_REVIEW_PROMPT_VERSION = "glossary-review-20260707-v1"
 STATIC_HINT_REVIEW_PROMPT_VERSION = "static-hint-review-20260709-v1"
 DEFAULT_MODEL = "gpt-4.1-mini"
+DEFAULT_CODEX_MODEL = "gpt-5.6-sol"
+DEFAULT_CODEX_REASONING_EFFORT = "high"
 DEFAULT_BASE_URL = "https://api.openai.com/v1"
 DEFAULT_STYLES = "BILINGUAL,BILINGUAL_MUSIC,BILINGUAL_CHANT,OCR_TRANSLATION,EXPLANATION_NOTE"
 DEFAULT_POLISH_PROVIDER = "codex-cli"
@@ -32,6 +34,8 @@ MUSIC_SYMBOL = "\u266a"
 CHANT_SYMBOL = "\u2726"
 EN_FONT_SIZE = 34
 EN_SIZE_TAG = r"{\fs" + str(EN_FONT_SIZE) + "}"
+MAX_BILINGUAL_ZH_CHARS = 42
+BILINGUAL_ZH_WRAP_CHARS = 36
 DELETE_SENTINEL = "__DELETE_OVERLAY_EVENT__"
 
 ASS_TAG_RE = re.compile(r"\{[^}]*\}")
@@ -153,13 +157,13 @@ class CodexCLIClient:
         cwd: Path,
         cache_dir: Path,
         timeout: int,
-        reasoning_effort: str = "low",
+        reasoning_effort: str = DEFAULT_CODEX_REASONING_EFFORT,
     ) -> None:
         self.command = resolve_codex_command(command)
         self.cwd = Path(cwd)
         self.cache_dir = Path(cache_dir)
         self.timeout = timeout
-        self.reasoning_effort = reasoning_effort or "low"
+        self.reasoning_effort = reasoning_effort or DEFAULT_CODEX_REASONING_EFFORT
         self._last_request_monotonic = 0.0
 
     def chat_json(
@@ -265,7 +269,7 @@ def add_polish_args(parser) -> None:
     parser.add_argument(
         "--polish-model",
         default=os.environ.get("SUB_POLISH_MODEL") or os.environ.get("OPENAI_MODEL") or "",
-        help="Model name for --polish-backend. openai defaults to gpt-4.1-mini; codex-cli defaults to Codex config.",
+        help="Model name for --polish-backend. openai defaults to gpt-4.1-mini; codex-cli defaults to gpt-5.6-sol.",
     )
     parser.add_argument(
         "--polish-base-url",
@@ -323,7 +327,7 @@ def add_polish_args(parser) -> None:
     )
     parser.add_argument(
         "--polish-codex-reasoning-effort",
-        default=os.environ.get("SUB_POLISH_CODEX_REASONING_EFFORT", "medium"),
+        default=os.environ.get("SUB_POLISH_CODEX_REASONING_EFFORT", DEFAULT_CODEX_REASONING_EFFORT),
         help="Codex CLI model_reasoning_effort override for --polish-provider codex-cli.",
     )
 
@@ -337,7 +341,7 @@ def build_polish_client(
     cache_dir: Path,
     cwd: Path,
     codex_command: str = "codex",
-    codex_reasoning_effort: str = "low",
+    codex_reasoning_effort: str = DEFAULT_CODEX_REASONING_EFFORT,
 ):
     if provider == "codex-cli":
         return CodexCLIClient(codex_command, cwd, cache_dir, timeout, codex_reasoning_effort)
@@ -373,7 +377,7 @@ def polish_ass_file(
     cache_dir: Path | None = None,
     force: bool = False,
     codex_command: str = "codex",
-    codex_reasoning_effort: str = "low",
+    codex_reasoning_effort: str = DEFAULT_CODEX_REASONING_EFFORT,
 ) -> dict:
     results = polish_ass_files(
         [ass_file],
@@ -411,7 +415,7 @@ def polish_ass_files(
     cache_dir: Path | None = None,
     force: bool = False,
     codex_command: str = "codex",
-    codex_reasoning_effort: str = "low",
+    codex_reasoning_effort: str = DEFAULT_CODEX_REASONING_EFFORT,
 ) -> dict[Path, dict]:
     states: list[PolishFileState] = []
     if not style_names:
@@ -419,8 +423,8 @@ def polish_ass_files(
 
     cache_dir = cache_dir or (work_dir / "polish_cache")
     cache_dir.mkdir(parents=True, exist_ok=True)
-    effective_model = model or (DEFAULT_MODEL if provider == "openai" else "")
-    model_label = effective_model or "codex-config"
+    effective_model = model or (DEFAULT_MODEL if provider == "openai" else DEFAULT_CODEX_MODEL)
+    model_label = effective_model
     base_label = "codex-cli" if provider == "codex-cli" else base_url
 
     for ass_file in ass_files:
@@ -573,6 +577,9 @@ def apply_polish_result(
 ) -> None:
     key = cache_key(provider, model_label, target)
     if raw_zh is None:
+        if target.en and not has_chinese(target.zh):
+            state.stats["failed"] += 1
+            return
         state.entries[key] = polish_cache_entry(provider, model_label, target, target.zh, now)
         state.stats["unchanged"] += 1
         return
@@ -694,7 +701,13 @@ def extract_polish_targets(lines: list[str], style_names: set[str]) -> list[Poli
         else:
             zh = visible_ass_text(text_field)
             en = ""
-        if not zh or not has_chinese(zh):
+        missing_zh_translation = bool(
+            style in BILINGUAL_STYLES
+            and en
+            and not has_chinese(zh)
+            and not re.search(r"[0-9A-Za-z]", zh)
+        )
+        if not has_chinese(zh) and not missing_zh_translation:
             continue
         targets.append(
             PolishTarget(
@@ -730,6 +743,7 @@ def request_polish_batch(
                 "time": f"{target.start}-{target.end}",
                 "source_en": target.en,
                 "current_zh": target.zh,
+                "needs_translation": bool(target.en and not has_chinese(target.zh)),
             }
             for index, (ass_name, target) in enumerate(batch, start=1)
         ],
@@ -739,6 +753,8 @@ def request_polish_batch(
         "Polish the existing Chinese text, using the English source when present. "
         "Return strict JSON only: {\"items\":[{\"id\":1,\"zh\":\"...\"}]}. "
         "To save tokens, return only items whose Chinese text should change; omit ids that are already good. "
+        "If needs_translation=true, current_zh is missing or only punctuation: translate source_en into concise "
+        "Simplified Chinese and always return that id; never omit it. "
         "For OCR overlays or cultural notes only, if an item is useless OCR garbage, duplicated clutter, "
         "or an unnecessary/incorrect note, return {\"id\":1,\"delete\":true}; never delete dialogue or lyrics. "
         "Do not change ids, timing, style, speaker order, or meaning. "
@@ -766,7 +782,8 @@ def request_polish_batch(
         "Keep each line concise enough for subtitles. Use Simplified Chinese only."
     )
     user_prompt = (
-        "Polish current_zh for each item. Return only changed items; omitted ids keep current_zh. "
+        "Polish current_zh for each item. Return only changed items; omitted ids keep current_zh, except every "
+        "needs_translation=true item must be returned with a Chinese translation. "
         "For kind=ocr or kind=note, use delete=true only when the overlay should be removed from the finished ASS. "
         "The glossary and phrase_hints are optional context; use them only when relevant.\n"
         + json.dumps(payload, ensure_ascii=False, separators=(",", ":"))
@@ -896,7 +913,13 @@ def replace_bilingual_zh(text: str, zh: str) -> str:
     if not split:
         return text
     zh_fragment, en_fragment = split
-    return ass_escape(zh) + r"\N" + with_english_size_tag(en_fragment)
+    visible_zh = visible_ass_text(zh)
+    display_zh = (
+        break_zh(zh, max_chars=BILINGUAL_ZH_WRAP_CHARS)
+        if len(re.sub(r"\s+", "", visible_zh)) > MAX_BILINGUAL_ZH_CHARS
+        else zh
+    )
+    return ass_escape(display_zh) + r"\N" + with_english_size_tag(en_fragment)
 
 
 def replace_leading_tagged_text(text: str, zh: str) -> str:
@@ -949,6 +972,8 @@ def normalize_series_terms(text: str, source_en: str = "") -> str:
         text = re.sub(r"(?<![A-Za-z])(?:Juliette|Juliet)(?![A-Za-z])", "朱丽叶", text, flags=re.IGNORECASE)
     if "gunnar" in en or "gunner" in en:
         text = re.sub(r"(?:古纳|刚纳)", "冈纳", text)
+    if "avery" in en:
+        text = re.sub(r"艾弗里", "埃弗里", text)
     if any(term in en for term in ("deacon", "dakin", "beacon", "dickon")):
         text = re.sub(r"(?:戴肯|德肯|戴克|德克)(?=[，。？！、\\s]|$)", "迪肯", text)
         text = re.sub(r"(?:戴肯|德肯|戴克|德克)[·・](?:克莱伯恩|克莱布尔)", "迪肯·克莱伯恩", text)
@@ -971,6 +996,8 @@ def clean_polished_zh(value, target: PolishTarget) -> str:
     if not text:
         return ""
     if has_chinese(target.zh) and not has_chinese(text):
+        return ""
+    if target.en and not has_chinese(target.zh) and not has_chinese(text):
         return ""
     # Guard against accidental explanations or whole-batch echoes.
     max_reasonable = max(len(target.zh) * 3 + 12, 80)
@@ -1305,13 +1332,48 @@ def curate_static_hint_files(
     cache_dir: Path,
     cwd: Path,
     codex_command: str = "codex",
-    codex_reasoning_effort: str = "low",
+    codex_reasoning_effort: str = DEFAULT_CODEX_REASONING_EFFORT,
 ) -> dict[str, int]:
-    stats = {"samples": 0, "mistranslation_added": 0, "phrase_added": 0, "ocr_low_value_added": 0, "failed": 0}
+    stats = {
+        "samples": 0,
+        "mistranslation_added": 0,
+        "phrase_added": 0,
+        "ocr_low_value_added": 0,
+        "failed": 0,
+        "skipped": 0,
+    }
     samples = _collect_static_hint_samples(cache_files)
     stats["samples"] = len(samples["changed_items"]) + len(samples["deleted_ocr"])
     if not stats["samples"]:
         return stats
+
+    effective_model = model or (DEFAULT_MODEL if provider == "openai" else DEFAULT_CODEX_MODEL)
+    effective_reasoning = ""
+    if provider == "codex-cli":
+        effective_reasoning = codex_reasoning_effort or DEFAULT_CODEX_REASONING_EFFORT
+    review_identity = f"{provider}:{effective_model}:{effective_reasoning}:{STATIC_HINT_REVIEW_PROMPT_VERSION}"
+    review_digest_payload = {
+        "provider": provider,
+        "model": effective_model,
+        "reasoning_effort": effective_reasoning,
+        "prompt_version": STATIC_HINT_REVIEW_PROMPT_VERSION,
+        "samples": samples,
+    }
+    review_digest = hashlib.sha256(
+        json.dumps(review_digest_payload, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode("utf-8")
+    ).hexdigest()
+    review_state_file = cache_dir / "static_hint_review_state.json"
+    review_state = load_json(review_state_file, {})
+    if not isinstance(review_state, dict):
+        review_state = {}
+    review_entries = review_state.setdefault("entries", {})
+    previous_review = review_entries.get(review_identity) if isinstance(review_entries, dict) else None
+    if isinstance(previous_review, dict) and previous_review.get("digest") == review_digest:
+        stats["skipped"] = 1
+        return stats
+    if not isinstance(review_entries, dict):
+        review_entries = {}
+        review_state["entries"] = review_entries
 
     payload = {
         "prompt_version": STATIC_HINT_REVIEW_PROMPT_VERSION,
@@ -1322,7 +1384,6 @@ def curate_static_hint_files(
         },
         "samples": samples,
     }
-    effective_model = model or (DEFAULT_MODEL if provider == "openai" else "")
     client = build_polish_client(
         provider,
         base_url,
@@ -1367,6 +1428,16 @@ def curate_static_hint_files(
     stats["mistranslation_added"] = mistranslation_added
     stats["phrase_added"] = phrase_added
     stats["ocr_low_value_added"] = ocr_added
+    review_entries[review_identity] = {
+        "digest": review_digest,
+        "updated_at": time.strftime("%Y-%m-%d %H:%M:%S"),
+    }
+    review_state["version"] = 1
+    review_state_file.parent.mkdir(parents=True, exist_ok=True)
+    review_state_file.write_text(
+        json.dumps(review_state, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
     return stats
 
 
@@ -1485,7 +1556,7 @@ def curate_glossary_file(
     temperature: float,
     cache_dir: Path | None = None,
     codex_command: str = "codex",
-    codex_reasoning_effort: str = "low",
+    codex_reasoning_effort: str = DEFAULT_CODEX_REASONING_EFFORT,
     batch_size: int = DEFAULT_GLOSSARY_REVIEW_BATCH_SIZE,
 ) -> dict[str, int]:
     stats = {"targets": 0, "reviewed": 0, "changed": 0, "removed": 0, "failed": 0}
@@ -1504,8 +1575,8 @@ def curate_glossary_file(
         return stats
 
     cache_dir = cache_dir or (work_dir / "polish_cache")
-    effective_model = model or (DEFAULT_MODEL if provider == "openai" else "")
-    model_label = effective_model or "codex-config"
+    effective_model = model or (DEFAULT_MODEL if provider == "openai" else DEFAULT_CODEX_MODEL)
+    model_label = effective_model
     client = build_polish_client(
         provider,
         base_url,

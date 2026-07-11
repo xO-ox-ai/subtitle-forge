@@ -199,12 +199,13 @@ Step 9 后端调优：
 ```powershell
 $env:SUB_POLISH_PROVIDER = "codex-cli"
 $env:SUB_POLISH_CODEX_COMMAND = "codex"
-$env:SUB_POLISH_CODEX_REASONING_EFFORT = "medium"
+$env:SUB_POLISH_MODEL = "gpt-5.6-sol"
+$env:SUB_POLISH_CODEX_REASONING_EFFORT = "high"
 $env:SUB_POLISH_BATCH_SIZE = "48"
 $env:SUB_POLISH_TIMEOUT = "180"
 ```
 
-- 默认使用 `codex-cli`，也就是本地 Codex CLI 配置。
+- 默认使用 `codex-cli`、`gpt-5.6-sol` 和 `high` 推理强度；环境变量或命令行参数仍可覆盖。
 - `SUB_POLISH_BATCH_SIZE` 越大，请求次数越少，但单次失败影响也更大；网络或后端不稳定时可以降到 25 或 10。
 - `SUB_POLISH_TIMEOUT` 是单次后端请求超时秒数。
 

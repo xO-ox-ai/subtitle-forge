@@ -1,1294 +1,2313 @@
 [
   {
     "phrase": "come on",
-    "zh": "高频口语，常按语气译成行了吧/得了吧/拜托/快点，别机械译成来吧。"
+    "zh": "高频口语，常按语气译成行了吧/得了吧/拜托/快点，别机械译成来吧。",
+    "preferred_zh": "高频口语，常按语气译成行了吧/得了吧/拜托/快点，别机械译成来吧。",
+    "support_count": 1
   },
   {
     "phrase": "give me a break",
-    "zh": "通常是饶了吧/少来了/别闹了，不是字面让我休息一下。"
+    "zh": "通常是饶了吧/少来了/别闹了，不是字面让我休息一下。",
+    "preferred_zh": "通常是饶了吧/少来了/别闹了，不是字面让我休息一下。",
+    "support_count": 1
   },
   {
     "phrase": "cut me some slack",
-    "zh": "通常是放我一马/别这么苛刻/通融一下。"
+    "zh": "通常是放我一马/别这么苛刻/通融一下。",
+    "preferred_zh": "通常是放我一马/别这么苛刻/通融一下。",
+    "support_count": 1
   },
   {
     "phrase": "get over yourself",
-    "zh": "口语里多为别太把自己当回事/别这么自恋，不要直译成克服自己。"
+    "zh": "口语里多为别太把自己当回事/别这么自恋，不要直译成克服自己。",
+    "preferred_zh": "口语里多为别太把自己当回事/别这么自恋，不要直译成克服自己。",
+    "support_count": 1
   },
   {
     "phrase": "i'm good",
-    "zh": "常按语境译成不用了/我没事/我挺好，不要总译成我很好。"
+    "zh": "常按语境译成不用了/我没事/我挺好，不要总译成我很好。",
+    "preferred_zh": "常按语境译成不用了/我没事/我挺好，不要总译成我很好。",
+    "support_count": 1
   },
   {
     "phrase": "i hear you",
-    "zh": "通常是我懂你意思/我明白，不是我听见你了。"
+    "zh": "通常是我懂你意思/我明白，不是我听见你了。",
+    "preferred_zh": "通常是我懂你意思/我明白，不是我听见你了。",
+    "support_count": 1
   },
   {
     "phrase": "fair enough",
-    "zh": "通常译成有道理/也行/这倒也是。"
+    "zh": "通常译成有道理/也行/这倒也是。",
+    "preferred_zh": "通常译成有道理/也行/这倒也是。",
+    "support_count": 1
   },
   {
     "phrase": "what do you want me to say",
-    "zh": "口语里常是那你要我怎么说/我还能说什么。"
+    "zh": "口语里常是那你要我怎么说/我还能说什么。",
+    "preferred_zh": "口语里常是那你要我怎么说/我还能说什么。",
+    "support_count": 1
   },
   {
     "phrase": "own it",
-    "zh": "通常是认了吧/坦然承认/别躲，别译成拥有它。"
+    "zh": "通常是认了吧/坦然承认/别躲，别译成拥有它。",
+    "preferred_zh": "通常是认了吧/坦然承认/别躲，别译成拥有它。",
+    "support_count": 1
   },
   {
     "phrase": "screw up",
-    "zh": "通常是搞砸/犯浑/出岔子。"
+    "zh": "通常是搞砸/犯浑/出岔子。",
+    "preferred_zh": "通常是搞砸/犯浑/出岔子。",
+    "support_count": 1
   },
   {
     "phrase": "get a room",
-    "zh": "调侃口吻通常是要不你俩开个房去/注意点影响，不是单纯去找房间。"
+    "zh": "调侃口吻通常是要不你俩开个房去/注意点影响，不是单纯去找房间。",
+    "preferred_zh": "调侃口吻通常是要不你俩开个房去/注意点影响，不是单纯去找房间。",
+    "support_count": 1
   },
   {
     "phrase": "do me a favor",
-    "zh": "常按语气译成帮我个忙/拜托你了；有时也是否定口气的得了吧。"
+    "zh": "常按语气译成帮我个忙/拜托你了；有时也是否定口气的得了吧。",
+    "preferred_zh": "常按语气译成帮我个忙/拜托你了；有时也是否定口气的得了吧。",
+    "support_count": 1
   },
   {
     "phrase": "play nice",
-    "zh": "通常是客气点/别闹/好好相处，不是玩得开心。"
+    "zh": "通常是客气点/别闹/好好相处，不是玩得开心。",
+    "preferred_zh": "通常是客气点/别闹/好好相处，不是玩得开心。",
+    "support_count": 1
   },
   {
     "phrase": "hold my spot",
-    "zh": "通常是给我留个位置/先替我占着。"
+    "zh": "通常是给我留个位置/先替我占着。",
+    "preferred_zh": "通常是给我留个位置/先替我占着。",
+    "support_count": 1
   },
   {
     "phrase": "cut a record",
-    "zh": "音乐行业里通常指录唱片/录专辑，不是切唱片。"
+    "zh": "音乐行业里通常指录唱片/录专辑，不是切唱片。",
+    "preferred_zh": "音乐行业里通常指录唱片/录专辑，不是切唱片。",
+    "support_count": 1
   },
   {
     "phrase": "cut vocals",
-    "zh": "录音语境通常指录人声/录主唱，不是切分声轨。"
+    "zh": "录音语境通常指录人声/录主唱，不是切分声轨。",
+    "preferred_zh": "录音语境通常指录人声/录主唱，不是切分声轨。",
+    "support_count": 1
   },
   {
     "phrase": "rough demo",
-    "zh": "通常是粗 demo/小样/初版试唱，不要直译成粗糙演示。"
+    "zh": "通常是粗 demo/小样/初版试唱，不要直译成粗糙演示。",
+    "preferred_zh": "通常是粗 demo/小样/初版试唱，不要直译成粗糙演示。",
+    "support_count": 1
   },
   {
     "phrase": "radio single",
-    "zh": "通常指主打电台单曲/送电台主打歌。"
+    "zh": "通常指主打电台单曲/送电台主打歌。",
+    "preferred_zh": "通常指主打电台单曲/送电台主打歌。",
+    "support_count": 1
   },
   {
     "phrase": "lead single",
-    "zh": "通常指首支主打单曲/先行单曲。"
+    "zh": "通常指首支主打单曲/先行单曲。",
+    "preferred_zh": "通常指首支主打单曲/先行单曲。",
+    "support_count": 1
   },
   {
     "phrase": "showcase",
-    "zh": "音乐行业里常指展示演出/试演场/行业 showcase，不是陈列柜。"
+    "zh": "音乐行业里常指展示演出/试演场/行业 showcase，不是陈列柜。",
+    "preferred_zh": "音乐行业里常指展示演出/试演场/行业 showcase，不是陈列柜。",
+    "support_count": 1
   },
   {
     "phrase": "soundcheck",
-    "zh": "演出语境通常是试音/彩排试音，不是声音检查。"
+    "zh": "演出语境通常是试音/彩排试音，不是声音检查。",
+    "preferred_zh": "演出语境通常是试音/彩排试音，不是声音检查。",
+    "support_count": 1
   },
   {
     "phrase": "write with",
-    "zh": "写歌语境通常是跟某人一起写歌/合写，不是写给。"
+    "zh": "写歌语境通常是跟某人一起写歌/合写，不是写给。",
+    "preferred_zh": "写歌语境通常是跟某人一起写歌/合写，不是写给。",
+    "support_count": 1
   },
   {
     "phrase": "record deal",
-    "zh": "行业表达通常是唱片合约/签约机会，整句要译得像口语。"
+    "zh": "行业表达通常是唱片合约/签约机会，整句要译得像口语。",
+    "preferred_zh": "行业表达通常是唱片合约/签约机会，整句要译得像口语。",
+    "support_count": 1
   },
   {
     "phrase": "publishing deal",
-    "zh": "音乐行业里通常是版权发行合约/出版约，不是出版交易。"
+    "zh": "音乐行业里通常是版权发行合约/出版约，不是出版交易。",
+    "preferred_zh": "音乐行业里通常是版权发行合约/出版约，不是出版交易。",
+    "support_count": 1
   },
   {
     "phrase": "get dropped",
-    "zh": "行业里常指被公司放弃/被解约/被撤下，不是掉下来。"
+    "zh": "行业里常指被公司放弃/被解约/被撤下，不是掉下来。",
+    "preferred_zh": "行业里常指被公司放弃/被解约/被撤下，不是掉下来。",
+    "support_count": 1
   },
   {
     "phrase": "backup singer",
-    "zh": "通常是伴唱/和声歌手，不是后备歌手。"
+    "zh": "通常是伴唱/和声歌手，不是后备歌手。",
+    "preferred_zh": "通常是伴唱/和声歌手，不是后备歌手。",
+    "support_count": 1
   },
   {
     "phrase": "headliner",
-    "zh": "演出语境通常是主咖/压轴/领衔艺人。"
+    "zh": "演出语境通常是主咖/压轴/领衔艺人。",
+    "preferred_zh": "演出语境通常是主咖/压轴/领衔艺人。",
+    "support_count": 1
   },
   {
     "phrase": "lineup",
-    "zh": "演出语境通常是阵容/演出名单/排班，不是排成一列。"
+    "zh": "演出语境通常是阵容/演出名单/排班，不是排成一列。",
+    "preferred_zh": "演出语境通常是阵容/演出名单/排班，不是排成一列。",
+    "support_count": 1
   },
   {
     "phrase": "back home",
-    "zh": "标题或包装语境通常是回家/重返家乡，不必译成生硬的回到家中。"
+    "zh": "标题或包装语境通常是回家/重返家乡，不必译成生硬的回到家中。",
+    "preferred_zh": "标题或包装语境通常是回家/重返家乡，不必译成生硬的回到家中。",
+    "support_count": 1
   },
   {
     "phrase": "number one single",
-    "zh": "榜单语境通常是冠军单曲/单曲登顶，不宜硬译成单曲冠军。"
+    "zh": "榜单语境通常是冠军单曲/单曲登顶，不宜硬译成单曲冠军。",
+    "preferred_zh": "榜单语境通常是冠军单曲/单曲登顶，不宜硬译成单曲冠军。",
+    "support_count": 1
   },
   {
     "phrase": "number one spot",
-    "zh": "通常是登顶/拿下榜首，不要总译成第一名位置。"
+    "zh": "通常是登顶/拿下榜首，不要总译成第一名位置。",
+    "preferred_zh": "通常是登顶/拿下榜首，不要总译成第一名位置。",
+    "support_count": 1
   },
   {
     "phrase": "claimed the number one single spot",
-    "zh": "新闻口吻通常是单曲登顶/拿下单曲榜冠军。"
+    "zh": "新闻口吻通常是单曲登顶/拿下单曲榜冠军。",
+    "preferred_zh": "新闻口吻通常是单曲登顶/拿下单曲榜冠军。",
+    "support_count": 1
   },
   {
     "phrase": "previously on",
-    "zh": "前情提要"
+    "zh": "前情提要",
+    "preferred_zh": "前情提要",
+    "support_count": 1
   },
   {
     "phrase": "the future of",
-    "zh": "下一个"
+    "zh": "下一个",
+    "preferred_zh": "下一个",
+    "support_count": 1
   },
   {
     "phrase": "move records",
-    "zh": "卖唱片"
+    "zh": "卖唱片",
+    "preferred_zh": "卖唱片",
+    "support_count": 1
   },
   {
     "phrase": "protect your voice",
-    "zh": "保护好嗓子"
+    "zh": "保护好嗓子",
+    "preferred_zh": "保护好嗓子",
+    "support_count": 1
   },
   {
     "phrase": "plug it in",
-    "zh": "插电"
+    "zh": "插电",
+    "preferred_zh": "插电",
+    "support_count": 1
   },
   {
     "phrase": "off on the wrong foot",
-    "zh": "一开始就不太对付"
+    "zh": "一开始就不太对付",
+    "preferred_zh": "一开始就不太对付",
+    "support_count": 1
   },
   {
     "phrase": "owe someone a record",
-    "zh": "欠某人一张专辑"
+    "zh": "欠某人一张专辑",
+    "preferred_zh": "欠某人一张专辑",
+    "support_count": 1
   },
   {
     "phrase": "buy yourself out",
-    "zh": "花钱赎身"
+    "zh": "花钱赎身",
+    "preferred_zh": "花钱赎身",
+    "support_count": 1
   },
   {
     "phrase": "get stood up",
-    "zh": "被放鸽子"
+    "zh": "被放鸽子",
+    "preferred_zh": "被放鸽子",
+    "support_count": 1
   },
   {
     "phrase": "give us a minute",
-    "zh": "回避一下"
+    "zh": "回避一下",
+    "preferred_zh": "回避一下",
+    "support_count": 1
   },
   {
     "phrase": "take some of the pressure off",
-    "zh": "减轻一些压力"
+    "zh": "减轻一些压力",
+    "preferred_zh": "减轻一些压力",
+    "support_count": 1
   },
   {
     "phrase": "singing somebody else's hits",
-    "zh": "唱别人的热门歌"
+    "zh": "唱别人的热门歌",
+    "preferred_zh": "唱别人的热门歌",
+    "support_count": 1
   },
   {
     "phrase": "fresh, new talent",
-    "zh": "新鲜血液"
+    "zh": "新鲜血液",
+    "preferred_zh": "新鲜血液",
+    "support_count": 1
   },
   {
     "phrase": "reboot of the label",
-    "zh": "重启厂牌"
+    "zh": "重启厂牌",
+    "preferred_zh": "重启厂牌",
+    "support_count": 1
   },
   {
     "phrase": "shake hands with some suits",
-    "zh": "跟一些高管打交道"
+    "zh": "跟一些高管打交道",
+    "preferred_zh": "跟一些高管打交道",
+    "support_count": 1
   },
   {
     "phrase": "get them excited about",
-    "zh": "让他们看好、支持"
+    "zh": "让他们看好、支持",
+    "preferred_zh": "让他们看好、支持",
+    "support_count": 1
   },
   {
     "phrase": "There she is.",
-    "zh": "她来了。"
+    "zh": "她来了。",
+    "preferred_zh": "她来了。",
+    "support_count": 1
   },
   {
     "phrase": "You obviously have your priorities.",
-    "zh": "看来你有更要紧的事。"
+    "zh": "看来你有更要紧的事。",
+    "preferred_zh": "看来你有更要紧的事。",
+    "support_count": 1
   },
   {
     "phrase": "get back in the studio",
-    "zh": "回录音室"
+    "zh": "回录音室",
+    "preferred_zh": "回录音室",
+    "support_count": 1
   },
   {
     "phrase": "make something of",
-    "zh": "把……活出点名堂/做出点成果"
+    "zh": "把……活出点名堂/做出点成果",
+    "preferred_zh": "把……活出点名堂/做出点成果",
+    "support_count": 1
   },
   {
     "phrase": "court-appointed attorney",
-    "zh": "法院指派的律师"
+    "zh": "法院指派的律师",
+    "preferred_zh": "法院指派的律师",
+    "support_count": 1
   },
   {
     "phrase": "throw my hat in the ring",
-    "zh": "参选；加入竞争"
+    "zh": "参选；加入竞争",
+    "preferred_zh": "参选；加入竞争",
+    "support_count": 1
   },
   {
     "phrase": "poll numbers are up",
-    "zh": "民调支持率上升"
+    "zh": "民调支持率上升",
+    "preferred_zh": "民调支持率上升",
+    "support_count": 1
   },
   {
     "phrase": "push a date",
-    "zh": "改期；推迟档期"
+    "zh": "改期；推迟档期",
+    "preferred_zh": "改期；推迟档期",
+    "support_count": 1
   },
   {
     "phrase": "plug a new label",
-    "zh": "为新厂牌宣传；给新厂牌站台"
+    "zh": "为新厂牌宣传；给新厂牌站台",
+    "preferred_zh": "为新厂牌宣传；给新厂牌站台",
+    "support_count": 1
   },
   {
     "phrase": "lost my voice",
-    "zh": "歌手语境下常指失去嗓音，不是抽象的“声音”"
+    "zh": "歌手语境下常指失去嗓音，不是抽象的“声音”",
+    "preferred_zh": "歌手语境下常指失去嗓音，不是抽象的“声音”",
+    "support_count": 1
   },
   {
     "phrase": "be up for it",
-    "zh": "有意愿；状态允许"
+    "zh": "有意愿；状态允许",
+    "preferred_zh": "有意愿；状态允许",
+    "support_count": 1
   },
   {
     "phrase": "write someone off",
-    "zh": "不管某人；放弃某人"
+    "zh": "不管某人；放弃某人",
+    "preferred_zh": "不管某人；放弃某人",
+    "support_count": 1
   },
   {
     "phrase": "plead guilty",
-    "zh": "认罪"
+    "zh": "认罪",
+    "preferred_zh": "认罪",
+    "support_count": 1
   },
   {
     "phrase": "recant",
-    "zh": "翻供；收回证词"
+    "zh": "翻供；收回证词",
+    "preferred_zh": "翻供；收回证词",
+    "support_count": 1
   },
   {
     "phrase": "read the instruction booklet",
-    "zh": "自然译为“研究一下说明书/看看说明书”，不宜生硬译“阅读小册子”"
+    "zh": "自然译为“研究一下说明书/看看说明书”，不宜生硬译“阅读小册子”",
+    "preferred_zh": "自然译为“研究一下说明书/看看说明书”，不宜生硬译“阅读小册子”",
+    "support_count": 1
   },
   {
     "phrase": "it feels tight",
-    "zh": "身体或嗓音状态可译“发紧”"
+    "zh": "身体或嗓音状态可译“发紧”",
+    "preferred_zh": "身体或嗓音状态可译“发紧”",
+    "support_count": 1
   },
   {
     "phrase": "healing is halted by anxiety",
-    "zh": "自然译为“焦虑会影响恢复/康复”"
+    "zh": "自然译为“焦虑会影响恢复/康复”",
+    "preferred_zh": "自然译为“焦虑会影响恢复/康复”",
+    "support_count": 1
   },
   {
     "phrase": "live in the moment",
-    "zh": "活在当下"
+    "zh": "活在当下",
+    "preferred_zh": "活在当下",
+    "support_count": 1
   },
   {
     "phrase": "get rid of her",
-    "zh": "按语境可译“甩掉她/摆脱她”"
+    "zh": "按语境可译“甩掉她/摆脱她”",
+    "preferred_zh": "按语境可译“甩掉她/摆脱她”",
+    "support_count": 1
   },
   {
     "phrase": "she's overthinking it",
-    "zh": "她想多了"
+    "zh": "她想多了",
+    "preferred_zh": "她想多了",
+    "support_count": 1
   },
   {
     "phrase": "make my entrance",
-    "zh": "舞台语境译“出场/登场”"
+    "zh": "舞台语境译“出场/登场”",
+    "preferred_zh": "舞台语境译“出场/登场”",
+    "support_count": 1
   },
   {
     "phrase": "goodwill from the fans",
-    "zh": "粉丝的好感/善意"
+    "zh": "粉丝的好感/善意",
+    "preferred_zh": "粉丝的好感/善意",
+    "support_count": 1
   },
   {
     "phrase": "tip of the iceberg",
-    "zh": "冰山一角"
+    "zh": "冰山一角",
+    "preferred_zh": "冰山一角",
+    "support_count": 1
   },
   {
     "phrase": "red carpet stuff",
-    "zh": "红毯的事"
+    "zh": "红毯的事",
+    "preferred_zh": "红毯的事",
+    "support_count": 1
   },
   {
     "phrase": "smooth it over",
-    "zh": "摆平/把事情圆过去"
+    "zh": "摆平/把事情圆过去",
+    "preferred_zh": "摆平/把事情圆过去",
+    "support_count": 1
   },
   {
     "phrase": "get wind of",
-    "zh": "得知风声/听到消息"
+    "zh": "得知风声/听到消息",
+    "preferred_zh": "得知风声/听到消息",
+    "support_count": 1
   },
   {
     "phrase": "gag order",
-    "zh": "封口令"
+    "zh": "封口令",
+    "preferred_zh": "封口令",
+    "support_count": 1
   },
   {
     "phrase": "co-conspirator",
-    "zh": "共谋者"
+    "zh": "共谋者",
+    "preferred_zh": "共谋者",
+    "support_count": 1
   },
   {
     "phrase": "take the deal",
-    "zh": "接受这笔交易/接受条件"
+    "zh": "接受这笔交易/接受条件",
+    "preferred_zh": "接受这笔交易/接受条件",
+    "support_count": 1
   },
   {
     "phrase": "To what do I owe the pleasure of your company?",
-    "zh": "自然口语可译“什么风把你吹来了？”"
+    "zh": "自然口语可译“什么风把你吹来了？”",
+    "preferred_zh": "自然口语可译“什么风把你吹来了？”",
+    "support_count": 1
   },
   {
     "phrase": "be my own boss",
-    "zh": "自己当老板"
+    "zh": "自己当老板",
+    "preferred_zh": "自己当老板",
+    "support_count": 1
   },
   {
     "phrase": "twirl your hair",
-    "zh": "用手指卷头发"
+    "zh": "用手指卷头发",
+    "preferred_zh": "用手指卷头发",
+    "support_count": 1
   },
   {
     "phrase": "come off as aloof",
-    "zh": "显得高冷/不好接近"
+    "zh": "显得高冷/不好接近",
+    "preferred_zh": "显得高冷/不好接近",
+    "support_count": 1
   },
   {
     "phrase": "give it up for",
-    "zh": "把掌声送给"
+    "zh": "把掌声送给",
+    "preferred_zh": "把掌声送给",
+    "support_count": 1
   },
   {
     "phrase": "if you'll have us",
-    "zh": "如果你愿意接纳我们"
+    "zh": "如果你愿意接纳我们",
+    "preferred_zh": "如果你愿意接纳我们",
+    "support_count": 1
   },
   {
     "phrase": "highest honor",
-    "zh": "最高荣誉/莫大的荣幸"
+    "zh": "最高荣誉/莫大的荣幸",
+    "preferred_zh": "最高荣誉/莫大的荣幸",
+    "support_count": 1
   },
   {
     "phrase": "come out on the road",
-    "zh": "跟着一起巡演"
+    "zh": "跟着一起巡演",
+    "preferred_zh": "跟着一起巡演",
+    "support_count": 1
   },
   {
     "phrase": "get booked as",
-    "zh": "被安排为；接到……演出"
+    "zh": "被安排为；接到……演出",
+    "preferred_zh": "被安排为；接到……演出",
+    "support_count": 1
   },
   {
     "phrase": "featured performer",
-    "zh": "特邀表演嘉宾"
+    "zh": "特邀表演嘉宾",
+    "preferred_zh": "特邀表演嘉宾",
+    "support_count": 1
   },
   {
     "phrase": "pre-opener",
-    "zh": "最早的暖场歌手"
+    "zh": "最早的暖场歌手",
+    "preferred_zh": "最早的暖场歌手",
+    "support_count": 1
   },
   {
     "phrase": "Nashville tastemakers",
-    "zh": "纳什维尔的行家／业内意见领袖"
+    "zh": "纳什维尔的行家／业内意见领袖",
+    "preferred_zh": "纳什维尔的行家／业内意见领袖",
+    "support_count": 1
   },
   {
     "phrase": "buyout offer",
-    "zh": "买断报价"
+    "zh": "买断报价",
+    "preferred_zh": "买断报价",
+    "support_count": 1
   },
   {
     "phrase": "assets have been frozen",
-    "zh": "资产被冻结"
+    "zh": "资产被冻结",
+    "preferred_zh": "资产被冻结",
+    "support_count": 1
   },
   {
     "phrase": "old money",
-    "zh": "老钱；老牌富豪阶层"
+    "zh": "老钱；老牌富豪阶层",
+    "preferred_zh": "老钱；老牌富豪阶层",
+    "support_count": 1
   },
   {
     "phrase": "rub elbows with",
-    "zh": "与……套近乎；结交"
+    "zh": "与……套近乎；结交",
+    "preferred_zh": "与……套近乎；结交",
+    "support_count": 1
   },
   {
     "phrase": "not at liberty to comment",
-    "zh": "不便置评"
+    "zh": "不便置评",
+    "preferred_zh": "不便置评",
+    "support_count": 1
   },
   {
     "phrase": "by the book",
-    "zh": "完全合规；按规矩办"
+    "zh": "完全合规；按规矩办",
+    "preferred_zh": "完全合规；按规矩办",
+    "support_count": 1
   },
   {
     "phrase": "pleaded not guilty",
-    "zh": "表示不认罪"
+    "zh": "表示不认罪",
+    "preferred_zh": "表示不认罪",
+    "support_count": 1
   },
   {
     "phrase": "bail hearing",
-    "zh": "保释听证会"
+    "zh": "保释听证会",
+    "preferred_zh": "保释听证会",
+    "support_count": 1
   },
   {
     "phrase": "unknown quantity",
-    "zh": "没什么知名度；前景难料的人"
+    "zh": "没什么知名度；前景难料的人",
+    "preferred_zh": "没什么知名度；前景难料的人",
+    "support_count": 1
   },
   {
     "phrase": "take a chance",
-    "zh": "冒险给机会"
+    "zh": "冒险给机会",
+    "preferred_zh": "冒险给机会",
+    "support_count": 1
   },
   {
     "phrase": "stay tuned for your chance to win",
-    "zh": "继续收听，就有机会赢取奖品或门票"
+    "zh": "继续收听，就有机会赢取奖品或门票",
+    "preferred_zh": "继续收听，就有机会赢取奖品或门票",
+    "support_count": 1
   },
   {
     "phrase": "see it in writing",
-    "zh": "看到白纸黑字"
+    "zh": "看到白纸黑字",
+    "preferred_zh": "看到白纸黑字",
+    "support_count": 1
   },
   {
     "phrase": "swing by and say hello",
-    "zh": "顺路来打个招呼"
+    "zh": "顺路来打个招呼",
+    "preferred_zh": "顺路来打个招呼",
+    "support_count": 1
   },
   {
     "phrase": "kill it",
-    "zh": "表现出色、惊艳全场"
+    "zh": "表现出色、惊艳全场",
+    "preferred_zh": "表现出色、惊艳全场",
+    "support_count": 1
   },
   {
     "phrase": "play by their rules",
-    "zh": "按他们的规矩来"
+    "zh": "按他们的规矩来",
+    "preferred_zh": "按他们的规矩来",
+    "support_count": 1
   },
   {
     "phrase": "show of support",
-    "zh": "表态支持"
+    "zh": "表态支持",
+    "preferred_zh": "表态支持",
+    "support_count": 1
   },
   {
     "phrase": "go out on the road",
-    "zh": "去巡演"
+    "zh": "去巡演",
+    "preferred_zh": "去巡演",
+    "support_count": 1
   },
   {
     "phrase": "on the road with",
-    "zh": "跟……一起巡演"
+    "zh": "跟……一起巡演",
+    "preferred_zh": "跟……一起巡演",
+    "support_count": 1
   },
   {
     "phrase": "opening for",
-    "zh": "给……当开场嘉宾"
+    "zh": "给……当开场嘉宾",
+    "preferred_zh": "给……当开场嘉宾",
+    "support_count": 1
   },
   {
     "phrase": "tour bus",
-    "zh": "巡演巴士"
+    "zh": "巡演巴士",
+    "preferred_zh": "巡演巴士",
+    "support_count": 1
   },
   {
     "phrase": "knock boots with",
-    "zh": "和……上床"
+    "zh": "和……上床",
+    "preferred_zh": "和……上床",
+    "support_count": 1
   },
   {
     "phrase": "drop down to A",
-    "zh": "降到A调"
+    "zh": "降到A调",
+    "preferred_zh": "降到A调",
+    "support_count": 1
   },
   {
     "phrase": "fit my brand",
-    "zh": "贴合我的品牌形象"
+    "zh": "贴合我的品牌形象",
+    "preferred_zh": "贴合我的品牌形象",
+    "support_count": 1
   },
   {
     "phrase": "open the doors",
-    "zh": "开门放观众进场"
+    "zh": "开门放观众进场",
+    "preferred_zh": "开门放观众进场",
+    "support_count": 1
   },
   {
     "phrase": "get back to somebody",
-    "zh": "回复某人的消息"
+    "zh": "回复某人的消息",
+    "preferred_zh": "回复某人的消息",
+    "support_count": 1
   },
   {
     "phrase": "hired hand",
-    "zh": "雇工"
+    "zh": "雇工",
+    "preferred_zh": "雇工",
+    "support_count": 1
   },
   {
     "phrase": "put me on speakerphone",
-    "zh": "开免提"
+    "zh": "开免提",
+    "preferred_zh": "开免提",
+    "support_count": 1
   },
   {
     "phrase": "collect call",
-    "zh": "对方付费电话"
+    "zh": "对方付费电话",
+    "preferred_zh": "对方付费电话",
+    "support_count": 1
   },
   {
     "phrase": "headline",
-    "zh": "担任压轴；压轴演出"
+    "zh": "担任压轴；压轴演出",
+    "preferred_zh": "担任压轴；压轴演出",
+    "support_count": 1
   },
   {
     "phrase": "acts performing",
-    "zh": "演出的艺人/组合"
+    "zh": "演出的艺人/组合",
+    "preferred_zh": "演出的艺人/组合",
+    "support_count": 1
   },
   {
     "phrase": "make the space for someone",
-    "zh": "给某人安排位置/名额"
+    "zh": "给某人安排位置/名额",
+    "preferred_zh": "给某人安排位置/名额",
+    "support_count": 1
   },
   {
     "phrase": "build a life together",
-    "zh": "一起过日子"
+    "zh": "一起过日子",
+    "preferred_zh": "一起过日子",
+    "support_count": 1
   },
   {
     "phrase": "Here's the thing.",
-    "zh": "是这样。"
+    "zh": "是这样。",
+    "preferred_zh": "是这样。",
+    "support_count": 1
   },
   {
     "phrase": "pull the plug",
-    "zh": "叫停；中止"
+    "zh": "叫停；中止",
+    "preferred_zh": "叫停；中止",
+    "support_count": 1
   },
   {
     "phrase": "girl code",
-    "zh": "姐妹规矩；女生之间的规矩"
+    "zh": "姐妹规矩；女生之间的规矩",
+    "preferred_zh": "姐妹规矩；女生之间的规矩",
+    "support_count": 1
   },
   {
     "phrase": "play games",
-    "zh": "玩感情游戏"
+    "zh": "玩感情游戏",
+    "preferred_zh": "玩感情游戏",
+    "support_count": 1
   },
   {
     "phrase": "be worth your while",
-    "zh": "不会让你后悔；值得你花时间"
+    "zh": "不会让你后悔；值得你花时间",
+    "preferred_zh": "不会让你后悔；值得你花时间",
+    "support_count": 1
   },
   {
     "phrase": "play the festival",
-    "zh": "在音乐节演出"
+    "zh": "在音乐节演出",
+    "preferred_zh": "在音乐节演出",
+    "support_count": 1
   },
   {
     "phrase": "come on board",
-    "zh": "加入；参与进来"
+    "zh": "加入；参与进来",
+    "preferred_zh": "加入；参与进来",
+    "support_count": 1
   },
   {
     "phrase": "pull some strings",
-    "zh": "托关系；动用关系"
+    "zh": "托关系；动用关系",
+    "preferred_zh": "托关系；动用关系",
+    "support_count": 1
   },
   {
     "phrase": "get the message",
-    "zh": "明白对方的意思；识趣"
+    "zh": "明白对方的意思；识趣",
+    "preferred_zh": "明白对方的意思；识趣",
+    "support_count": 1
   },
   {
     "phrase": "have merit",
-    "zh": "有根据"
+    "zh": "有根据",
+    "preferred_zh": "有根据",
+    "support_count": 1
   },
   {
     "phrase": "screw someone over",
-    "zh": "摆某人一道；坑某人"
+    "zh": "摆某人一道；坑某人",
+    "preferred_zh": "摆某人一道；坑某人",
+    "support_count": 1
   },
   {
     "phrase": "run the numbers",
-    "zh": "算过账；核算过"
+    "zh": "算过账；核算过",
+    "preferred_zh": "算过账；核算过",
+    "support_count": 1
   },
   {
     "phrase": "make my quarter",
-    "zh": "完成我这个季度的业绩"
+    "zh": "完成我这个季度的业绩",
+    "preferred_zh": "完成我这个季度的业绩",
+    "support_count": 1
   },
   {
     "phrase": "back up",
-    "zh": "退后"
+    "zh": "退后",
+    "preferred_zh": "退后",
+    "support_count": 1
   },
   {
     "phrase": "take this personally",
-    "zh": "往心里去"
+    "zh": "往心里去",
+    "preferred_zh": "往心里去",
+    "support_count": 1
   },
   {
     "phrase": "left a couple messages",
-    "zh": "留了几条留言"
+    "zh": "留了几条留言",
+    "preferred_zh": "留了几条留言",
+    "support_count": 1
   },
   {
     "phrase": "be swamped",
-    "zh": "忙得不可开交"
+    "zh": "忙得不可开交",
+    "preferred_zh": "忙得不可开交",
+    "support_count": 1
   },
   {
     "phrase": "up to speed on everything",
-    "zh": "了解全部情况"
+    "zh": "了解全部情况",
+    "preferred_zh": "了解全部情况",
+    "support_count": 1
   },
   {
     "phrase": "new material",
-    "zh": "新歌；新作品"
+    "zh": "新歌；新作品",
+    "preferred_zh": "新歌；新作品",
+    "support_count": 1
   },
   {
     "phrase": "skim the surface",
-    "zh": "浮于表面；浅尝辄止"
+    "zh": "浮于表面；浅尝辄止",
+    "preferred_zh": "浮于表面；浅尝辄止",
+    "support_count": 1
   },
   {
     "phrase": "get this verse down",
-    "zh": "把这段歌词记下来"
+    "zh": "把这段歌词记下来",
+    "preferred_zh": "把这段歌词记下来",
+    "support_count": 1
   },
   {
     "phrase": "return my calls",
-    "zh": "回我电话"
+    "zh": "回我电话",
+    "preferred_zh": "回我电话",
+    "support_count": 1
   },
   {
     "phrase": "record my song",
-    "zh": "录我的歌"
+    "zh": "录我的歌",
+    "preferred_zh": "录我的歌",
+    "support_count": 1
   },
   {
     "phrase": "website up",
-    "zh": "网站上线"
+    "zh": "网站上线",
+    "preferred_zh": "网站上线",
+    "support_count": 1
   },
   {
     "phrase": "put out a blurb",
-    "zh": "发通稿；发声明"
+    "zh": "发通稿；发声明",
+    "preferred_zh": "发通稿；发声明",
+    "support_count": 1
   },
   {
     "phrase": "sequence the album",
-    "zh": "给专辑排曲序"
+    "zh": "给专辑排曲序",
+    "preferred_zh": "给专辑排曲序",
+    "support_count": 1
   },
   {
     "phrase": "the record comes out",
-    "zh": "专辑发行"
+    "zh": "专辑发行",
+    "preferred_zh": "专辑发行",
+    "support_count": 1
   },
   {
     "phrase": "number one party",
-    "zh": "冠军单曲庆功派对"
+    "zh": "冠军单曲庆功派对",
+    "preferred_zh": "冠军单曲庆功派对",
+    "support_count": 1
   },
   {
     "phrase": "unique tweets",
-    "zh": "提到某人的不同推文"
+    "zh": "提到某人的不同推文",
+    "preferred_zh": "提到某人的不同推文",
+    "support_count": 1
   },
   {
     "phrase": "get to sleep in my own bed",
-    "zh": "终于能睡自己的床"
+    "zh": "终于能睡自己的床",
+    "preferred_zh": "终于能睡自己的床",
+    "support_count": 1
   },
   {
     "phrase": "write some time",
-    "zh": "改天一起写歌"
+    "zh": "改天一起写歌",
+    "preferred_zh": "改天一起写歌",
+    "support_count": 1
   },
   {
     "phrase": "grab a room",
-    "zh": "找个房间"
+    "zh": "找个房间",
+    "preferred_zh": "找个房间",
+    "support_count": 1
   },
   {
     "phrase": "make noise in this marketplace",
-    "zh": "在这个市场闹出点动静"
+    "zh": "在这个市场闹出点动静",
+    "preferred_zh": "在这个市场闹出点动静",
+    "support_count": 1
   },
   {
     "phrase": "break out",
-    "zh": "打出名堂"
+    "zh": "打出名堂",
+    "preferred_zh": "打出名堂",
+    "support_count": 1
   },
   {
     "phrase": "press tour",
-    "zh": "媒体宣传"
+    "zh": "媒体宣传",
+    "preferred_zh": "媒体宣传",
+    "support_count": 1
   },
   {
     "phrase": "lay something down",
-    "zh": "先录点东西"
+    "zh": "先录点东西",
+    "preferred_zh": "先录点东西",
+    "support_count": 1
   },
   {
     "phrase": "work around your schedule",
-    "zh": "配合你的时间"
+    "zh": "配合你的时间",
+    "preferred_zh": "配合你的时间",
+    "support_count": 1
   },
   {
     "phrase": "get my album on the shelf",
-    "zh": "让我的专辑上架"
+    "zh": "让我的专辑上架",
+    "preferred_zh": "让我的专辑上架",
+    "support_count": 1
   },
   {
     "phrase": "give them a nod",
-    "zh": "冲他们点个头"
+    "zh": "冲他们点个头",
+    "preferred_zh": "冲他们点个头",
+    "support_count": 1
   },
   {
     "phrase": "stay off the grid",
-    "zh": "断联一阵子；不宜直译为离网"
+    "zh": "断联一阵子；不宜直译为离网",
+    "preferred_zh": "断联一阵子；不宜直译为离网",
+    "support_count": 1
   },
   {
     "phrase": "shoestring budget",
-    "zh": "预算很紧"
+    "zh": "预算很紧",
+    "preferred_zh": "预算很紧",
+    "support_count": 1
   },
   {
     "phrase": "dry run",
-    "zh": "排一遍；预演"
+    "zh": "排一遍；预演",
+    "preferred_zh": "排一遍；预演",
+    "support_count": 1
   },
   {
     "phrase": "take someone on",
-    "zh": "跟某人一较高下"
+    "zh": "跟某人一较高下",
+    "preferred_zh": "跟某人一较高下",
+    "support_count": 1
   },
   {
     "phrase": "pale in comparison",
-    "zh": "相比之下黯然失色"
+    "zh": "相比之下黯然失色",
+    "preferred_zh": "相比之下黯然失色",
+    "support_count": 1
   },
   {
     "phrase": "let someone walk",
-    "zh": "就这么放了某人；让某人逍遥法外"
+    "zh": "就这么放了某人；让某人逍遥法外",
+    "preferred_zh": "就这么放了某人；让某人逍遥法外",
+    "support_count": 1
   },
   {
     "phrase": "bounce off the walls",
-    "zh": "太闹腾；兴奋过头"
+    "zh": "太闹腾；兴奋过头",
+    "preferred_zh": "太闹腾；兴奋过头",
+    "support_count": 1
   },
   {
     "phrase": "smother someone",
-    "zh": "围着某人不放；过度关照"
+    "zh": "围着某人不放；过度关照",
+    "preferred_zh": "围着某人不放；过度关照",
+    "support_count": 1
   },
   {
     "phrase": "be in your corner",
-    "zh": "站在你这边；支持你"
+    "zh": "站在你这边；支持你",
+    "preferred_zh": "站在你这边；支持你",
+    "support_count": 1
   },
   {
     "phrase": "media blackout",
-    "zh": "媒体封锁；拒绝接受媒体曝光"
+    "zh": "媒体封锁；拒绝接受媒体曝光",
+    "preferred_zh": "媒体封锁；拒绝接受媒体曝光",
+    "support_count": 1
   },
   {
     "phrase": "keep under wraps",
-    "zh": "暂时保密"
+    "zh": "暂时保密",
+    "preferred_zh": "暂时保密",
+    "support_count": 1
   },
   {
     "phrase": "sold out the Bluebird",
-    "zh": "在蓝鸟咖啡馆演出满场"
+    "zh": "在蓝鸟咖啡馆演出满场",
+    "preferred_zh": "在蓝鸟咖啡馆演出满场",
+    "support_count": 1
   },
   {
     "phrase": "booking agent",
-    "zh": "演出经纪人"
+    "zh": "演出经纪人",
+    "preferred_zh": "演出经纪人",
+    "support_count": 1
   },
   {
     "phrase": "dinky little dive",
-    "zh": "破小酒吧"
+    "zh": "破小酒吧",
+    "preferred_zh": "破小酒吧",
+    "support_count": 1
   },
   {
     "phrase": "wouldn't touch someone with a barge pole",
-    "zh": "对某人避之不及"
+    "zh": "对某人避之不及",
+    "preferred_zh": "对某人避之不及",
+    "support_count": 1
   },
   {
     "phrase": "bounce a check",
-    "zh": "支票跳票；开空头支票"
+    "zh": "支票跳票；开空头支票",
+    "preferred_zh": "支票跳票；开空头支票",
+    "support_count": 1
   },
   {
     "phrase": "jump on the bandwagon",
-    "zh": "跟风；蹭热度"
+    "zh": "跟风；蹭热度",
+    "preferred_zh": "跟风；蹭热度",
+    "support_count": 1
   },
   {
     "phrase": "right off the bat",
-    "zh": "一上来；一开始就"
+    "zh": "一上来；一开始就",
+    "preferred_zh": "一上来；一开始就",
+    "support_count": 1
   },
   {
     "phrase": "something came up",
-    "zh": "临时有事"
+    "zh": "临时有事",
+    "preferred_zh": "临时有事",
+    "support_count": 1
   },
   {
     "phrase": "can't make it",
-    "zh": "去不了；来不了"
+    "zh": "去不了；来不了",
+    "preferred_zh": "去不了；来不了",
+    "support_count": 1
   },
   {
     "phrase": "be good for it",
-    "zh": "肯定会付；有能力支付"
+    "zh": "肯定会付；有能力支付",
+    "preferred_zh": "肯定会付；有能力支付",
+    "support_count": 1
   },
   {
     "phrase": "discretion on that",
-    "zh": "替这件事保密"
+    "zh": "替这件事保密",
+    "preferred_zh": "替这件事保密",
+    "support_count": 1
   },
   {
     "phrase": "take someone on the road",
-    "zh": "带某人去巡演"
+    "zh": "带某人去巡演",
+    "preferred_zh": "带某人去巡演",
+    "support_count": 1
   },
   {
     "phrase": "book a gig",
-    "zh": "订演出"
+    "zh": "订演出",
+    "preferred_zh": "订演出",
+    "support_count": 1
   },
   {
     "phrase": "hit the ground running",
-    "zh": "一开始就全速推进"
+    "zh": "一开始就全速推进",
+    "preferred_zh": "一开始就全速推进",
+    "support_count": 1
   },
   {
     "phrase": "make a big splash",
-    "zh": "高调造势；大张旗鼓地宣传"
+    "zh": "高调造势；大张旗鼓地宣传",
+    "preferred_zh": "高调造势；大张旗鼓地宣传",
+    "support_count": 1
   },
   {
     "phrase": "play our cards right",
-    "zh": "把牌打好；安排得当"
+    "zh": "把牌打好；安排得当",
+    "preferred_zh": "把牌打好；安排得当",
+    "support_count": 1
   },
   {
     "phrase": "bad blood",
-    "zh": "闹僵；结下梁子"
+    "zh": "闹僵；结下梁子",
+    "preferred_zh": "闹僵；结下梁子",
+    "support_count": 1
   },
   {
     "phrase": "keep this casual",
-    "zh": "别太当回事；保持轻松随意"
+    "zh": "别太当回事；保持轻松随意",
+    "preferred_zh": "别太当回事；保持轻松随意",
+    "support_count": 1
   },
   {
     "phrase": "stamp of approval",
-    "zh": "背书；认可"
+    "zh": "背书；认可",
+    "preferred_zh": "背书；认可",
+    "support_count": 1
   },
   {
     "phrase": "get back into everybody's good graces",
-    "zh": "重新赢回大家的好感"
+    "zh": "重新赢回大家的好感",
+    "preferred_zh": "重新赢回大家的好感",
+    "support_count": 1
   },
   {
     "phrase": "hold off on talking about",
-    "zh": "暂时先别提"
+    "zh": "暂时先别提",
+    "preferred_zh": "暂时先别提",
+    "support_count": 1
   },
   {
     "phrase": "spice things up",
-    "zh": "添点情趣；增加新鲜感"
+    "zh": "添点情趣；增加新鲜感",
+    "preferred_zh": "添点情趣；增加新鲜感",
+    "support_count": 1
   },
   {
     "phrase": "make a strong case for oneself",
-    "zh": "把自己推销得很到位；有力证明自己"
+    "zh": "把自己推销得很到位；有力证明自己",
+    "preferred_zh": "把自己推销得很到位；有力证明自己",
+    "support_count": 1
   },
   {
     "phrase": "the name of the game",
-    "zh": "这就是行规"
+    "zh": "这就是行规",
+    "preferred_zh": "这就是行规",
+    "support_count": 1
   },
   {
     "phrase": "blow over",
-    "zh": "平息过去"
+    "zh": "平息过去",
+    "preferred_zh": "平息过去",
+    "support_count": 1
   },
   {
     "phrase": "out of pocket",
-    "zh": "自掏腰包"
+    "zh": "自掏腰包",
+    "preferred_zh": "自掏腰包",
+    "support_count": 1
   },
   {
     "phrase": "best man",
-    "zh": "伴郎"
+    "zh": "伴郎",
+    "preferred_zh": "伴郎",
+    "support_count": 1
   },
   {
     "phrase": "travel day",
-    "zh": "赶路日"
+    "zh": "赶路日",
+    "preferred_zh": "赶路日",
+    "support_count": 1
   },
   {
     "phrase": "make some noise",
-    "zh": "闹出点声势"
+    "zh": "闹出点声势",
+    "preferred_zh": "闹出点声势",
+    "support_count": 1
   },
   {
     "phrase": "he's a ham",
-    "zh": "他很会抢镜"
+    "zh": "他很会抢镜",
+    "preferred_zh": "他很会抢镜",
+    "support_count": 1
   },
   {
     "phrase": "cover for someone",
-    "zh": "替某人打掩护"
+    "zh": "替某人打掩护",
+    "preferred_zh": "替某人打掩护",
+    "support_count": 1
   },
   {
     "phrase": "dead room",
-    "zh": "空场、冷场"
+    "zh": "空场、冷场",
+    "preferred_zh": "空场、冷场",
+    "support_count": 1
   },
   {
     "phrase": "take it down",
-    "zh": "删掉；撤下"
+    "zh": "删掉；撤下",
+    "preferred_zh": "删掉；撤下",
+    "support_count": 1
   },
   {
     "phrase": "let it speak for itself",
-    "zh": "让表现说明一切"
+    "zh": "让表现说明一切",
+    "preferred_zh": "让表现说明一切",
+    "support_count": 1
   },
   {
     "phrase": "be a united front",
-    "zh": "口径一致；统一立场"
+    "zh": "口径一致；统一立场",
+    "preferred_zh": "口径一致；统一立场",
+    "support_count": 1
   },
   {
     "phrase": "on a bender",
-    "zh": "喝得烂醉；酗酒放纵"
+    "zh": "喝得烂醉；酗酒放纵",
+    "preferred_zh": "喝得烂醉；酗酒放纵",
+    "support_count": 1
   },
   {
     "phrase": "wide-eyed hick from the sticks",
-    "zh": "没见过世面的乡下土包子"
+    "zh": "没见过世面的乡下土包子",
+    "preferred_zh": "没见过世面的乡下土包子",
+    "support_count": 1
   },
   {
     "phrase": "good riddance",
-    "zh": "走了也好"
+    "zh": "走了也好",
+    "preferred_zh": "走了也好",
+    "support_count": 1
   },
   {
     "phrase": "slow news day",
-    "zh": "没新闻可报"
+    "zh": "没新闻可报",
+    "preferred_zh": "没新闻可报",
+    "support_count": 1
   },
   {
     "phrase": "get the job done",
-    "zh": "能用；管用"
+    "zh": "能用；管用",
+    "preferred_zh": "能用；管用",
+    "support_count": 1
   },
   {
     "phrase": "off limits",
-    "zh": "不能牵扯；不许碰"
+    "zh": "不能牵扯；不许碰",
+    "preferred_zh": "不能牵扯；不许碰",
+    "support_count": 1
   },
   {
     "phrase": "national television",
-    "zh": "全国电视"
+    "zh": "全国电视",
+    "preferred_zh": "全国电视",
+    "support_count": 1
   },
   {
     "phrase": "save the day",
-    "zh": "救场；挽回局面"
+    "zh": "救场；挽回局面",
+    "preferred_zh": "救场；挽回局面",
+    "support_count": 1
   },
   {
     "phrase": "get checked out",
-    "zh": "做检查"
+    "zh": "做检查",
+    "preferred_zh": "做检查",
+    "support_count": 1
   },
   {
     "phrase": "real hospital",
-    "zh": "正规医院"
+    "zh": "正规医院",
+    "preferred_zh": "正规医院",
+    "support_count": 1
   },
   {
     "phrase": "keep someone away from the press",
-    "zh": "让某人避开媒体"
+    "zh": "让某人避开媒体",
+    "preferred_zh": "让某人避开媒体",
+    "support_count": 1
   },
   {
     "phrase": "ride with someone",
-    "zh": "陪某人坐车；跟某人一起去"
+    "zh": "陪某人坐车；跟某人一起去",
+    "preferred_zh": "陪某人坐车；跟某人一起去",
+    "support_count": 1
   },
   {
     "phrase": "got this under control",
-    "zh": "能处理好；局面在掌控中"
+    "zh": "能处理好；局面在掌控中",
+    "preferred_zh": "能处理好；局面在掌控中",
+    "support_count": 1
   },
   {
     "phrase": "take it back to the top",
-    "zh": "从头再来；回到开头"
+    "zh": "从头再来；回到开头",
+    "preferred_zh": "从头再来；回到开头",
+    "support_count": 1
   },
   {
     "phrase": "downplay it",
-    "zh": "淡化处理"
+    "zh": "淡化处理",
+    "preferred_zh": "淡化处理",
+    "support_count": 1
   },
   {
     "phrase": "trust fund guy",
-    "zh": "信托基金少爷"
+    "zh": "信托基金少爷",
+    "preferred_zh": "信托基金少爷",
+    "support_count": 1
   },
   {
     "phrase": "first available flight",
-    "zh": "最早的一班航班"
+    "zh": "最早的一班航班",
+    "preferred_zh": "最早的一班航班",
+    "support_count": 1
   },
   {
     "phrase": "off the road",
-    "zh": "不用巡演；结束巡演"
+    "zh": "不用巡演；结束巡演",
+    "preferred_zh": "不用巡演；结束巡演",
+    "support_count": 1
   },
   {
     "phrase": "pick up where you left off",
-    "zh": "从停下的地方接着来"
+    "zh": "从停下的地方接着来",
+    "preferred_zh": "从停下的地方接着来",
+    "support_count": 1
   },
   {
     "phrase": "let alone",
-    "zh": "更别说"
+    "zh": "更别说",
+    "preferred_zh": "更别说",
+    "support_count": 1
   },
   {
     "phrase": "all set",
-    "zh": "都好了；都准备好了"
+    "zh": "都好了；都准备好了",
+    "preferred_zh": "都好了；都准备好了",
+    "support_count": 1
   },
   {
     "phrase": "spend the night with someone",
-    "zh": "在某人那儿过夜"
+    "zh": "在某人那儿过夜",
+    "preferred_zh": "在某人那儿过夜",
+    "support_count": 1
   },
   {
     "phrase": "shook me up",
-    "zh": "让我很受冲击"
+    "zh": "让我很受冲击",
+    "preferred_zh": "让我很受冲击",
+    "support_count": 1
   },
   {
     "phrase": "kick this thing off on the right foot",
-    "zh": "开个好头"
+    "zh": "开个好头",
+    "preferred_zh": "开个好头",
+    "support_count": 1
   },
   {
     "phrase": "get bumped from",
-    "zh": "通告或档期被取消，不是被解雇"
+    "zh": "通告或档期被取消，不是被解雇",
+    "preferred_zh": "通告或档期被取消，不是被解雇",
+    "support_count": 1
   },
   {
     "phrase": "promise someone the moon",
-    "zh": "许下天大的好处"
+    "zh": "许下天大的好处",
+    "preferred_zh": "许下天大的好处",
+    "support_count": 1
   },
   {
     "phrase": "launch week",
-    "zh": "专辑发行周"
+    "zh": "专辑发行周",
+    "preferred_zh": "专辑发行周",
+    "support_count": 1
   },
   {
     "phrase": "get the word out",
-    "zh": "把消息放出去"
+    "zh": "把消息放出去",
+    "preferred_zh": "把消息放出去",
+    "support_count": 1
   },
   {
     "phrase": "wait for my cue",
-    "zh": "等我信号"
+    "zh": "等我信号",
+    "preferred_zh": "等我信号",
+    "support_count": 1
   },
   {
     "phrase": "come through for someone",
-    "zh": "帮某人解围或兑现承诺"
+    "zh": "帮某人解围或兑现承诺",
+    "preferred_zh": "帮某人解围或兑现承诺",
+    "support_count": 1
   },
   {
     "phrase": "hit the charts",
-    "zh": "冲上榜单"
+    "zh": "冲上榜单",
+    "preferred_zh": "冲上榜单",
+    "support_count": 1
   },
   {
     "phrase": "the future of [artist]",
-    "zh": "下一个某某；有望成为某某那样的人"
+    "zh": "下一个某某；有望成为某某那样的人",
+    "preferred_zh": "下一个某某；有望成为某某那样的人",
+    "support_count": 1
   },
   {
     "phrase": "get stood up at the airport",
-    "zh": "在机场被放鸽子"
+    "zh": "在机场被放鸽子",
+    "preferred_zh": "在机场被放鸽子",
+    "support_count": 1
   },
   {
     "phrase": "deliver the album",
-    "zh": "交出/交付专辑，履行唱片合约"
+    "zh": "交出/交付专辑，履行唱片合约",
+    "preferred_zh": "交出/交付专辑，履行唱片合约",
+    "support_count": 1
   },
   {
     "phrase": "see the place",
-    "zh": "参观一下；作客场景不要直译为看这个地方"
+    "zh": "参观一下；作客场景不要直译为看这个地方",
+    "preferred_zh": "参观一下；作客场景不要直译为看这个地方",
+    "support_count": 1
   },
   {
     "phrase": "can't get enough of this song",
-    "zh": "这首歌怎么都听不够"
+    "zh": "这首歌怎么都听不够",
+    "preferred_zh": "这首歌怎么都听不够",
+    "support_count": 1
   },
   {
     "phrase": "Here's [artist]",
-    "zh": "电台介绍歌曲时可译为“下面请听[艺人]”"
+    "zh": "电台介绍歌曲时可译为“下面请听[艺人]”",
+    "preferred_zh": "电台介绍歌曲时可译为“下面请听[艺人]”",
+    "support_count": 1
   },
   {
     "phrase": "catch up",
-    "zh": "叙旧，聊聊近况"
+    "zh": "叙旧，聊聊近况",
+    "preferred_zh": "叙旧，聊聊近况",
+    "support_count": 1
   },
   {
     "phrase": "press thing",
-    "zh": "媒体活动"
+    "zh": "媒体活动",
+    "preferred_zh": "媒体活动",
+    "support_count": 1
   },
   {
     "phrase": "blow off",
-    "zh": "放鸽子，临时推掉"
+    "zh": "放鸽子，临时推掉",
+    "preferred_zh": "放鸽子，临时推掉",
+    "support_count": 1
   },
   {
     "phrase": "courting you",
-    "zh": "讨好你，巴结你"
+    "zh": "讨好你，巴结你",
+    "preferred_zh": "讨好你，巴结你",
+    "support_count": 1
   },
   {
     "phrase": "get your band together",
-    "zh": "组好你的乐队"
+    "zh": "组好你的乐队",
+    "preferred_zh": "组好你的乐队",
+    "support_count": 1
   },
   {
     "phrase": "be covered",
-    "zh": "有人顶上，有人帮忙撑场"
+    "zh": "有人顶上，有人帮忙撑场",
+    "preferred_zh": "有人顶上，有人帮忙撑场",
+    "support_count": 1
   },
   {
     "phrase": "one more",
-    "zh": "再来一首"
+    "zh": "再来一首",
+    "preferred_zh": "再来一首",
+    "support_count": 1
   },
   {
     "phrase": "dedicate this one to",
-    "zh": "把这首献给"
+    "zh": "把这首献给",
+    "preferred_zh": "把这首献给",
+    "support_count": 1
   },
   {
     "phrase": "push my set back",
-    "zh": "拖慢我的布景进度"
+    "zh": "拖慢我的布景进度",
+    "preferred_zh": "拖慢我的布景进度",
+    "support_count": 1
   },
   {
     "phrase": "have a show to do",
-    "zh": "还要演出"
+    "zh": "还要演出",
+    "preferred_zh": "还要演出",
+    "support_count": 1
   },
   {
     "phrase": "keep herself busy",
-    "zh": "够她忙的"
+    "zh": "够她忙的",
+    "preferred_zh": "够她忙的",
+    "support_count": 1
   },
   {
     "phrase": "talk someone into doing something",
-    "zh": "劝某人做某事"
+    "zh": "劝某人做某事",
+    "preferred_zh": "劝某人做某事",
+    "support_count": 1
   },
   {
     "phrase": "get going",
-    "zh": "该走了"
+    "zh": "该走了",
+    "preferred_zh": "该走了",
+    "support_count": 1
   },
   {
     "phrase": "sack out on the couch",
-    "zh": "睡沙发"
+    "zh": "睡沙发",
+    "preferred_zh": "睡沙发",
+    "support_count": 1
   },
   {
     "phrase": "bad influence",
-    "zh": "带坏人的人"
+    "zh": "带坏人的人",
+    "preferred_zh": "带坏人的人",
+    "support_count": 1
   },
   {
     "phrase": "back to work",
-    "zh": "接着干活"
+    "zh": "接着干活",
+    "preferred_zh": "接着干活",
+    "support_count": 1
   },
   {
     "phrase": "hit the trades",
-    "zh": "上行业媒体；被行业媒体报道"
+    "zh": "上行业媒体；被行业媒体报道",
+    "preferred_zh": "上行业媒体；被行业媒体报道",
+    "support_count": 1
   },
   {
     "phrase": "spin it like",
-    "zh": "把话说成；包装成"
+    "zh": "把话说成；包装成",
+    "preferred_zh": "把话说成；包装成",
+    "support_count": 1
   },
   {
     "phrase": "what single we're gonna use",
-    "zh": "要主打哪首单曲"
+    "zh": "要主打哪首单曲",
+    "preferred_zh": "要主打哪首单曲",
+    "support_count": 1
   },
   {
     "phrase": "clear one's head",
-    "zh": "散散心；冷静一下"
+    "zh": "散散心；冷静一下",
+    "preferred_zh": "散散心；冷静一下",
+    "support_count": 1
   },
   {
     "phrase": "cross that bridge when we come to it",
-    "zh": "到时候再说"
+    "zh": "到时候再说",
+    "preferred_zh": "到时候再说",
+    "support_count": 1
   },
   {
     "phrase": "crack the charts",
-    "zh": "上榜"
+    "zh": "上榜",
+    "preferred_zh": "上榜",
+    "support_count": 1
   },
   {
     "phrase": "be all over someone",
-    "zh": "缠着某人不放；紧追某人"
+    "zh": "缠着某人不放；紧追某人",
+    "preferred_zh": "缠着某人不放；紧追某人",
+    "support_count": 1
   },
   {
     "phrase": "tightening the chain",
-    "zh": "把人管得更紧"
+    "zh": "把人管得更紧",
+    "preferred_zh": "把人管得更紧",
+    "support_count": 1
   },
   {
     "phrase": "big ticket outfits",
-    "zh": "大公司；大机构"
+    "zh": "大公司；大机构",
+    "preferred_zh": "大公司；大机构",
+    "support_count": 1
   },
   {
     "phrase": "wave from the audience",
-    "zh": "坐在观众席挥手"
+    "zh": "坐在观众席挥手",
+    "preferred_zh": "坐在观众席挥手",
+    "support_count": 1
   },
   {
     "phrase": "good for it",
-    "zh": "有能力付钱；肯定会付"
+    "zh": "有能力付钱；肯定会付",
+    "preferred_zh": "有能力付钱；肯定会付",
+    "support_count": 1
   },
   {
     "phrase": "keep your phone close",
-    "zh": "手机别离身"
+    "zh": "手机别离身",
+    "preferred_zh": "手机别离身",
+    "support_count": 1
   },
   {
     "phrase": "get called away to another project",
-    "zh": "被叫去忙另一个项目"
+    "zh": "被叫去忙另一个项目",
+    "preferred_zh": "被叫去忙另一个项目",
+    "support_count": 1
   },
   {
     "phrase": "be gone a whole lot",
-    "zh": "最近老是不在家"
+    "zh": "最近老是不在家",
+    "preferred_zh": "最近老是不在家",
+    "support_count": 1
   },
   {
     "phrase": "grades have been slipping",
-    "zh": "成绩最近有点下滑"
+    "zh": "成绩最近有点下滑",
+    "preferred_zh": "成绩最近有点下滑",
+    "support_count": 1
   },
   {
     "phrase": "positive influence",
-    "zh": "正面影响"
+    "zh": "正面影响",
+    "preferred_zh": "正面影响",
+    "support_count": 1
   },
   {
     "phrase": "charm offensive",
-    "zh": "亲和攻势"
+    "zh": "亲和攻势",
+    "preferred_zh": "亲和攻势",
+    "support_count": 1
   },
   {
     "phrase": "sign on with",
-    "zh": "签约加入"
+    "zh": "签约加入",
+    "preferred_zh": "签约加入",
+    "support_count": 1
   },
   {
     "phrase": "win back country",
-    "zh": "赢回乡村音乐市场"
+    "zh": "赢回乡村音乐市场",
+    "preferred_zh": "赢回乡村音乐市场",
+    "support_count": 1
   },
   {
     "phrase": "get back on track",
-    "zh": "重回正轨"
+    "zh": "重回正轨",
+    "preferred_zh": "重回正轨",
+    "support_count": 1
   },
   {
     "phrase": "make a strong case for himself",
-    "zh": "把自己推销得很到位"
+    "zh": "把自己推销得很到位",
+    "preferred_zh": "把自己推销得很到位",
+    "support_count": 1
   },
   {
     "phrase": "open for someone",
-    "zh": "给某人当开场嘉宾；给某人暖场"
+    "zh": "给某人当开场嘉宾；给某人暖场",
+    "preferred_zh": "给某人当开场嘉宾；给某人暖场",
+    "support_count": 1
   },
   {
     "phrase": "go back out on the road",
-    "zh": "重新出去巡演"
+    "zh": "重新出去巡演",
+    "preferred_zh": "重新出去巡演",
+    "support_count": 1
   },
   {
     "phrase": "tour dates",
-    "zh": "巡演场次"
+    "zh": "巡演场次",
+    "preferred_zh": "巡演场次",
+    "support_count": 1
   },
   {
     "phrase": "crank out [song]",
-    "zh": "唱/演奏某首歌"
+    "zh": "唱/演奏某首歌",
+    "preferred_zh": "唱/演奏某首歌",
+    "support_count": 1
   },
   {
     "phrase": "the opera",
-    "zh": "乡村音乐语境中若指Opry，应译为大奥普里，不要译作歌剧"
+    "zh": "乡村音乐语境中若指Opry，应译为大奥普里，不要译作歌剧",
+    "preferred_zh": "乡村音乐语境中若指Opry，应译为大奥普里，不要译作歌剧",
+    "support_count": 1
   },
   {
     "phrase": "one city at a time",
-    "zh": "一座城市一座城市地"
+    "zh": "一座城市一座城市地",
+    "preferred_zh": "一座城市一座城市地",
+    "support_count": 1
   },
   {
     "phrase": "Didn't mean anything.",
-    "zh": "那根本不算什么。"
+    "zh": "那根本不算什么。",
+    "preferred_zh": "那根本不算什么。",
+    "support_count": 1
   },
   {
     "phrase": "We're done.",
-    "zh": "我们完了。"
+    "zh": "我们完了。",
+    "preferred_zh": "我们完了。",
+    "support_count": 1
   },
   {
     "phrase": "The thing is",
-    "zh": "其实"
+    "zh": "其实",
+    "preferred_zh": "其实",
+    "support_count": 1
   },
   {
     "phrase": "get crazy",
-    "zh": "失控"
+    "zh": "失控",
+    "preferred_zh": "失控",
+    "support_count": 1
   },
   {
     "phrase": "take advantage of the time off",
-    "zh": "利用这段休假"
+    "zh": "利用这段休假",
+    "preferred_zh": "利用这段休假",
+    "support_count": 1
   },
   {
     "phrase": "stop trying to push this",
-    "zh": "别再逼这件事了"
+    "zh": "别再逼这件事了",
+    "preferred_zh": "别再逼这件事了",
+    "support_count": 1
   },
   {
     "phrase": "it doesn't seem like an unreasonable request",
-    "zh": "这要求也不算过分"
+    "zh": "这要求也不算过分",
+    "preferred_zh": "这要求也不算过分",
+    "support_count": 1
   },
   {
     "phrase": "be dangerously close to stalking",
-    "zh": "都快成跟踪了"
+    "zh": "都快成跟踪了",
+    "preferred_zh": "都快成跟踪了",
+    "support_count": 1
   },
   {
     "phrase": "train has left the station",
-    "zh": "事情已经启动；这趟车已经开动了"
+    "zh": "事情已经启动；这趟车已经开动了",
+    "preferred_zh": "事情已经启动；这趟车已经开动了",
+    "support_count": 1
   },
   {
     "phrase": "bust my balls",
-    "zh": "找我茬；刁难我"
+    "zh": "找我茬；刁难我",
+    "preferred_zh": "找我茬；刁难我",
+    "support_count": 1
   },
   {
     "phrase": "call the cops kind of situation",
-    "zh": "需要报警的情况"
+    "zh": "需要报警的情况",
+    "preferred_zh": "需要报警的情况",
+    "support_count": 1
   },
   {
     "phrase": "ill will toward",
-    "zh": "对……心怀怨恨"
+    "zh": "对……心怀怨恨",
+    "preferred_zh": "对……心怀怨恨",
+    "support_count": 1
   },
   {
     "phrase": "be in the zone",
-    "zh": "正来灵感；进入状态"
+    "zh": "正来灵感；进入状态",
+    "preferred_zh": "正来灵感；进入状态",
+    "support_count": 1
   },
   {
     "phrase": "dig deep",
-    "zh": "往深了挖；深入挖掘内心"
+    "zh": "往深了挖；深入挖掘内心",
+    "preferred_zh": "往深了挖；深入挖掘内心",
+    "support_count": 1
   },
   {
     "phrase": "take the girls home",
-    "zh": "把孩子们送回家"
+    "zh": "把孩子们送回家",
+    "preferred_zh": "把孩子们送回家",
+    "support_count": 1
   },
   {
     "phrase": "cash poor",
-    "zh": "有资产但手头现金紧"
+    "zh": "有资产但手头现金紧",
+    "preferred_zh": "有资产但手头现金紧",
+    "support_count": 1
   },
   {
     "phrase": "kiss the ring",
-    "zh": "拜码头；向权威人物示好"
+    "zh": "拜码头；向权威人物示好",
+    "preferred_zh": "拜码头；向权威人物示好",
+    "support_count": 1
   },
   {
     "phrase": "fall off the turnip truck",
-    "zh": "刚进城的傻子；别把我当傻子"
+    "zh": "刚进城的傻子；别把我当傻子",
+    "preferred_zh": "刚进城的傻子；别把我当傻子",
+    "support_count": 1
   },
   {
     "phrase": "be nice",
-    "zh": "态度好点；友好点"
+    "zh": "态度好点；友好点",
+    "preferred_zh": "态度好点；友好点",
+    "support_count": 1
   },
   {
     "phrase": "get us in",
-    "zh": "带我们进去；帮我们入场"
+    "zh": "带我们进去；帮我们入场",
+    "preferred_zh": "带我们进去；帮我们入场",
+    "support_count": 1
   },
   {
     "phrase": "I write poetry",
-    "zh": "我写诗"
+    "zh": "我写诗",
+    "preferred_zh": "我写诗",
+    "support_count": 1
   },
   {
     "phrase": "somebody's got to work around here",
-    "zh": "家里总得有人工作"
+    "zh": "家里总得有人工作",
+    "preferred_zh": "家里总得有人工作",
+    "support_count": 1
   },
   {
     "phrase": "bad manners to talk about money",
-    "zh": "谈钱不礼貌"
+    "zh": "谈钱不礼貌",
+    "preferred_zh": "谈钱不礼貌",
+    "support_count": 1
   },
   {
     "phrase": "you're burning it up out there",
-    "zh": "你在台上很火"
+    "zh": "你在台上很火",
+    "preferred_zh": "你在台上很火",
+    "support_count": 1
   },
   {
     "phrase": "you probably got to go on soon",
-    "zh": "你快该上场了吧"
+    "zh": "你快该上场了吧",
+    "preferred_zh": "你快该上场了吧",
+    "support_count": 1
   },
   {
     "phrase": "drop out of the race",
-    "zh": "退出竞选"
+    "zh": "退出竞选",
+    "preferred_zh": "退出竞选",
+    "support_count": 1
   },
   {
     "phrase": "get leaked to the press",
-    "zh": "被捅给媒体"
+    "zh": "被捅给媒体",
+    "preferred_zh": "被捅给媒体",
+    "support_count": 1
   },
   {
     "phrase": "get it over with",
-    "zh": "赶紧弄完"
+    "zh": "赶紧弄完",
+    "preferred_zh": "赶紧弄完",
+    "support_count": 1
   },
   {
     "phrase": "back on",
-    "zh": "恢复进行"
+    "zh": "恢复进行",
+    "preferred_zh": "恢复进行",
+    "support_count": 1
   },
   {
     "phrase": "give someone a piece of my mind",
-    "zh": "跟某人理论理论"
+    "zh": "跟某人理论理论",
+    "preferred_zh": "跟某人理论理论",
+    "support_count": 1
   },
   {
     "phrase": "sleep on it",
-    "zh": "睡一觉再考虑"
+    "zh": "睡一觉再考虑",
+    "preferred_zh": "睡一觉再考虑",
+    "support_count": 1
   },
   {
     "phrase": "hit the road with someone",
-    "zh": "跟某人一起巡演"
+    "zh": "跟某人一起巡演",
+    "preferred_zh": "跟某人一起巡演",
+    "support_count": 1
   },
   {
     "phrase": "hang up his strap",
-    "zh": "退下来；不再巡演"
+    "zh": "退下来；不再巡演",
+    "preferred_zh": "退下来；不再巡演",
+    "support_count": 1
   },
   {
     "phrase": "dirty up the vocals",
-    "zh": "让人声更粗粝一点"
+    "zh": "让人声更粗粝一点",
+    "preferred_zh": "让人声更粗粝一点",
+    "support_count": 1
   },
   {
     "phrase": "the real deal",
-    "zh": "来真的；真有本事的人"
+    "zh": "来真的；真有本事的人",
+    "preferred_zh": "来真的；真有本事的人",
+    "support_count": 1
   },
   {
     "phrase": "holler at you real quick",
-    "zh": "单独聊两句"
+    "zh": "单独聊两句",
+    "preferred_zh": "单独聊两句",
+    "support_count": 1
   },
   {
     "phrase": "that's my man",
-    "zh": "这才是我的哥们"
+    "zh": "这才是我的哥们",
+    "preferred_zh": "这才是我的哥们",
+    "support_count": 1
+  },
+  {
+    "phrase": "I don't deserve you",
+    "zh": "我配不上你",
+    "source_en": "I don't deserve you",
+    "bad_zh": "我不值得拥有你",
+    "preferred_zh": "我配不上你",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "where we stand",
+    "zh": "我们的关系算什么；我们现在是什么关系；事情发展到哪一步了",
+    "source_en": "where we stand",
+    "bad_zh": "我们站在哪里",
+    "preferred_zh": "我们的关系算什么；我们现在是什么关系；事情发展到哪一步了",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "go down the aisle",
+    "zh": "举行婚礼；步入婚姻殿堂；结婚",
+    "source_en": "go down the aisle",
+    "bad_zh": "走下过道",
+    "preferred_zh": "举行婚礼；步入婚姻殿堂；结婚",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 2
+  },
+  {
+    "phrase": "give me a minute",
+    "zh": "给我点时间；让我缓一缓；让我静一会儿",
+    "source_en": "give me a minute",
+    "bad_zh": "给我一分钟",
+    "preferred_zh": "给我点时间；让我缓一缓；让我静一会儿",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "Tell me I heard wrong.",
+    "zh": "告诉我，是我听错了；告诉我我没听明白",
+    "source_en": "Tell me I heard wrong.",
+    "preferred_zh": "告诉我，是我听错了；告诉我我没听明白",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "square with someone",
+    "zh": "跟某人说好了；跟某人谈妥了；跟某人打过招呼了",
+    "source_en": "square with someone",
+    "preferred_zh": "跟某人说好了；跟某人谈妥了；跟某人打过招呼了",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "timing is everything",
+    "zh": "时机最重要；成败全看时机；时机决定一切",
+    "source_en": "timing is everything",
+    "bad_zh": "时机就是一切",
+    "preferred_zh": "时机最重要；成败全看时机；时机决定一切",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "sick to my stomach",
+    "zh": "恶心得反胃；难受得想吐；恶心透了",
+    "source_en": "sick to my stomach",
+    "preferred_zh": "恶心得反胃；难受得想吐；恶心透了",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "can't stand the sight of someone",
+    "zh": "一看见某人就受不了；根本不想见到某人；看见某人就烦",
+    "source_en": "can't stand the sight of someone",
+    "preferred_zh": "一看见某人就受不了；根本不想见到某人；看见某人就烦",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "the first time around",
+    "zh": "第一次时；当初；头一回的时候",
+    "source_en": "the first time around",
+    "preferred_zh": "第一次时；当初；头一回的时候",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "There's nothing left for me here.",
+    "zh": "我在这儿已经没什么可留恋的了。；这里已经没有值得我留下的了。",
+    "source_en": "There's nothing left for me here.",
+    "bad_zh": "这里对我来说已经什么都没有了。",
+    "preferred_zh": "我在这儿已经没什么可留恋的了。；这里已经没有值得我留下的了。",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 2
+  },
+  {
+    "phrase": "start someplace else",
+    "zh": "去别处重新开始；换个地方从头开始",
+    "source_en": "I gotta start someplace else.",
+    "bad_zh": "从别的地方开始",
+    "preferred_zh": "去别处重新开始；换个地方从头开始",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "crash someone's event",
+    "zh": "不请自来；跑来搅局；贸然闯进人家的活动",
+    "source_en": "I wasn't sure they'd be okay with us crashing their event.",
+    "bad_zh": "参加他们的活动",
+    "preferred_zh": "不请自来；跑来搅局；贸然闯进人家的活动",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "come through these doors",
+    "zh": "曾在这里登台；曾来这里演出；曾经来过这里",
+    "source_en": "A lot of artists that I respect have come through these doors.",
+    "bad_zh": "从这些门走进来",
+    "preferred_zh": "曾在这里登台；曾来这里演出；曾经来过这里",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "I haven't heard that one before.",
+    "zh": "这首我以前没听过；这歌我没听过；这说法我倒没听过",
+    "source_en": "I haven't heard that one before.",
+    "preferred_zh": "这首我以前没听过；这歌我没听过；这说法我倒没听过",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "take it back",
+    "zh": "反悔；收回那句话；撤回",
+    "source_en": "take it back",
+    "bad_zh": "把它拿回来",
+    "preferred_zh": "反悔；收回那句话；撤回",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "overreact",
+    "zh": "反应过度；反应太大；反应过激",
+    "source_en": "overreact",
+    "bad_zh": "太激动",
+    "preferred_zh": "反应过度；反应太大；反应过激",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "damn near",
+    "zh": "几乎；差不多；简直快要",
+    "source_en": "damn near",
+    "preferred_zh": "几乎；差不多；简直快要",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "debut a song",
+    "zh": "首次演唱这首歌；第一次公开唱这首歌",
+    "source_en": "debut a song",
+    "bad_zh": "首演一首歌",
+    "preferred_zh": "首次演唱这首歌；第一次公开唱这首歌",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "play at someone's house",
+    "zh": "在某人家弹琴；在某人家演奏；在某人家唱歌",
+    "source_en": "play at someone's house",
+    "bad_zh": "在某人家玩",
+    "preferred_zh": "在某人家弹琴；在某人家演奏；在某人家唱歌",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "be up for an award",
+    "zh": "入围……奖；获得……项提名",
+    "source_en": "be up for [an award / number of awards]",
+    "bad_zh": "要……个奖",
+    "preferred_zh": "入围……奖；获得……项提名",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 3
+  },
+  {
+    "phrase": "the full package",
+    "zh": "各方面都很出色；条件样样都好；是个十足的理想人选",
+    "source_en": "the full package",
+    "preferred_zh": "各方面都很出色；条件样样都好；是个十足的理想人选",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "have each other's backs",
+    "zh": "互相支持；互相撑腰；彼此照应",
+    "source_en": "have each other's backs",
+    "preferred_zh": "互相支持；互相撑腰；彼此照应",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "take home a trophy",
+    "zh": "拿到奖杯；捧得奖杯；获奖",
+    "source_en": "take home a trophy",
+    "preferred_zh": "拿到奖杯；捧得奖杯；获奖",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "power couple",
+    "zh": "金童玉女；强强联合的一对；明星情侣",
+    "source_en": "power couple",
+    "bad_zh": "权力夫妻",
+    "preferred_zh": "金童玉女；强强联合的一对；明星情侣",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "give a shout-out to",
+    "zh": "向……致意；特别感谢……；为……加油",
+    "source_en": "give a shout-out to",
+    "bad_zh": "打个招呼",
+    "preferred_zh": "向……致意；特别感谢……；为……加油",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "get dressed",
+    "zh": "换衣服；穿好衣服；打扮好",
+    "source_en": "get dressed",
+    "bad_zh": "穿衣服",
+    "preferred_zh": "换衣服；穿好衣服；打扮好",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "no-show",
+    "zh": "没有出席；缺席；爽约没来",
+    "source_en": "be a no-show",
+    "preferred_zh": "没有出席；缺席；爽约没来",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "out of the blue",
+    "zh": "突然；出乎意料；毫无征兆",
+    "source_en": "out of the blue",
+    "preferred_zh": "突然；出乎意料；毫无征兆",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "root for someone",
+    "zh": "给某人加油；支持某人；盼着某人赢",
+    "source_en": "root for someone",
+    "preferred_zh": "给某人加油；支持某人；盼着某人赢",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "a given",
+    "zh": "理所当然的事；默认如此；板上钉钉的事",
+    "source_en": "a given",
+    "preferred_zh": "理所当然的事；默认如此；板上钉钉的事",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "take something seriously",
+    "zh": "认真对待；把它当回事；否定式 don't take it seriously 才译成别当真",
+    "source_en": "take something seriously",
+    "bad_zh": "不可能把它当真",
+    "preferred_zh": "认真对待；把它当回事；否定式 don't take it seriously 才译成别当真",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "need a breather",
+    "zh": "需要喘口气；想缓一缓；需要歇一会儿",
+    "source_en": "need a little breather",
+    "preferred_zh": "需要喘口气；想缓一缓；需要歇一会儿",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "I couldn't be prouder",
+    "zh": "我再骄傲不过了；我无比自豪",
+    "source_en": "I couldn't be prouder",
+    "preferred_zh": "我再骄傲不过了；我无比自豪",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "Didn't think so",
+    "zh": "我就知道；果然如此；我想也是",
+    "source_en": "Didn't think so",
+    "bad_zh": "我也没那么想",
+    "preferred_zh": "我就知道；果然如此；我想也是",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "be backed up",
+    "zh": "忙不过来；堵住了；积压了",
+    "source_en": "be backed up",
+    "preferred_zh": "忙不过来；堵住了；积压了",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "roots and weeds",
+    "zh": "根与杂草；保留 weeds 的负面意象，不要误译成翅膀或展翅",
+    "source_en": "roots and weeds",
+    "bad_zh": "扎根和展翅；根与翅膀",
+    "preferred_zh": "根与杂草",
+    "style_scope": "lyrics",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "short of treatment",
+    "zh": "在不接受治疗的情况下；除治疗以外，避免译成除了接受治疗",
+    "source_en": "short of treatment",
+    "bad_zh": "除了接受治疗",
+    "preferred_zh": "在不接受治疗的情况下；除治疗以外",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "a song about mine",
+    "zh": "唱一首关于我的歌；mine 在此指我的故事/关于我",
+    "source_en": "sing a song about mine",
+    "bad_zh": "唱出自己的故事",
+    "preferred_zh": "唱一首关于我的歌",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
   }
 ]

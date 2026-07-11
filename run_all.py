@@ -9,12 +9,18 @@ from pathlib import Path
 
 from pipeline_common import PYTHON_EXE, configure_environment, environment_for_script, python_for_script
 from common import chunked_videos, selected_videos, video_stems, work_dir_for, write_status
+from ass_polish_helpers import DEFAULT_CODEX_MODEL, DEFAULT_CODEX_REASONING_EFFORT
 
 
 configure_environment()
 
 
 SCRIPT_DIR = Path(__file__).resolve().parent
+EPISODE_CODE_RE = re.compile(r"s\d{2}e\d{2}", re.IGNORECASE)
+KNOWN_TARGET_SUFFIXES = {
+    ".ass", ".srt", ".vtt", ".ssa", ".sub",
+    ".mkv", ".mp4", ".m4v", ".mov", ".avi", ".webm", ".ts",
+}
 
 PREP_STEPS = [
     ("V2_STEP1", "extract audio", "step01_prepare_audio.py"),
@@ -117,7 +123,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--polish-model",
         default="",
-        help="Step09 polish model. Defaults to SUB_POLISH_MODEL, OPENAI_MODEL, then step09's built-in default.",
+        help="Step09 polish model. Codex CLI defaults to gpt-5.6-sol; other providers use step09's built-in default.",
     )
     parser.add_argument(
         "--polish-base-url",
@@ -145,7 +151,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--polish-codex-reasoning-effort",
         default="",
-        help="Codex CLI reasoning effort for --polish-provider codex-cli. Empty uses step09 default.",
+        help="Codex CLI reasoning effort for --polish-provider codex-cli. Default: high.",
     )
     parser.add_argument(
         "--no-cleanup",
@@ -494,8 +500,9 @@ def step9_extra_args(args: argparse.Namespace) -> list[str]:
     if not args.no_polish:
         extra.append("--polish-backend")
         extra.extend(["--polish-provider", args.polish_provider])
-        if args.polish_model:
-            extra.extend(["--polish-model", args.polish_model])
+        effective_model = args.polish_model or (DEFAULT_CODEX_MODEL if args.polish_provider == "codex-cli" else "")
+        if effective_model:
+            extra.extend(["--polish-model", effective_model])
         if args.polish_base_url:
             extra.extend(["--polish-base-url", args.polish_base_url])
         if args.polish_batch_size > 0:
@@ -506,8 +513,9 @@ def step9_extra_args(args: argparse.Namespace) -> list[str]:
             extra.extend(["--polish-styles", args.polish_styles])
         if args.polish_force:
             extra.append("--polish-force")
-        if args.polish_codex_reasoning_effort:
-            extra.extend(["--polish-codex-reasoning-effort", args.polish_codex_reasoning_effort])
+        effective_reasoning = args.polish_codex_reasoning_effort or DEFAULT_CODEX_REASONING_EFFORT
+        if args.polish_provider == "codex-cli":
+            extra.extend(["--polish-codex-reasoning-effort", effective_reasoning])
     return extra
 
 
@@ -525,6 +533,18 @@ def allows_ass_only_run(start_at: str) -> bool:
     return step_index(start) >= step_index("V2_STEP9")
 
 
+def episode_code(value: str | Path) -> str:
+    match = EPISODE_CODE_RE.search(str(value))
+    return match.group(0).upper() if match else ""
+
+
+def target_selector_text(target: str) -> str:
+    target_path = Path(target)
+    if target_path.suffix.lower() in KNOWN_TARGET_SUFFIXES:
+        return target_path.stem
+    return target_path.name or target
+
+
 def ass_files_for_auto(base_dir: Path, target_stems: list[str] | None = None, chunk: str = "0") -> list[Path]:
     ass_files = sorted(path for path in base_dir.glob("*.ass") if path.is_file())
     raw_targets = [str(stem) for stem in (target_stems or []) if stem]
@@ -532,9 +552,13 @@ def ass_files_for_auto(base_dir: Path, target_stems: list[str] | None = None, ch
         selected: list[Path] = []
         for path in ass_files:
             for target in raw_targets:
-                target_path = Path(target)
-                candidates = {target, target_path.name, target_path.stem}
-                if path.name in candidates or path.stem in candidates or target_path.stem.lower() in path.stem.lower():
+                target_ep = episode_code(target)
+                if target_ep:
+                    matched = target_ep == episode_code(path.name)
+                else:
+                    selector = target_selector_text(target).lower()
+                    matched = selector == path.name.lower() or selector == path.stem.lower() or selector in path.stem.lower()
+                if matched:
                     selected.append(path)
                     break
         return selected
