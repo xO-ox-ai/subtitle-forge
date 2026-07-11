@@ -1992,5 +1992,45 @@
     "style_scope": "dialogue",
     "confidence": "high",
     "support_count": 1
+  },
+  {
+    "term": "feature film debut",
+    "zh": "大银幕处女作；首次出演剧情长片",
+    "source_en": "feature film debut",
+    "bad_zh": "首部剧情长片",
+    "preferred_zh": "大银幕处女作；首次出演剧情长片",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "term": "Oscar buzz",
+    "zh": "奥斯卡呼声；有人在谈奥斯卡",
+    "source_en": "Oscar buzz",
+    "bad_zh": "奥斯卡奖的议论声",
+    "preferred_zh": "奥斯卡呼声；有人在谈奥斯卡",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "term": "album options",
+    "zh": "后续两张专辑的选择权；两张后续专辑的续约选择权",
+    "source_en": "options for two follow-up albums",
+    "bad_zh": "后续专辑的选项",
+    "preferred_zh": "后续两张专辑的选择权；两张后续专辑的续约选择权",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "term": "recording session",
+    "zh": "录音；录音安排；录音时段",
+    "source_en": "recording session",
+    "bad_zh": "上课；比赛",
+    "preferred_zh": "录音；录音安排；录音时段",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
   }
 ]

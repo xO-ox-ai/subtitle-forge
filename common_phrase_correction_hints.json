@@ -2282,7 +2282,7 @@
   },
   {
     "phrase": "roots and weeds",
-    "zh": "根与杂草；保留 weeds 的负面意象，不要误译成翅膀或展翅",
+    "zh": "根与杂草",
     "source_en": "roots and weeds",
     "bad_zh": "扎根和展翅；根与翅膀",
     "preferred_zh": "根与杂草",
@@ -2292,7 +2292,7 @@
   },
   {
     "phrase": "short of treatment",
-    "zh": "在不接受治疗的情况下；除治疗以外，避免译成除了接受治疗",
+    "zh": "在不接受治疗的情况下；除治疗以外",
     "source_en": "short of treatment",
     "bad_zh": "除了接受治疗",
     "preferred_zh": "在不接受治疗的情况下；除治疗以外",
@@ -2302,10 +2302,59 @@
   },
   {
     "phrase": "a song about mine",
-    "zh": "唱一首关于我的歌；mine 在此指我的故事/关于我",
+    "zh": "唱一首关于我的歌",
     "source_en": "sing a song about mine",
     "bad_zh": "唱出自己的故事",
     "preferred_zh": "唱一首关于我的歌",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "check in",
+    "zh": "打来问问；联系一下看看情况；来问问进展",
+    "source_en": "Just checking in from New York",
+    "bad_zh": "确认一下",
+    "preferred_zh": "打来问问；联系一下看看情况；来问问进展",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "deserve each other",
+    "zh": "他俩真是绝配；他俩正好配一对；他俩谁也别嫌谁",
+    "source_en": "They deserve each other.",
+    "bad_zh": "他们互相伤害",
+    "preferred_zh": "他俩真是绝配；他俩正好配一对；他俩谁也别嫌谁",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "on your radar",
+    "zh": "想提醒你留意一下；想让你注意到这件事；先跟你通个气",
+    "source_en": "I just wanted it on your radar.",
+    "preferred_zh": "想提醒你留意一下；想让你注意到这件事；先跟你通个气",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "as good as can be expected",
+    "zh": "情况已经算不错了；也只能这样了；以目前情况来说还算好",
+    "source_en": "She is as good as can be expected.",
+    "bad_zh": "情况在预料之中",
+    "preferred_zh": "情况已经算不错了；也只能这样了；以目前情况来说还算好",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "sign the papers",
+    "zh": "把手续签了；把协议签了；签字办完手续",
+    "source_en": "Let's just sign the papers.",
+    "bad_zh": "签文件",
+    "preferred_zh": "把手续签了；把协议签了；签字办完手续",
     "style_scope": "dialogue",
     "confidence": "high",
     "support_count": 1

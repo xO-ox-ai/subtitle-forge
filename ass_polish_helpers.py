@@ -285,7 +285,7 @@ def add_polish_args(parser) -> None:
         "--polish-batch-size",
         type=int,
         default=_int_env("SUB_POLISH_BATCH_SIZE", DEFAULT_POLISH_BATCH_SIZE),
-        help="Number of ASS events per backend polish request. Default 64.",
+        help="Number of ASS events per backend polish request. Default 48.",
     )
     parser.add_argument(
         "--polish-file-batch-size",

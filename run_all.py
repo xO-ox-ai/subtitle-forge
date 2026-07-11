@@ -9,7 +9,11 @@ from pathlib import Path
 
 from pipeline_common import PYTHON_EXE, configure_environment, environment_for_script, python_for_script
 from common import chunked_videos, selected_videos, video_stems, work_dir_for, write_status
-from ass_polish_helpers import DEFAULT_CODEX_MODEL, DEFAULT_CODEX_REASONING_EFFORT
+from ass_polish_helpers import (
+    DEFAULT_CODEX_MODEL,
+    DEFAULT_CODEX_REASONING_EFFORT,
+    DEFAULT_POLISH_FILE_BATCH_SIZE,
+)
 
 
 configure_environment()
@@ -139,8 +143,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--polish-file-batch-size",
         type=int,
-        default=0,
-        help="Step09 polish file batch size. 0 uses step09 default.",
+        default=DEFAULT_POLISH_FILE_BATCH_SIZE,
+        help="Step09 ASS files per durable polish batch. Default: 1 (write/cache each file before continuing).",
     )
     parser.add_argument(
         "--polish-styles",
