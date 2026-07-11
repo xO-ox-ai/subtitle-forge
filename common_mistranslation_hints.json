@@ -2032,5 +2032,71 @@
     "style_scope": "dialogue",
     "confidence": "high",
     "support_count": 1
+  },
+  {
+    "term": "Lenox Hill Records",
+    "zh": "莱诺克斯山唱片公司",
+    "source_en": "Lenox Hill Records",
+    "bad_zh": "伦诺克斯山唱片公司",
+    "preferred_zh": "莱诺克斯山唱片公司",
+    "style_scope": "all",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "term": "Zach Wells",
+    "zh": "扎克·韦尔斯",
+    "source_en": "Zach Wells",
+    "preferred_zh": "扎克·韦尔斯",
+    "style_scope": "all",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "term": "Wayfaring Stranger",
+    "zh": "《漂泊的异乡人》",
+    "source_en": "Wayfaring Stranger",
+    "preferred_zh": "《漂泊的异乡人》",
+    "style_scope": "all",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "term": "spinal cord",
+    "zh": "脊髓",
+    "source_en": "spinal cord",
+    "bad_zh": "脐带",
+    "preferred_zh": "脊髓",
+    "style_scope": "all",
+    "confidence": "high",
+    "support_count": 2
+  },
+  {
+    "term": "vertebrae",
+    "zh": "椎骨",
+    "source_en": "vertebrae",
+    "preferred_zh": "椎骨",
+    "style_scope": "all",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "term": "first responders",
+    "zh": "首批救援人员；最先赶到现场的救援人员",
+    "source_en": "first responders",
+    "preferred_zh": "首批救援人员；最先赶到现场的救援人员",
+    "style_scope": "all",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "term": "reps (exercise)",
+    "zh": "个；次",
+    "source_en": "reps / repetitions in exercise or physical therapy",
+    "bad_zh": "集",
+    "preferred_zh": "个；次",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 2
   }
 ]

@@ -2358,5 +2358,61 @@
     "style_scope": "dialogue",
     "confidence": "high",
     "support_count": 1
+  },
+  {
+    "phrase": "stay with me",
+    "zh": "急救语境：撑住、坚持住、别昏过去；一般语境：陪着我、留在我身边",
+    "source_en": "stay with me",
+    "preferred_zh": "按语境选择：撑住；坚持住；陪着我；留在我身边",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 4
+  },
+  {
+    "phrase": "pull the trigger",
+    "zh": "比喻语境：作出决定、正式启动；枪械语境：扣动扳机",
+    "source_en": "pull the trigger",
+    "preferred_zh": "按语境选择：作出决定；正式启动；扣动扳机",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "pull for someone",
+    "zh": "盼着你好起来；为你加油；支持你；希望你挺过去",
+    "source_en": "pulling for you",
+    "preferred_zh": "盼着你好起来；为你加油；支持你；希望你挺过去",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "on the horizon",
+    "zh": "近期有望出现；眼下可能到来；已经露出苗头",
+    "source_en": "on the horizon",
+    "bad_zh": "在地平线上",
+    "preferred_zh": "近期有望出现；眼下可能到来；已经露出苗头",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "bumps in the road",
+    "zh": "一点坎坷；暂时的困难；小波折",
+    "source_en": "bumps in the road",
+    "bad_zh": "路上的小颠簸",
+    "preferred_zh": "一点坎坷；暂时的困难；小波折",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "in a bad way",
+    "zh": "情况很糟；状态很差；伤势严重",
+    "source_en": "in a bad way",
+    "preferred_zh": "情况很糟；状态很差；伤势严重",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
   }
 ]
