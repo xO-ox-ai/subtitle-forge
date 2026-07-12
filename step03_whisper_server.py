@@ -20,7 +20,7 @@ from common import (
     work_dir_for,
     write_status,
 )
-from pipeline_common import configure_environment, exe_path, int_env
+from pipeline_common import PROJECT_ROOT, WHISPER_DIR, configure_environment, exe_path, int_env, resolve_project_path
 
 
 configure_environment()
@@ -43,21 +43,21 @@ def upload_chunk_size() -> int:
 
 
 def whisper_server_exe() -> str:
-    return exe_path("whisper-server.exe", "WHISPER_SERVER_EXE")
+    return exe_path("whisper-server.exe", "WHISPER_SERVER_EXE", (WHISPER_DIR,))
 
 
 def whisper_model_path() -> Path:
     for name in ("WHISPER_MODEL", "WHISPER_CPP_MODEL"):
         value = os.environ.get(name)
         if value:
-            return Path(value)
+            return resolve_project_path(value)
     exe = whisper_server_exe()
     resolved = Path(shutil.which(exe) or exe)
     if resolved.exists():
         candidate = resolved.parent / "ggml-large-v3.bin"
         if candidate.exists():
             return candidate
-    return Path("ggml-large-v3.bin")
+    return PROJECT_ROOT / "models" / "ggml-large-v3.bin"
 
 
 def server_base_url() -> str:
@@ -118,7 +118,7 @@ def build_server_cmd(tmp_dir: Path) -> list[str]:
     if bool_env("WHISPER_VAD"):
         cmd.append("--vad")
         if os.environ.get("WHISPER_VAD_MODEL"):
-            cmd.extend(["--vad-model", os.environ["WHISPER_VAD_MODEL"]])
+            cmd.extend(["--vad-model", str(resolve_project_path(os.environ["WHISPER_VAD_MODEL"]))])
     if bool_env("WHISPER_SUPPRESS_NST", True):
         cmd.append("--suppress-nst")
     if bool_env("WHISPER_SERVER_CONVERT"):

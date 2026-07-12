@@ -20,6 +20,12 @@ temp/
 overrides/
 __pycache__/
 .pytest_cache/
+.cache/
+.venv/
+.venvs/
+tools/
+models/
+wheels/
 
 # Local runtime state
 subtitle_status.txt

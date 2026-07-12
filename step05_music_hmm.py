@@ -10,9 +10,10 @@ from pathlib import Path
 
 from common import StatusHeartbeat, filter_paths_by_stems, parse_common_args, selected_videos, work_dir_for, write_status, write_status_only
 from override_utils import apply_music_overrides, load_overrides
+from pipeline_common import HF_HOME, resolve_project_path
 
 
-WHISPER_AT_CACHE = os.environ.get("WHISPER_AT_CACHE", r"C:\Python\hf-cache\whisper-at")
+WHISPER_AT_CACHE = str(resolve_project_path(os.environ.get("WHISPER_AT_CACHE") or (HF_HOME / "whisper-at")))
 MUSIC_SYMBOL = "\u266a"
 WINDOW_SECONDS = 4.0
 SINGING_CORE_THRESHOLD = -2.45

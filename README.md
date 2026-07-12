@@ -32,33 +32,46 @@ python .\run_all.py .
 - whisper.cpp 的 `whisper-server.exe`，用于 Step 3 英文转写
 - `codex.exe`，或一个 OpenAI-compatible API，用于 Step 9 后端调优
 
-工具路径可以通过环境变量指定。下面都使用 `X:` 作为示例盘符，请按自己的实际安装位置修改：
+脚本不会再假定工具安装在固定盘符。外部程序优先从当前 `PATH` 查找；先确认这些命令可以直接执行：
 
 ```powershell
-$env:FFMPEG_DIR = "X:\ffmpeg\bin"
-$env:LLAMA_DIR = "X:\llama"
-$env:LLAMA_SERVER_EXE = "X:\llama\llama-server.exe"
-$env:WHISPER_SERVER_EXE = "X:\whisper.cpp\whisper-server.exe"
+Get-Command python
+Get-Command ffmpeg.exe
+Get-Command ffprobe.exe
+Get-Command llama-server.exe
+Get-Command whisper-server.exe
+Get-Command codex.exe
 ```
 
-Python 环境示例：
+解析顺序为：对应的可执行文件环境变量（如 `FFMPEG_EXE`）→ 当前 `PATH` → 项目相对兜底目录。如果不想修改系统 `PATH`，也可以把工具放进项目相对目录：
+
+- `tools/ffmpeg/bin/ffmpeg.exe` 与 `ffprobe.exe`
+- `tools/llama/llama-server.exe`
+- `tools/whisper/whisper-server.exe`
 
 ```powershell
-$env:SUB_PYTHON_EXE = "X:\Python\Python310\python.exe"
-$env:SUB_DEMUCS_SCRIPTS = "X:\Python\Python310\demucs\Scripts"
-$env:SUB_WHISPERX_SCRIPTS = "X:\Python\Python310\whisperx\Scripts"
-$env:SUB_WHISPER_AT_SCRIPTS = "X:\Python\Python310\whisper-at\Scripts"
-$env:SUB_PADDLEOCR_SCRIPTS = "X:\Python\Python310\paddleocr\Scripts"
+$env:PATH = ".\tools\whisper;.\tools\llama;.\tools\ffmpeg\bin;$env:PATH"
 ```
 
-缓存目录示例：
+所有路径型环境变量都允许使用相对路径，并统一相对于项目根目录解析。只有确实需要覆盖 `PATH` 结果时才设置对应变量。
+
+Python 默认使用 `PATH` 中的 `python`。需要隔离依赖时，推荐把环境放在项目的 `.venvs/` 下：
 
 ```powershell
-$env:HF_HOME = "X:\Python\hf-cache"
-$env:HF_HUB_CACHE = "X:\Python\hf-cache\hub"
-$env:TORCH_HOME = "X:\Python\hf-cache\torch"
-$env:PIP_CACHE_DIR = "X:\Python\pip-cache"
-$env:PIP_FIND_LINKS = "X:\Python\wheel-cache"
+$env:SUB_DEMUCS_SCRIPTS = ".venvs\demucs\Scripts"
+$env:SUB_WHISPERX_SCRIPTS = ".venvs\whisperx\Scripts"
+$env:SUB_WHISPER_AT_SCRIPTS = ".venvs\whisper-at\Scripts"
+$env:SUB_PADDLEOCR_SCRIPTS = ".venvs\paddleocr\Scripts"
+```
+
+未指定时，模型与 Python 缓存默认写入项目的 `.cache/`。如需覆盖，也建议继续使用项目相对路径：
+
+```powershell
+$env:HF_HOME = ".cache\huggingface"
+$env:HF_HUB_CACHE = ".cache\huggingface\hub"
+$env:TORCH_HOME = ".cache\torch"
+$env:PIP_CACHE_DIR = ".cache\pip"
+$env:PIP_FIND_LINKS = ".\wheels"
 ```
 
 项目会自动设置常见 UTF-8 相关变量；如果想提前固定，也可以这样写：
@@ -74,10 +87,11 @@ Step 7 本地翻译模型：
 
 - 默认模型别名：`qwen3-32b`
 - 默认 GGUF 文件名：`Qwen3-32B-Q4_K_M.gguf`
-- 可以把模型放在 `llama-server.exe` 同目录、`LLAMA_DIR` 下，或直接设置 `QWEN_GGUF`
+- 默认相对路径：`models/Qwen3-32B-Q4_K_M.gguf`
+- 也可以放在 `llama-server.exe` 同目录、`tools/llama/` 下，或设置相对的 `QWEN_GGUF`
 
 ```powershell
-$env:QWEN_GGUF = "X:\llama\models\Qwen3-32B-Q4_K_M.gguf"
+$env:QWEN_GGUF = ".\models\Qwen3-32B-Q4_K_M.gguf"
 $env:QWEN_MODEL = "qwen3-32b"
 $env:QWEN_BASE_URL = "http://127.0.0.1:8080/v1"
 ```
@@ -85,10 +99,11 @@ $env:QWEN_BASE_URL = "http://127.0.0.1:8080/v1"
 Step 3 Whisper.cpp 转写模型：
 
 - 默认文件名：`ggml-large-v3.bin`
-- 可以放在 `whisper-server.exe` 同目录，或设置 `WHISPER_MODEL` / `WHISPER_CPP_MODEL`
+- 默认相对路径：`models/ggml-large-v3.bin`
+- 也可以放在 `whisper-server.exe` 同目录，或设置相对的 `WHISPER_MODEL` / `WHISPER_CPP_MODEL`
 
 ```powershell
-$env:WHISPER_MODEL = "X:\whisper.cpp\models\ggml-large-v3.bin"
+$env:WHISPER_MODEL = ".\models\ggml-large-v3.bin"
 $env:WHISPER_LANGUAGE = "en"
 $env:WHISPER_SERVER_PORT = "8091"
 ```
@@ -109,7 +124,7 @@ Step 5 音乐/歌词识别：
 - 缓存目录可用 `WHISPER_AT_CACHE` 指定
 
 ```powershell
-$env:WHISPER_AT_CACHE = "X:\Python\hf-cache\whisper-at"
+$env:WHISPER_AT_CACHE = ".cache\huggingface\whisper-at"
 ```
 
 Step 6 OCR：

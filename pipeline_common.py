@@ -5,28 +5,57 @@ import shutil
 from pathlib import Path
 
 
+PROJECT_ROOT = Path(__file__).resolve().parent
+
+
+def resolve_project_path(value: str | Path) -> Path:
+    """Resolve relative configuration paths from the repository root."""
+    path = Path(value).expanduser()
+    if not path.is_absolute():
+        path = PROJECT_ROOT / path
+    return path.resolve(strict=False)
+
+
+def env_path(name: str, default: str | Path) -> Path:
+    value = os.environ.get(name)
+    return resolve_project_path(value if value else default)
+
+
+def resolve_executable_path(value: str | Path) -> Path:
+    configured = str(value)
+    resolved = shutil.which(configured)
+    if resolved:
+        return Path(resolved).resolve()
+    configured_path = Path(configured).expanduser()
+    if configured_path.is_absolute():
+        return configured_path
+    if configured_path.parent != Path("."):
+        return resolve_project_path(configured_path)
+    return configured_path
+
+
 _CURRENT_PYTHON = Path(sys.executable).resolve()
 _CURRENT_ROOT = _CURRENT_PYTHON.parent.parent if _CURRENT_PYTHON.parent.name.lower() == "scripts" else _CURRENT_PYTHON.parent
-VENV_ROOT = Path(os.environ.get("SUB_VENV_ROOT") or _CURRENT_ROOT)
-DEMUCS_SCRIPTS = Path(os.environ.get("SUB_DEMUCS_SCRIPTS", r"C:\Python\Python310\demucs\Scripts"))
-WHISPERX_SCRIPTS = Path(os.environ.get("SUB_WHISPERX_SCRIPTS", r"C:\Python\Python310\whisperx\Scripts"))
-WHISPER_AT_SCRIPTS = Path(os.environ.get("SUB_WHISPER_AT_SCRIPTS", r"C:\Python\Python310\whisper-at\Scripts"))
-PADDLEOCR_SCRIPTS = Path(os.environ.get("SUB_PADDLEOCR_SCRIPTS", r"C:\Python\Python310\paddleocr\Scripts"))
-_DEFAULT_PYTHON_EXE = VENV_ROOT / "Scripts" / "python.exe"
+VENV_ROOT = env_path("SUB_VENV_ROOT", _CURRENT_ROOT)
+DEMUCS_SCRIPTS = env_path("SUB_DEMUCS_SCRIPTS", Path(".venvs") / "demucs" / "Scripts")
+WHISPERX_SCRIPTS = env_path("SUB_WHISPERX_SCRIPTS", Path(".venvs") / "whisperx" / "Scripts")
+WHISPER_AT_SCRIPTS = env_path("SUB_WHISPER_AT_SCRIPTS", Path(".venvs") / "whisper-at" / "Scripts")
+PADDLEOCR_SCRIPTS = env_path("SUB_PADDLEOCR_SCRIPTS", Path(".venvs") / "paddleocr" / "Scripts")
 if os.environ.get("SUB_PYTHON_EXE"):
-    PYTHON_EXE = Path(os.environ["SUB_PYTHON_EXE"])
-elif _DEFAULT_PYTHON_EXE.exists():
-    PYTHON_EXE = _DEFAULT_PYTHON_EXE
+    PYTHON_EXE = resolve_executable_path(os.environ["SUB_PYTHON_EXE"])
+elif shutil.which("python"):
+    PYTHON_EXE = Path(shutil.which("python") or sys.executable).resolve()
 else:
     PYTHON_EXE = Path(sys.executable)
-HF_HOME = Path(os.environ.get("HF_HOME") or r"C:\Python\hf-cache")
-HF_HUB_CACHE = Path(os.environ.get("HF_HUB_CACHE") or (HF_HOME / "hub"))
-TORCH_HOME = Path(os.environ.get("TORCH_HOME") or (HF_HOME / "torch"))
-NLTK_DATA = Path(os.environ.get("NLTK_DATA") or (VENV_ROOT / "nltk_data"))
-PIP_CACHE_DIR = Path(os.environ.get("PIP_CACHE_DIR") or r"C:\Python\pip-cache")
-PIP_FIND_LINKS = Path(os.environ.get("PIP_FIND_LINKS") or r"C:\Python\wheel-cache")
-LLAMA_DIR = Path(os.environ.get("LLAMA_DIR", r"C:\llama"))
-FFMPEG_DIR = Path(os.environ.get("FFMPEG_DIR", r"C:\ffmpeg\bin"))
+HF_HOME = env_path("HF_HOME", Path(".cache") / "huggingface")
+HF_HUB_CACHE = env_path("HF_HUB_CACHE", HF_HOME / "hub")
+TORCH_HOME = env_path("TORCH_HOME", Path(".cache") / "torch")
+NLTK_DATA = env_path("NLTK_DATA", Path(".cache") / "nltk")
+PIP_CACHE_DIR = env_path("PIP_CACHE_DIR", Path(".cache") / "pip")
+PIP_FIND_LINKS = env_path("PIP_FIND_LINKS", "wheels")
+LLAMA_DIR = env_path("LLAMA_DIR", Path("tools") / "llama")
+FFMPEG_DIR = env_path("FFMPEG_DIR", Path("tools") / "ffmpeg" / "bin")
+WHISPER_DIR = env_path("WHISPER_DIR", Path("tools") / "whisper")
 DEFAULT_PROXY = os.environ.get("SUB_PROXY", "http://127.0.0.1:7897")
 TORCH_LIB_DIR = VENV_ROOT / "Lib" / "site-packages" / "torch" / "lib"
 
@@ -91,13 +120,13 @@ def configure_environment() -> None:
     # Keep the system PATH first. Tool locations such as ffmpeg, llama-server,
     # and whisper-server are expected to be managed by the host environment now.
     path_parts = [os.environ.get("PATH", "")]
-    for extra_dir in (VENV_ROOT / "Scripts", TORCH_LIB_DIR, LLAMA_DIR, FFMPEG_DIR):
+    for extra_dir in (VENV_ROOT / "Scripts", TORCH_LIB_DIR, LLAMA_DIR, FFMPEG_DIR, WHISPER_DIR):
         if extra_dir.exists():
             path_parts.append(str(extra_dir))
     os.environ["PATH"] = os.pathsep.join(part for part in path_parts if part)
 
     if hasattr(os, "add_dll_directory"):
-        for dll_dir in (VENV_ROOT / "Scripts", TORCH_LIB_DIR, FFMPEG_DIR, LLAMA_DIR):
+        for dll_dir in (VENV_ROOT / "Scripts", TORCH_LIB_DIR, FFMPEG_DIR, LLAMA_DIR, WHISPER_DIR):
             if dll_dir.exists():
                 try:
                     _DLL_DIRECTORY_HANDLES.append(os.add_dll_directory(str(dll_dir)))
@@ -130,7 +159,7 @@ def scripts_python(scripts_dir: Path) -> Path | None:
 def python_for_script(script_name: str) -> Path:
     env_name = SCRIPT_PYTHON_ENV.get(Path(script_name).name)
     if env_name and os.environ.get(env_name):
-        return Path(os.environ[env_name])
+        return resolve_executable_path(os.environ[env_name])
     scripts_dir = SCRIPT_VENV_SCRIPTS.get(Path(script_name).name)
     if scripts_dir:
         candidate = scripts_python(scripts_dir)
@@ -159,7 +188,16 @@ def environment_for_script(script_name: str) -> dict[str, str]:
 
 def exe_path(name: str, env_var: str | None = None, fallback_dirs: tuple[Path, ...] = ()) -> str:
     if env_var and os.environ.get(env_var):
-        return os.environ[env_var]
+        configured = os.environ[env_var]
+        resolved_configured = shutil.which(configured)
+        if resolved_configured:
+            return resolved_configured
+        configured_path = Path(configured).expanduser()
+        if configured_path.is_absolute():
+            return str(configured_path)
+        if configured_path.parent != Path("."):
+            return str(resolve_project_path(configured_path))
+        return configured
     resolved = shutil.which(name)
     if resolved:
         return resolved

@@ -10,7 +10,7 @@ from types import SimpleNamespace
 from urllib.parse import urlparse
 from urllib.request import Request, urlopen
 
-from pipeline_common import LLAMA_DIR, configure_environment, exe_path, int_env
+from pipeline_common import PROJECT_ROOT, LLAMA_DIR, configure_environment, exe_path, int_env, resolve_project_path
 
 
 configure_environment()
@@ -24,7 +24,7 @@ LLAMA_SERVER_EXE = exe_path("llama-server.exe", "LLAMA_SERVER_EXE", (LLAMA_DIR,)
 
 def default_qwen_gguf() -> Path:
     if os.environ.get("QWEN_GGUF"):
-        return Path(os.environ["QWEN_GGUF"])
+        return resolve_project_path(os.environ["QWEN_GGUF"])
     search_dirs: list[Path] = []
     server_path = shutil.which(str(LLAMA_SERVER_EXE)) or str(LLAMA_SERVER_EXE)
     try:
@@ -32,11 +32,12 @@ def default_qwen_gguf() -> Path:
     except OSError:
         pass
     search_dirs.append(LLAMA_DIR)
+    search_dirs.append(PROJECT_ROOT / "models")
     for directory in search_dirs:
         candidate = directory / "Qwen3-32B-Q4_K_M.gguf"
         if candidate.exists():
             return candidate
-    return Path("Qwen3-32B-Q4_K_M.gguf")
+    return PROJECT_ROOT / "models" / "Qwen3-32B-Q4_K_M.gguf"
 
 
 QWEN_GGUF = default_qwen_gguf()
