@@ -143,6 +143,37 @@ class DictionaryRoutingTests(unittest.TestCase):
             self.assertNotIn("glossary", guidance)
             self.assertEqual(guidance["terminology"][0]["preferred_zh"], "定位咒")
 
+    def test_static_hint_review_ignores_stale_prompt_versions(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            cache = Path(temp_dir) / "sample.json"
+            cache.write_text(
+                json.dumps(
+                    {
+                        "entries": {
+                            "old": {
+                                "prompt_version": "ass-polish-older",
+                                "kind": "dialogue",
+                                "en": "old source",
+                                "source_zh": "旧译",
+                                "polished_zh": "旧改",
+                            },
+                            "current": {
+                                "prompt_version": polish.PROMPT_VERSION,
+                                "kind": "dialogue",
+                                "en": "current source",
+                                "source_zh": "原译",
+                                "polished_zh": "新译",
+                            },
+                        }
+                    },
+                    ensure_ascii=False,
+                ),
+                encoding="utf-8",
+            )
+            samples = polish._collect_static_hint_samples([cache])
+            self.assertEqual(len(samples["changed_items"]), 1)
+            self.assertEqual(samples["changed_items"][0]["en"], "current source")
+
 
 if __name__ == "__main__":
     unittest.main()

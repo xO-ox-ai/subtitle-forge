@@ -2100,5 +2100,75 @@
     "confidence": "high",
     "support_count": 1,
     "guidance": "巡演首秀；巡演首场；巡演启动"
+  },
+  {
+    "phrase": "know better",
+    "guidance": "表示掌握事实、知道事情并非表面所说时，译为“我们知道并非如此”“我们很清楚不是这么回事”等；不要仅译成“心里有数”。",
+    "source_en": "we know better",
+    "bad_zh": "我们心里有数",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "not so much",
+    "guidance": "用于与前项形成反差时，译为“就未必了”“可就不一定了”“那倒未必”，不要按数量直译。",
+    "source_en": "not so much",
+    "bad_zh": "不算太多",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "mix business with pleasure",
+    "guidance": "根据暧昧程度自然译为“公事私事一起办”“公私兼顾”或“谈公事也不耽误享乐”，避免生硬直译。",
+    "source_en": "mix business with pleasure",
+    "bad_zh": "把公事和私事混在一起",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "stop at nothing",
+    "guidance": "译为“不惜一切做某事”“会用尽一切手段”，突出为达目的不择手段。",
+    "source_en": "stop at nothing to do something",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "get word of a lead",
+    "guidance": "自然译为“听到线索”“收到线报”“有了线索”，根据消息来源选择，避免欧化的“得到一个线索”。",
+    "source_en": "get word of a lead",
+    "bad_zh": "得到一个线索",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "keep someone in check",
+    "guidance": "指约束某群体、使其不惹事时，译为“管住”“压住”“让其安分”，不要机械译为“控制住”。",
+    "source_en": "keep someone in check / be in check",
+    "bad_zh": "被控制住",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "stay in line",
+    "guidance": "指人或群体守规矩时，译为“安分守己”“听从约束”“不越界”，不要按排队含义处理。",
+    "source_en": "stay in line",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "to what do I owe this honor",
+    "guidance": "作为带调侃或客套意味的来访寒暄，可译为“什么风把你吹来了”“怎么有幸迎来你这位贵客”等，并按称谓和语气调整。",
+    "source_en": "to what do I owe this great honor",
+    "bad_zh": "我这次又有什么荣幸",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
   }
 ]

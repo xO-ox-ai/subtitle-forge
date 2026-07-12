@@ -16,7 +16,7 @@ from ass_overlay_helpers import ass_escape, break_zh, load_json
 
 PROMPT_VERSION = "ass-polish-20260712-v7"
 GLOSSARY_REVIEW_PROMPT_VERSION = "glossary-review-20260707-v1"
-STATIC_HINT_REVIEW_PROMPT_VERSION = "static-hint-review-20260712-v2"
+STATIC_HINT_REVIEW_PROMPT_VERSION = "static-hint-review-20260712-v3"
 DEFAULT_MODEL = "gpt-4.1-mini"
 DEFAULT_CODEX_MODEL = "gpt-5.6-sol"
 DEFAULT_CODEX_REASONING_EFFORT = "high"
@@ -1219,6 +1219,9 @@ def request_static_hint_review(
         "Add only high-confidence, reusable rules that are likely to help future episodes. "
         "Use mistranslation_hints for proper nouns, fixed collocations, industry terms, and title/technical wording. "
         "Use phrase_correction_hints for frequent colloquial or industry phrases where the natural Chinese guidance is reusable. "
+        "Do not add series-specific character names, fictional places, supernatural terms, or other exact canon wording "
+        "to either common dictionary; those belong in subtitle_terminology.json and require explicit series scope. "
+        "Never duplicate anything listed in existing.terminology_terms. "
         "The guidance field is an instruction for a future editor, not literal replacement text. "
         "For short colloquial phrases, provide several natural Chinese options in guidance when context decides the final wording. "
         "Set style_scope carefully: dialogue for spoken lines, lyric only for song-lyric wording, ocr for screen-text cleanup, all only when truly universal. "
@@ -1334,6 +1337,8 @@ def _collect_static_hint_samples(cache_files: list[Path]) -> dict:
         for entry in entries.values():
             if not isinstance(entry, dict):
                 continue
+            if entry.get("prompt_version") != PROMPT_VERSION:
+                continue
             kind = str(entry.get("kind") or "").strip()
             source_zh = clean_glossary_review_text(entry.get("source_zh"))
             polished_zh = clean_glossary_review_text(entry.get("polished_zh"))
@@ -1418,11 +1423,20 @@ def curate_static_hint_files(
         review_entries = {}
         review_state["entries"] = review_entries
 
+    terminology_data = load_json(cwd / SUBTITLE_TERMINOLOGY_FILE, {})
+    terminology_entries = terminology_data.get("entries") if isinstance(terminology_data, dict) else []
+    if not isinstance(terminology_entries, list):
+        terminology_entries = []
     payload = {
         "prompt_version": STATIC_HINT_REVIEW_PROMPT_VERSION,
         "existing": {
             "mistranslation_terms": [item.get("term") for item in COMMON_MISTRANSLATION_HINTS if isinstance(item, dict)],
             "phrase_corrections": [item.get("phrase") for item in COMMON_PHRASE_CORRECTION_HINTS if isinstance(item, dict)],
+            "terminology_terms": [
+                item.get("source_en")
+                for item in terminology_entries
+                if isinstance(item, dict) and item.get("source_en")
+            ],
             "ocr_low_value_short_texts": sorted(OCR_LOW_VALUE_SHORT_TEXTS),
         },
         "samples": samples,

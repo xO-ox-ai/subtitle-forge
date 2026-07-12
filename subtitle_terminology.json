@@ -1,6 +1,6 @@
 {
   "version": "subtitle-terminology-20260712-v1",
-  "updated_at": "2026-07-12 15:20:00",
+  "updated_at": "2026-07-12 20:35:00",
   "schema": {
     "source_en": "English term matched as a whole word or phrase",
     "preferred_zh": "Literal preferred subtitle wording only",
@@ -167,6 +167,7 @@
     },
     {
       "source_en": "the Ancestors",
+      "aliases": ["our ancestors", "your ancestors"],
       "preferred_zh": "祖灵",
       "note": "本剧新奥尔良女巫体系中的专称",
       "series": "The Originals",
@@ -224,8 +225,65 @@
       "reviewed": true
     },
     {
+      "source_en": "Niklaus",
+      "preferred_zh": "尼克劳斯",
+      "series": "The Originals",
+      "scope": "all",
+      "reviewed": true
+    },
+    {
+      "source_en": "Mikaelson",
+      "aliases": ["Mikaelsons"],
+      "preferred_zh": "迈克尔森",
+      "note": "复数或指全家时按语境译作“迈克尔森家族”或“迈克尔森一家”",
+      "series": "The Originals",
+      "scope": "all",
+      "reviewed": true
+    },
+    {
+      "source_en": "Alistair Duquesne",
+      "preferred_zh": "艾利斯塔·杜克森",
+      "series": "The Originals",
+      "scope": "all",
+      "reviewed": true
+    },
+    {
+      "source_en": "Alistair",
+      "preferred_zh": "艾利斯塔",
+      "series": "The Originals",
+      "scope": "all",
+      "reviewed": true
+    },
+    {
+      "source_en": "sigil",
+      "aliases": ["sigils", "sigil markings"],
+      "preferred_zh": "符印",
+      "note": "魔法语境；依句式可译作“符印标记”，不要弱化为普通符号",
+      "series": "The Originals",
+      "scope": "dialogue|chant",
+      "reviewed": true
+    },
+    {
+      "source_en": "syphon a hex",
+      "aliases": ["siphon a hex"],
+      "preferred_zh": "吸除诅咒",
+      "note": "指吸取并移除诅咒的魔力",
+      "series": "The Originals",
+      "scope": "dialogue|chant",
+      "reviewed": true
+    },
+    {
+      "source_en": "the Cauldron",
+      "preferred_zh": "坩埚区",
+      "note": "新奥尔良地区名称，不是普通容器",
+      "case_sensitive": true,
+      "series": "The Originals",
+      "scope": "all",
+      "reviewed": true
+    },
+    {
       "source_en": "Hope Mikaelson",
-      "preferred_zh": "霍普·米凯尔森",
+      "preferred_zh": "霍普·迈克尔森",
       "series": "The Originals",
       "scope": "all",
       "reviewed": true
@@ -240,7 +298,7 @@
     },
     {
       "source_en": "Klaus Mikaelson",
-      "preferred_zh": "克劳斯·米凯尔森",
+      "preferred_zh": "克劳斯·迈克尔森",
       "series": "The Originals",
       "scope": "all",
       "reviewed": true
@@ -254,7 +312,7 @@
     },
     {
       "source_en": "Elijah Mikaelson",
-      "preferred_zh": "伊利亚·米凯尔森",
+      "preferred_zh": "伊利亚·迈克尔森",
       "series": "The Originals",
       "scope": "all",
       "reviewed": true
@@ -268,7 +326,7 @@
     },
     {
       "source_en": "Freya Mikaelson",
-      "preferred_zh": "弗蕾雅·米凯尔森",
+      "preferred_zh": "弗蕾雅·迈克尔森",
       "series": "The Originals",
       "scope": "all",
       "reviewed": true
@@ -282,7 +340,7 @@
     },
     {
       "source_en": "Rebekah Mikaelson",
-      "preferred_zh": "丽贝卡·米凯尔森",
+      "preferred_zh": "丽贝卡·迈克尔森",
       "series": "The Originals",
       "scope": "all",
       "reviewed": true

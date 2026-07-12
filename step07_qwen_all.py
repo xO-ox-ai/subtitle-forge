@@ -253,7 +253,7 @@ Rules:
 
 FIXED_CHANT_PHRASES = {
     ("yoli", "conepiya", "miquiliztli"): "\u7ea6\u5229\u00b7\u79d1\u6d85\u76ae\u4e9a\u00b7\u7c73\u57fa\u5229\u5179\u7279\u5229\u3002",
-    ("spasiti", "animam", "suam"): "\u5524\u9192\u543e\u4e4b\u7075\u9b42\u3002",
+    ("spasiti", "animam", "suam"): "\u62ef\u6551\u4ed6\u7684\u7075\u9b42\u3002",
     ("animam", "suam"): "\u4ed6\u7684\u7075\u9b42\u3002",
     ("tillate", "ulaz"): "\u63d0\u62c9\u7279\u00b7\u4e4c\u62c9\u5179\u3002",
     ("tillate",): "\u63d0\u62c9\u7279\u2026\u2026",
