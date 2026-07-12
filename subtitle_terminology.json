@@ -1,0 +1,340 @@
+{
+  "version": "subtitle-terminology-20260712-v1",
+  "updated_at": "2026-07-12 15:20:00",
+  "schema": {
+    "source_en": "English term matched as a whole word or phrase",
+    "preferred_zh": "Literal preferred subtitle wording only",
+    "note": "Optional usage instruction; never copy into subtitle text",
+    "aliases": "Optional source variants that share the same preferred wording",
+    "case_sensitive": "Optional true for proper terms whose lowercase form has an ordinary meaning",
+    "series": "Optional filename-based series scope",
+    "scope": "Optional dialogue/lyric/chant/ocr/note/all scope"
+  },
+  "entries": [
+    {
+      "source_en": "The Originals",
+      "preferred_zh": "始祖家族",
+      "note": "剧名；指始祖吸血鬼家族时也可按语境使用",
+      "series": "The Originals",
+      "scope": "all",
+      "reviewed": true
+    },
+    {
+      "source_en": "Original vampire",
+      "aliases": ["Original vampires"],
+      "preferred_zh": "始祖吸血鬼",
+      "note": "语境明确时可简称“始祖”，不要译成“原始吸血鬼”",
+      "series": "The Originals",
+      "scope": "dialogue|chant",
+      "reviewed": true
+    },
+    {
+      "source_en": "binding spell",
+      "aliases": ["binding spells"],
+      "preferred_zh": "束缚咒",
+      "series": "The Originals",
+      "scope": "dialogue|chant",
+      "reviewed": true
+    },
+    {
+      "source_en": "locator spell",
+      "aliases": ["locator spells"],
+      "preferred_zh": "定位咒",
+      "series": "The Originals",
+      "scope": "dialogue|chant",
+      "reviewed": true
+    },
+    {
+      "source_en": "protection spell",
+      "aliases": ["protection spells"],
+      "preferred_zh": "保护咒",
+      "note": "护身用途可按语境译作“护身咒”；spell 不是实体护身符",
+      "series": "The Originals",
+      "scope": "dialogue|chant",
+      "reviewed": true
+    },
+    {
+      "source_en": "cloaking spell",
+      "aliases": ["cloaking spells"],
+      "preferred_zh": "隐匿咒",
+      "series": "The Originals",
+      "scope": "dialogue|chant",
+      "reviewed": true
+    },
+    {
+      "source_en": "transcription spell",
+      "preferred_zh": "转录咒",
+      "note": "指以魔法转录内容，不要笼统译成“文字咒语”",
+      "series": "The Originals",
+      "scope": "dialogue|chant",
+      "reviewed": true
+    },
+    {
+      "source_en": "unlinking spell",
+      "preferred_zh": "断链咒",
+      "note": "明确指血脉联系时可译作“解除血脉联系的咒语”",
+      "series": "The Originals",
+      "scope": "dialogue|chant",
+      "reviewed": true
+    },
+    {
+      "source_en": "linking spell",
+      "preferred_zh": "连接咒",
+      "series": "The Originals",
+      "scope": "dialogue|chant",
+      "reviewed": true
+    },
+    {
+      "source_en": "boundary spell",
+      "preferred_zh": "结界咒",
+      "note": "指限制人员进出的魔法结界",
+      "series": "The Originals",
+      "scope": "dialogue|chant",
+      "reviewed": true
+    },
+    {
+      "source_en": "representational magic",
+      "preferred_zh": "象征魔法",
+      "note": "使用象征物对应真实对象的巫术体系",
+      "series": "The Originals",
+      "scope": "dialogue|chant",
+      "reviewed": true
+    },
+    {
+      "source_en": "coven",
+      "aliases": ["covens"],
+      "preferred_zh": "女巫团",
+      "note": "巫术组织，不要译作“女巫派”",
+      "series": "The Originals",
+      "scope": "dialogue|chant",
+      "reviewed": true
+    },
+    {
+      "source_en": "Gemini Coven",
+      "preferred_zh": "双子女巫团",
+      "series": "The Originals",
+      "scope": "dialogue|chant",
+      "reviewed": true
+    },
+    {
+      "source_en": "siphoner witch",
+      "aliases": ["siphoner witches", "siphoning witch", "siphoning witches"],
+      "preferred_zh": "吸魔女巫",
+      "note": "指能从外界汲取魔力的女巫，不要译成“吸血女巫”",
+      "series": "The Originals",
+      "scope": "dialogue|chant",
+      "reviewed": true
+    },
+    {
+      "source_en": "sire line",
+      "aliases": ["sire lines"],
+      "preferred_zh": "授血线",
+      "note": "始祖吸血鬼衍生出的血脉系统",
+      "series": "The Originals",
+      "scope": "dialogue",
+      "reviewed": true
+    },
+    {
+      "source_en": "hybrid",
+      "aliases": ["hybrids"],
+      "preferred_zh": "混血种",
+      "note": "本剧超自然物种用语",
+      "series": "The Originals",
+      "scope": "dialogue",
+      "reviewed": true
+    },
+    {
+      "source_en": "dark magic",
+      "preferred_zh": "黑暗魔法",
+      "series": "The Originals",
+      "scope": "dialogue|chant",
+      "reviewed": true
+    },
+    {
+      "source_en": "Ancestral Well",
+      "preferred_zh": "祖灵之井",
+      "note": "新奥尔良女巫体系专名，不要混用“祖先井”或“宗族井”",
+      "series": "The Originals",
+      "scope": "dialogue|chant",
+      "reviewed": true
+    },
+    {
+      "source_en": "Ancestral Plane",
+      "preferred_zh": "祖灵界",
+      "series": "The Originals",
+      "scope": "dialogue|chant",
+      "reviewed": true
+    },
+    {
+      "source_en": "the Ancestors",
+      "preferred_zh": "祖灵",
+      "note": "本剧新奥尔良女巫体系中的专称",
+      "series": "The Originals",
+      "scope": "dialogue|chant",
+      "reviewed": true
+    },
+    {
+      "source_en": "grimoire",
+      "aliases": ["grimoires"],
+      "preferred_zh": "魔典",
+      "note": "普通说明语境可用“魔法书”，同一对象前后须一致",
+      "series": "The Originals",
+      "scope": "dialogue|chant",
+      "reviewed": true
+    },
+    {
+      "source_en": "the Hollow",
+      "aliases": ["Hollow"],
+      "case_sensitive": true,
+      "preferred_zh": "空洞",
+      "note": "超自然存在专名，不要按普通形容词改译",
+      "series": "The Originals",
+      "scope": "dialogue|chant",
+      "reviewed": true
+    },
+    {
+      "source_en": "Inadu",
+      "preferred_zh": "伊纳杜",
+      "series": "The Originals",
+      "scope": "all",
+      "reviewed": true
+    },
+    {
+      "source_en": "werewolf curse",
+      "preferred_zh": "狼人诅咒",
+      "note": "trigger the curse 译作“触发狼人诅咒”",
+      "series": "The Originals",
+      "scope": "dialogue|chant",
+      "reviewed": true
+    },
+    {
+      "source_en": "daylight ring",
+      "preferred_zh": "日光戒",
+      "note": "吸血鬼抵御日光的魔法戒指",
+      "series": "The Originals",
+      "scope": "dialogue",
+      "reviewed": true
+    },
+    {
+      "source_en": "compulsion",
+      "preferred_zh": "精神控制",
+      "note": "吸血鬼能力语境，不要按普通义译成“强迫症”",
+      "series": "The Originals",
+      "scope": "dialogue",
+      "reviewed": true
+    },
+    {
+      "source_en": "Hope Mikaelson",
+      "preferred_zh": "霍普·米凯尔森",
+      "series": "The Originals",
+      "scope": "all",
+      "reviewed": true
+    },
+    {
+      "source_en": "Hope",
+      "preferred_zh": "霍普",
+      "note": "人物语境；与 Mikaelson、Klaus、Hayley 或 Hollow 同现时绝不能译成普通名词“希望”",
+      "series": "The Originals",
+      "scope": "dialogue",
+      "reviewed": true
+    },
+    {
+      "source_en": "Klaus Mikaelson",
+      "preferred_zh": "克劳斯·米凯尔森",
+      "series": "The Originals",
+      "scope": "all",
+      "reviewed": true
+    },
+    {
+      "source_en": "Klaus",
+      "preferred_zh": "克劳斯",
+      "series": "The Originals",
+      "scope": "all",
+      "reviewed": true
+    },
+    {
+      "source_en": "Elijah Mikaelson",
+      "preferred_zh": "伊利亚·米凯尔森",
+      "series": "The Originals",
+      "scope": "all",
+      "reviewed": true
+    },
+    {
+      "source_en": "Elijah",
+      "preferred_zh": "伊利亚",
+      "series": "The Originals",
+      "scope": "all",
+      "reviewed": true
+    },
+    {
+      "source_en": "Freya Mikaelson",
+      "preferred_zh": "弗蕾雅·米凯尔森",
+      "series": "The Originals",
+      "scope": "all",
+      "reviewed": true
+    },
+    {
+      "source_en": "Freya",
+      "preferred_zh": "弗蕾雅",
+      "series": "The Originals",
+      "scope": "all",
+      "reviewed": true
+    },
+    {
+      "source_en": "Rebekah Mikaelson",
+      "preferred_zh": "丽贝卡·米凯尔森",
+      "series": "The Originals",
+      "scope": "all",
+      "reviewed": true
+    },
+    {
+      "source_en": "Rebekah",
+      "preferred_zh": "丽贝卡",
+      "series": "The Originals",
+      "scope": "all",
+      "reviewed": true
+    },
+    {
+      "source_en": "Marcel Gerard",
+      "preferred_zh": "马塞尔·杰拉德",
+      "series": "The Originals",
+      "scope": "all",
+      "reviewed": true
+    },
+    {
+      "source_en": "Marcel",
+      "preferred_zh": "马塞尔",
+      "series": "The Originals",
+      "scope": "all",
+      "reviewed": true
+    },
+    {
+      "source_en": "Davina Claire",
+      "preferred_zh": "达维娜·克莱尔",
+      "series": "The Originals",
+      "scope": "all",
+      "reviewed": true
+    },
+    {
+      "source_en": "Davina",
+      "preferred_zh": "达维娜",
+      "series": "The Originals",
+      "scope": "all",
+      "reviewed": true
+    },
+    {
+      "source_en": "Hayley Marshall",
+      "preferred_zh": "海莉·马歇尔",
+      "series": "The Originals",
+      "scope": "all",
+      "reviewed": true
+    },
+    {
+      "source_en": "Hayley",
+      "preferred_zh": "海莉",
+      "series": "The Originals",
+      "scope": "all",
+      "reviewed": true
+    }
+  ]
+}

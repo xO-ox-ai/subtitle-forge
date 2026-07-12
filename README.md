@@ -242,10 +242,13 @@ python .\run_all.py . --cleanup
 
 ## 可复用字典文件
 
-- `subtitle_glossary.json`：人名、术语和文化注解词库
-- `common_mistranslation_hints.json`：常见误译、专名和固定搭配提示
-- `common_phrase_correction_hints.json`：口语短语和行业表达修正提示
+- `subtitle_glossary.json`：仅存放需要显示在屏幕上的文化注解；`zh` 是完整注解正文，不参与台词翻译替换
+- `subtitle_terminology.json`：固定译名和剧集术语；`preferred_zh` 是可直接用于字幕的标准译名，`note` 只说明适用条件，绝不能写入字幕正文
+- `common_mistranslation_hints.json`：常见误译陷阱；`guidance` 是编辑指引，不是直接替换文本
+- `common_phrase_correction_hints.json`：口语短语和行业表达倾向；`guidance` 可列出多个候选，必须按上下文选择
 - `ocr_low_value_short_texts.json`：单独出现时通常应删除的低价值 OCR 碎片
+
+`subtitle_terminology.json` 的条目可用 `series` 按文件名限定剧集，用 `scope` 限定对白、歌词、咒语、OCR 或注解。文化注解词库不会再作为翻译术语提示传入 Step 7/Step 9。
 
 ## 注意事项
 

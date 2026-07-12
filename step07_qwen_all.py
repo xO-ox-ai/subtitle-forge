@@ -143,10 +143,10 @@ TRADITIONAL_TO_SIMPLIFIED = str.maketrans(
 
 COMMON_MISTRANSLATION_HINTS_FILE = "common_mistranslation_hints.json"
 COMMON_PHRASE_CORRECTION_HINTS_FILE = "common_phrase_correction_hints.json"
-SUBTITLE_GLOSSARY_FILE = "subtitle_glossary.json"
-STEP09_GUIDANCE_VERSION = "step09-guidance-20260710-v1"
+SUBTITLE_TERMINOLOGY_FILE = "subtitle_terminology.json"
+STEP09_GUIDANCE_VERSION = "step09-guidance-20260712-v2"
 GUIDANCE_LIMITS = {
-    "glossary": 20,
+    "terminology": 20,
     "mistranslation": 12,
     "phrase": 20,
 }
@@ -212,8 +212,9 @@ Rules:
 12. Do not over-formalize casual dialogue. Keep it conversational, but not internet-slangy.
 13. If a literal translation sounds stiff, rewrite the whole line into fluent spoken Chinese.
 14. For very short spoken lines, choose the Chinese by local intent and tone; do not use one fixed dictionary translation.
-15. If reusable guidance gives multiple candidates, pick the candidate that fits the current context instead of copying the whole hint.
-16. If display_units are requested, each display_units.en must be an exact consecutive slice copied from the current English segment."""
+15. terminology.preferred_zh is literal preferred wording; terminology.note and all reusable guidance are instructions, never subtitle text.
+16. If reusable guidance gives multiple candidates, pick the candidate that fits the current context instead of copying the whole hint.
+17. If display_units are requested, each display_units.en must be an exact consecutive slice copied from the current English segment."""
 
 LYRIC_SYSTEM_PROMPT = """You are a professional song lyric subtitle translator.
 Input is one English lyric segment from a TV episode.
@@ -355,14 +356,23 @@ def load_hint_dict_list(path: Path) -> list[dict]:
     return [item for item in data if isinstance(item, dict)]
 
 
-def load_step09_guidance(base_dir: Path) -> dict:
-    glossary_data = load_json(base_dir / SUBTITLE_GLOSSARY_FILE, {"terms": []})
-    glossary_terms = glossary_data.get("terms") if isinstance(glossary_data, dict) else []
-    if not isinstance(glossary_terms, list):
-        glossary_terms = []
+def load_step09_guidance(base_dir: Path, source_name: str = "") -> dict:
+    terminology_data = load_json(base_dir / SUBTITLE_TERMINOLOGY_FILE, {"entries": []})
+    terminology_entries = terminology_data.get("entries") if isinstance(terminology_data, dict) else []
+    if not isinstance(terminology_entries, list):
+        terminology_entries = []
+    source_haystack = re.sub(r"[._-]+", " ", source_name)
+    scoped_terminology: list[dict] = []
+    for item in terminology_entries:
+        if not isinstance(item, dict) or item.get("reviewed") is False:
+            continue
+        series = normalize_inline_text(item.get("series", ""))
+        if series and not hint_term_matches(series, source_haystack):
+            continue
+        scoped_terminology.append(item)
     return {
         "version": STEP09_GUIDANCE_VERSION,
-        "glossary": [item for item in glossary_terms if isinstance(item, dict) and item.get("reviewed") is not False],
+        "terminology": scoped_terminology,
         "mistranslation": load_hint_dict_list(module_dir() / COMMON_MISTRANSLATION_HINTS_FILE),
         "phrase": load_hint_dict_list(module_dir() / COMMON_PHRASE_CORRECTION_HINTS_FILE) + SHORT_DIALOGUE_PHRASE_HINTS,
     }
@@ -419,8 +429,8 @@ def hint_support_count(item: dict) -> int:
         return 1
 
 
-def hint_preferred_zh(item: dict) -> str:
-    return normalize_inline_text(item.get("preferred_zh") or item.get("zh") or item.get("note") or "")
+def hint_guidance(item: dict) -> str:
+    return normalize_inline_text(item.get("guidance") or item.get("preferred_zh") or item.get("zh") or item.get("note") or "")
 
 
 def sort_guidance_items(items: list[dict]) -> list[dict]:
@@ -454,8 +464,8 @@ def collect_matching_guidance_items(
             source = normalize_inline_text(item.get(field, ""))
             if source:
                 break
-        zh = hint_preferred_zh(item)
-        if not source or not zh:
+        guidance = hint_guidance(item)
+        if not source or not guidance:
             continue
         if not hint_term_matches(source, haystack):
             continue
@@ -466,8 +476,54 @@ def collect_matching_guidance_items(
         selected.append(
             {
                 "source": source,
-                "preferred_zh": zh,
+                "guidance": guidance,
                 "bad_zh": normalize_inline_text(item.get("bad_zh", "")),
+                "confidence": item.get("confidence", ""),
+                "support_count": hint_support_count(item),
+            }
+        )
+    return sort_guidance_items(selected)[:limit]
+
+
+def collect_matching_terminology_items(
+    items: list[dict],
+    haystack: str,
+    *,
+    segment_kind: str,
+    limit: int,
+) -> list[dict]:
+    selected: list[dict] = []
+    seen: set[str] = set()
+    for item in items:
+        if not hint_scope_matches(item, segment_kind, default_all=True):
+            continue
+        source = normalize_inline_text(item.get("source_en") or item.get("term") or "")
+        preferred_zh = normalize_inline_text(item.get("preferred_zh") or "")
+        raw_aliases = item.get("aliases") or []
+        aliases = raw_aliases if isinstance(raw_aliases, list) else [raw_aliases]
+        candidates = [source, *(normalize_inline_text(alias) for alias in aliases)]
+        flags = 0 if item.get("case_sensitive") is True else re.IGNORECASE
+        matched = False
+        for candidate in candidates:
+            if not candidate:
+                continue
+            pattern = re.escape(normalize_hint_match_text(candidate) if flags else normalize_inline_text(candidate))
+            pattern = re.sub(r"\\\s+", r"\\s+", pattern)
+            comparison_text = normalize_hint_match_text(haystack) if flags else normalize_inline_text(haystack)
+            if re.search(rf"(?<![0-9A-Za-z]){pattern}(?![0-9A-Za-z])", comparison_text, flags):
+                matched = True
+                break
+        if not source or not preferred_zh or not matched:
+            continue
+        key = normalize_hint_match_text(source)
+        if key in seen:
+            continue
+        seen.add(key)
+        selected.append(
+            {
+                "source": source,
+                "preferred_zh": preferred_zh,
+                "note": normalize_inline_text(item.get("note", "")),
                 "confidence": item.get("confidence", ""),
                 "support_count": hint_support_count(item),
             }
@@ -482,13 +538,11 @@ def select_step09_translation_guidance(guidance: dict, text: str, context: dict 
     haystack = f"{text}\n{context_text}"
     current_word_count = len(HINT_TOKEN_RE.findall(text))
     return {
-        "glossary": collect_matching_guidance_items(
-            guidance.get("glossary", []),
+        "terminology": collect_matching_terminology_items(
+            guidance.get("terminology", []),
             haystack,
-            key_fields=("term", "text", "source_en"),
             segment_kind=segment_kind,
-            default_all=True,
-            limit=GUIDANCE_LIMITS["glossary"],
+            limit=GUIDANCE_LIMITS["terminology"],
         ),
         "mistranslation": collect_matching_guidance_items(
             guidance.get("mistranslation", []),
@@ -511,9 +565,16 @@ def select_step09_translation_guidance(guidance: dict, text: str, context: dict 
 
 
 def format_guidance_line(item: dict) -> str:
-    line = f"- {item['source']} -> {item['preferred_zh']}"
+    line = f"- {item['source']}：{item['guidance']}"
     if item.get("bad_zh"):
         line += f"；规避：{item['bad_zh']}"
+    return line
+
+
+def format_terminology_line(item: dict) -> str:
+    line = f"- {item['source']} -> {item['preferred_zh']}"
+    if item.get("note"):
+        line += f"；使用说明（不要照抄）：{item['note']}"
     return line
 
 
@@ -521,8 +582,8 @@ def format_step09_guidance(hints: dict | None, segment_kind: str) -> str:
     if not hints:
         return ""
     sections: list[str] = []
-    if hints.get("glossary"):
-        sections.append("Names / terms:\n" + "\n".join(format_guidance_line(item) for item in hints["glossary"]))
+    if hints.get("terminology"):
+        sections.append("Exact terminology:\n" + "\n".join(format_terminology_line(item) for item in hints["terminology"]))
     if hints.get("mistranslation"):
         sections.append("Mistranslation traps:\n" + "\n".join(format_guidance_line(item) for item in hints["mistranslation"]))
     if hints.get("phrase"):
@@ -532,6 +593,7 @@ def format_step09_guidance(hints: dict | None, segment_kind: str) -> str:
     lines = [
         "",
         "Reusable guidance matched from prior Step09 polish. Apply it only if it fits the CURRENT segment; context overrides hints.",
+        "Only the right side of an Exact terminology arrow is literal subtitle wording; usage notes and all other guidance are instructions and must never be copied wholesale.",
     ]
     if segment_kind == "lyric":
         lines.append("This is a lyric segment: keep lyric feeling and ignore dialogue-only colloquial hints.")
@@ -820,7 +882,7 @@ def translate_dialogue_file(client, base_dir: Path, json_file: Path, out_file: P
     overrides = load_overrides(base_dir, json_file.stem)
     total = len(segments)
     translation_cache: dict[tuple[str, str, bool], dict] = {}
-    step09_guidance = load_step09_guidance(base_dir)
+    step09_guidance = load_step09_guidance(base_dir, json_file.stem)
     update_progress_status(base_dir, "V2_STEP7", json_file.stem, 0, total, "", "")
 
     for offset, seg in enumerate(segments):

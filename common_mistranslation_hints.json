@@ -1,2150 +1,1807 @@
 [
   {
     "term": "off-ride hat",
-    "zh": "游乐设施出口处卖的纪念帽；不要硬译成下车帽。",
-    "preferred_zh": "游乐设施出口处卖的纪念帽；不要硬译成下车帽。",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "游乐设施出口处卖的纪念帽；不要硬译成下车帽。"
   },
   {
     "term": "Deacon Claiborne",
-    "zh": "角色名迪肯·克莱伯恩；Deacon在本剧里通常是人名，不是执事头衔。",
-    "preferred_zh": "角色名迪肯·克莱伯恩；Deacon在本剧里通常是人名，不是执事头衔。",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "角色名迪肯·克莱伯恩；Deacon在本剧里通常是人名，不是执事头衔。"
   },
   {
     "term": "Bluebird",
-    "zh": "通常指纳什维尔的Bluebird Cafe，可译蓝鸟咖啡馆，不要随意泛化成蓝鸟餐厅。",
-    "preferred_zh": "通常指纳什维尔的Bluebird Cafe，可译蓝鸟咖啡馆，不要随意泛化成蓝鸟餐厅。",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "通常指纳什维尔的Bluebird Cafe，可译蓝鸟咖啡馆，不要随意泛化成蓝鸟餐厅。"
   },
   {
     "term": "mask resonance",
-    "zh": "声乐语境通常指面罩共鸣/头腔前部共鸣，避免生硬直译。",
-    "preferred_zh": "声乐语境通常指面罩共鸣/头腔前部共鸣，避免生硬直译。",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "声乐语境通常指面罩共鸣/头腔前部共鸣，避免生硬直译。"
   },
   {
     "term": "opening act",
-    "zh": "通常指开场嘉宾/暖场歌手，不是开场表演这个抽象说法。",
-    "preferred_zh": "通常指开场嘉宾/暖场歌手，不是开场表演这个抽象说法。",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "通常指开场嘉宾/暖场歌手，不是开场表演这个抽象说法。"
   },
   {
     "term": "arena tour",
-    "zh": "通常指体育馆巡演，不是字面大舞台巡演。",
-    "preferred_zh": "通常指体育馆巡演，不是字面大舞台巡演。",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "通常指体育馆巡演，不是字面大舞台巡演。"
   },
   {
     "term": "record deal",
-    "zh": "通常指唱片合约/签约，不要直译成交易。",
-    "preferred_zh": "通常指唱片合约/签约，不要直译成交易。",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "通常指唱片合约/签约，不要直译成交易。"
   },
   {
     "term": "dream house",
-    "zh": "通常是梦想中的房子/理想住宅，不要硬译成梦想家园。",
-    "preferred_zh": "通常是梦想中的房子/理想住宅，不要硬译成梦想家园。",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "通常是梦想中的房子/理想住宅，不要硬译成梦想家园。"
   },
   {
     "term": "board of directors",
-    "zh": "董事会；整句要译得像自然中文，不要留下英语骨架。",
-    "preferred_zh": "董事会；整句要译得像自然中文，不要留下英语骨架。",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "董事会；整句要译得像自然中文，不要留下英语骨架。"
   },
   {
     "term": "hospital jail ward",
-    "zh": "医院内的拘留病房/监护病房，不要生硬拼接。",
-    "preferred_zh": "医院内的拘留病房/监护病房，不要生硬拼接。",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "医院内的拘留病房/监护病房，不要生硬拼接。"
   },
   {
     "term": "on the house",
-    "zh": "口语里通常是这杯我请/店里请客，不是字面在房子上。",
-    "preferred_zh": "口语里通常是这杯我请/店里请客，不是字面在房子上。",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "口语里通常是这杯我请/店里请客，不是字面在房子上。"
   },
   {
     "term": "tween demo",
-    "zh": "通常指青少年受众/低龄受众，不要硬译成样本或人口统计术语。",
-    "preferred_zh": "通常指青少年受众/低龄受众，不要硬译成样本或人口统计术语。",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "通常指青少年受众/低龄受众，不要硬译成样本或人口统计术语。"
   },
   {
     "term": "breakup",
-    "zh": "通常按语境译成分手/失恋，不要保留抽象名词腔。",
-    "preferred_zh": "通常按语境译成分手/失恋，不要保留抽象名词腔。",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "通常按语境译成分手/失恋，不要保留抽象名词腔。"
   },
   {
     "term": "housewarming party",
-    "zh": "通常指暖房派对/乔迁派对。",
-    "preferred_zh": "通常指暖房派对/乔迁派对。",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "通常指暖房派对/乔迁派对。"
   },
   {
     "term": "get the stick out of your ass",
-    "zh": "粗口俚语，意为别那么端着/别那么死板，要本地化处理，不要直译。",
-    "preferred_zh": "粗口俚语，意为别那么端着/别那么死板，要本地化处理，不要直译。",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "粗口俚语，意为别那么端着/别那么死板，要本地化处理，不要直译。"
   },
   {
     "term": "top of the charts",
-    "zh": "通常指占据排行榜前列/继续领跑榜单，不必每次都译成霸榜。",
-    "preferred_zh": "通常指占据排行榜前列/继续领跑榜单，不必每次都译成霸榜。",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "通常指占据排行榜前列/继续领跑榜单，不必每次都译成霸榜。"
   },
   {
     "term": "critical condition",
-    "zh": "通常指病情危急/情况危重。",
-    "preferred_zh": "通常指病情危急/情况危重。",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "通常指病情危急/情况危重。"
   },
   {
     "term": "Raina",
-    "zh": "角色名统一译为蕾娜；Raina/Rayna/Raina James/Rayna Jaymes 均按蕾娜/蕾娜·詹姆斯处理，不要写成雷娜、瑞娜或莱娜。",
-    "preferred_zh": "角色名统一译为蕾娜；Raina/Rayna/Raina James/Rayna Jaymes 均按蕾娜/蕾娜·詹姆斯处理，不要写成雷娜、瑞娜或莱娜。",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "角色名统一译为蕾娜；Raina/Rayna/Raina James/Rayna Jaymes 均按蕾娜/蕾娜·詹姆斯处理，不要写成雷娜、瑞娜或莱娜。"
   },
   {
     "term": "Scarlett",
-    "zh": "斯嘉丽",
-    "preferred_zh": "斯嘉丽",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "斯嘉丽"
   },
   {
     "term": "Jeff Fordham",
-    "zh": "角色名统一译为杰夫·福特汉姆；只称 Jeff 时译杰夫，Fordham 单独出现时译福特汉姆，不要写成福特、福特汉或福德汉。",
-    "preferred_zh": "角色名统一译为杰夫·福特汉姆；只称 Jeff 时译杰夫，Fordham 单独出现时译福特汉姆，不要写成福特、福特汉或福德汉。",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "角色名统一译为杰夫·福特汉姆；只称 Jeff 时译杰夫，Fordham 单独出现时译福特汉姆，不要写成福特、福特汉或福德汉。"
   },
   {
     "term": "Edgehill",
-    "zh": "唱片公司/厂牌名统一译为埃奇希尔；Edge Hill/Edgehill 都不要直译成边缘山、埃奇山或伊奇山。",
-    "preferred_zh": "唱片公司/厂牌名统一译为埃奇希尔；Edge Hill/Edgehill 都不要直译成边缘山、埃奇山或伊奇山。",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "唱片公司/厂牌名统一译为埃奇希尔；Edge Hill/Edgehill 都不要直译成边缘山、埃奇山或伊奇山。"
   },
   {
     "term": "Edge Hill",
-    "zh": "唱片公司/厂牌名统一译为埃奇希尔；Edge Hill/Edgehill 都不要直译成边缘山、埃奇山或伊奇山。",
-    "preferred_zh": "唱片公司/厂牌名统一译为埃奇希尔；Edge Hill/Edgehill 都不要直译成边缘山、埃奇山或伊奇山。",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "唱片公司/厂牌名统一译为埃奇希尔；Edge Hill/Edgehill 都不要直译成边缘山、埃奇山或伊奇山。"
   },
   {
     "term": "Fordham",
-    "zh": "人名姓氏统一译为福特汉姆；Jeff Fordham 是杰夫·福特汉姆，不要写成福特、福特汉或福德汉。",
-    "preferred_zh": "人名姓氏统一译为福特汉姆；Jeff Fordham 是杰夫·福特汉姆，不要写成福特、福特汉或福德汉。",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "人名姓氏统一译为福特汉姆；Jeff Fordham 是杰夫·福特汉姆，不要写成福特、福特汉或福德汉。"
   },
   {
     "term": "Gunnar",
-    "zh": "角色名统一译为冈纳；Gunnar Scott 译冈纳·斯科特，Gunner 若明显指同一角色也按冈纳处理。",
-    "preferred_zh": "角色名统一译为冈纳；Gunnar Scott 译冈纳·斯科特，Gunner 若明显指同一角色也按冈纳处理。",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "角色名统一译为冈纳；Gunnar Scott 译冈纳·斯科特，Gunner 若明显指同一角色也按冈纳处理。"
   },
   {
     "term": "St. Lucia",
-    "zh": "圣卢西亚",
-    "preferred_zh": "圣卢西亚",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "圣卢西亚"
   },
   {
     "term": "Gibson",
-    "zh": "吉普森吉他",
-    "preferred_zh": "吉普森吉他",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "吉普森吉他"
   },
   {
     "term": "label",
-    "zh": "厂牌",
-    "preferred_zh": "厂牌",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "厂牌"
   },
   {
     "term": "Stockholders' Showcase",
-    "zh": "股东展示演出",
-    "preferred_zh": "股东展示演出",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "股东展示演出"
   },
   {
     "term": "Wentworth family",
-    "zh": "温特沃斯家族",
-    "preferred_zh": "温特沃斯家族",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "温特沃斯家族"
   },
   {
     "term": "Ed Sheeran",
-    "zh": "艾德·希兰",
-    "preferred_zh": "艾德·希兰",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "艾德·希兰"
   },
   {
     "term": "Highway 65",
-    "zh": "Highway 65",
-    "preferred_zh": "Highway 65",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "Highway 65"
   },
   {
     "term": "Liam",
-    "zh": "利亚姆",
-    "preferred_zh": "利亚姆",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "利亚姆"
   },
   {
     "term": "Juliette",
-    "zh": "朱丽叶",
-    "preferred_zh": "朱丽叶",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "朱丽叶"
   },
   {
     "term": "Bucky",
-    "zh": "巴基",
-    "preferred_zh": "巴基",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "巴基"
   },
   {
     "term": "Charles Wentworth",
-    "zh": "查尔斯·温特沃斯",
-    "preferred_zh": "查尔斯·温特沃斯",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "查尔斯·温特沃斯"
   },
   {
     "term": "Olivia Wentworth",
-    "zh": "奥利维亚·温特沃斯",
-    "preferred_zh": "奥利维亚·温特沃斯",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "奥利维亚·温特沃斯"
   },
   {
     "term": "Fresh Off the Farm Act",
-    "zh": "刚出农场的人设",
-    "preferred_zh": "刚出农场的人设",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "刚出农场的人设"
   },
   {
     "term": "plane tickets",
-    "zh": "机票",
-    "preferred_zh": "机票",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "机票"
   },
   {
     "term": "St. Lucio",
-    "zh": "圣卢西亚",
-    "preferred_zh": "圣卢西亚",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "圣卢西亚"
   },
   {
     "term": "Juliet",
-    "zh": "朱丽叶",
-    "preferred_zh": "朱丽叶",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "朱丽叶"
   },
   {
     "term": "sole artist",
-    "zh": "唯一签约歌手",
-    "preferred_zh": "唯一签约歌手",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "唯一签约歌手"
   },
   {
     "term": "one-night-only concert",
-    "zh": "只演一晚的私人演出",
-    "preferred_zh": "只演一晚的私人演出",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "只演一晚的私人演出"
   },
   {
     "term": "estate",
-    "zh": "庄园",
-    "preferred_zh": "庄园",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "庄园"
   },
   {
     "term": "radio station",
-    "zh": "电台",
-    "preferred_zh": "电台",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "电台"
   },
   {
     "term": "Nashville",
-    "zh": "《音乐之乡》；作地名时译为“纳什维尔”",
-    "preferred_zh": "《音乐之乡》；作地名时译为“纳什维尔”",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "《音乐之乡》；作地名时译为“纳什维尔”"
   },
   {
     "term": "Deacon",
-    "zh": "迪肯",
-    "preferred_zh": "迪肯",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "迪肯"
   },
   {
     "term": "Maddie",
-    "zh": "麦迪",
-    "preferred_zh": "麦迪",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "麦迪"
   },
   {
     "term": "Layla",
-    "zh": "莱拉",
-    "preferred_zh": "莱拉",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "莱拉"
   },
   {
     "term": "Conrad",
-    "zh": "康拉德",
-    "preferred_zh": "康拉德",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "康拉德"
   },
   {
     "term": "Mrs. Munson",
-    "zh": "蒙森太太",
-    "preferred_zh": "蒙森太太",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "蒙森太太"
   },
   {
     "term": "U.S. Attorney",
-    "zh": "联邦检察官",
-    "preferred_zh": "联邦检察官",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "联邦检察官"
   },
   {
     "term": "Congressional Exploratory Committee",
-    "zh": "国会试探委员会",
-    "preferred_zh": "国会试探委员会",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "国会试探委员会"
   },
   {
     "term": "symphony gala",
-    "zh": "交响乐晚宴",
-    "preferred_zh": "交响乐晚宴",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "交响乐晚宴"
   },
   {
     "term": "orange jumpsuit",
-    "zh": "橙色囚服",
-    "preferred_zh": "橙色囚服",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "橙色囚服"
   },
   {
     "term": "lip-syncing",
-    "zh": "假唱；对口型",
-    "preferred_zh": "假唱；对口型",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "假唱；对口型"
   },
   {
     "term": "intubation",
-    "zh": "插管",
-    "preferred_zh": "插管",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "插管"
   },
   {
     "term": "Grand Ole Opry",
-    "zh": "Grand Ole Opry；可译为“大奥普里剧院/大奥普里”，乡村音乐殿堂，成为成员是极高荣誉",
-    "preferred_zh": "Grand Ole Opry；可译为“大奥普里剧院/大奥普里”，乡村音乐殿堂，成为成员是极高荣誉",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "Grand Ole Opry；可译为“大奥普里剧院/大奥普里”，乡村音乐殿堂，成为成员是极高荣誉"
   },
   {
     "term": "Opry",
-    "zh": "奥普里；指Grand Ole Opry时可译“大奥普里剧院/大奥普里”",
-    "preferred_zh": "奥普里；指Grand Ole Opry时可译“大奥普里剧院/大奥普里”",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "奥普里；指Grand Ole Opry时可译“大奥普里剧院/大奥普里”"
   },
   {
     "term": "Luke Wheeler",
-    "zh": "卢克·惠勒",
-    "preferred_zh": "卢克·惠勒",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "卢克·惠勒"
   },
   {
     "term": "Youthful Noise",
-    "zh": "Youthful Noise；演唱会或活动名，通常保留英文",
-    "preferred_zh": "Youthful Noise；演唱会或活动名，通常保留英文",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "Youthful Noise；演唱会或活动名，通常保留英文"
   },
   {
     "term": "Raina James Wyatt",
-    "zh": "蕾娜·詹姆斯·怀亚特",
-    "preferred_zh": "蕾娜·詹姆斯·怀亚特",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "蕾娜·詹姆斯·怀亚特"
   },
   {
     "term": "Will Lexington",
-    "zh": "威尔·列克星敦",
-    "preferred_zh": "威尔·列克星敦",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "威尔·列克星敦"
   },
   {
     "term": "Wyatt Industries",
-    "zh": "怀亚特实业",
-    "preferred_zh": "怀亚特实业",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "怀亚特实业"
   },
   {
     "term": "Ole Miss",
-    "zh": "密西西比大学",
-    "preferred_zh": "密西西比大学",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "密西西比大学"
   },
   {
     "term": "American Hitmaker",
-    "zh": "《American Hitmaker》",
-    "preferred_zh": "《American Hitmaker》",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "《American Hitmaker》"
   },
   {
     "term": "Adair",
-    "zh": "Adair；节目、机构或试镜名，通常保留英文",
-    "preferred_zh": "Adair；节目、机构或试镜名，通常保留英文",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "Adair；节目、机构或试镜名，通常保留英文"
   },
   {
     "term": "media training",
-    "zh": "媒体培训",
-    "preferred_zh": "媒体培训",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "媒体培训"
   },
   {
     "term": "vocal therapist",
-    "zh": "嗓音康复师",
-    "preferred_zh": "嗓音康复师",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "嗓音康复师"
   },
   {
     "term": "vocal therapy",
-    "zh": "嗓音康复",
-    "preferred_zh": "嗓音康复",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "嗓音康复"
   },
   {
     "term": "masters",
-    "zh": "母带；音乐版权语境中指录音母带",
-    "preferred_zh": "母带；音乐版权语境中指录音母带",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "母带；音乐版权语境中指录音母带"
   },
   {
     "term": "Martin Triple O",
-    "zh": "Martin 000；吉他桶型，不要译成字母O",
-    "preferred_zh": "Martin 000；吉他桶型，不要译成字母O",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "Martin 000；吉他桶型，不要译成字母O"
   },
   {
     "term": "double O guitar",
-    "zh": "00桶型吉他；不要译成字母OO",
-    "preferred_zh": "00桶型吉他；不要译成字母OO",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "00桶型吉他；不要译成字母OO"
   },
   {
     "term": "racketeering",
-    "zh": "有组织犯罪；非法敛财，法律语境下不要译成普通“敲诈”",
-    "preferred_zh": "有组织犯罪；非法敛财，法律语境下不要译成普通“敲诈”",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "有组织犯罪；非法敛财，法律语境下不要译成普通“敲诈”"
   },
   {
     "term": "extortion",
-    "zh": "勒索",
-    "preferred_zh": "勒索",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "勒索"
   },
   {
     "term": "Lamar Wyatt",
-    "zh": "拉马尔·怀亚特",
-    "preferred_zh": "拉马尔·怀亚特",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "拉马尔·怀亚特"
   },
   {
     "term": "Peggy Kenter",
-    "zh": "佩吉·肯特",
-    "preferred_zh": "佩吉·肯特",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "佩吉·肯特"
   },
   {
     "term": "The Murders",
-    "zh": "The Murders，乐队名，保留英文",
-    "preferred_zh": "The Murders，乐队名，保留英文",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "The Murders，乐队名，保留英文"
   },
   {
     "term": "Bellmead Invitational Polo Match",
-    "zh": "贝尔梅德马球邀请赛",
-    "preferred_zh": "贝尔梅德马球邀请赛",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "贝尔梅德马球邀请赛"
   },
   {
     "term": "Music City Music Festival",
-    "zh": "音乐城音乐节",
-    "preferred_zh": "音乐城音乐节",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "音乐城音乐节"
   },
   {
     "term": "recording artist",
-    "zh": "歌手；签约艺人，不宜直译为“录音艺术家”",
-    "preferred_zh": "歌手；签约艺人，不宜直译为“录音艺术家”",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "歌手；签约艺人，不宜直译为“录音艺术家”"
   },
   {
     "term": "Bobby Delmont",
-    "zh": "鲍比·德尔蒙特",
-    "preferred_zh": "鲍比·德尔蒙特",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "鲍比·德尔蒙特"
   },
   {
     "term": "K-CUT 105.2",
-    "zh": "K-CUT 105.2",
-    "preferred_zh": "K-CUT 105.2",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "K-CUT 105.2"
   },
   {
     "term": "Cutting Edge Country",
-    "zh": "前沿乡村",
-    "preferred_zh": "前沿乡村",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "前沿乡村"
   },
   {
     "term": "Dream Tour",
-    "zh": "梦境之旅",
-    "preferred_zh": "梦境之旅",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "梦境之旅"
   },
   {
     "term": "undercard",
-    "zh": "暖场阵容",
-    "preferred_zh": "暖场阵容",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "暖场阵容"
   },
   {
     "term": "meet and greet",
-    "zh": "粉丝见面会",
-    "preferred_zh": "粉丝见面会",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "粉丝见面会"
   },
   {
     "term": "deposition",
-    "zh": "庭外取证",
-    "preferred_zh": "庭外取证",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "庭外取证"
   },
   {
     "term": "big market radio",
-    "zh": "大市场电台",
-    "preferred_zh": "大市场电台",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "大市场电台"
   },
   {
     "term": "Hedge Hill Records",
-    "zh": "埃奇希尔唱片",
-    "preferred_zh": "埃奇希尔唱片",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "埃奇希尔唱片"
   },
   {
     "term": "Ray",
-    "zh": "蕾",
-    "preferred_zh": "蕾",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "蕾"
   },
   {
     "term": "Reena James",
-    "zh": "蕾娜·詹姆斯",
-    "preferred_zh": "蕾娜·詹姆斯",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "蕾娜·詹姆斯"
   },
   {
     "term": "Gunner",
-    "zh": "冈纳",
-    "preferred_zh": "冈纳",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "冈纳"
   },
   {
     "term": "multi-platinum",
-    "zh": "多白金",
-    "preferred_zh": "多白金",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "多白金"
   },
   {
     "term": "contempt of court",
-    "zh": "藐视法庭",
-    "preferred_zh": "藐视法庭",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "藐视法庭"
   },
   {
     "term": "injunction",
-    "zh": "禁令",
-    "preferred_zh": "禁令",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "禁令"
   },
   {
     "term": "court order",
-    "zh": "法院令",
-    "preferred_zh": "法院令",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "法院令"
   },
   {
     "term": "monitor guy",
-    "zh": "监听师",
-    "preferred_zh": "监听师",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "监听师"
   },
   {
     "term": "First Lady",
-    "zh": "第一夫人",
-    "preferred_zh": "第一夫人",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "第一夫人"
   },
   {
     "term": "Tampa",
-    "zh": "坦帕",
-    "preferred_zh": "坦帕",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "坦帕"
   },
   {
     "term": "Daphne",
-    "zh": "达芙妮",
-    "preferred_zh": "达芙妮",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "达芙妮"
   },
   {
     "term": "Zoe",
-    "zh": "佐伊",
-    "preferred_zh": "佐伊",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "佐伊"
   },
   {
     "term": "Avery",
-    "zh": "埃弗里",
-    "preferred_zh": "埃弗里",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "埃弗里"
   },
   {
     "term": "Layla Grant",
-    "zh": "莱拉·格兰特",
-    "preferred_zh": "莱拉·格兰特",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "莱拉·格兰特"
   },
   {
     "term": "Glenn",
-    "zh": "格伦",
-    "preferred_zh": "格伦",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "格伦"
   },
   {
     "term": "Charlie Wentworth",
-    "zh": "查理·温特沃斯",
-    "preferred_zh": "查理·温特沃斯",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "查理·温特沃斯"
   },
   {
     "term": "Federal Correctional Institution at Clarksville",
-    "zh": "克拉克斯维尔联邦惩教所",
-    "preferred_zh": "克拉克斯维尔联邦惩教所",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "克拉克斯维尔联邦惩教所"
   },
   {
     "term": "all-access pass",
-    "zh": "全场通行证",
-    "preferred_zh": "全场通行证",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "全场通行证"
   },
   {
     "term": "morning radio show",
-    "zh": "早间电台节目",
-    "preferred_zh": "早间电台节目",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "早间电台节目"
   },
   {
     "term": "honky-tonk",
-    "zh": "乡村酒吧音乐",
-    "preferred_zh": "乡村酒吧音乐",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "乡村酒吧音乐"
   },
   {
     "term": "encore",
-    "zh": "安可",
-    "preferred_zh": "安可",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "安可"
   },
   {
     "term": "Brian",
-    "zh": "布莱恩",
-    "preferred_zh": "布莱恩",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "布莱恩"
   },
   {
     "term": "Juliette Barnes",
-    "zh": "朱丽叶·巴恩斯",
-    "preferred_zh": "朱丽叶·巴恩斯",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "朱丽叶·巴恩斯"
   },
   {
     "term": "Gunner Scott",
-    "zh": "冈纳·斯科特",
-    "preferred_zh": "冈纳·斯科特",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "冈纳·斯科特"
   },
   {
     "term": "album launch",
-    "zh": "专辑发行",
-    "preferred_zh": "专辑发行",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "专辑发行"
   },
   {
     "term": "big radio tour",
-    "zh": "大型电台宣传巡演",
-    "preferred_zh": "大型电台宣传巡演",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "大型电台宣传巡演"
   },
   {
     "term": "homewrecker",
-    "zh": "破坏别人家庭的小三",
-    "preferred_zh": "破坏别人家庭的小三",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "破坏别人家庭的小三"
   },
   {
     "term": "sex tape",
-    "zh": "性爱录像",
-    "preferred_zh": "性爱录像",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "性爱录像"
   },
   {
     "term": "Wentworth separation",
-    "zh": "温特沃斯夫妇分居",
-    "preferred_zh": "温特沃斯夫妇分居",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "温特沃斯夫妇分居"
   },
   {
     "term": "Donald Stoffel",
-    "zh": "唐纳德·斯托费尔",
-    "preferred_zh": "唐纳德·斯托费尔",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "唐纳德·斯托费尔"
   },
   {
     "term": "Nashville PD",
-    "zh": "纳什维尔警方",
-    "preferred_zh": "纳什维尔警方",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "纳什维尔警方"
   },
   {
     "term": "Waddy White",
-    "zh": "瓦迪·怀特",
-    "preferred_zh": "瓦迪·怀特",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "瓦迪·怀特"
   },
   {
     "term": "Kelly Clarkson",
-    "zh": "凯莉·克拉克森",
-    "preferred_zh": "凯莉·克拉克森",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "凯莉·克拉克森"
   },
   {
     "term": "Fade Into You",
-    "zh": "《Fade Into You》",
-    "preferred_zh": "《Fade Into You》",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "《Fade Into You》"
   },
   {
     "term": "Tandy",
-    "zh": "坦迪",
-    "preferred_zh": "坦迪",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "坦迪"
   },
   {
     "term": "the trades",
-    "zh": "行业媒体",
-    "preferred_zh": "行业媒体",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "行业媒体"
   },
   {
     "term": "publisher",
-    "zh": "版权公司",
-    "preferred_zh": "版权公司",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "版权公司"
   },
   {
     "term": "ASCAP",
-    "zh": "ASCAP",
-    "preferred_zh": "ASCAP",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "ASCAP"
   },
   {
     "term": "Rascal Flatts",
-    "zh": "Rascal Flatts",
-    "preferred_zh": "Rascal Flatts",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "Rascal Flatts"
   },
   {
     "term": "Jay DeMarcus",
-    "zh": "杰·德马库斯",
-    "preferred_zh": "杰·德马库斯",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "杰·德马库斯"
   },
   {
     "term": "Southern Ground Festival",
-    "zh": "南方大地音乐节",
-    "preferred_zh": "南方大地音乐节",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "南方大地音乐节"
   },
   {
     "term": "Knoxville",
-    "zh": "诺克斯维尔",
-    "preferred_zh": "诺克斯维尔",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "诺克斯维尔"
   },
   {
     "term": "Charleston",
-    "zh": "查尔斯顿",
-    "preferred_zh": "查尔斯顿",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "查尔斯顿"
   },
   {
     "term": "Raleigh",
-    "zh": "罗利",
-    "preferred_zh": "罗利",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "罗利"
   },
   {
     "term": "Ball and Chain",
-    "zh": "《Ball and Chain》",
-    "preferred_zh": "《Ball and Chain》",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "《Ball and Chain》"
   },
   {
     "term": "360 deal",
-    "zh": "360度全约",
-    "preferred_zh": "360度全约",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "360度全约"
   },
   {
     "term": "three-sixty deal",
-    "zh": "360度全约",
-    "preferred_zh": "360度全约",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "360度全约"
   },
   {
     "term": "venue",
-    "zh": "场馆",
-    "preferred_zh": "场馆",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "场馆"
   },
   {
     "term": "marquee",
-    "zh": "门头灯",
-    "preferred_zh": "门头灯",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "门头灯"
   },
   {
     "term": "Belcourt Records",
-    "zh": "贝尔科特唱片",
-    "preferred_zh": "贝尔科特唱片",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "贝尔科特唱片"
   },
   {
     "term": "Liam McGinnis",
-    "zh": "利亚姆·麦金尼斯",
-    "preferred_zh": "利亚姆·麦金尼斯",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "利亚姆·麦金尼斯"
   },
   {
     "term": "Garland O'Connor",
-    "zh": "加兰德·奥康纳",
-    "preferred_zh": "加兰德·奥康纳",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "加兰德·奥康纳"
   },
   {
     "term": "Crazy Tonight",
-    "zh": "《Crazy Tonight》",
-    "preferred_zh": "《Crazy Tonight》",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "《Crazy Tonight》"
   },
   {
     "term": "Looking for a Place to Shine",
-    "zh": "《Looking for a Place to Shine》",
-    "preferred_zh": "《Looking for a Place to Shine》",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "《Looking for a Place to Shine》"
   },
   {
     "term": "Sam Boone",
-    "zh": "萨姆·布恩",
-    "preferred_zh": "萨姆·布恩",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "萨姆·布恩"
   },
   {
     "term": "Boone's",
-    "zh": "博恩",
-    "preferred_zh": "博恩",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "博恩"
   },
   {
     "term": "Dash",
-    "zh": "达什",
-    "preferred_zh": "达什",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "达什"
   },
   {
     "term": "drop date",
-    "zh": "发行日期",
-    "preferred_zh": "发行日期",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "发行日期"
   },
   {
     "term": "charts",
-    "zh": "谱子",
-    "preferred_zh": "谱子",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "谱子"
   },
   {
     "term": "board",
-    "zh": "调音台",
-    "preferred_zh": "调音台",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "调音台"
   },
   {
     "term": "engineer",
-    "zh": "录音师；作动词时指负责录音",
-    "preferred_zh": "录音师；作动词时指负责录音",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "录音师；作动词时指负责录音"
   },
   {
     "term": "analog",
-    "zh": "模拟录音",
-    "preferred_zh": "模拟录音",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "模拟录音"
   },
   {
     "term": "head shot",
-    "zh": "头像照",
-    "preferred_zh": "头像照",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "头像照"
   },
   {
     "term": "up-tempo",
-    "zh": "快歌",
-    "preferred_zh": "快歌",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "快歌"
   },
   {
     "term": "Avery Barkley",
-    "zh": "埃弗里·巴克利",
-    "preferred_zh": "埃弗里·巴克利",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "埃弗里·巴克利"
   },
   {
     "term": "Live at the Bluebird EP",
-    "zh": "《蓝鸟现场》EP",
-    "preferred_zh": "《蓝鸟现场》EP",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "《蓝鸟现场》EP"
   },
   {
     "term": "Ken Inman",
-    "zh": "肯·因曼",
-    "preferred_zh": "肯·因曼",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "肯·因曼"
   },
   {
     "term": "Howie B",
-    "zh": "豪威·B",
-    "preferred_zh": "豪威·B",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "豪威·B"
   },
   {
     "term": "The New York Times",
-    "zh": "《纽约时报》",
-    "preferred_zh": "《纽约时报》",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "《纽约时报》"
   },
   {
     "term": "Don't Put Dirt on My Grave Just Yet",
-    "zh": "《别急着往我坟上撒土》",
-    "preferred_zh": "《别急着往我坟上撒土》",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "《别急着往我坟上撒土》"
   },
   {
     "term": "induction performance",
-    "zh": "入会演出",
-    "preferred_zh": "入会演出",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "入会演出"
   },
   {
     "term": "Opry website",
-    "zh": "大奥普里官网",
-    "preferred_zh": "大奥普里官网",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "大奥普里官网"
   },
   {
     "term": "The Cadillac Three",
-    "zh": "凯迪拉克三人组",
-    "preferred_zh": "凯迪拉克三人组",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "凯迪拉克三人组"
   },
   {
     "term": "Big Machine",
-    "zh": "Big Machine（唱片公司名，保留英文）",
-    "preferred_zh": "Big Machine（唱片公司名，保留英文）",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "Big Machine（唱片公司名，保留英文）"
   },
   {
     "term": "Interscope",
-    "zh": "Interscope（唱片公司名，保留英文）",
-    "preferred_zh": "Interscope（唱片公司名，保留英文）",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "Interscope（唱片公司名，保留英文）"
   },
   {
     "term": "Eli Maddox",
-    "zh": "伊莱·马多克斯",
-    "preferred_zh": "伊莱·马多克斯",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "伊莱·马多克斯"
   },
   {
     "term": "Mercy Lounge",
-    "zh": "Mercy Lounge（演出场地名，保留英文）",
-    "preferred_zh": "Mercy Lounge（演出场地名，保留英文）",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "Mercy Lounge（演出场地名，保留英文）"
   },
   {
     "term": "buttermilk",
-    "zh": "酪乳",
-    "preferred_zh": "酪乳",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "酪乳"
   },
   {
     "term": "cubic zirconia",
-    "zh": "锆石",
-    "preferred_zh": "锆石",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "锆石"
   },
   {
     "term": "legal brief",
-    "zh": "法律意见书",
-    "preferred_zh": "法律意见书",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "法律意见书"
   },
   {
     "term": "CFO",
-    "zh": "财务总监",
-    "preferred_zh": "财务总监",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "财务总监"
   },
   {
     "term": "booker",
-    "zh": "订演负责人",
-    "preferred_zh": "订演负责人",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "订演负责人"
   },
   {
     "term": "rehearsal space",
-    "zh": "排练室",
-    "preferred_zh": "排练室",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "排练室"
   },
   {
     "term": "studio time",
-    "zh": "录音棚时段；录音棚费用",
-    "preferred_zh": "录音棚时段；录音棚费用",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "录音棚时段；录音棚费用"
   },
   {
     "term": "Liberty Gap",
-    "zh": "利伯蒂峡谷",
-    "preferred_zh": "利伯蒂峡谷",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "利伯蒂峡谷"
   },
   {
     "term": "Battle of Liberty Gap",
-    "zh": "利伯蒂峡谷战役",
-    "preferred_zh": "利伯蒂峡谷战役",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "利伯蒂峡谷战役"
   },
   {
     "term": "digital download",
-    "zh": "数字下载",
-    "preferred_zh": "数字下载",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "数字下载"
   },
   {
     "term": "country radio",
-    "zh": "乡村电台",
-    "preferred_zh": "乡村电台",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "乡村电台"
   },
   {
     "term": "country music establishment",
-    "zh": "乡村音乐圈",
-    "preferred_zh": "乡村音乐圈",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "乡村音乐圈"
   },
   {
     "term": "Great Lakes circuit",
-    "zh": "大湖区巡演",
-    "preferred_zh": "大湖区巡演",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "大湖区巡演"
   },
   {
     "term": "Glenn Goodman",
-    "zh": "格伦·古德曼",
-    "preferred_zh": "格伦·古德曼",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "格伦·古德曼"
   },
   {
     "term": "Brett",
-    "zh": "布雷特",
-    "preferred_zh": "布雷特",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "布雷特"
   },
   {
     "term": "Bridgestone",
-    "zh": "普利司通体育馆",
-    "preferred_zh": "普利司通体育馆",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "普利司通体育馆"
   },
   {
     "term": "Bridgestone Arena",
-    "zh": "普利司通体育馆",
-    "preferred_zh": "普利司通体育馆",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "普利司通体育馆"
   },
   {
     "term": "light rotation",
-    "zh": "轻量轮播",
-    "preferred_zh": "轻量轮播",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "轻量轮播"
   },
   {
     "term": "most added",
-    "zh": "新增播放榜",
-    "preferred_zh": "新增播放榜",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "新增播放榜"
   },
   {
     "term": "radio play",
-    "zh": "电台播放",
-    "preferred_zh": "电台播放",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "电台播放"
   },
   {
     "term": "live stream",
-    "zh": "直播",
-    "preferred_zh": "直播",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "直播"
   },
   {
     "term": "Dixie Chicks",
-    "zh": "南方小鸡",
-    "preferred_zh": "南方小鸡",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "南方小鸡"
   },
   {
     "term": "Steve Earle",
-    "zh": "史蒂夫·厄尔",
-    "preferred_zh": "史蒂夫·厄尔",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "史蒂夫·厄尔"
   },
   {
     "term": "Kris Kristofferson",
-    "zh": "克里斯·克里斯托弗森",
-    "preferred_zh": "克里斯·克里斯托弗森",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "克里斯·克里斯托弗森"
   },
   {
     "term": "Colt Bitts",
-    "zh": "科尔特·比茨",
-    "preferred_zh": "科尔特·比茨",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "科尔特·比茨"
   },
   {
     "term": "George Strait",
-    "zh": "乔治·斯特雷特",
-    "preferred_zh": "乔治·斯特雷特",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "乔治·斯特雷特"
   },
   {
     "term": "I Cross My Heart",
-    "zh": "《我以真心起誓》",
-    "preferred_zh": "《我以真心起誓》",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "《我以真心起誓》"
   },
   {
     "term": "love child",
-    "zh": "私生子女",
-    "preferred_zh": "私生子女",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "私生子女"
   },
   {
     "term": "house",
-    "zh": "上座率",
-    "preferred_zh": "上座率",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "上座率"
   },
   {
     "term": "biscuit",
-    "zh": "比司吉",
-    "preferred_zh": "比司吉",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "比司吉"
   },
   {
     "term": "demo",
-    "zh": "小样",
-    "preferred_zh": "小样",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "小样"
   },
   {
     "term": "agency",
-    "zh": "经纪公司",
-    "preferred_zh": "经纪公司",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "经纪公司"
   },
   {
     "term": "press conference",
-    "zh": "记者会",
-    "preferred_zh": "记者会",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "记者会"
   },
   {
     "term": "24-hour news cycle",
-    "zh": "24小时新闻周期",
-    "preferred_zh": "24小时新闻周期",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "24小时新闻周期"
   },
   {
     "term": "Scarlet",
-    "zh": "斯嘉丽",
-    "preferred_zh": "斯嘉丽",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "斯嘉丽"
   },
   {
     "term": "Beverly",
-    "zh": "贝弗利",
-    "preferred_zh": "贝弗利",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "贝弗利"
   },
   {
     "term": "Dr. Wilson",
-    "zh": "威尔逊医生",
-    "preferred_zh": "威尔逊医生",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "威尔逊医生"
   },
   {
     "term": "Dr. Lau",
-    "zh": "劳医生",
-    "preferred_zh": "劳医生",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "劳医生"
   },
   {
     "term": "Lakeshore Crossing",
-    "zh": "莱克肖尔克罗辛诊所",
-    "preferred_zh": "莱克肖尔克罗辛诊所",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "莱克肖尔克罗辛诊所"
   },
   {
     "term": "Northwestern",
-    "zh": "西北医院",
-    "preferred_zh": "西北医院",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "西北医院"
   },
   {
     "term": "psychotic break",
-    "zh": "精神病性发作",
-    "preferred_zh": "精神病性发作",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "精神病性发作"
   },
   {
     "term": "reality show",
-    "zh": "真人秀",
-    "preferred_zh": "真人秀",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "真人秀"
   },
   {
     "term": "reality TV",
-    "zh": "真人秀",
-    "preferred_zh": "真人秀",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "真人秀"
   },
   {
     "term": "follow crew",
-    "zh": "跟拍组",
-    "preferred_zh": "跟拍组",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "跟拍组"
   },
   {
     "term": "publicist",
-    "zh": "公关",
-    "preferred_zh": "公关",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "公关"
   },
   {
     "term": "tarmac",
-    "zh": "停机坪",
-    "preferred_zh": "停机坪",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "停机坪"
   },
   {
     "term": "crosshairs",
-    "zh": "准星",
-    "preferred_zh": "准星",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "准星"
   },
   {
     "term": "Deaconitis",
-    "zh": "Deaconitis",
-    "preferred_zh": "Deaconitis",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "Deaconitis"
   },
   {
     "term": "Maddie Claiborne",
-    "zh": "麦迪·克莱伯恩",
-    "preferred_zh": "麦迪·克莱伯恩",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "麦迪·克莱伯恩"
   },
   {
     "term": "IED",
-    "zh": "简易爆炸装置",
-    "preferred_zh": "简易爆炸装置",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "简易爆炸装置"
   },
   {
     "term": "NC-17",
-    "zh": "NC-17级",
-    "preferred_zh": "NC-17级",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "NC-17级"
   },
   {
     "term": "release form",
-    "zh": "授权书",
-    "preferred_zh": "授权书",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "授权书"
   },
   {
     "term": "co-writes",
-    "zh": "合写歌曲",
-    "preferred_zh": "合写歌曲",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "合写歌曲"
   },
   {
     "term": "GMA",
-    "zh": "《早安美国》",
-    "preferred_zh": "《早安美国》",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "《早安美国》"
   },
   {
     "term": "Good Morning America",
-    "zh": "《早安美国》",
-    "preferred_zh": "《早安美国》",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "《早安美国》"
   },
   {
     "term": "Johnny Cash",
-    "zh": "约翰尼·卡什",
-    "preferred_zh": "约翰尼·卡什",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "约翰尼·卡什"
   },
   {
     "term": "Waylon",
-    "zh": "韦伦",
-    "preferred_zh": "韦伦",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "韦伦"
   },
   {
     "term": "Loretta Lynn",
-    "zh": "洛雷塔·林恩",
-    "preferred_zh": "洛雷塔·林恩",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "洛雷塔·林恩"
   },
   {
     "term": "outlaw country",
-    "zh": "叛道乡村",
-    "preferred_zh": "叛道乡村",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "叛道乡村"
   },
   {
     "term": "shelf space",
-    "zh": "货架位置",
-    "preferred_zh": "货架位置",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "货架位置"
   },
   {
     "term": "label head",
-    "zh": "厂牌负责人",
-    "preferred_zh": "厂牌负责人",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "厂牌负责人"
   },
   {
     "term": "LP Field",
-    "zh": "LP体育场",
-    "preferred_zh": "LP体育场",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "LP体育场"
   },
   {
     "term": "Fort Campbell",
-    "zh": "坎贝尔堡",
-    "preferred_zh": "坎贝尔堡",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "坎贝尔堡"
   },
   {
     "term": "Byrne",
-    "zh": "伯恩",
-    "preferred_zh": "伯恩",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "伯恩"
   },
   {
     "term": "Deegan",
-    "zh": "迪根",
-    "preferred_zh": "迪根",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "迪根"
   },
   {
     "term": "divorce decree",
-    "zh": "离婚判决书；离婚文件，按语境可处理为离婚正式生效的文件",
-    "preferred_zh": "离婚判决书；离婚文件，按语境可处理为离婚正式生效的文件",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "离婚判决书；离婚文件，按语境可处理为离婚正式生效的文件"
   },
   {
     "term": "custody",
-    "zh": "监护权；子女抚养安排，家庭法语境不要译作拘留",
-    "preferred_zh": "监护权；子女抚养安排，家庭法语境不要译作拘留",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "监护权；子女抚养安排，家庭法语境不要译作拘留"
   },
   {
     "term": "suits",
-    "zh": "高管；公司里西装革履的人",
-    "preferred_zh": "高管；公司里西装革履的人",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "高管；公司里西装革履的人"
   },
   {
     "term": "anniversary",
-    "zh": "周年纪念；婚姻语境常指结婚纪念日",
-    "preferred_zh": "周年纪念；婚姻语境常指结婚纪念日",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "周年纪念；婚姻语境常指结婚纪念日"
   },
   {
     "term": "Medshill Records",
-    "zh": "埃奇希尔唱片",
-    "preferred_zh": "埃奇希尔唱片",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "埃奇希尔唱片"
   },
   {
     "term": "Stockholder Showcase",
-    "zh": "股东展示演出",
-    "preferred_zh": "股东展示演出",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "股东展示演出"
   },
   {
     "term": "air time",
-    "zh": "播放时段",
-    "preferred_zh": "播放时段",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "播放时段"
   },
   {
     "term": "wedding reception",
-    "zh": "婚宴",
-    "preferred_zh": "婚宴",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "婚宴"
   },
   {
     "term": "manager",
-    "zh": "经纪人",
-    "preferred_zh": "经纪人",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "经纪人"
   },
   {
     "term": "Washington, D.C.",
-    "zh": "华盛顿特区",
-    "preferred_zh": "华盛顿特区",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "华盛顿特区"
   },
   {
     "term": "St. Louis",
-    "zh": "圣路易斯",
-    "preferred_zh": "圣路易斯",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "圣路易斯"
   },
   {
     "term": "union fees",
-    "zh": "工会费用",
-    "preferred_zh": "工会费用",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "工会费用"
   },
   {
     "term": "season tickets",
-    "zh": "季票",
-    "preferred_zh": "季票",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "季票"
   },
   {
     "term": "box seats",
-    "zh": "包厢座位",
-    "preferred_zh": "包厢座位",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "包厢座位"
   },
   {
     "term": "theme song",
-    "zh": "主题曲",
-    "preferred_zh": "主题曲",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "主题曲"
   },
   {
     "term": "Raina James",
-    "zh": "蕾娜·詹姆斯",
-    "preferred_zh": "蕾娜·詹姆斯",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "蕾娜·詹姆斯"
   },
   {
     "term": "Brent",
-    "zh": "布伦特",
-    "preferred_zh": "布伦特",
-    "support_count": 1
-  },
-  {
-    "term": "Soundcheck",
-    "zh": "Soundcheck（场地名，保留英文）",
-    "preferred_zh": "Soundcheck（场地名，保留英文）",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "布伦特"
   },
   {
     "term": "market research",
-    "zh": "市场调研",
-    "preferred_zh": "市场调研",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "市场调研"
   },
   {
     "term": "Edge Hill model",
-    "zh": "埃奇希尔那套模式",
-    "preferred_zh": "埃奇希尔那套模式",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "埃奇希尔那套模式"
   },
   {
     "term": "Cadillac 3",
-    "zh": "凯迪拉克三人组",
-    "preferred_zh": "凯迪拉克三人组",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "凯迪拉克三人组"
   },
   {
     "term": "What If I Was Willing",
-    "zh": "《What If I Was Willing》",
-    "preferred_zh": "《What If I Was Willing》",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "《What If I Was Willing》"
   },
   {
     "term": "I'm Gonna Get Even",
-    "zh": "《I'm Gonna Get Even》",
-    "preferred_zh": "《I'm Gonna Get Even》",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "《I'm Gonna Get Even》"
   },
   {
     "term": "bookkeeper",
-    "zh": "会计",
-    "preferred_zh": "会计",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "会计"
   },
   {
     "term": "royalty check",
-    "zh": "版税支票",
-    "preferred_zh": "版税支票",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "版税支票"
   },
   {
     "term": "big-time songwriter",
-    "zh": "大牌词曲作者",
-    "preferred_zh": "大牌词曲作者",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "大牌词曲作者"
   },
   {
     "term": "breakfast in bed",
-    "zh": "送到床边的早餐",
-    "preferred_zh": "送到床边的早餐",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "送到床边的早餐"
   },
   {
     "term": "serious artist",
-    "zh": "真正的艺术家",
-    "preferred_zh": "真正的艺术家",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "真正的艺术家"
   },
   {
     "term": "drop party",
-    "zh": "发行派对",
-    "preferred_zh": "发行派对",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "发行派对"
   },
   {
     "term": "calculated rollout",
-    "zh": "有策略的发布安排",
-    "preferred_zh": "有策略的发布安排",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "有策略的发布安排"
   },
   {
     "term": "signing bonus",
-    "zh": "签约奖金",
-    "preferred_zh": "签约奖金",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "签约奖金"
   },
   {
     "term": "blacklisted",
-    "zh": "被封杀",
-    "preferred_zh": "被封杀",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "被封杀"
   },
   {
     "term": "Garner",
-    "zh": "冈纳",
-    "preferred_zh": "冈纳",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "冈纳"
   },
   {
     "term": "Sage",
-    "zh": "莎姬",
-    "preferred_zh": "莎姬",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "莎姬"
   },
   {
     "term": "recital",
-    "zh": "演出；汇演",
-    "preferred_zh": "演出；汇演",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "演出；汇演"
   },
   {
     "term": "Music City",
-    "zh": "音乐之城",
-    "preferred_zh": "音乐之城",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "音乐之城"
   },
   {
     "term": "independent artist",
-    "zh": "独立音乐人",
-    "preferred_zh": "独立音乐人",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "独立音乐人"
   },
   {
     "term": "midway",
-    "zh": "游乐区",
-    "preferred_zh": "游乐区",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "游乐区"
   },
   {
     "term": "Ferris wheel",
-    "zh": "摩天轮",
-    "preferred_zh": "摩天轮",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "摩天轮"
   },
   {
     "term": "tabloids",
-    "zh": "小报",
-    "preferred_zh": "小报",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "小报"
   },
   {
     "term": "messengered over",
-    "zh": "专人送来",
-    "preferred_zh": "专人送来",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "专人送来"
   },
   {
     "term": "radio business",
-    "zh": "电台圈",
-    "preferred_zh": "电台圈",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "电台圈"
   },
   {
     "term": "quote",
-    "zh": "采访素材",
-    "preferred_zh": "采访素材",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "采访素材"
   },
   {
     "term": "collect call",
-    "zh": "对方付费电话",
-    "preferred_zh": "对方付费电话",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "对方付费电话"
   },
   {
     "term": "speakerphone",
-    "zh": "免提",
-    "preferred_zh": "免提",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "免提"
   },
   {
     "term": "Billy the Kid",
-    "zh": "比利小子",
-    "preferred_zh": "比利小子",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "比利小子"
   },
   {
     "term": "voice message",
-    "zh": "语音留言",
-    "preferred_zh": "语音留言",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "语音留言"
   },
   {
     "term": "seaweed wrap",
-    "zh": "海藻裹敷",
-    "preferred_zh": "海藻裹敷",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "海藻裹敷"
   },
   {
     "term": "chronic unemployment",
-    "zh": "长期失业",
-    "preferred_zh": "长期失业",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "长期失业"
   },
   {
     "term": "music publisher",
-    "zh": "音乐版权公司",
-    "preferred_zh": "音乐版权公司",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "音乐版权公司"
   },
   {
     "term": "WSM",
-    "zh": "WSM，纳什维尔老牌乡村音乐电台，长期转播Grand Ole Opry",
-    "preferred_zh": "WSM，纳什维尔老牌乡村音乐电台，长期转播Grand Ole Opry",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "WSM，纳什维尔老牌乡村音乐电台，长期转播Grand Ole Opry"
   },
   {
     "term": "Vogue",
-    "zh": "《Vogue》杂志",
-    "preferred_zh": "《Vogue》杂志",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "《Vogue》杂志"
   },
   {
     "term": "songwriter",
-    "zh": "词曲作者；口语中可译为“写歌的人”",
-    "preferred_zh": "词曲作者；口语中可译为“写歌的人”",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "词曲作者；口语中可译为“写歌的人”"
   },
   {
     "term": "hillbilly music",
-    "zh": "早期对乡村音乐的俗称，带有“乡下音乐”色彩",
-    "preferred_zh": "早期对乡村音乐的俗称，带有“乡下音乐”色彩",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "早期对乡村音乐的俗称，带有“乡下音乐”色彩"
   },
   {
     "term": "co-headline",
-    "zh": "共同压轴；联合领衔",
-    "preferred_zh": "共同压轴；联合领衔",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "共同压轴；联合领衔"
   },
   {
     "term": "crossover artist",
-    "zh": "跨界歌手",
-    "preferred_zh": "跨界歌手",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "跨界歌手"
   },
   {
     "term": "Bluebird Cafe",
-    "zh": "蓝鸟咖啡馆",
-    "preferred_zh": "蓝鸟咖啡馆",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "蓝鸟咖啡馆"
   },
   {
     "term": "Raina Jay",
-    "zh": "蕾娜·詹姆斯",
-    "preferred_zh": "蕾娜·詹姆斯",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "蕾娜·詹姆斯"
   },
   {
     "term": "Waddy Watt",
-    "zh": "瓦迪·怀特",
-    "preferred_zh": "瓦迪·怀特",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "瓦迪·怀特"
   },
   {
     "term": "perfume bottle",
-    "zh": "香水瓶",
-    "preferred_zh": "香水瓶",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "香水瓶"
   },
   {
     "term": "prototype",
-    "zh": "样品",
-    "preferred_zh": "样品",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "样品"
   },
   {
     "term": "first record on vinyl",
-    "zh": "第一张黑胶",
-    "preferred_zh": "第一张黑胶",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "第一张黑胶"
   },
   {
     "term": "Edge Hill Republic",
-    "zh": "埃奇希尔共和唱片",
-    "preferred_zh": "埃奇希尔共和唱片",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "埃奇希尔共和唱片"
   },
   {
     "term": "Peggy Cantor",
-    "zh": "佩吉·肯特",
-    "preferred_zh": "佩吉·肯特",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "佩吉·肯特"
   },
   {
     "term": "Coleman",
-    "zh": "科尔曼",
-    "preferred_zh": "科尔曼",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "科尔曼"
   },
   {
     "term": "Marshall Evans",
-    "zh": "马歇尔·埃文斯",
-    "preferred_zh": "马歇尔·埃文斯",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "马歇尔·埃文斯"
   },
   {
     "term": "Ryman",
-    "zh": "里曼音乐厅",
-    "preferred_zh": "里曼音乐厅",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "里曼音乐厅"
   },
   {
     "term": "Franklin",
-    "zh": "弗兰克林",
-    "preferred_zh": "弗兰克林",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "弗兰克林"
   },
   {
     "term": "Epic Fails",
-    "zh": "Epic Fails乐队",
-    "preferred_zh": "Epic Fails乐队",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "Epic Fails乐队"
   },
   {
     "term": "Black Sabbath",
-    "zh": "黑色安息日乐队",
-    "preferred_zh": "黑色安息日乐队",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "黑色安息日乐队"
   },
   {
     "term": "overdubs",
-    "zh": "补录",
-    "preferred_zh": "补录",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "补录"
   },
   {
     "term": "live single",
-    "zh": "现场版单曲",
-    "preferred_zh": "现场版单曲",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "现场版单曲"
   },
   {
     "term": "lead guitarist",
-    "zh": "主音吉他手",
-    "preferred_zh": "主音吉他手",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "主音吉他手"
   },
   {
     "term": "female lead singer",
-    "zh": "女主唱",
-    "preferred_zh": "女主唱",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "女主唱"
   },
   {
     "term": "NPR",
-    "zh": "美国国家公共广播电台",
     "source_en": "NPR",
-    "preferred_zh": "美国国家公共广播电台",
     "style_scope": "all",
     "confidence": "high",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "美国国家公共广播电台"
   },
   {
     "term": "The Tennessean",
-    "zh": "《田纳西人报》",
     "source_en": "The Tennessean",
     "bad_zh": "田纳西人",
-    "preferred_zh": "《田纳西人报》",
     "style_scope": "ocr",
     "confidence": "high",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "《田纳西人报》"
   },
   {
     "term": "three chords and the truth",
-    "zh": "三和弦，道真情",
     "source_en": "three chords and the truth",
     "bad_zh": "三和弦加真相",
-    "preferred_zh": "三和弦，道真情",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "三和弦，道真情"
   },
   {
     "term": "self-awareness",
-    "zh": "自我认知；能认清自己",
     "source_en": "self-awareness",
     "bad_zh": "自知之明",
-    "preferred_zh": "自我认知；能认清自己",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "自我认知；能认清自己"
   },
   {
     "term": "movie audition",
-    "zh": "电影试镜",
     "source_en": "movie audition",
-    "preferred_zh": "电影试镜",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "电影试镜"
   },
   {
     "term": "going-away present",
-    "zh": "送别礼物；临别礼物",
     "source_en": "going-away present",
-    "preferred_zh": "送别礼物；临别礼物",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "送别礼物；临别礼物"
   },
   {
     "term": "Micah",
-    "zh": "迈卡",
     "source_en": "Micah",
     "bad_zh": "迈克；米卡",
-    "preferred_zh": "迈卡",
     "style_scope": "all",
     "confidence": "high",
-    "support_count": 3
+    "support_count": 3,
+    "guidance": "迈卡"
   },
   {
     "term": "Kylie",
-    "zh": "凯莉",
     "source_en": "Kylie",
-    "preferred_zh": "凯莉",
     "style_scope": "all",
     "confidence": "high",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "凯莉"
   },
   {
     "term": "CMA Awards",
-    "zh": "乡村音乐协会奖",
     "source_en": "CMA Awards / CMAs / Country Music Awards",
     "bad_zh": "加拿大音乐奖",
-    "preferred_zh": "乡村音乐协会奖",
     "style_scope": "all",
     "confidence": "high",
-    "support_count": 5
+    "support_count": 5,
+    "guidance": "乡村音乐协会奖"
   },
   {
     "term": "Entertainer of the Year",
-    "zh": "年度艺人",
     "source_en": "Entertainer of the Year",
     "bad_zh": "年度最佳娱乐奖",
-    "preferred_zh": "年度艺人",
     "style_scope": "all",
     "confidence": "high",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "年度艺人"
   },
   {
     "term": "acceptance speech",
-    "zh": "获奖感言",
     "source_en": "speech / speeches",
     "bad_zh": "演讲稿",
-    "preferred_zh": "获奖感言",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 3
+    "support_count": 3,
+    "guidance": "获奖感言"
   },
   {
     "term": "nod",
-    "zh": "提名",
     "source_en": "nod",
     "bad_zh": "点头",
-    "preferred_zh": "提名",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 2
+    "support_count": 2,
+    "guidance": "提名"
   },
   {
     "term": "no re-entry",
-    "zh": "不得再次入场",
     "source_en": "no re-entry",
     "bad_zh": "无重新进入；无重入",
-    "preferred_zh": "不得再次入场",
     "style_scope": "ocr",
     "confidence": "high",
-    "support_count": 2
+    "support_count": 2,
+    "guidance": "不得再次入场"
   },
   {
     "term": "CMA/CMAs",
-    "zh": "乡村音乐协会奖",
     "source_en": "CMA / CMAs",
     "bad_zh": "加拿大音乐奖",
-    "preferred_zh": "乡村音乐协会奖",
     "style_scope": "all",
     "confidence": "high",
-    "support_count": 3
+    "support_count": 3,
+    "guidance": "乡村音乐协会奖"
   },
   {
     "term": "Song of the Year",
-    "zh": "年度歌曲",
     "source_en": "Song of the Year",
-    "preferred_zh": "年度歌曲",
     "style_scope": "all",
     "confidence": "high",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "年度歌曲"
   },
   {
     "term": "s'mores",
-    "zh": "夹心烤棉花糖",
     "source_en": "s'mores",
-    "preferred_zh": "夹心烤棉花糖",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "夹心烤棉花糖"
   },
   {
     "term": "Hook 'em Horns",
-    "zh": "长角牛，加油",
     "source_en": "Hook 'em Horns",
     "bad_zh": "来比个角号",
-    "preferred_zh": "长角牛，加油",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "长角牛，加油"
   },
   {
     "term": "feature film debut",
-    "zh": "大银幕处女作；首次出演剧情长片",
     "source_en": "feature film debut",
     "bad_zh": "首部剧情长片",
-    "preferred_zh": "大银幕处女作；首次出演剧情长片",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "大银幕处女作；首次出演剧情长片"
   },
   {
     "term": "Oscar buzz",
-    "zh": "奥斯卡呼声；有人在谈奥斯卡",
     "source_en": "Oscar buzz",
     "bad_zh": "奥斯卡奖的议论声",
-    "preferred_zh": "奥斯卡呼声；有人在谈奥斯卡",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "奥斯卡呼声；有人在谈奥斯卡"
   },
   {
     "term": "album options",
-    "zh": "后续两张专辑的选择权；两张后续专辑的续约选择权",
     "source_en": "options for two follow-up albums",
     "bad_zh": "后续专辑的选项",
-    "preferred_zh": "后续两张专辑的选择权；两张后续专辑的续约选择权",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "后续两张专辑的选择权；两张后续专辑的续约选择权"
   },
   {
     "term": "recording session",
-    "zh": "录音；录音安排；录音时段",
     "source_en": "recording session",
     "bad_zh": "上课；比赛",
-    "preferred_zh": "录音；录音安排；录音时段",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "录音；录音安排；录音时段"
   },
   {
     "term": "Lenox Hill Records",
-    "zh": "莱诺克斯山唱片公司",
     "source_en": "Lenox Hill Records",
     "bad_zh": "伦诺克斯山唱片公司",
-    "preferred_zh": "莱诺克斯山唱片公司",
     "style_scope": "all",
     "confidence": "high",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "莱诺克斯山唱片公司"
   },
   {
     "term": "Zach Wells",
-    "zh": "扎克·韦尔斯",
     "source_en": "Zach Wells",
-    "preferred_zh": "扎克·韦尔斯",
     "style_scope": "all",
     "confidence": "high",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "扎克·韦尔斯"
   },
   {
     "term": "Wayfaring Stranger",
-    "zh": "《漂泊的异乡人》",
     "source_en": "Wayfaring Stranger",
-    "preferred_zh": "《漂泊的异乡人》",
     "style_scope": "all",
     "confidence": "high",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "《漂泊的异乡人》"
   },
   {
     "term": "spinal cord",
-    "zh": "脊髓",
     "source_en": "spinal cord",
     "bad_zh": "脐带",
-    "preferred_zh": "脊髓",
     "style_scope": "all",
     "confidence": "high",
-    "support_count": 2
+    "support_count": 2,
+    "guidance": "脊髓"
   },
   {
     "term": "vertebrae",
-    "zh": "椎骨",
     "source_en": "vertebrae",
-    "preferred_zh": "椎骨",
     "style_scope": "all",
     "confidence": "high",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "椎骨"
   },
   {
     "term": "first responders",
-    "zh": "首批救援人员；最先赶到现场的救援人员",
     "source_en": "first responders",
-    "preferred_zh": "首批救援人员；最先赶到现场的救援人员",
     "style_scope": "all",
     "confidence": "high",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "首批救援人员；最先赶到现场的救援人员"
   },
   {
     "term": "reps (exercise)",
-    "zh": "个；次",
     "source_en": "reps / repetitions in exercise or physical therapy",
     "bad_zh": "集",
-    "preferred_zh": "个；次",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 2
+    "support_count": 2,
+    "guidance": "个；次"
   },
   {
     "term": "New Year's Eve",
-    "zh": "跨年夜",
     "source_en": "New Year's Eve",
     "bad_zh": "元旦夜",
-    "preferred_zh": "跨年夜",
     "style_scope": "all",
     "confidence": "high",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "跨年夜"
   },
   {
     "term": "Staples Center",
-    "zh": "斯台普斯中心",
     "source_en": "Staples Center",
-    "preferred_zh": "斯台普斯中心",
     "style_scope": "all",
     "confidence": "high",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "斯台普斯中心"
   },
   {
     "term": "caterer",
-    "zh": "餐饮公司；宴席承办商",
     "source_en": "caterer",
     "bad_zh": "承办人",
-    "preferred_zh": "餐饮公司；宴席承办商",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "餐饮公司；宴席承办商"
   },
   {
     "term": "notes (creative feedback)",
-    "zh": "修改意见；反馈意见",
     "source_en": "notes on a song, script, performance, or creative work",
     "bad_zh": "笔记",
-    "preferred_zh": "修改意见；反馈意见",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "修改意见；反馈意见"
   },
   {
     "term": "benefit concert",
-    "zh": "慈善演出；公益演出",
     "source_en": "benefit concert",
-    "preferred_zh": "慈善演出；公益演出",
     "style_scope": "all",
     "confidence": "high",
-    "support_count": 1
+    "support_count": 1,
+    "guidance": "慈善演出；公益演出"
   }
 ]

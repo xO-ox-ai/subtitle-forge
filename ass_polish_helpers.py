@@ -14,9 +14,9 @@ from ass_filter_helpers import has_chinese
 from ass_overlay_helpers import ass_escape, break_zh, load_json
 
 
-PROMPT_VERSION = "ass-polish-20260711-v6"
+PROMPT_VERSION = "ass-polish-20260712-v7"
 GLOSSARY_REVIEW_PROMPT_VERSION = "glossary-review-20260707-v1"
-STATIC_HINT_REVIEW_PROMPT_VERSION = "static-hint-review-20260709-v1"
+STATIC_HINT_REVIEW_PROMPT_VERSION = "static-hint-review-20260712-v2"
 DEFAULT_MODEL = "gpt-4.1-mini"
 DEFAULT_CODEX_MODEL = "gpt-5.6-sol"
 DEFAULT_CODEX_REASONING_EFFORT = "high"
@@ -30,6 +30,7 @@ DEBUG_POLISH_DIR_ENV = "SUB_POLISH_DEBUG_DIR"
 COMMON_MISTRANSLATION_HINTS_FILE = "common_mistranslation_hints.json"
 COMMON_PHRASE_CORRECTION_HINTS_FILE = "common_phrase_correction_hints.json"
 OCR_LOW_VALUE_SHORT_TEXTS_FILE = "ocr_low_value_short_texts.json"
+SUBTITLE_TERMINOLOGY_FILE = "subtitle_terminology.json"
 MUSIC_SYMBOL = "\u266a"
 CHANT_SYMBOL = "\u2726"
 EN_FONT_SIZE = 34
@@ -455,10 +456,11 @@ def polish_ass_files(
             codex_command=codex_command,
             codex_reasoning_effort=codex_reasoning_effort,
         )
-        glossary_terms = load_relevant_glossary(base_dir, [target for _, target in pending_pairs])
         effective_batch_size = len(pending_pairs) if batch_size <= 0 else max(batch_size, 1)
         for batch_offset in range(0, len(pending_pairs), effective_batch_size):
             batch_pairs = pending_pairs[batch_offset : batch_offset + effective_batch_size]
+            terminology = load_relevant_terminology(base_dir, batch_pairs)
+            mistranslation_hints = select_mistranslation_hints([target for _, target in batch_pairs])
             phrase_hints = select_phrase_correction_hints([target for _, target in batch_pairs])
             result = request_polish_batch(
                 client,
@@ -467,7 +469,8 @@ def polish_ass_files(
                     (state.ass_file.name, target)
                     for state, target in batch_pairs
                 ],
-                glossary_terms,
+                terminology,
+                mistranslation_hints,
                 phrase_hints,
                 temperature,
             )
@@ -728,12 +731,14 @@ def request_polish_batch(
     client: OpenAICompatibleClient,
     model: str,
     batch: list[tuple[str, PolishTarget]],
-    glossary_terms: list[dict],
+    terminology: list[dict],
+    mistranslation_hints: list[dict],
     phrase_hints: list[dict],
     temperature: float,
 ) -> dict[int, str] | None:
     payload = {
-        "glossary": glossary_terms,
+        "terminology": terminology,
+        "mistranslation_hints": mistranslation_hints,
         "phrase_hints": phrase_hints,
         "items": [
             {
@@ -773,7 +778,11 @@ def request_polish_batch(
         "words are visible; prefer the shortest natural Chinese a subtitle editor would actually use. "
         "For colloquial dialogue, jokes, ad copy, venue/show packaging, and spoken banter, prefer "
         "idiomatic Chinese over literal lexical matching. "
-        "When phrase_hints contains a matched colloquial or industry phrase, treat it as stronger guidance "
+        "When terminology contains a matched entry, preferred_zh is the literal preferred subtitle term; "
+        "the optional note only explains when to use it and must never be copied into a subtitle. "
+        "Mistranslation_hints and phrase_hints contain reusable guidance, not replacement text; follow the "
+        "guidance in context and never copy an entire guidance sentence into the subtitle. "
+        "When phrase_hints contains a matched colloquial or industry phrase, treat its guidance as stronger guidance "
         "than word-by-word translation. "
         "When a line still reads like translated English syntax, rewrite the whole sentence into fluent "
         "spoken Chinese instead of preserving the original clause order. "
@@ -785,7 +794,8 @@ def request_polish_batch(
         "Polish current_zh for each item. Return only changed items; omitted ids keep current_zh, except every "
         "needs_translation=true item must be returned with a Chinese translation. "
         "For kind=ocr or kind=note, use delete=true only when the overlay should be removed from the finished ASS. "
-        "The glossary and phrase_hints are optional context; use them only when relevant.\n"
+        "Terminology, mistranslation_hints, and phrase_hints are optional context; use them only when relevant. "
+        "Only terminology.preferred_zh is literal replacement wording; note and guidance fields are instructions.\n"
         + json.dumps(payload, ensure_ascii=False, separators=(",", ":"))
     )
     debug_dir = os.environ.get(DEBUG_POLISH_DIR_ENV, "").strip()
@@ -817,6 +827,11 @@ def request_polish_batch(
 
     raw_items = parsed.get("items") if isinstance(parsed, dict) else parsed
     result: dict[int, str] = {}
+    terminology_notes = {
+        normalize_for_cache(item.get("note", ""))
+        for item in terminology
+        if isinstance(item, dict) and normalize_for_cache(item.get("note", ""))
+    }
     if isinstance(raw_items, list):
         for item in raw_items:
             if not isinstance(item, dict):
@@ -827,6 +842,8 @@ def request_polish_batch(
                 continue
             zh = item.get("zh")
             if isinstance(zh, str):
+                if normalize_for_cache(zh) in terminology_notes:
+                    continue
                 result[item_id] = zh
             elif item.get("delete") is True:
                 result[item_id] = DELETE_SENTINEL
@@ -1057,16 +1074,43 @@ def normalize_for_cache(text: str) -> str:
     return CJK_INTERNAL_SPACE_RE.sub("", text)
 
 
+def hint_guidance_text(item: dict) -> str:
+    return str(item.get("guidance") or item.get("preferred_zh") or item.get("zh") or item.get("note") or "").strip()
+
+
+def select_mistranslation_hints(targets: list[PolishTarget], limit: int = 24) -> list[dict]:
+    haystack = "\n".join(f"{target.en}\n{target.zh}" for target in targets).lower()
+    selected: list[dict] = []
+    for item in COMMON_MISTRANSLATION_HINTS:
+        term = str(item.get("term") or item.get("source_en") or "").strip()
+        guidance = hint_guidance_text(item)
+        if not term or not guidance:
+            continue
+        if term_matches_text(term, haystack):
+            hint = {"term": term, "guidance": guidance}
+            bad_zh = str(item.get("bad_zh") or "").strip()
+            if bad_zh:
+                hint["bad_zh"] = bad_zh
+            selected.append(hint)
+            if len(selected) >= limit:
+                break
+    return selected
+
+
 def select_phrase_correction_hints(targets: list[PolishTarget], limit: int = 24) -> list[dict]:
     haystack = "\n".join(f"{target.en}\n{target.zh}" for target in targets).lower()
     selected: list[dict] = []
     for item in COMMON_PHRASE_CORRECTION_HINTS:
         phrase = str(item.get("phrase") or "").strip()
-        zh = str(item.get("zh") or "").strip()
-        if not phrase or not zh:
+        guidance = hint_guidance_text(item)
+        if not phrase or not guidance:
             continue
         if term_matches_text(phrase, haystack):
-            selected.append({"phrase": phrase, "zh": zh})
+            hint = {"phrase": phrase, "guidance": guidance}
+            bad_zh = str(item.get("bad_zh") or "").strip()
+            if bad_zh:
+                hint["bad_zh"] = bad_zh
+            selected.append(hint)
             if len(selected) >= limit:
                 break
     return selected
@@ -1166,16 +1210,17 @@ def request_static_hint_review(
         "You are maintaining reusable Simplified Chinese subtitle correction dictionaries. "
         "Return strict JSON only: "
         "{\"mistranslation_hints\":[{\"term\":\"...\",\"source_en\":\"...\",\"bad_zh\":\"...\","
-        "\"preferred_zh\":\"...\",\"zh\":\"...\",\"style_scope\":\"dialogue|lyric|ocr|note|all\","
+        "\"guidance\":\"...\",\"style_scope\":\"dialogue|lyric|ocr|note|all\","
         "\"confidence\":\"high|medium|low\",\"support_count\":1}],"
         "\"phrase_correction_hints\":[{\"phrase\":\"...\",\"source_en\":\"...\",\"bad_zh\":\"...\","
-        "\"preferred_zh\":\"...\",\"zh\":\"...\",\"style_scope\":\"dialogue|lyric|all\","
+        "\"guidance\":\"...\",\"style_scope\":\"dialogue|lyric|all\","
         "\"confidence\":\"high|medium|low\",\"support_count\":1}],"
         "\"ocr_low_value_short_texts\":[\"...\"]}. "
         "Add only high-confidence, reusable rules that are likely to help future episodes. "
         "Use mistranslation_hints for proper nouns, fixed collocations, industry terms, and title/technical wording. "
         "Use phrase_correction_hints for frequent colloquial or industry phrases where the natural Chinese guidance is reusable. "
-        "For short colloquial phrases, provide several natural Chinese options in preferred_zh when context decides the final wording. "
+        "The guidance field is an instruction for a future editor, not literal replacement text. "
+        "For short colloquial phrases, provide several natural Chinese options in guidance when context decides the final wording. "
         "Set style_scope carefully: dialogue for spoken lines, lyric only for song-lyric wording, ocr for screen-text cleanup, all only when truly universal. "
         "Use bad_zh only for a recurring wrong translation pattern, not for every source line. "
         "Use ocr_low_value_short_texts only for short or low-value Chinese OCR fragments that should usually be deleted when shown alone. "
@@ -1213,7 +1258,7 @@ def _clean_hint_support_count(value) -> int:
 
 
 def _hint_preferred_text(item: dict) -> str:
-    return clean_glossary_review_text(item.get("preferred_zh") or item.get("zh"))
+    return clean_glossary_review_text(item.get("guidance") or item.get("preferred_zh") or item.get("zh"))
 
 
 def _normalize_hint_dict(item: dict, key_field: str) -> dict | None:
@@ -1221,14 +1266,12 @@ def _normalize_hint_dict(item: dict, key_field: str) -> dict | None:
     value = _hint_preferred_text(item)
     if not key_text or not value:
         return None
-    normalized = {key_field: key_text, "zh": value}
-    for field in ("source_en", "bad_zh", "preferred_zh", "style_scope", "confidence", "note"):
+    normalized = {key_field: key_text, "guidance": value}
+    for field in ("source_en", "bad_zh", "style_scope", "confidence", "note"):
         field_value = clean_glossary_review_text(item.get(field))
         if field_value:
             normalized[field] = field_value
     normalized["support_count"] = _clean_hint_support_count(item.get("support_count") or item.get("count"))
-    if "preferred_zh" not in normalized:
-        normalized["preferred_zh"] = value
     return normalized
 
 
@@ -1239,7 +1282,7 @@ def _merge_hint_record(existing: dict, addition: dict) -> None:
     )
     if addition.get("confidence") == "high" and existing.get("confidence") != "high":
         existing["confidence"] = "high"
-    for field in ("source_en", "bad_zh", "preferred_zh", "style_scope", "note"):
+    for field in ("source_en", "bad_zh", "guidance", "style_scope", "note"):
         if addition.get(field) and not existing.get(field):
             existing[field] = addition[field]
 
@@ -1636,33 +1679,74 @@ def curate_glossary_file(
     return stats
 
 
-def load_relevant_glossary(base_dir: Path, targets: list[PolishTarget], limit: int = 32) -> list[dict]:
-    data = load_json(base_dir / "subtitle_glossary.json", {})
-    terms = data.get("terms") if isinstance(data, dict) else []
-    if not isinstance(terms, list):
+def terminology_scope_matches(item: dict, target_kinds: set[str]) -> bool:
+    raw = item.get("scope") or item.get("style_scope") or ""
+    values = raw if isinstance(raw, list) else re.split(r"[,/| ]+", str(raw))
+    scopes = {str(value).strip().lower() for value in values if str(value).strip()}
+    if not scopes or "all" in scopes:
+        return True
+    aliases = {
+        "dialogue": {"dialogue", "spoken", "line"},
+        "lyric": {"lyric", "lyrics", "music", "song"},
+        "chant": {"chant", "incantation", "spell"},
+        "ocr": {"ocr", "screen"},
+        "note": {"note", "cultural_note"},
+    }
+    return any(scopes & aliases.get(kind, {kind}) for kind in target_kinds)
+
+
+def terminology_entry_matches(item: dict, text: str) -> bool:
+    source_en = str(item.get("source_en") or item.get("term") or "").strip()
+    raw_aliases = item.get("aliases") or []
+    aliases = raw_aliases if isinstance(raw_aliases, list) else [raw_aliases]
+    candidates = [source_en, *(str(alias).strip() for alias in aliases)]
+    flags = 0 if item.get("case_sensitive") is True else re.IGNORECASE
+    for candidate in candidates:
+        if not candidate:
+            continue
+        pattern = re.escape(normalize_for_cache(candidate))
+        pattern = re.sub(r"\\\s+", r"\\s+", pattern)
+        if re.search(rf"(?<![0-9A-Za-z]){pattern}(?![0-9A-Za-z])", normalize_for_cache(text), flags):
+            return True
+    return False
+
+
+def load_relevant_terminology(
+    base_dir: Path,
+    pairs: list[tuple[PolishFileState, PolishTarget]],
+    limit: int = 32,
+) -> list[dict]:
+    data = load_json(base_dir / SUBTITLE_TERMINOLOGY_FILE, {})
+    entries = data.get("entries") if isinstance(data, dict) else []
+    if not isinstance(entries, list):
         return []
-    haystack = "\n".join(f"{target.en}\n{target.zh}" for target in targets).lower()
+    haystack = "\n".join(f"{target.en}\n{target.zh}" for _, target in pairs)
+    file_haystack = "\n".join(
+        re.sub(r"[._-]+", " ", state.ass_file.name)
+        for state, _ in pairs
+    ).lower()
+    target_kinds = {target.kind for _, target in pairs}
     selected: list[dict] = []
-    for item in terms:
+    for item in entries:
         if not isinstance(item, dict):
             continue
         if item.get("reviewed") is False:
             continue
-        term = str(item.get("term") or "").strip()
-        zh = str(item.get("zh") or "").strip()
-        if not term or not zh:
+        source_en = str(item.get("source_en") or item.get("term") or "").strip()
+        preferred_zh = str(item.get("preferred_zh") or "").strip()
+        if not source_en or not preferred_zh:
             continue
-        if term_matches_text(term, haystack) or zh in haystack:
-            selected.append({"term": term, "zh": zh})
-            if len(selected) >= limit:
-                break
-    for item in COMMON_MISTRANSLATION_HINTS:
-        term = str(item.get("term") or "").strip()
-        zh = str(item.get("zh") or "").strip()
-        if not term or not zh:
+        series = str(item.get("series") or "").strip()
+        if series and not term_matches_text(series, file_haystack):
             continue
-        if term_matches_text(term, haystack):
-            selected.append({"term": term, "zh": zh})
+        if not terminology_scope_matches(item, target_kinds):
+            continue
+        if terminology_entry_matches(item, haystack):
+            entry = {"source_en": source_en, "preferred_zh": preferred_zh}
+            note = str(item.get("note") or "").strip()
+            if note:
+                entry["note"] = note
+            selected.append(entry)
             if len(selected) >= limit:
                 break
     return selected
