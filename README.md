@@ -55,7 +55,7 @@ $env:PATH = ".\tools\whisper;.\tools\llama;.\tools\ffmpeg\bin;$env:PATH"
 
 所有路径型环境变量都允许使用相对路径，并统一相对于项目根目录解析。只有确实需要覆盖 `PATH` 结果时才设置对应变量。
 
-Python 默认使用 `PATH` 中的 `python`。需要隔离依赖时，推荐把环境放在项目的 `.venvs/` 下：
+Python 默认使用 `PATH` 中的 `python`。需要隔离依赖时，推荐把环境放在项目的 `.venvs/` 下；如果相对环境不存在，脚本也会自动查找 PATH Python 同级的 `demucs/`、`whisperx/`、`whisper-at/`、`paddleocr/` 环境，不需要写死盘符：
 
 ```powershell
 $env:SUB_DEMUCS_SCRIPTS = ".venvs\demucs\Scripts"

@@ -36,11 +36,26 @@ def resolve_executable_path(value: str | Path) -> Path:
 
 _CURRENT_PYTHON = Path(sys.executable).resolve()
 _CURRENT_ROOT = _CURRENT_PYTHON.parent.parent if _CURRENT_PYTHON.parent.name.lower() == "scripts" else _CURRENT_PYTHON.parent
+
+
+def specialized_scripts_dir(env_name: str, environment_name: str) -> Path:
+    """Find a step-specific Python environment without a fixed machine path."""
+    if os.environ.get(env_name):
+        return env_path(env_name, "")
+    project_candidate = resolve_project_path(Path(".venvs") / environment_name / "Scripts")
+    if project_candidate.exists():
+        return project_candidate
+    adjacent_candidate = _CURRENT_ROOT / environment_name / "Scripts"
+    if adjacent_candidate.exists():
+        return adjacent_candidate.resolve()
+    return project_candidate
+
+
 VENV_ROOT = env_path("SUB_VENV_ROOT", _CURRENT_ROOT)
-DEMUCS_SCRIPTS = env_path("SUB_DEMUCS_SCRIPTS", Path(".venvs") / "demucs" / "Scripts")
-WHISPERX_SCRIPTS = env_path("SUB_WHISPERX_SCRIPTS", Path(".venvs") / "whisperx" / "Scripts")
-WHISPER_AT_SCRIPTS = env_path("SUB_WHISPER_AT_SCRIPTS", Path(".venvs") / "whisper-at" / "Scripts")
-PADDLEOCR_SCRIPTS = env_path("SUB_PADDLEOCR_SCRIPTS", Path(".venvs") / "paddleocr" / "Scripts")
+DEMUCS_SCRIPTS = specialized_scripts_dir("SUB_DEMUCS_SCRIPTS", "demucs")
+WHISPERX_SCRIPTS = specialized_scripts_dir("SUB_WHISPERX_SCRIPTS", "whisperx")
+WHISPER_AT_SCRIPTS = specialized_scripts_dir("SUB_WHISPER_AT_SCRIPTS", "whisper-at")
+PADDLEOCR_SCRIPTS = specialized_scripts_dir("SUB_PADDLEOCR_SCRIPTS", "paddleocr")
 if os.environ.get("SUB_PYTHON_EXE"):
     PYTHON_EXE = resolve_executable_path(os.environ["SUB_PYTHON_EXE"])
 elif shutil.which("python"):

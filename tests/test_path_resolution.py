@@ -44,6 +44,23 @@ class PathResolutionTests(unittest.TestCase):
         with patch("pipeline_common.shutil.which", return_value=None):
             self.assertEqual(paths.resolve_executable_path("custom-python"), Path("custom-python"))
 
+    def test_specialized_environment_falls_back_next_to_path_python(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            project_root = root / "project"
+            runtime_root = root / "runtime"
+            adjacent_scripts = runtime_root / "paddleocr" / "Scripts"
+            project_root.mkdir()
+            adjacent_scripts.mkdir(parents=True)
+            with patch.object(paths, "PROJECT_ROOT", project_root):
+                with patch.object(paths, "_CURRENT_ROOT", runtime_root):
+                    with patch.dict(os.environ, {}, clear=False):
+                        os.environ.pop("SUB_TEST_SCRIPTS", None)
+                        self.assertEqual(
+                            paths.specialized_scripts_dir("SUB_TEST_SCRIPTS", "paddleocr"),
+                            adjacent_scripts.resolve(),
+                        )
+
 
 if __name__ == "__main__":
     unittest.main()
