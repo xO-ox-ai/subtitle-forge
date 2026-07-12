@@ -2361,7 +2361,7 @@
   },
   {
     "phrase": "stay with me",
-    "zh": "急救语境：撑住、坚持住、别昏过去；一般语境：陪着我、留在我身边",
+    "zh": "按语境选择：撑住；坚持住；陪着我；留在我身边",
     "source_en": "stay with me",
     "preferred_zh": "按语境选择：撑住；坚持住；陪着我；留在我身边",
     "style_scope": "dialogue",
@@ -2370,7 +2370,7 @@
   },
   {
     "phrase": "pull the trigger",
-    "zh": "比喻语境：作出决定、正式启动；枪械语境：扣动扳机",
+    "zh": "按语境选择：作出决定；正式启动；扣动扳机",
     "source_en": "pull the trigger",
     "preferred_zh": "按语境选择：作出决定；正式启动；扣动扳机",
     "style_scope": "dialogue",
@@ -2411,6 +2411,83 @@
     "zh": "情况很糟；状态很差；伤势严重",
     "source_en": "in a bad way",
     "preferred_zh": "情况很糟；状态很差；伤势严重",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "make it",
+    "zh": "到场语境：赶上、及时到；成功语境：做到、成功；生存语境：挺过去",
+    "source_en": "make it",
+    "preferred_zh": "按语境选择：赶上；及时到；做到；成功；挺过去",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "pull up",
+    "zh": "车辆语境：到门口、停车；信息语境：调出、查出；动作语境：拉起",
+    "source_en": "pull up",
+    "preferred_zh": "按语境选择：到了；停车；调出；拉起",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "I need a minute",
+    "zh": "让我缓一会儿；让我静一静；给我一点时间",
+    "source_en": "I need a minute",
+    "bad_zh": "我需要一分钟",
+    "preferred_zh": "让我缓一会儿；让我静一静；给我一点时间",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "catch you later",
+    "zh": "回头见；待会儿见；之后再找你",
+    "source_en": "catch you later",
+    "bad_zh": "之后抓住你",
+    "preferred_zh": "回头见；待会儿见；之后再找你",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "full house",
+    "zh": "座无虚席；全场满座；客满",
+    "source_en": "full house",
+    "preferred_zh": "座无虚席；全场满座；客满",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "pre-show jitters",
+    "zh": "演出前紧张；上台前有点紧张",
+    "source_en": "pre-show jitters",
+    "bad_zh": "开场前的小紧张",
+    "preferred_zh": "演出前紧张；上台前有点紧张",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "first ... in two years",
+    "zh": "时隔两年的首次……；两年来的第一场……",
+    "source_en": "first ... in two years",
+    "bad_zh": "首次……推迟两年",
+    "preferred_zh": "时隔两年的首次……；两年来的第一场……",
+    "style_scope": "all",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "kickoff of a tour",
+    "zh": "巡演首秀；巡演首场；巡演启动",
+    "source_en": "kickoff of a tour",
+    "bad_zh": "巡演的启动仪式",
+    "preferred_zh": "巡演首秀；巡演首场；巡演启动",
     "style_scope": "dialogue",
     "confidence": "high",
     "support_count": 1

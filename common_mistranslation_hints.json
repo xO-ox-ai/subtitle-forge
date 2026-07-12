@@ -2098,5 +2098,53 @@
     "style_scope": "dialogue",
     "confidence": "high",
     "support_count": 2
+  },
+  {
+    "term": "New Year's Eve",
+    "zh": "跨年夜",
+    "source_en": "New Year's Eve",
+    "bad_zh": "元旦夜",
+    "preferred_zh": "跨年夜",
+    "style_scope": "all",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "term": "Staples Center",
+    "zh": "斯台普斯中心",
+    "source_en": "Staples Center",
+    "preferred_zh": "斯台普斯中心",
+    "style_scope": "all",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "term": "caterer",
+    "zh": "餐饮公司；宴席承办商",
+    "source_en": "caterer",
+    "bad_zh": "承办人",
+    "preferred_zh": "餐饮公司；宴席承办商",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "term": "notes (creative feedback)",
+    "zh": "修改意见；反馈意见",
+    "source_en": "notes on a song, script, performance, or creative work",
+    "bad_zh": "笔记",
+    "preferred_zh": "修改意见；反馈意见",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "term": "benefit concert",
+    "zh": "慈善演出；公益演出",
+    "source_en": "benefit concert",
+    "preferred_zh": "慈善演出；公益演出",
+    "style_scope": "all",
+    "confidence": "high",
+    "support_count": 1
   }
 ]
