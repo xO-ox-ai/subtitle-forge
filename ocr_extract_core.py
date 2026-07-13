@@ -34,6 +34,13 @@ def write_status(base_dir: Path, video: str, index: int, total: int) -> None:
     return None
 
 
+def ocr_temporary_directory(out_file: Path) -> tempfile.TemporaryDirectory:
+    """Create OCR scratch space inside the configured pipeline work directory."""
+    work_dir = out_file.parent.parent
+    work_dir.mkdir(parents=True, exist_ok=True)
+    return tempfile.TemporaryDirectory(prefix="sub_ocr_", dir=work_dir)
+
+
 def run_json(cmd: list[str]) -> dict:
     result = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, encoding="utf-8")
     if result.returncode != 0:
@@ -372,7 +379,7 @@ def scan_video(base_dir: Path, video: Path, out_file: Path) -> None:
     times = sample_times(duration)
     reader = make_reader()
     detections: list[dict] = []
-    with tempfile.TemporaryDirectory(prefix="sub_ocr_") as tmp:
+    with ocr_temporary_directory(out_file) as tmp:
         tmp_dir = Path(tmp)
         frames_dir = tmp_dir / "frames"
         frames_dir.mkdir(parents=True, exist_ok=True)

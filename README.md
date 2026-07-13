@@ -21,6 +21,8 @@ python .\run_all.py .
 
 默认保留中间文件。Step 10 清理缓存不会默认执行，需要显式调用。
 
+默认工作目录为项目下的 `temp/`。持久化的 OCR JSON、翻译缓存、运行日志和其他中间结果都写入这里；OCR 抽帧等短期工作文件也会建立在 `temp/sub_ocr_*/` 中，并在单集处理完成或抛出异常时自动删除，不再使用系统 `%TEMP%`。如果通过 `--work-dir` 改写工作目录，短期文件会跟随该目录。
+
 ## 环境准备
 
 本项目优先面向 Windows + PowerShell。建议使用 Python 3.10 系列环境，并按不同工具拆分虚拟环境，因为 Demucs、WhisperX/pyannote、Whisper-AT、PaddleOCR 的依赖栈经常互相冲突。
