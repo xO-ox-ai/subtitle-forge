@@ -49,6 +49,7 @@ KNOWN_TARGET_SUFFIXES = {
 ASS_TIME_RE = re.compile(r"(?P<h>\d+):(?P<m>\d{2}):(?P<s>\d{2})\.(?P<cs>\d{2})")
 OCR_MAX_DISPLAY_SECONDS = 6.0
 OCR_SUBSUME_TIME_EPSILON = 0.06
+SDH_SEPARATOR_RE = re.compile(r"^[\s\-\u2013\u2014\u2015]+$")
 
 
 def episode_code(value: str | Path) -> str:
@@ -341,6 +342,19 @@ def overlay_ass(ass_file: Path, ocr_file: Path, notes_file: Path) -> int:
     return len(overlay_events)
 
 
+def is_separator_only_bilingual(line: str) -> bool:
+    """Return true for empty SDH speaker separators such as "- -" / "——"."""
+    parts = line.split(",", 9) if line.startswith("Dialogue:") else []
+    if len(parts) != 10 or parts[3] != "BILINGUAL":
+        return False
+    fragments = parts[9].split(r"\N")
+    visible_fragments = [ass_visible_text(fragment).strip() for fragment in fragments]
+    return bool(visible_fragments) and all(
+        not fragment or SDH_SEPARATOR_RE.fullmatch(fragment)
+        for fragment in visible_fragments
+    )
+
+
 def filter_ass_file(path: Path) -> tuple[int, int, int]:
     """Filter one ASS file.
 
@@ -365,9 +379,13 @@ def filter_ass_file(path: Path) -> tuple[int, int, int]:
             if not has_chinese(ass_visible_text(line)):
                 removed_non_chinese += 1
                 continue
-        elif ",BILINGUAL," in line and is_credit_disclaimer(ass_visible_text(line)):
-            removed_credits += 1
-            continue
+        elif ",BILINGUAL," in line:
+            if is_separator_only_bilingual(line):
+                removed_non_chinese += 1
+                continue
+            if is_credit_disclaimer(ass_visible_text(line)):
+                removed_credits += 1
+                continue
         kept_lines.append(line)
     if removed_non_chinese or removed_credits:
         path.write_text("\n".join(kept_lines) + "\n", encoding="utf-8-sig")
