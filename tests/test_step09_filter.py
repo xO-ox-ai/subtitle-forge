@@ -24,6 +24,10 @@ class Step09FilterTests(unittest.TestCase):
         line = r"Dialogue: 0,0:00:01.00,0:00:02.00,BILINGUAL,,0,0,0,,- 我不去\N{\fs34}- I'm not going."
         self.assertFalse(step09.is_separator_only_bilingual(line))
 
+    def test_ellipsis_and_sdh_dashes_are_separator(self):
+        line = r"Dialogue: 0,0:00:01.00,0:00:02.00,BILINGUAL,,0,0,0,,……\N{\fs34}- -"
+        self.assertTrue(step09.is_separator_only_bilingual(line))
+
 
 if __name__ == "__main__":
     unittest.main()

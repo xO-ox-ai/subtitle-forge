@@ -49,7 +49,7 @@ KNOWN_TARGET_SUFFIXES = {
 ASS_TIME_RE = re.compile(r"(?P<h>\d+):(?P<m>\d{2}):(?P<s>\d{2})\.(?P<cs>\d{2})")
 OCR_MAX_DISPLAY_SECONDS = 6.0
 OCR_SUBSUME_TIME_EPSILON = 0.06
-SDH_SEPARATOR_RE = re.compile(r"^[\s\-\u2013\u2014\u2015]+$")
+SDH_SEPARATOR_RE = re.compile(r"^[\s\-\u2013\u2014\u2015\u2026]+$")
 
 
 def episode_code(value: str | Path) -> str:
@@ -343,7 +343,7 @@ def overlay_ass(ass_file: Path, ocr_file: Path, notes_file: Path) -> int:
 
 
 def is_separator_only_bilingual(line: str) -> bool:
-    """Return true for empty SDH speaker separators such as "- -" / "——"."""
+    """Return true for empty SDH separators such as "- -", "——", or "……"."""
     parts = line.split(",", 9) if line.startswith("Dialogue:") else []
     if len(parts) != 10 or parts[3] != "BILINGUAL":
         return False
