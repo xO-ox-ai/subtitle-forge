@@ -1,6 +1,6 @@
 {
   "version": "subtitle-cultural-notes-20260712-v2",
-  "updated_at": "2026-07-12 15:20:00",
+  "updated_at": "2026-07-13 08:47:47",
   "usage": "cultural_notes_only",
   "schema": {
     "term": "English cultural reference matched in dialogue or OCR",
@@ -3966,6 +3966,356 @@
       "review_prompt_version": "glossary-review-20260707-v1",
       "review_model": "codex-config",
       "reviewed_at": "2026-07-09 10:52:01"
+    },
+    {
+      "term": "Star Trek fan club magazine",
+      "zh": "《星际迷航》粉丝俱乐部杂志，围绕这部经典科幻系列发行，体现其长期活跃的粉丝文化。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 08:33:13"
+    },
+    {
+      "term": "Texas and New Orleans locomotive number 701",
+      "zh": "得克萨斯与新奥尔良铁路701号机车，属于南太平洋铁路体系，是美国得州铁路史的实物见证。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 08:33:13"
+    },
+    {
+      "term": "LONE STAR TRAIN MUSEUM",
+      "zh": "孤星铁路博物馆，以得克萨斯州“孤星州”别称命名，主要展示当地铁路车辆及交通史。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 08:33:13"
+    },
+    {
+      "term": "Bruce Willis",
+      "zh": "布鲁斯·威利斯是美国演员，以《虎胆龙威》系列塑造的警探约翰·麦克莱恩形象著称。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 06:12:40"
+    },
+    {
+      "term": "ATCHISON, TOPEKA & SANTA FE",
+      "zh": "阿奇森、托皮卡和圣菲铁路是美国著名历史铁路公司，曾推动中西部与西南部的开发。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 06:12:40"
+    },
+    {
+      "term": "Texas Longhorn",
+      "zh": "得克萨斯长角牛以跨度惊人的长角闻名，是美国西部牧场历史和得州文化的重要象征。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 06:12:40"
+    },
+    {
+      "term": "TIMEX",
+      "zh": "天美时是创立于美国的平价手表品牌，以耐用著称，其经典广告曾强调手表经受冲击仍能走时。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 06:12:40"
+    },
+    {
+      "term": "MALAGASY",
+      "zh": "马尔加什既指马达加斯加的主要民族及其文化，也指该国两种官方语言之一的马尔加什语。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 06:12:40"
+    },
+    {
+      "term": "LEMUR CATTA",
+      "zh": "环尾狐猴的学名为Lemur catta，仅原生于马达加斯加，以黑白相间的长尾闻名。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 06:12:40"
+    },
+    {
+      "term": "NOAH'S ARK",
+      "zh": "诺亚方舟源自《圣经·创世记》，诺亚依照神谕造船，使家人与各类动物躲过大洪水。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 06:12:40"
+    },
+    {
+      "term": "Dungeon Master's Guide",
+      "zh": "《地下城主指南》是桌面角色扮演游戏《龙与地下城》的核心规则书，供主持人设计冒险与裁定规则。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 06:12:40"
+    },
+    {
+      "term": "CROQUET",
+      "zh": "槌球是一种用木槌击球穿过铁门的草地运动，兴盛于十九世纪英国，常与庄园社交活动相联系。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 06:12:40"
+    },
+    {
+      "term": "East Texas Tech",
+      "zh": "东得克萨斯理工学院是《小谢尔顿》中的虚构大学，少年谢尔顿曾在此求学并参与科研。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 08:33:13"
+    },
+    {
+      "term": "HARLEY-DAVIDSON",
+      "zh": "哈雷戴维森是美国老牌摩托车制造商，其重型巡航车与骑手社群已成为公路自由文化的象征。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 06:12:40"
+    },
+    {
+      "term": "GREEK PRIDE",
+      "zh": "此处的Greek通常指美国大学兄弟会和姐妹会体系，成员以希腊字母命名组织并强调归属感。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 08:33:13"
+    },
+    {
+      "term": "FRATERNITIES AND SORORITIES",
+      "zh": "兄弟会和姐妹会是美国大学常见的希腊字母学生组织，以社交、仪式、校友网络及慈善活动著称。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 06:12:40"
+    },
+    {
+      "term": "Remington",
+      "zh": "雷明顿是美国老牌枪械制造商，创立于1816年，其步枪和霰弹枪常见于美国影视文化。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 06:12:40"
+    },
+    {
+      "term": "Sanyo",
+      "zh": "三洋是日本老牌电子企业，曾以家电、电池和收音机闻名，后被松下逐步整合。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 06:12:40"
+    },
+    {
+      "term": "Star Trek: The Original Series",
+      "zh": "星际迷航原初系列于1966年首播，奠定星际迷航世界观，是美国科幻电视史经典。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 06:12:40"
+    },
+    {
+      "term": "Star Trek: The Animated Series",
+      "zh": "星际迷航动画版于1973年首播，由原版主要演员配音，延续企业号的太空探索故事。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 06:12:40"
+    },
+    {
+      "term": "Zhuangzi",
+      "zh": "庄子是战国时期道家代表人物，其思想强调顺应自然与精神自由，著作亦名庄子。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 06:12:40"
+    },
+    {
+      "term": "Pepperidge Farm",
+      "zh": "培珀莉农场是美国食品品牌，以面包和金鱼饼干闻名，也因广告语衍生出网络怀旧梗。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 06:12:40"
+    },
+    {
+      "term": "Plato",
+      "zh": "柏拉图是古希腊哲学家、苏格拉底的学生，以理念论及政治哲学著作理想国闻名。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 06:12:40"
+    },
+    {
+      "term": "Classical Greek",
+      "zh": "古典希腊语是古希腊文学与哲学的主要语言，柏拉图、亚里士多德等人的著作皆以此写成。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 06:12:40"
+    },
+    {
+      "term": "Rudolf Carnap",
+      "zh": "鲁道夫·卡尔纳普是逻辑实证主义代表哲学家，重点研究语言、逻辑与科学知识的结构。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 06:12:40"
+    },
+    {
+      "term": "Pericles",
+      "zh": "伯里克利是古代雅典政治家和将领，其执政时期常被视为雅典民主与文化的黄金时代。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 06:12:40"
+    },
+    {
+      "term": "Transcendentalism",
+      "zh": "超验主义是十九世纪美国思想和文学运动，强调个人直觉、自然体验与精神独立。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 06:12:40"
+    },
+    {
+      "term": "King David",
+      "zh": "大卫王是圣经中的古代以色列君主，因击败歌利亚、建立王国及与诗篇的联系而著名。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 06:12:40"
+    },
+    {
+      "term": "Howard Hughes",
+      "zh": "霍华德·休斯是美国航空业巨头、电影制片人与飞行员，晚年隐居及严重洁癖尤为知名。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 06:12:40"
+    },
+    {
+      "term": "Guns N' Roses",
+      "zh": "枪与玫瑰是美国硬摇滚乐队，代表作包括甜蜜孩童与欢迎来到丛林，风靡八九十年代。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 06:12:40"
+    },
+    {
+      "term": "World Series 1930",
+      "zh": "1930年世界大赛是美国职业棒球冠军赛，费城运动家队击败圣路易斯红雀队成功卫冕。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 06:12:40"
+    },
+    {
+      "term": "IRON MAIDEN",
+      "zh": "铁娘子乐队，1975年成立的英国重金属名团，是英国重金属新浪潮的代表之一。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 06:12:40"
+    },
+    {
+      "term": "Thomas Edison",
+      "zh": "托马斯·爱迪生，美国发明家和企业家，推动实用白炽灯、留声机及电影技术的发展。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 06:12:40"
+    },
+    {
+      "term": "Batman's utility belt",
+      "zh": "蝙蝠侠的万能腰带，其标志性装备，内藏抓钩、烟雾弹等应对犯罪的各类工具。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 06:12:40"
+    },
+    {
+      "term": "Hegelian Dialectical Materialism",
+      "zh": "黑格尔以唯心主义辩证法著称；马克思批判改造其辩证法后，发展出辩证唯物主义。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 06:12:40"
     }
   ],
   "review_prompt_version": "glossary-review-20260707-v1"

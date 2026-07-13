@@ -1803,5 +1803,46 @@
     "confidence": "high",
     "support_count": 1,
     "guidance": "慈善演出；公益演出"
+  },
+  {
+    "term": "valedictorian",
+    "source_en": "valedictorian",
+    "bad_zh": "毕业典礼致辞人",
+    "style_scope": "all",
+    "confidence": "high",
+    "support_count": 1,
+    "guidance": "指毕业生成绩最优并代表毕业生致辞的人时，译为“毕业生致辞代表”或“毕业生代表”，不要生硬译成“毕业典礼致辞人”。"
+  },
+  {
+    "term": "safety goggles",
+    "source_en": "safety goggles",
+    "style_scope": "all",
+    "confidence": "high",
+    "support_count": 1,
+    "guidance": "译为“护目镜”或“安全护目镜”；根据语境区分“带护目镜”和“戴护目镜”，不要误用代词指代。"
+  },
+  {
+    "term": "extra credit",
+    "source_en": "extra credit",
+    "style_scope": "all",
+    "confidence": "high",
+    "support_count": 1,
+    "guidance": "在学校语境中译为“额外加分”或“额外学分”，根据具体计分制度选择，不能只按普通报酬理解。"
+  },
+  {
+    "term": "pink eye",
+    "source_en": "pink eye",
+    "style_scope": "all",
+    "confidence": "high",
+    "support_count": 1,
+    "guidance": "医学及日常语境中通常译为“红眼病”或“结膜炎”，根据说话人的正式程度选择。"
+  },
+  {
+    "term": "seeing-eye dog",
+    "source_en": "seeing-eye dog",
+    "style_scope": "all",
+    "confidence": "high",
+    "support_count": 1,
+    "guidance": "固定译为“导盲犬”，不要按字面拆译。"
   }
 ]

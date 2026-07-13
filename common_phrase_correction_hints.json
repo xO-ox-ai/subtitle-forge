@@ -2170,5 +2170,65 @@
     "style_scope": "dialogue",
     "confidence": "high",
     "support_count": 1
+  },
+  {
+    "phrase": "nothing personal",
+    "source_en": "It's nothing personal.",
+    "bad_zh": "这不是针对你个人。",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1,
+    "guidance": "自然处理为“不是针对你”“我不是对你有意见”或“没有针对你的意思”，根据语气选择。"
+  },
+  {
+    "phrase": "forget I even asked",
+    "source_en": "You can forget I even asked.",
+    "bad_zh": "你别提这事了。",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1,
+    "guidance": "表示收回刚才的请求，译为“就当我没问过”“当我没说”或“忘了我问过吧”，不要误成让对方别再提。"
+  },
+  {
+    "phrase": "take it out on someone",
+    "source_en": "I took it out on Georgie.",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1,
+    "guidance": "表示把对别人的怒气发泄到某人身上，译为“拿某人撒气”或“把气撒在某人身上”。"
+  },
+  {
+    "phrase": "give someone another shot",
+    "source_en": "Thanks again for giving me another shot.",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1,
+    "guidance": "表示再给一次尝试或挽回的机会，译为“再给某人一次机会”或“让某人再试一次”。"
+  },
+  {
+    "phrase": "go ahead",
+    "source_en": "You go ahead.",
+    "bad_zh": "你去吧。",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1,
+    "guidance": "表示准许或鼓励对方继续时，按语境译为“你继续吧”“你尽管来”“你喝吧”或“不用管我”，不要脱离上下文一律译成“你去吧”。"
+  },
+  {
+    "phrase": "I insist",
+    "source_en": "I insist.",
+    "bad_zh": "我坚持。",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1,
+    "guidance": "口语中表示坚持请客、安排或要求时，译为“听我的”“一定得这样”或“我说真的”，避免生硬直译为“我坚持”。"
+  },
+  {
+    "phrase": "spoil an episode",
+    "source_en": "spoil the episode",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1,
+    "guidance": "指提前透露影视剧情时译为“剧透这一集”“提前把剧情说出来”或“把这一集的结局说破”。"
   }
 ]
