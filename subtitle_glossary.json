@@ -1,6 +1,6 @@
 {
   "version": "subtitle-cultural-notes-20260712-v2",
-  "updated_at": "2026-07-13 08:47:47",
+  "updated_at": "2026-07-14 02:48:37",
   "usage": "cultural_notes_only",
   "schema": {
     "term": "English cultural reference matched in dialogue or OCR",
@@ -4316,6 +4316,846 @@
       "review_prompt_version": "glossary-review-20260707-v1",
       "review_model": "gpt-5.6-sol",
       "reviewed_at": "2026-07-13 06:12:40"
+    },
+    {
+      "term": "Neil Armstrong",
+      "zh": "尼尔·阿姆斯特朗，美国宇航员，1969年随阿波罗11号成为首位踏上月球的人。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "Jane Goodall",
+      "zh": "珍·古道尔，英国灵长类动物学家，长期研究野生黑猩猩，深刻改变了人类对动物行为的认识。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "Christian soldier",
+      "zh": "基督精兵，源自基督教属灵争战观念，以士兵比喻坚定信仰、抵抗罪恶的信徒。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "Oral Roberts University",
+      "zh": "奥罗·罗伯茨大学，位于美国俄克拉何马州，由电视布道家奥罗·罗伯茨创办的福音派大学。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "THE LIONEL CORPORATION",
+      "zh": "莱昂内尔公司，美国经典玩具火车制造商，其电动模型火车曾是美国家庭圣诞文化的重要象征。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "Jim Parsons",
+      "zh": "吉姆·帕森斯，美国演员，凭情景喜剧生活大爆炸中的谢尔顿一角广为人知。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "BORDEN",
+      "zh": "博登，美国老牌乳制品企业，以奶制品和名为埃尔西的奶牛商标深入美国大众文化。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "OLYMPUS",
+      "zh": "奥林巴斯，日本光学与医疗设备企业，曾以相机和镜头闻名，现以医用内窥镜为核心业务。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "VHS",
+      "zh": "家用录像系统，曾占主导地位的模拟录像带格式，象征录像机、录像带出租店盛行的家庭影音时代。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "BACK TO SCHOOL",
+      "zh": "返校季，欧美学生开学前集中购买文具、服装等用品的时期，也是零售业的重要促销季。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "Jean-Paul Sartre",
+      "zh": "让-保罗·萨特，法国哲学家和作家，存在主义代表人物，主张人须为自由选择承担责任。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "Robert H. Goddard",
+      "zh": "罗伯特·H·戈达德是美国火箭先驱，1926年发射首枚液体燃料火箭，被誉为现代火箭之父。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-14 02:41:59"
+    },
+    {
+      "term": "Isaac Newton",
+      "zh": "艾萨克·牛顿，英国物理学家和数学家，以运动定律、万有引力和微积分研究奠定经典力学基础。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "Charles Darwin",
+      "zh": "查尔斯·达尔文，英国博物学家，以自然选择学说解释物种演化，深刻影响现代生物学。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "Blaise Pascal",
+      "zh": "布莱兹·帕斯卡，法国数学家、物理学家和哲学家，在概率论、流体力学及计算机械方面贡献卓著。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "Willie Nelson",
+      "zh": "威利·纳尔逊，美国乡村音乐传奇人物，亡命乡村流派代表，也是农业慈善演唱会Farm Aid发起人。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "AT&T",
+      "zh": "美国电话电报公司，源自贝尔电话体系，长期主导美国电信业，其历史与美国电话网络发展密切相关。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "Jimmy Dean",
+      "zh": "吉米·迪安，美国乡村歌手、电视主持人和演员，后来创办以香肠和早餐食品闻名的同名品牌。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "doctor doom",
+      "zh": "毁灭博士，漫威漫画经典反派，虚构国家拉托维利亚的统治者，兼具尖端科技与强大魔法能力。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "Lex Luthor",
+      "zh": "莱克斯·卢瑟，DC漫画中的天才企业家和超级反派，以智谋、财富及对超人的敌意著称。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "FOOD DRIVE",
+      "zh": "食品募捐，美国社区、学校和教会常见的慈善活动，集中收集耐储存食品并捐给食物银行或困难家庭。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "THE CULTURE OF FEAR",
+      "zh": "恐惧文化，社会学家巴里·格拉斯纳的著作，分析媒体和利益团体如何夸大风险并制造社会恐慌。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "Detective Comics",
+      "zh": "侦探漫画，DC自1937年起出版的长期连载漫画，蝙蝠侠于1939年的第27期首次登场。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "HAWKMAN",
+      "zh": "鹰侠，DC漫画超级英雄，多版设定涉及古埃及转世或萨纳加星人，并使用能操控重力的Nth金属装备。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "The Outsiders",
+      "zh": "《局外人》是S.E.欣顿1967年出版的成长小说，以青少年帮派冲突书写阶层隔阂，后被科波拉改编成电影。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-14 02:41:59"
+    },
+    {
+      "term": "SHAMAN",
+      "zh": "萨满，通过入神、仪式和治病等方式沟通人界与灵界的宗教人物，见于西伯利亚等多种传统文化。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "DAIRY QUEEN",
+      "zh": "冰雪皇后，简称DQ，源自美国的冰淇淋与快餐连锁品牌，以倒杯不落的暴风雪冰淇淋闻名。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "MARVEL",
+      "zh": "漫威，美国大型漫画与影视娱乐品牌，旗下拥有蜘蛛侠、钢铁侠、复仇者联盟等著名超级英雄。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "DC",
+      "zh": "DC漫画，美国主要漫画出版商之一，旗下代表角色包括超人、蝙蝠侠、神奇女侠和正义联盟。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "Wonder Woman",
+      "zh": "神奇女侠是DC漫画于1941年创作的超级英雄，亚马逊公主形象已成为女性力量与流行文化的重要象征。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-14 02:41:59"
+    },
+    {
+      "term": "quid pro quo",
+      "zh": "拉丁语短语，字面意为以此换彼，指以某种利益或服务换取回报，也常用于不当利益交换语境。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "Tony Orlando",
+      "zh": "托尼·奥兰多，美国流行歌手，1970年代凭系上黄丝带等热门歌曲走红。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "SETH THOMAS",
+      "zh": "塞思·托马斯，美国老牌钟表制造商，19世纪创立，其古董座钟和挂钟颇受收藏家重视。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "SpaceX founder Elon Musk",
+      "zh": "埃隆·马斯克，美国企业家，创办太空探索技术公司SpaceX，推动可重复使用火箭商业化。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "Denoyer-Geppert",
+      "zh": "德诺耶－格佩特，美国老牌教学用品厂商，以学校使用的地图、地球仪和人体模型著称。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "DNA Replication",
+      "zh": "DNA复制指细胞分裂前复制遗传信息的过程，是遗传物质传递和生命繁殖的基础机制。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "NATIONAL AERONAUTICS & SPACE ADMINISTRATION",
+      "zh": "美国国家航空航天局，简称NASA，负责美国民用太空计划、航空研究和科学探索。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "LYNDON B JOHNSON SPACE CENTER",
+      "zh": "林登·约翰逊航天中心位于休斯敦，是NASA载人航天训练和任务控制的核心基地。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "CNN",
+      "zh": "美国有线电视新闻网，1980年开播，是全球首批提供全天候新闻报道的电视网络之一。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "ELON MUSK",
+      "zh": "埃隆·马斯克，美国企业家，创办SpaceX并领导特斯拉，以商业航天和电动汽车事业闻名。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "Rocket Reentry & Retropropulsion",
+      "zh": "火箭再入与反推着陆技术，利用发动机逆向推力减速，使火箭穿越大气层后安全回收。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "DELMONICO",
+      "zh": "德尔莫尼科牛排，以纽约名店德尔莫尼科餐厅命名，通常指厚切的高档美式牛排。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "John Glenn",
+      "zh": "约翰·格伦，美国宇航员及参议员，1962年成为首位绕地球轨道飞行的美国人。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "Continental BREAKFAST",
+      "zh": "欧陆式早餐，常见于欧美酒店，通常只有面包、糕点、水果及咖啡等简单冷食。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "Elle MacPherson",
+      "zh": "艾丽·麦弗逊，澳大利亚超模、演员及商人，因多次登上体育画报泳装特刊而走红。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "Sir Isaac Newton",
+      "zh": "艾萨克·牛顿爵士，英国物理学家和数学家，奠定经典力学并提出万有引力定律。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "Chessie System",
+      "zh": "切西系统，美国历史上的铁路控股公司，以小猫切西为著名标志，后来并入CSX运输公司。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "SINGLE MALT SCOTCH",
+      "zh": "单一麦芽苏格兰威士忌须出自同一家苏格兰蒸馏厂，以发芽大麦和壶式蒸馏器酿制，是重要酒类类别。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "Casper",
+      "zh": "卡斯珀是美国漫画与动画中的友善小幽灵，中文常称鬼马小精灵，以反转幽灵的恐怖形象闻名。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-14 02:41:59"
+    },
+    {
+      "term": "HARLAN COBEN",
+      "zh": "哈兰·科本是美国畅销悬疑作家，擅长失踪、秘密与反转题材，多部小说被改编为热门剧集。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "CIA",
+      "zh": "美国中央情报局是负责海外情报搜集与秘密行动的联邦机构，也是谍战影视中的常见文化符号。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "THE TEN COMMANDMENTS",
+      "zh": "十诫是圣经记载上帝授予摩西的十条诫命，是犹太教和基督教伦理传统的重要基础。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "E.T.",
+      "zh": "斯皮尔伯格执导的一九八二年科幻经典，讲述男孩与外星人的友谊，后来成为全球流行文化标志。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "BACH",
+      "zh": "约翰·塞巴斯蒂安·巴赫是德国巴洛克时期作曲家，复调与宗教音乐巨匠，对西方古典音乐影响深远。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "TANDY 1000 SL",
+      "zh": "这是美国无线电屋公司一九八八年推出的家用个人电脑，兼容当时主流标准，并强化声音与图形功能。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "ELIZA",
+      "zh": "伊莱扎是约瑟夫·魏岑鲍姆于一九六六年开发的对话程序，以模拟心理治疗师闻名，是聊天机器人先驱。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "Sam Houston",
+      "zh": "山姆·休斯顿是得克萨斯革命领袖，曾任得克萨斯共和国总统及该州州长，休斯敦市以他命名。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "Mars, PA",
+      "zh": "马斯是美国宾夕法尼亚州的一座小镇，英文名称与火星相同，常因这个颇具科幻感的地名引发玩笑。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-14 02:41:59"
+    },
+    {
+      "term": "Energizer",
+      "zh": "劲量是美国电池品牌，长期广告角色劲量兔因永不停歇的设定，成为持久耐力的流行文化比喻。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-14 02:41:59"
+    },
+    {
+      "term": "Charles Lyell",
+      "zh": "查尔斯·莱尔是十九世纪英国地质学家，以均变论解释地质变化，其著作地质学原理深刻影响达尔文。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "Martin Luther King",
+      "zh": "马丁·路德·金是美国民权运动领袖，以非暴力抗争推动种族平等，并于一九六四年获诺贝尔和平奖。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "WORLD BOOK",
+      "zh": "世界图书百科全书是美国经典综合性百科全书，自二十世纪初出版，长期用于学校与家庭查阅。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "Kevin Smith",
+      "zh": "美国独立电影导演、编剧兼演员，以低成本处女作《疯狂店员》成名，也因饰演沉默鲍勃广为人知。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "Sandy Duncan",
+      "zh": "美国舞台与电视演员，1979年百老汇复排音乐剧《彼得·潘》中反串彼得·潘，并获托尼奖提名。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "Shakespeare",
+      "zh": "英国文艺复兴时期剧作家、诗人，代表作有《哈姆雷特》《麦克白》等，对英语文学与戏剧影响深远。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "Peter Pan",
+      "zh": "苏格兰作家詹姆斯·巴里创造的经典角色，是住在梦幻岛、永远不会长大的男孩，后来被多次改编。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "CAPRISUN",
+      "zh": "源自德国的果汁饮料品牌，以软袋包装和插入式吸管著称，在欧美儿童午餐文化中辨识度很高。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "Asteroid 1989 PB",
+      "zh": "近地小行星卡斯塔利亚的临时编号，1989年近距离掠过地球，雷达观测显示其具有双叶状外形。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "EERIE",
+      "zh": "美国沃伦出版社1966年创办的恐怖漫画杂志，以黑白画面、哥特恐怖和面向成年读者的故事著称。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "Richie Rich",
+      "zh": "哈维漫画公司创造的美国经典漫画角色，设定为世界上最富有的男孩，故事围绕财富、冒险与慈善展开。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "TRON",
+      "zh": "迪士尼1982年科幻电影《电子世界争霸战》，以角色进入计算机世界的设定和早期电脑特效闻名。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "SMUCKER'S",
+      "zh": "美国老牌食品品牌，以果酱、花生酱和糖浆等早餐食品闻名，其果酱产品在美国家庭中尤其常见。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "HARVARD",
+      "zh": "哈佛大学创立于1636年，是美国历史最悠久的高等学府，也是常春藤盟校和世界著名研究型大学。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "RODEO",
+      "zh": "源于北美牧牛工作传统的牛仔竞技，常见项目包括骑野牛、骑烈马和套牛，是美国西部文化象征。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "CAPCOM",
+      "zh": "日本电子游戏公司卡普空，以《街头霸王》《洛克人》《生化危机》和《怪物猎人》等系列闻名。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "PLUTO",
+      "zh": "冥王星曾被列为太阳系第九大行星，2006年因新的天体分类标准被国际天文学联合会归为矮行星。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "JOOP",
+      "zh": "德国设计师沃尔夫冈·乔普创立的时尚品牌，经营服装、配饰和香水，尤以男士香水产品知名。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "AMERICAN REVOLUTION",
+      "zh": "18世纪北美十三殖民地反抗英国统治并建立美国的政治与军事革命，其核心战争即美国独立战争。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "ART of WAR",
+      "zh": "通常指中国古代军事经典《孙子兵法》，相传由孙武所著，其战略思想长期影响世界军事与商业领域。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "Psalm 23:6",
+      "zh": "《圣经·诗篇》第23篇第6节，表达上帝的恩惠与慈爱将终身相伴，以及永远居于主殿的信念。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "WHITSTABLE",
+      "zh": "英格兰肯特郡海滨小镇，自罗马时代以来便以牡蛎养殖闻名，如今仍举办颇具地方特色的牡蛎节。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "corretto",
+      "zh": "意大利咖啡习俗，指在浓缩咖啡中加入少量格拉帕酒、茴香酒或白兰地，名称含有校正咖啡之意。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "TEJAS",
+      "zh": "得克萨斯的西班牙语旧称，源自当地卡多族语言中朋友或盟友一词，后来演变为英语名称得克萨斯。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "PASTA FRESCA",
+      "zh": "意大利语中的新鲜意大利面，指以面粉和鸡蛋等现制、未经干燥保存的面食，口感通常较柔软。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-13 22:04:42"
     }
   ],
   "review_prompt_version": "glossary-review-20260707-v1"

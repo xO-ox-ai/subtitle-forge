@@ -2230,5 +2230,68 @@
     "confidence": "high",
     "support_count": 1,
     "guidance": "指提前透露影视剧情时译为“剧透这一集”“提前把剧情说出来”或“把这一集的结局说破”。"
+  },
+  {
+    "phrase": "language",
+    "guidance": "用来制止脏话或不当措辞时，可译为“注意用词”“说话注意点”或“不许说脏话”，不要按名词直译。",
+    "source_en": "Language. / Hey, language.",
+    "bad_zh": "语言。",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 2
+  },
+  {
+    "phrase": "be adopted",
+    "guidance": "注意收养关系的方向：表示某人是养子女时应译为“被收养”或“是领养来的”，不要把被收养者误写成领养他人的人。",
+    "source_en": "be adopted",
+    "bad_zh": "领养",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 3
+  },
+  {
+    "phrase": "leave someone be",
+    "guidance": "表示不要干涉或打扰，可译为“别管他”“随他去”或“让他待着”，不要误解为让对方独自完成某事。",
+    "source_en": "leave him be",
+    "bad_zh": "让他自己来",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "That can still be arranged.",
+    "guidance": "回应负面愿望或假设时通常带调侃或威胁意味，可译为“现在安排还来得及”“我可以成全你”等，并保留反讽语气。",
+    "source_en": "That can still be arranged.",
+    "bad_zh": "这事儿还能安排。",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "We don't know that.",
+    "guidance": "作为否定或冷幽默式反驳时，可译为“那可不一定”“谁知道呢”；只有讨论事实是否确定时才直译为“不确定”。",
+    "source_en": "We don't know that.",
+    "bad_zh": "我们不确定。",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "after church",
+    "guidance": "church表示礼拜活动时，应译为“礼拜结束后”或“做完礼拜后”，不要误当成地点方位。",
+    "source_en": "after church",
+    "bad_zh": "在教堂后、教堂后",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 2
+  },
+  {
+    "phrase": "Well, this was nice.",
+    "guidance": "用于结束谈话时，可按语气译为“聊得挺愉快”“那就先这样”或带反讽的“这下可真愉快”，不要只描述事物不错。",
+    "source_en": "Well, this was nice.",
+    "bad_zh": "这挺不错的。",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
   }
 ]

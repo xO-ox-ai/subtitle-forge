@@ -1844,5 +1844,86 @@
     "confidence": "high",
     "support_count": 1,
     "guidance": "固定译为“导盲犬”，不要按字面拆译。"
+  },
+  {
+    "term": "pilot episode",
+    "guidance": "表示电视剧首集或供审看、测试市场反应的剧集时，应按影视术语译为“试播集”，不要按人物职业直译。",
+    "source_en": "pilot",
+    "bad_zh": "飞行员",
+    "style_scope": "ocr",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "term": "tater tots",
+    "guidance": "指圆柱状油炸碎薯制品，统一译为“炸薯球”；不要与土豆饼或普通土豆丸子混淆。",
+    "source_en": "tater tots",
+    "bad_zh": "土豆丸子、土豆饼",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 5
+  },
+  {
+    "term": "mid-Atlantic accent",
+    "guidance": "译为“跨大西洋口音”，指融合英美发音特点的刻意口音，并非美国大西洋中部地区口音。",
+    "source_en": "mid-Atlantic accent",
+    "bad_zh": "美式大西洋中部口音",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "term": "freshman year",
+    "guidance": "结合学段判断：美国高中语境通常指九年级或高一，大学语境才指大一，不要一律译成“大一”。",
+    "source_en": "freshman year",
+    "bad_zh": "大一",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "term": "playbook",
+    "guidance": "体育语境通常译为“战术手册”或“战术本”，只有明确指实体展示板时才译为“战术板”。",
+    "source_en": "playbook",
+    "bad_zh": "战术板",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "term": "Newtonian physics",
+    "guidance": "通常采用规范术语“牛顿力学”；不要机械译为“牛顿物理学”。",
+    "source_en": "Newtonian physics",
+    "bad_zh": "牛顿物理学",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "term": "Christian soldier",
+    "guidance": "在圣歌或宗教比喻中采用“基督精兵”，避免直译成现实军事意义上的“基督教士兵”。",
+    "source_en": "Christian soldier / Christian soldiers",
+    "bad_zh": "基督教士兵",
+    "style_scope": "all",
+    "confidence": "high",
+    "support_count": 2
+  },
+  {
+    "term": "evil thoughts",
+    "guidance": "宗教或道德语境中译为“恶念”或“邪念”，不要弱化成普通的坏主意。",
+    "source_en": "evil thoughts",
+    "bad_zh": "坏念头、坏主意",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 2
+  },
+  {
+    "term": "testicles descend",
+    "guidance": "按生理含义译为“睾丸下降”或口语化的“蛋蛋降下来”；代词指代明确时应补出对象，不能译成“离开”。",
+    "source_en": "testicles descend / they descended",
+    "bad_zh": "蛋蛋掉下来、它们离开了",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 3
   }
 ]
