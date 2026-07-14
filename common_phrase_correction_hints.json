@@ -2293,5 +2293,71 @@
     "style_scope": "dialogue",
     "confidence": "high",
     "support_count": 1
+  },
+  {
+    "phrase": "word came that",
+    "guidance": "表示“传来……的消息”或“听说……”，应将消息内容自然嵌入句中，避免逐字译成“消息来了”。",
+    "source_en": "word came that",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "get on the road",
+    "guidance": "按语境译为“上路”“动身”或“启程”；强调尽快出发时可译为“赶紧上路”。",
+    "source_en": "get on the road",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "There you go.",
+    "guidance": "递给对方物品时译为“给你”或“拿好”；帮助对方完成动作时可译为“好了”或“这就对了”，不要脱离情境固定译成“试试看”。",
+    "source_en": "There you go.",
+    "bad_zh": "试试看",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "go to pieces",
+    "guidance": "事物、组织或局势作主语时译为“分崩离析”“土崩瓦解”或“乱成一团”；人作主语时可译为“崩溃”或“垮掉”。",
+    "source_en": "go to pieces",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "swear allegiance to",
+    "guidance": "译为“宣誓效忠于……”或“向……宣誓效忠”，不要只译成笼统的“忠诚”。",
+    "source_en": "swear allegiance to",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "lay down your arms",
+    "guidance": "命令对方停止抵抗时自然译为“放下武器”或“缴械”，避免生硬直译为“卸下武装”。",
+    "source_en": "lay down your arms",
+    "bad_zh": "卸下你们的武装",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "if I remember right",
+    "guidance": "自然译为“如果我没记错”或“要是我记得没错”。",
+    "source_en": "if I remember right",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "exactly as I intended",
+    "guidance": "表示结果符合有意安排，应译为“一切正如我所安排的”“正合我意”或“正如我计划的”，不要擅自补出对方“成功了”等信息。",
+    "source_en": "exactly as I intended",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
   }
 ]
