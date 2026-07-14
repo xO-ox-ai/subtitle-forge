@@ -21,7 +21,7 @@ DEFAULT_MODEL = "gpt-4.1-mini"
 DEFAULT_CODEX_MODEL = "gpt-5.6-sol"
 DEFAULT_CODEX_REASONING_EFFORT = "high"
 DEFAULT_BASE_URL = "https://api.openai.com/v1"
-DEFAULT_STYLES = "BILINGUAL,BILINGUAL_MUSIC,BILINGUAL_CHANT,OCR_TRANSLATION,EXPLANATION_NOTE"
+DEFAULT_STYLES = "BILINGUAL,BILINGUAL_MUSIC,BILINGUAL_CHANT,OCR_TRANSLATION,EXPLANATION_NOTE,Chinese,Default"
 DEFAULT_POLISH_PROVIDER = "codex-cli"
 DEFAULT_GLOSSARY_REVIEW_BATCH_SIZE = 48
 DEFAULT_POLISH_BATCH_SIZE = 48
@@ -66,6 +66,8 @@ OVERLAY_STYLES = {
     "OCR_TRANSLATION": "ocr",
     "EXPLANATION_NOTE": "note",
 }
+LEGACY_PAIRED_SOURCE_STYLES = {"English", "Default"}
+LEGACY_PAIRED_ZH_STYLES = {"Chinese", "Default"}
 OCR_LOW_VALUE_COMPOUND_RE = re.compile(r"^(?:[东西南北上下左右前后内外里中]|[东西南北](?:塔|门))$")
 OCR_LOW_VALUE_SUFFIXES = ("大道", "大街", "公路", "路口", "中心", "广场")
 
@@ -356,7 +358,7 @@ def build_polish_client(
 
 def parse_polish_styles(value: str) -> set[str]:
     text = str(value or "").strip()
-    all_styles = set(BILINGUAL_STYLES) | set(OVERLAY_STYLES)
+    all_styles = set(BILINGUAL_STYLES) | set(OVERLAY_STYLES) | LEGACY_PAIRED_ZH_STYLES
     if not text or text.lower() == "all":
         return all_styles
     return {item.strip() for item in text.split(",") if item.strip()} & all_styles
@@ -724,6 +726,59 @@ def extract_polish_targets(lines: list[str], style_names: set[str]) -> list[Poli
                 en=en,
             )
         )
+    targets.extend(extract_legacy_paired_targets(lines, style_names))
+    return sorted(targets, key=lambda item: item.line_index)
+
+
+def extract_legacy_paired_targets(lines: list[str], style_names: set[str]) -> list[PolishTarget]:
+    """Pair legacy separate English/Chinese events with identical timestamps.
+
+    Some finished bilingual ASS files keep the two languages as adjacent events
+    instead of a single ``zh\\Nen`` event. Only exact-time pairs are accepted so
+    unrelated overlays cannot become dialogue context. When a malformed group
+    contains extra fragments, the nearest (last) events are preferred.
+    """
+    groups: dict[tuple[str, str], dict[str, list[tuple[int, list[str], str]]]] = {}
+    enabled_zh_styles = LEGACY_PAIRED_ZH_STYLES & style_names
+    if not enabled_zh_styles:
+        return []
+
+    for line_index, line in enumerate(lines):
+        parts = split_dialogue(line)
+        if not parts:
+            continue
+        style = parts[3]
+        if style not in (LEGACY_PAIRED_SOURCE_STYLES | enabled_zh_styles):
+            continue
+        visible = visible_ass_text(parts[9])
+        if not visible:
+            continue
+        group = groups.setdefault((parts[1], parts[2]), {"sources": [], "targets": []})
+        if style in enabled_zh_styles and has_chinese(visible):
+            group["targets"].append((line_index, parts, visible))
+        elif style in LEGACY_PAIRED_SOURCE_STYLES and LATIN_RE.search(visible):
+            group["sources"].append((line_index, parts, visible))
+
+    targets: list[PolishTarget] = []
+    for group in groups.values():
+        pair_count = min(len(group["sources"]), len(group["targets"]))
+        if pair_count <= 0:
+            continue
+        sources = group["sources"][-pair_count:]
+        zh_events = group["targets"][-pair_count:]
+        for (_source_index, _source_parts, en), (line_index, parts, zh) in zip(sources, zh_events):
+            targets.append(
+                PolishTarget(
+                    line_index=line_index,
+                    style=parts[3],
+                    kind="dialogue",
+                    start=parts[1],
+                    end=parts[2],
+                    text_field=parts[9],
+                    zh=zh,
+                    en=en,
+                )
+            )
     return targets
 
 
@@ -886,6 +941,8 @@ def replace_target_zh(line: str, target: PolishTarget, zh: str) -> str:
         replaced = replace_leading_tagged_text(parts[9], break_zh(zh, max_chars=18))
     elif target.style == "EXPLANATION_NOTE":
         replaced = replace_leading_tagged_text(parts[9], break_zh(zh, max_chars=24))
+    elif target.style in LEGACY_PAIRED_ZH_STYLES:
+        replaced = leading_tags(parts[9]) + ass_escape(zh)
     else:
         return line
     parts[9] = replaced
