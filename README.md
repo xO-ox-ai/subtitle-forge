@@ -256,6 +256,7 @@ python .\run_all.py . --cleanup
 - Step 7 使用本地 Qwen 模型翻译对白、歌词、OCR，并生成文化注解。
 - Step 9 使用后端大模型做最终润色、OCR 去噪和可复用 hint 提取。
 - Step 9 同时支持单条 `中文\\N英文` 事件，以及时间轴完全相同、分别使用 `English`/`Chinese`（或 `Default`）样式的旧式双语事件；后者只更新中文事件，不改英文行和时间轴。
+- 旧式分离事件完成调优后，可运行 `python normalize_legacy_ass_layout.py . --glob "剧集匹配式*.ass" --backup-dir temp/ass_layout_backup`，将精确同时间轴的中英文合并为当前 `BILINGUAL` 单事件样式；未配对事件会保留，备份也只写入项目 `temp`。
 - Step 9 沉淀出的 hint 会回流给 Step 7；Step 7 只按当前台词检索相关提示，不会全量塞进 prompt。
 
 ## 可复用字典文件
