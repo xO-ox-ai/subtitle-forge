@@ -1,6 +1,6 @@
 {
   "version": "subtitle-terminology-20260712-v1",
-  "updated_at": "2026-07-12 20:35:00",
+  "updated_at": "2026-07-14 21:45:00",
   "schema": {
     "source_en": "English term matched as a whole word or phrase",
     "preferred_zh": "Literal preferred subtitle wording only",
@@ -392,6 +392,146 @@
       "preferred_zh": "海莉",
       "series": "The Originals",
       "scope": "all",
+      "reviewed": true
+    },
+    {
+      "source_en": "Richard Cypher",
+      "preferred_zh": "理查德·塞弗尔",
+      "series": "Legend of the Seeker",
+      "scope": "all",
+      "reviewed": true
+    },
+    {
+      "source_en": "Richard",
+      "preferred_zh": "理查德",
+      "series": "Legend of the Seeker",
+      "scope": "all",
+      "reviewed": true
+    },
+    {
+      "source_en": "Kahlan Amnell",
+      "preferred_zh": "凯兰·阿姆尼尔",
+      "series": "Legend of the Seeker",
+      "scope": "all",
+      "reviewed": true
+    },
+    {
+      "source_en": "Kahlan",
+      "preferred_zh": "凯兰",
+      "series": "Legend of the Seeker",
+      "scope": "all",
+      "reviewed": true
+    },
+    {
+      "source_en": "Zeddicus Zu'l Zorander",
+      "aliases": ["Zeddicus Zu’l Zorander"],
+      "preferred_zh": "泽迪库斯·祖尔·佐兰德",
+      "series": "Legend of the Seeker",
+      "scope": "all",
+      "reviewed": true
+    },
+    {
+      "source_en": "Zedd",
+      "preferred_zh": "泽德",
+      "series": "Legend of the Seeker",
+      "scope": "all",
+      "reviewed": true
+    },
+    {
+      "source_en": "Darken Rahl",
+      "preferred_zh": "达肯·拉尔",
+      "series": "Legend of the Seeker",
+      "scope": "all",
+      "reviewed": true
+    },
+    {
+      "source_en": "Rahl",
+      "preferred_zh": "拉尔",
+      "series": "Legend of the Seeker",
+      "scope": "all",
+      "case_sensitive": true,
+      "reviewed": true
+    },
+    {
+      "source_en": "Denna",
+      "preferred_zh": "丹娜",
+      "series": "Legend of the Seeker",
+      "scope": "all",
+      "reviewed": true
+    },
+    {
+      "source_en": "Cara",
+      "preferred_zh": "卡拉",
+      "series": "Legend of the Seeker",
+      "scope": "all",
+      "reviewed": true
+    },
+    {
+      "source_en": "Egremont",
+      "preferred_zh": "埃格雷蒙",
+      "series": "Legend of the Seeker",
+      "scope": "all",
+      "reviewed": true
+    },
+    {
+      "source_en": "Seeker",
+      "aliases": ["Seekers"],
+      "preferred_zh": "探索者",
+      "series": "Legend of the Seeker",
+      "scope": "all",
+      "reviewed": true
+    },
+    {
+      "source_en": "Mother Confessor",
+      "preferred_zh": "忏悔圣母",
+      "series": "Legend of the Seeker",
+      "scope": "all",
+      "reviewed": true
+    },
+    {
+      "source_en": "Confessor",
+      "aliases": ["Confessors"],
+      "preferred_zh": "忏悔者",
+      "series": "Legend of the Seeker",
+      "scope": "all",
+      "reviewed": true
+    },
+    {
+      "source_en": "Mord-Sith",
+      "preferred_zh": "摩德西斯",
+      "series": "Legend of the Seeker",
+      "scope": "all",
+      "reviewed": true
+    },
+    {
+      "source_en": "the Keeper",
+      "preferred_zh": "守护者",
+      "note": "仅指与冥界并列的超自然实体；普通 keeper、gatekeeper、tavern keeper 按语境另译",
+      "series": "Legend of the Seeker",
+      "scope": "dialogue|chant",
+      "reviewed": true
+    },
+    {
+      "source_en": "Sword of Truth",
+      "preferred_zh": "真理之剑",
+      "series": "Legend of the Seeker",
+      "scope": "all",
+      "reviewed": true
+    },
+    {
+      "source_en": "Box of Orden",
+      "aliases": ["Boxes of Orden"],
+      "preferred_zh": "奥登宝盒",
+      "series": "Legend of the Seeker",
+      "scope": "all",
+      "reviewed": true
+    },
+    {
+      "source_en": "Agiel",
+      "preferred_zh": "惩戒杖",
+      "note": "摩德西斯使用的武器；不要保留英文或泛译成普通魔杖",
+      "series": "Legend of the Seeker",
+      "scope": "dialogue",
       "reviewed": true
     }
   ]

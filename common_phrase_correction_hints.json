@@ -2359,5 +2359,73 @@
     "style_scope": "dialogue",
     "confidence": "high",
     "support_count": 1
+  },
+  {
+    "phrase": "just in time",
+    "support_count": 1,
+    "guidance": "按语境译为“你来得正好”“正赶上”或“来得正是时候”，不要擅自补出具体赶上的事情。",
+    "source_en": "You're just in time.",
+    "style_scope": "dialogue",
+    "confidence": "high"
+  },
+  {
+    "phrase": "Easy.",
+    "support_count": 1,
+    "guidance": "作为制止或安抚用语时，可译为“别冲动”“慢点”“放轻松”或“稳住”，根据对象和动作选择。",
+    "source_en": "Easy.",
+    "bad_zh": "小心别让她抓到你",
+    "style_scope": "dialogue",
+    "confidence": "high"
+  },
+  {
+    "phrase": "not your fight",
+    "support_count": 1,
+    "guidance": "通常表示“不关你的事”“这事你别插手”或“这不是你该管的”，不要机械译成“不是你的战斗”。",
+    "source_en": "This is not your fight.",
+    "style_scope": "dialogue",
+    "confidence": "high"
+  },
+  {
+    "phrase": "On whose authority?",
+    "support_count": 1,
+    "guidance": "质问执法、命令或行动依据时，译为“奉谁的命令？”“谁授权的？”等正式问法。",
+    "source_en": "On whose authority?",
+    "style_scope": "dialogue",
+    "confidence": "high"
+  },
+  {
+    "phrase": "fairy-tales",
+    "support_count": 1,
+    "guidance": "用于讥讽对方编造说辞时，译为“鬼话”“瞎话”或“编出来的故事”，不要按儿童文学义直译。",
+    "source_en": "What other fairy-tales do you have to tell us?",
+    "bad_zh": "童话故事",
+    "style_scope": "dialogue",
+    "confidence": "high"
+  },
+  {
+    "phrase": "have someone beat",
+    "support_count": 1,
+    "guidance": "比赛或棋局语境表示胜券在握，可译为“再几步我就赢了”“我赢定了”，避免使用带杀戮意味的表达。",
+    "source_en": "I've got you beat in two moves.",
+    "bad_zh": "两步之内我就能灭了你",
+    "style_scope": "dialogue",
+    "confidence": "high"
+  },
+  {
+    "phrase": "What did I tell you?",
+    "support_count": 1,
+    "guidance": "用于印证先前判断时，可译为“我说什么来着？”“早跟你说了吧”，不要机械理解为询问说过的具体内容。",
+    "source_en": "What did I tell you?",
+    "style_scope": "dialogue",
+    "confidence": "high"
+  },
+  {
+    "phrase": "good while it lasted",
+    "support_count": 1,
+    "guidance": "表达一段好时光已经结束，可译为“之前倒也挺好”“好景不长”或结合语气译成“好日子到头了”。",
+    "source_en": "It was good while it lasted.",
+    "bad_zh": "好时候太短",
+    "style_scope": "dialogue",
+    "confidence": "high"
   }
 ]

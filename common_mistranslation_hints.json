@@ -1925,5 +1925,23 @@
     "style_scope": "dialogue",
     "confidence": "high",
     "support_count": 3
+  },
+  {
+    "term": "garrison",
+    "support_count": 1,
+    "guidance": "军事语境中译为“驻军”“卫戍部队”或“驻地”，根据句法判断指部队还是驻扎地点，避免生硬直译。",
+    "source_en": "garrison",
+    "bad_zh": "守备部队那",
+    "style_scope": "dialogue",
+    "confidence": "high"
+  },
+  {
+    "term": "fever breaks",
+    "support_count": 1,
+    "guidance": "表示“退烧”或“烧退了”，与伤口愈合无关。",
+    "source_en": "one's fever breaks",
+    "bad_zh": "伤口消失了",
+    "style_scope": "all",
+    "confidence": "high"
   }
 ]
