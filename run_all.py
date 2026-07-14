@@ -7,6 +7,13 @@ import sys
 import time
 from pathlib import Path
 
+# The main launcher imports every pipeline helper. Disable per-module bytecode
+# before those imports so a normal `python run_all.py` invocation does not
+# create a root-level __pycache__; child steps inherit the environment setting
+# applied by configure_environment().
+os.environ["PYTHONDONTWRITEBYTECODE"] = "1"
+sys.dont_write_bytecode = True
+
 from pipeline_common import PYTHON_EXE, configure_environment, environment_for_script, python_for_script
 from common import chunked_videos, selected_videos, video_stems, work_dir_for, write_status
 from ass_polish_helpers import (

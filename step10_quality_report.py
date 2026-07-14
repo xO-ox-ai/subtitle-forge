@@ -226,7 +226,7 @@ def write_manifest(base_dir: Path, work_dir: Path, videos: list[Path]) -> Path:
             "ass_event_gap": 0.03,
         },
     }
-    path = base_dir / "pipeline_manifest.json"
+    path = work_dir / "pipeline_manifest.json"
     save_json(path, manifest)
     return path
 

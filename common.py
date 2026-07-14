@@ -48,6 +48,13 @@ def work_dir_for(base_dir: Path, work_dir: str | Path = DEFAULT_WORK_DIR) -> Pat
     return base_dir / path
 
 
+def runtime_file_for(base_dir: Path, name: str) -> Path:
+    """Return a run-state path inside the default project work directory."""
+    runtime_dir = work_dir_for(base_dir)
+    runtime_dir.mkdir(parents=True, exist_ok=True)
+    return runtime_dir / name
+
+
 def iter_videos(base_dir: Path) -> list[Path]:
     return sorted(
         path
@@ -160,14 +167,14 @@ def save_json(path: Path, data) -> None:
 
 def append_log(base_dir: Path, step: str, video: str | Path | None, message: str) -> None:
     now = time.strftime("%Y-%m-%d %H:%M:%S")
-    log_file = base_dir / "subtitle_run.log"
+    log_file = runtime_file_for(base_dir, "subtitle_run.log")
     with log_file.open("a", encoding="utf-8") as f:
         f.write(f"[{now}] {step} | {compact_video_name(video)} | {message}\n")
 
 
 def write_status(base_dir: Path, step: str, video: str | Path | None, message: str) -> None:
     now = time.strftime("%Y-%m-%d %H:%M:%S")
-    (base_dir / "subtitle_status.txt").write_text(
+    runtime_file_for(base_dir, "subtitle_status.txt").write_text(
         f"time: {now}\nstep: {step}\nvideo: {compact_video_name(video)}\nmessage: {message}\n",
         encoding="utf-8",
     )
@@ -176,7 +183,7 @@ def write_status(base_dir: Path, step: str, video: str | Path | None, message: s
 
 def write_status_only(base_dir: Path, step: str, video: str | Path | None, message: str) -> None:
     now = time.strftime("%Y-%m-%d %H:%M:%S")
-    (base_dir / "subtitle_status.txt").write_text(
+    runtime_file_for(base_dir, "subtitle_status.txt").write_text(
         f"time: {now}\nstep: {step}\nvideo: {compact_video_name(video)}\nmessage: {message}\n",
         encoding="utf-8",
     )

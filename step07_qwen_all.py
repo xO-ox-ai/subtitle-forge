@@ -11,6 +11,7 @@ from common import (
     add_common_args,
     filter_paths_by_stems,
     load_json,
+    runtime_file_for,
     save_json,
     selected_videos,
     status_preview,
@@ -637,7 +638,7 @@ def update_progress_status(base_dir: Path, step: str, video: str, index: int, to
     now = time.strftime("%Y-%m-%d %H:%M:%S")
     remaining = max(total - index, 0)
     progress = 100.0 if total <= 0 else index * 100.0 / total
-    (base_dir / "subtitle_status.txt").write_text(
+    runtime_file_for(base_dir, "subtitle_status.txt").write_text(
         (
             f"time: {now}\n"
             f"step: {step}\n"
@@ -656,7 +657,7 @@ def update_note_status(base_dir: Path, video: str, phase: str, index: int, total
     now = time.strftime("%Y-%m-%d %H:%M:%S")
     progress = 100.0 if total <= 0 else index * 100.0 / total
     detail_line = f"detail: {status_preview(detail, 100)}\n" if detail else ""
-    (base_dir / "subtitle_status.txt").write_text(
+    runtime_file_for(base_dir, "subtitle_status.txt").write_text(
         (
             f"time: {now}\n"
             f"step: V2_STEP7\n"

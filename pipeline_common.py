@@ -2,6 +2,7 @@ import os
 import subprocess
 import sys
 import shutil
+import tempfile
 from pathlib import Path
 
 
@@ -68,6 +69,7 @@ TORCH_HOME = env_path("TORCH_HOME", Path(".cache") / "torch")
 NLTK_DATA = env_path("NLTK_DATA", Path(".cache") / "nltk")
 PIP_CACHE_DIR = env_path("PIP_CACHE_DIR", Path(".cache") / "pip")
 PIP_FIND_LINKS = env_path("PIP_FIND_LINKS", "wheels")
+PROJECT_TEMP_DIR = env_path("SUB_TEMP_DIR", "temp")
 LLAMA_DIR = env_path("LLAMA_DIR", Path("tools") / "llama")
 FFMPEG_DIR = env_path("FFMPEG_DIR", Path("tools") / "ffmpeg" / "bin")
 WHISPER_DIR = env_path("WHISPER_DIR", Path("tools") / "whisper")
@@ -119,6 +121,15 @@ def lower_process_priority() -> None:
 
 def configure_environment() -> None:
     configure_windows_utf8_stdio()
+    PROJECT_TEMP_DIR.mkdir(parents=True, exist_ok=True)
+    project_temp = str(PROJECT_TEMP_DIR)
+    # Keep generic Python and child-process scratch files with the rest of the
+    # pipeline state instead of scattering them through the system temp dir.
+    for name in ("TEMP", "TMP", "TMPDIR"):
+        os.environ[name] = project_temp
+    tempfile.tempdir = project_temp
+    os.environ["PYTHONDONTWRITEBYTECODE"] = "1"
+    sys.dont_write_bytecode = True
     os.environ.setdefault("HF_HOME", str(HF_HOME))
     os.environ.setdefault("HF_HUB_CACHE", str(HF_HUB_CACHE))
     os.environ.setdefault("TORCH_HOME", str(TORCH_HOME))
