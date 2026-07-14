@@ -87,16 +87,27 @@ $env:PYTHONIOENCODING = "utf-8"
 
 Step 7 本地翻译模型：
 
-- 默认模型别名：`qwen3-32b`
-- 默认 GGUF 文件名：`Qwen3-32B-Q4_K_M.gguf`
-- 默认相对路径：`models/Qwen3-32B-Q4_K_M.gguf`
-- 也可以放在 `llama-server.exe` 同目录、`tools/llama/` 下，或设置相对的 `QWEN_GGUF`
+- 默认配置：`80b`，模型别名 `qwen3-next-80b-a3b-instruct`
+- 默认 GGUF 文件名：`Qwen3-Next-80B-A3B-Instruct-Q4_K_M.gguf`
+- 低内存回退配置：`32b`，使用 `Qwen3-32B-Q4_K_M.gguf`
+- 模型会依次从 `llama-server.exe` 同目录、`tools/llama/`、`models/` 查找；也可分别设置 `QWEN_80B_GGUF`、`QWEN_32B_GGUF`
 
 ```powershell
-$env:QWEN_GGUF = ".\models\Qwen3-32B-Q4_K_M.gguf"
-$env:QWEN_MODEL = "qwen3-32b"
+$env:QWEN_PROFILE = "80b"
+$env:QWEN_80B_GGUF = ".\models\Qwen3-Next-80B-A3B-Instruct-Q4_K_M.gguf"
+$env:QWEN_32B_GGUF = ".\models\Qwen3-32B-Q4_K_M.gguf"
 $env:QWEN_BASE_URL = "http://127.0.0.1:8080/v1"
 ```
+
+也可以每次运行时选择，80B 启动失败或内存不足时无需改代码：
+
+```powershell
+python .\run_all.py . --qwen-profile 80b
+python .\run_all.py . --qwen-profile 32b
+python .\step07_qwen_all.py . --qwen-profile 32b
+```
+
+Step 7 只会复用别名与所选配置一致的现有服务。若 80B 服务处理中途退出，本次文件不会以英文原文冒充译文落盘，流程会明确失败；改用 `--qwen-profile 32b` 重跑即可沿用已完成文件继续处理。
 
 Step 3 Whisper.cpp 转写模型：
 
@@ -144,33 +155,38 @@ $env:OCR_MIN_CONFIDENCE = "0.45"
 
 ## 常用参数和硬件建议
 
-Qwen / llama.cpp 参数：
+Qwen / llama.cpp 参数。默认配置已按当前 4090 24GB + 64GB 内存主机测试：
 
 ```powershell
-$env:QWEN_CTX_SIZE = "8192"
-$env:QWEN_BATCH_SIZE = "2048"
-$env:QWEN_UBATCH_SIZE = "512"
-$env:QWEN_THREADS = "20"
-$env:QWEN_THREADS_BATCH = "20"
-$env:QWEN_GPU_LAYERS = "all"
-$env:QWEN_FLASH_ATTN = "on"
-$env:QWEN_CACHE_TYPE_K = "q8_0"
-$env:QWEN_CACHE_TYPE_V = "q8_0"
-$env:QWEN_REASONING = "off"
+$env:QWEN_PROFILE = "80b"
+$env:QWEN_80B_CTX_SIZE = "8192"
+$env:QWEN_80B_BATCH_SIZE = "1024"
+$env:QWEN_80B_UBATCH_SIZE = "256"
+$env:QWEN_80B_THREADS = "16"
+$env:QWEN_80B_THREADS_BATCH = "16"
+$env:QWEN_80B_GPU_LAYERS = "16"
+$env:QWEN_80B_FLASH_ATTN = "on"
+$env:QWEN_80B_CACHE_TYPE_K = "q8_0"
+$env:QWEN_80B_CACHE_TYPE_V = "q8_0"
+$env:QWEN_80B_CACHE_RAM = "2048"
+$env:QWEN_80B_REASONING = "off"
 ```
 
 这些参数的含义：
 
-- `QWEN_CTX_SIZE`：上下文长度。8192 适合当前按单条/小批字幕翻译的流程；调大能容纳更多上下文，但显存和内存占用会上升。
-- `QWEN_GPU_LAYERS`：GPU 承载层数。显存充足时用 `all`；显存不够时可以改成较小数字，甚至 `0` 走 CPU。
-- `QWEN_BATCH_SIZE` / `QWEN_UBATCH_SIZE`：影响吞吐和显存峰值。显存不足时优先降低 `QWEN_UBATCH_SIZE`。
-- `QWEN_THREADS` / `QWEN_THREADS_BATCH`：CPU 线程数。一般接近物理核心数或略低即可，过高可能反而抢占系统资源。
-- `QWEN_CACHE_TYPE_K` / `QWEN_CACHE_TYPE_V`：KV cache 精度。`q8_0` 比 `f16` 省显存，质量通常够用。
-- `QWEN_REASONING`：本流程默认 `off`。字幕翻译更需要稳定、简洁、快，通常不需要显式推理模式。
+- 配置项使用 `QWEN_80B_*` 或 `QWEN_32B_*` 前缀，互不污染。32B 仍兼容旧的通用 `QWEN_*` 设置；80B 不继承旧的 `QWEN_GPU_LAYERS=all`，防止误把 45GB 模型全量卸载到 24GB 显存。
+- `*_CTX_SIZE`：上下文长度。8192 足够容纳当前每批 4 条对白及前后各 4 条只读上下文；调大只会增加内存占用。
+- `*_GPU_LAYERS`：GPU 承载层数。80B 默认 16 层是稳定性优先的部分卸载；32B 默认 `all`。
+- `*_BATCH_SIZE` / `*_UBATCH_SIZE`：llama.cpp 的 token 计算批大小，不是一次翻译多少条字幕。显存不足时优先降低 `*_UBATCH_SIZE`。
+- `*_THREADS` / `*_THREADS_BATCH`：CPU 线程数。80B 默认 16，给系统和桌面保留调度余量。
+- `*_CACHE_TYPE_K` / `*_CACHE_TYPE_V`：KV cache 精度。`q8_0` 比 `f16` 省显存，质量通常够用。
+- `*_REASONING`：本流程默认 `off`。字幕翻译更依赖稳定的结构化输出，不启用显式推理模式。
 
 大致硬件参考：
 
-- 24GB 以上显存：更适合 `Qwen3-32B-Q4_K_M.gguf` 全量 GPU offload，`QWEN_GPU_LAYERS=all` 更稳。
+- 当前 4090 24GB + 64GB 内存：80B 默认配置实测加载稳定，显存约占 16.3GB、保留约 7.8GB，模型驻留后系统可用内存约 17GB；连续结构化翻译请求未崩溃。
+- 24GB 显存但系统内存不足 64GB：优先使用 32B，或进一步降低 80B 的 GPU 层数前先确认系统内存余量。
+- 24GB 以上显存：32B 可全量 GPU offload，`QWEN_32B_GPU_LAYERS=all`。
 - 12GB 到 16GB 显存：可以尝试降低 `QWEN_GPU_LAYERS` 和 `QWEN_UBATCH_SIZE`，让一部分层走 CPU；速度会慢。
 - 8GB 显存或纯 CPU：仍可运行部分步骤，但 Qwen 32B 会很慢，建议换更小 GGUF 或只对少量字幕测试。
 - 内存建议 32GB 起步，64GB 更舒服；如果 Qwen 部分 CPU offload 较多，内存压力会明显增加。
@@ -242,18 +258,21 @@ $env:SUB_POLISH_API_KEY = "sk-..."
 ```powershell
 python .\run_all.py . --dry-run
 python .\run_all.py . --target-stem "Nashville.S01E01"
+python .\run_all.py . --qwen-profile 80b
+python .\run_all.py . --qwen-profile 32b
 python .\run_all.py . --no-polish
 python .\run_all.py . --cleanup
 ```
 
 - `--dry-run`：只打印计划执行的步骤，不真正跑流程。
 - `--target-stem`：只处理指定文件名主干，可重复传入。
+- `--qwen-profile`：选择 Step 7 的 `80b` 高质量配置或 `32b` 低内存回退配置；默认 `80b`。
 - `--no-polish`：跳过 Step 9 后端大模型调优，只做合并和过滤。
 - `--cleanup`：显式执行清理；默认不会清理中间文件。
 
 ## 模型流程
 
-- Step 7 使用本地 Qwen 模型翻译对白、歌词、OCR，并生成文化注解。
+- Step 7 使用本地 Qwen 模型翻译对白、歌词、OCR，并生成文化注解。普通对白每批翻译 4 条，前后各附 4 条只读上下文；响应必须逐条返回原 ID，缺失、重复或空结果会按对应 ID 回退为单条重译。歌词和咒语仍按单条处理，避免跨类型合并影响韵律或专门用词。
 - Step 9 使用后端大模型做最终润色、OCR 去噪和可复用 hint 提取。
 - Step 9 同时支持单条 `中文\\N英文` 事件，以及时间轴完全相同、分别使用 `English`/`Chinese`（或 `Default`）样式的旧式双语事件；后者只更新中文事件，不改英文行和时间轴。
 - 旧式分离事件完成调优后，可运行 `python normalize_legacy_ass_layout.py . --glob "剧集匹配式*.ass" --backup-dir temp/ass_layout_backup`，将精确同时间轴的中英文合并为当前 `BILINGUAL` 单事件样式；未配对事件会保留，备份也只写入项目 `temp`。

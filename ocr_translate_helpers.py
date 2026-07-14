@@ -3,7 +3,7 @@ import math
 import re
 from pathlib import Path
 
-from qwen_common import QWEN_MODEL, chat_json
+from qwen_common import chat_json
 
 
 OCR_BATCH_SIZE = 12

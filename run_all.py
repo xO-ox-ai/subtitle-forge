@@ -121,6 +121,17 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--force-dialogue", action="store_true", help="Force Step07 to retranslate dialogue/lyrics.")
     parser.add_argument("--force-ocr", action="store_true", help="Force Step07 to regenerate OCR translations and notes.")
     parser.add_argument(
+        "--qwen-profile",
+        choices=["32b", "80b"],
+        default=os.environ.get("QWEN_PROFILE", "80b"),
+        help="Step07 local Qwen model/runtime profile. Use 32b as the lower-memory fallback.",
+    )
+    parser.add_argument(
+        "--qwen-gguf",
+        default="",
+        help="Optional Step07 GGUF path override for the selected Qwen profile.",
+    )
+    parser.add_argument(
         "--no-polish",
         action="store_true",
         help="Skip Step09 finished-ASS translation polish (enabled by default).",
@@ -779,6 +790,9 @@ def run_smart_auto_flow(
 
 def main() -> None:
     args = parse_args()
+    os.environ["QWEN_PROFILE"] = args.qwen_profile
+    if args.qwen_gguf:
+        os.environ[f"QWEN_{args.qwen_profile.upper()}_GGUF"] = args.qwen_gguf
     base_dir = Path(args.base_dir).resolve()
     if not base_dir.exists():
         print(f"[error] directory not found: {base_dir}")
@@ -817,6 +831,7 @@ def main() -> None:
     print(f"Source: {args.source}")
     print(f"OCR: {'disabled' if args.skip_ocr else 'enabled'}")
     print(f"Music HMM: {'disabled' if args.skip_music else 'enabled'}")
+    print(f"Qwen Step07 profile: {args.qwen_profile}")
     print(f"Quality: {'disabled' if args.skip_quality else 'enabled'}")
     print(f"Backend polish: {'disabled' if args.no_polish else 'enabled'}")
     print(f"Cleanup: {'disabled' if args.no_cleanup else 'enabled'}")

@@ -1,6 +1,7 @@
 import argparse
 import copy
 import json
+import os
 import re
 import sys
 import time
@@ -18,7 +19,7 @@ from common import (
     work_dir_for,
     write_status,
 )
-from qwen_common import QWEN_MODEL, get_client, stop_qwen_server
+import qwen_common
 from override_utils import apply_segment_overrides, load_overrides
 
 try:
@@ -48,6 +49,8 @@ BREAK_CHARS = ",.!?;: " + "\uff0c\u3002\uff01\uff1f\uff1b\uff1a"
 DISPLAY_MAX_DURATION = 5.8
 EN_DISPLAY_MAX_CHARS = 78
 DISPLAY_MIN_WORDS = 8
+DEFAULT_DIALOGUE_BATCH_SIZE = 4
+DEFAULT_DIALOGUE_CONTEXT_SIZE = 4
 MOJIBAKE_MUSIC_MARK_RE = re.compile(
     r"(?<![0-9A-Za-z])(?:[jJ][“”\"']|[jJ]n(?=\s))|[jJ][“”\"'](?=\s|$)"
 )
@@ -217,6 +220,31 @@ Rules:
 16. If reusable guidance gives multiple candidates, pick the candidate that fits the current context instead of copying the whole hint.
 17. If display_units are requested, each display_units.en must be an exact consecutive slice copied from the current English segment."""
 
+DIALOGUE_BATCH_SYSTEM_PROMPT = """You are a professional TV subtitle translator.
+The input contains a short batch of active English dialogue subtitle items plus read-only context before and after them.
+Return strict JSON only:
+{"items": [{"id": 1, "zh": "natural concise Chinese subtitle text"}]}
+When an item has request_display_units=true, that item may also contain:
+{"display_units": [{"en": "exact English slice", "zh": "matching Chinese slice"}]}
+
+Rules:
+1. Output JSON only, with no explanation or reasoning.
+2. Return exactly one item for every active input id, using the same ids and order. Never return read-only context items.
+3. Translate each active item as its own subtitle. Never merge text across ids, shift a translation to a neighboring id, or omit repeated lines.
+4. Use all active items and the read-only context to resolve meaning, grammar, pronouns, tone, continuity, and consistent terminology.
+5. The read-only context is evidence only. Do not translate it, quote it, or include it in an active item's zh.
+6. Use Simplified Chinese only. Never use Traditional Chinese.
+7. Write polished, concise, natural spoken Chinese suitable for finished TV subtitles, not written prose or English word order.
+8. Preserve attitude, sarcasm, teasing, threat, tenderness, negation, conditionals, and who did what.
+9. Preserve proper nouns and keep names, titles, forms of address, and recurring terminology consistent across the batch.
+10. You may omit redundant pronouns, fillers, and connectors only when the meaning stays clear.
+11. For very short lines, choose Chinese by local intent and tone instead of a fixed dictionary equivalent.
+12. Each item's guidance applies only when it fits that active item. Context overrides reusable guidance.
+13. When guidance.terminology.source occurs in that item's en, use its preferred_zh literally. terminology.note and all other guidance are instructions and must never appear as subtitle text.
+14. If request_display_units=false, omit display_units for that item.
+15. If request_display_units=true, use 2 units, or 3 only when necessary; every display_units.en must be an exact consecutive slice of that item's en, and the slices joined with single spaces must reproduce that item's en.
+16. Never place another item's source or translation inside display_units."""
+
 LYRIC_SYSTEM_PROMPT = """You are a professional song lyric subtitle translator.
 Input is one English lyric segment from a TV episode.
 Return strict JSON only:
@@ -273,6 +301,13 @@ FIXED_CHANT_PHRASES = {
 }
 
 
+def positive_int_env(name: str, default: int) -> int:
+    try:
+        return max(int(os.environ.get(name, default)), 1)
+    except (TypeError, ValueError):
+        return default
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="V2 STEP7: run one Qwen session for dialogue, lyrics, OCR, and notes.")
     add_common_args(parser)
@@ -291,6 +326,29 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--force-dialogue", action="store_true", help="Retranslate dialogue even if translated JSON exists.")
     parser.add_argument("--force-ocr", action="store_true", help="Regenerate OCR translations and notes even if outputs exist.")
+    parser.add_argument(
+        "--dialogue-batch-size",
+        type=int,
+        default=positive_int_env("QWEN_DIALOGUE_BATCH_SIZE", DEFAULT_DIALOGUE_BATCH_SIZE),
+        help="Active dialogue subtitles per Qwen request. Default: 4.",
+    )
+    parser.add_argument(
+        "--dialogue-context-size",
+        type=int,
+        default=positive_int_env("QWEN_DIALOGUE_CONTEXT_SIZE", DEFAULT_DIALOGUE_CONTEXT_SIZE),
+        help="Read-only subtitle items before and after each dialogue batch. Default: 4 per side.",
+    )
+    parser.add_argument(
+        "--qwen-profile",
+        choices=sorted(qwen_common.QWEN_PROFILES),
+        default=os.environ.get("QWEN_PROFILE", qwen_common.DEFAULT_QWEN_PROFILE),
+        help="Local Qwen model/runtime profile. Use 32b to fall back from the higher-quality 80b profile.",
+    )
+    parser.add_argument(
+        "--qwen-gguf",
+        default="",
+        help="Optional GGUF path override for the selected Qwen profile.",
+    )
     return parser.parse_args()
 
 
@@ -803,7 +861,7 @@ def translate_segment(
         user_content = f"{user_task}{text}{guidance_instruction}{display_instruction}"
     try:
         resp = client.chat.completions.create(
-            model=QWEN_MODEL,
+            model=qwen_common.QWEN_MODEL,
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_content},
@@ -814,8 +872,155 @@ def translate_segment(
         content = (resp.choices[0].message.content or "").strip()
         return parse_json_response(content)
     except Exception as exc:
-        print(f"  [warning] translation failed: {exc}")
-        return {"zh": text}
+        raise RuntimeError(
+            f"Qwen translation request failed for subtitle: {status_preview(text, 80)}"
+        ) from exc
+
+
+def context_window_items(segments: list[dict], anchor: int, step: int, limit: int) -> list[dict]:
+    items: list[dict] = []
+    cursor = anchor + step
+    while 0 <= cursor < len(segments) and len(items) < max(limit, 0):
+        seg = segments[cursor]
+        text = strip_speaker_placeholders(seg.get("text", ""))
+        if text:
+            is_music = bool(seg.get("is_music", False))
+            items.append(
+                {
+                    "id": cursor + 1,
+                    "kind": segment_translation_kind(seg, is_music),
+                    "en": text,
+                }
+            )
+        cursor += step
+    if step < 0:
+        items.reverse()
+    return items
+
+
+def dialogue_batch_payload(
+    segments: list[dict],
+    indices: list[int],
+    step09_guidance: dict,
+    context_size: int,
+) -> dict:
+    if not indices:
+        return {"read_only_context_before": [], "items": [], "read_only_context_after": []}
+    active_items = []
+    for index in indices:
+        seg = segments[index]
+        en_text = strip_speaker_placeholders(seg.get("text", ""))
+        hints = select_step09_translation_guidance(
+            step09_guidance,
+            en_text,
+            translation_context(segments, index, context_size),
+            "dialogue",
+        )
+        active_items.append(
+            {
+                "id": index + 1,
+                "en": en_text,
+                "request_display_units": semantic_split_requested(seg, en_text),
+                "guidance": hints,
+            }
+        )
+    return {
+        "read_only_context_before": context_window_items(segments, indices[0], -1, context_size),
+        "items": active_items,
+        "read_only_context_after": context_window_items(segments, indices[-1], 1, context_size),
+    }
+
+
+def parse_dialogue_batch_response(content: str, expected_ids: list[int]) -> tuple[dict[int, dict], list[int], list[str]]:
+    parsed = parse_json_response(content)
+    raw_items = parsed.get("items") if isinstance(parsed, dict) else None
+    if not isinstance(raw_items, list):
+        return {}, list(expected_ids), ["response does not contain an items array"]
+
+    expected = set(expected_ids)
+    results: dict[int, dict] = {}
+    duplicates: set[int] = set()
+    received_order: list[int] = []
+    issues: list[str] = []
+    for row in raw_items:
+        if not isinstance(row, dict):
+            issues.append("non-object response item")
+            continue
+        raw_id = row.get("id")
+        if isinstance(raw_id, bool):
+            issues.append(f"invalid response id={raw_id!r}")
+            continue
+        try:
+            item_id = int(raw_id)
+        except (TypeError, ValueError):
+            issues.append(f"invalid response id={raw_id!r}")
+            continue
+        if item_id not in expected:
+            issues.append(f"unexpected response id={item_id}")
+            continue
+        received_order.append(item_id)
+        if item_id in results or item_id in duplicates:
+            duplicates.add(item_id)
+            results.pop(item_id, None)
+            continue
+        zh = normalize_inline_text(row.get("zh", ""))
+        if not zh:
+            issues.append(f"empty zh for id={item_id}")
+            continue
+        result = {"zh": zh}
+        if "display_units" in row:
+            result["display_units"] = row.get("display_units")
+        results[item_id] = result
+
+    if duplicates:
+        issues.append("duplicate response ids=" + ",".join(str(item_id) for item_id in sorted(duplicates)))
+    if received_order != [item_id for item_id in expected_ids if item_id in received_order]:
+        issues.append("response ids are out of order")
+    fallback_ids = [item_id for item_id in expected_ids if item_id not in results]
+    if fallback_ids:
+        issues.append("missing/invalid response ids=" + ",".join(str(item_id) for item_id in fallback_ids))
+    return results, fallback_ids, issues
+
+
+def translate_dialogue_batch(
+    client,
+    segments: list[dict],
+    indices: list[int],
+    step09_guidance: dict,
+    context_size: int = DEFAULT_DIALOGUE_CONTEXT_SIZE,
+) -> tuple[dict[int, dict], list[int]]:
+    payload = dialogue_batch_payload(segments, indices, step09_guidance, context_size)
+    expected_ids = [item["id"] for item in payload["items"]]
+    if not expected_ids:
+        return {}, []
+    prompt = (
+        "Translate only payload.items. Treat both context arrays as read-only. "
+        "Return one result for every active id in the same order.\n"
+        + json.dumps(payload, ensure_ascii=False)
+    )
+    try:
+        resp = client.chat.completions.create(
+            model=qwen_common.QWEN_MODEL,
+            messages=[
+                {"role": "system", "content": DIALOGUE_BATCH_SYSTEM_PROMPT},
+                {"role": "user", "content": prompt},
+            ],
+            temperature=0.2,
+            max_tokens=min(2200, 500 + 420 * len(expected_ids)),
+        )
+        content = (resp.choices[0].message.content or "").strip()
+        results, fallback_ids, issues = parse_dialogue_batch_response(content, expected_ids)
+        if issues:
+            print("  [warning] dialogue batch validation: " + "; ".join(issues))
+        return results, fallback_ids
+    except Exception as exc:
+        if not qwen_common.server_ready(timeout=3, expected_model=qwen_common.QWEN_MODEL):
+            raise RuntimeError(
+                f"Qwen service became unavailable during a dialogue batch; profile={qwen_common.QWEN_PROFILE}. "
+                "Restart with --qwen-profile 32b to continue with the lower-memory model."
+            ) from exc
+        print(f"  [warning] dialogue batch failed while the service is still alive; falling back to single items: {exc}")
+        return {}, expected_ids
 
 
 def retry_display_units(client, text: str, zh_text: str, is_music: bool, kind: str | None = None) -> list[dict]:
@@ -836,7 +1041,7 @@ def retry_display_units(client, text: str, zh_text: str, is_music: bool, kind: s
     )
     try:
         resp = client.chat.completions.create(
-            model=QWEN_MODEL,
+            model=qwen_common.QWEN_MODEL,
             messages=[
                 {"role": "system", "content": "You split subtitles for display. Output strict JSON only."},
                 {"role": "user", "content": prompt},
@@ -850,20 +1055,12 @@ def retry_display_units(client, text: str, zh_text: str, is_music: bool, kind: s
         return []
 
 
-def nearby_text(segments: list[dict], index: int, step: int) -> str:
-    cursor = index + step
-    while 0 <= cursor < len(segments):
-        text = strip_speaker_placeholders(segments[cursor].get("text", ""))
-        if text:
-            return text
-        cursor += step
-    return ""
-
-
-def translation_context(segments: list[dict], index: int) -> dict:
+def translation_context(segments: list[dict], index: int, context_size: int = 1) -> dict:
+    previous = context_window_items(segments, index, -1, context_size)
+    following = context_window_items(segments, index, 1, context_size)
     return {
-        "previous": nearby_text(segments, index, -1),
-        "next": nearby_text(segments, index, 1),
+        "previous": "\n".join(item["en"] for item in previous),
+        "next": "\n".join(item["en"] for item in following),
     }
 
 
@@ -876,7 +1073,66 @@ def segment_translation_kind(seg: dict, is_music: bool) -> str:
     return "dialogue"
 
 
-def translate_dialogue_file(client, base_dir: Path, json_file: Path, out_file: Path) -> None:
+def clear_empty_segment(seg: dict) -> None:
+    seg["text"] = ""
+    seg["zh"] = ""
+    seg["en_wrap"] = ""
+    seg["is_music"] = False
+    seg["kind"] = "dialogue"
+    seg["is_chant"] = False
+    seg.pop("display_units", None)
+    seg.pop("display_units_source", None)
+
+
+def apply_translation_result(client, seg: dict, en_text: str, segment_kind: str, result: dict) -> str:
+    is_music = segment_kind == "lyric" or bool(seg.get("is_music", False))
+    zh_text = normalize_music_marks(strip_speaker_placeholders(result.get("zh", en_text)), is_music)
+    formatted_zh = format_zh_text(zh_text, is_music)
+    seg["text"] = en_text
+    seg["zh"] = formatted_zh
+    seg["en_wrap"] = en_text
+    seg["is_music"] = is_music
+    seg["kind"] = segment_kind
+    seg["is_chant"] = segment_kind == "chant"
+    request_display_units = semantic_split_requested(seg, en_text)
+    units = clean_display_units(result.get("display_units"), en_text) if request_display_units else []
+    if request_display_units and not units:
+        units = retry_display_units(client, en_text, formatted_zh, is_music, segment_kind)
+    if units:
+        seg["display_units"] = units
+        seg["display_units_source"] = "qwen"
+    else:
+        seg.pop("display_units", None)
+        seg.pop("display_units_source", None)
+    return zh_text
+
+
+def consecutive_dialogue_indices(segments: list[dict], start: int, batch_size: int) -> tuple[list[int], int]:
+    indices: list[int] = []
+    cursor = start
+    while cursor < len(segments) and len(indices) < max(batch_size, 1):
+        seg = segments[cursor]
+        en_text = strip_speaker_placeholders(seg.get("text", ""))
+        if not en_text:
+            clear_empty_segment(seg)
+            cursor += 1
+            continue
+        is_music = bool(seg.get("is_music", False))
+        if segment_translation_kind(seg, is_music) != "dialogue":
+            break
+        indices.append(cursor)
+        cursor += 1
+    return indices, cursor
+
+
+def translate_dialogue_file(
+    client,
+    base_dir: Path,
+    json_file: Path,
+    out_file: Path,
+    dialogue_batch_size: int = DEFAULT_DIALOGUE_BATCH_SIZE,
+    dialogue_context_size: int = DEFAULT_DIALOGUE_CONTEXT_SIZE,
+) -> None:
     print(f"\n[dialogue] {json_file.name}")
     data = load_json(json_file, {"segments": []})
     segments = data.get("segments", [])
@@ -886,19 +1142,67 @@ def translate_dialogue_file(client, base_dir: Path, json_file: Path, out_file: P
     step09_guidance = load_step09_guidance(base_dir, json_file.stem)
     update_progress_status(base_dir, "V2_STEP7", json_file.stem, 0, total, "", "")
 
-    for offset, seg in enumerate(segments):
+    offset = 0
+    while offset < total:
+        seg = segments[offset]
         index = offset + 1
         en_text = strip_speaker_placeholders(seg.get("text", ""))
+        if not en_text:
+            clear_empty_segment(seg)
+            update_progress_status(base_dir, "V2_STEP7", json_file.stem, index, total, "", "")
+            offset += 1
+            continue
+
         is_music = bool(seg.get("is_music", False))
         segment_kind = segment_translation_kind(seg, is_music)
-        if not en_text:
-            seg["text"] = ""
-            seg["zh"] = ""
-            seg["en_wrap"] = ""
-            seg["is_music"] = False
-            seg["kind"] = "dialogue"
-            seg["is_chant"] = False
-            update_progress_status(base_dir, "V2_STEP7", json_file.stem, index, total, "", "")
+        if segment_kind == "dialogue":
+            batch_indices, next_offset = consecutive_dialogue_indices(segments, offset, dialogue_batch_size)
+            batch_ids = [item_index + 1 for item_index in batch_indices]
+            print(
+                f"  [{batch_ids[0]}-{batch_ids[-1]}/{total}] dialogue batch "
+                f"items={len(batch_indices)} context={dialogue_context_size}+{dialogue_context_size}"
+            )
+            batch_results, _fallback_ids = translate_dialogue_batch(
+                client,
+                segments,
+                batch_indices,
+                step09_guidance,
+                dialogue_context_size,
+            )
+            for item_index in batch_indices:
+                item = segments[item_index]
+                item_id = item_index + 1
+                item_en = strip_speaker_placeholders(item.get("text", ""))
+                fixed_recap = fixed_recap_translation(item_en)
+                result = {"zh": fixed_recap} if fixed_recap else batch_results.get(item_id)
+                if result is None:
+                    context = translation_context(segments, item_index, dialogue_context_size)
+                    translation_hints = select_step09_translation_guidance(
+                        step09_guidance,
+                        item_en,
+                        context,
+                        "dialogue",
+                    )
+                    result = translate_segment(
+                        client,
+                        item_en,
+                        False,
+                        context,
+                        request_display_units=semantic_split_requested(item, item_en),
+                        kind="dialogue",
+                        translation_hints=translation_hints,
+                    )
+                zh_text = apply_translation_result(client, item, item_en, "dialogue", result)
+                update_progress_status(
+                    base_dir,
+                    "V2_STEP7",
+                    json_file.stem,
+                    item_id,
+                    total,
+                    item_en,
+                    zh_text,
+                )
+            offset = next_offset
             continue
 
         print(f"  [{index}/{total}] {segment_kind}: {status_preview(en_text, 40)}")
@@ -920,24 +1224,9 @@ def translate_dialogue_file(client, base_dir: Path, json_file: Path, out_file: P
             )
             if segment_kind == "chant":
                 translation_cache[cache_key] = copy.deepcopy(result)
-        zh_text = normalize_music_marks(strip_speaker_placeholders(result.get("zh", en_text)), is_music)
-
-        seg["text"] = en_text
-        seg["zh"] = format_zh_text(zh_text, is_music)
-        seg["en_wrap"] = en_text
-        seg["is_music"] = is_music
-        seg["kind"] = segment_kind
-        seg["is_chant"] = segment_kind == "chant"
-        units = clean_display_units(result.get("display_units"), en_text) if request_display_units else []
-        if request_display_units and not units:
-            units = retry_display_units(client, en_text, format_zh_text(zh_text, is_music), is_music, segment_kind)
-        if units:
-            seg["display_units"] = units
-            seg["display_units_source"] = "qwen"
-        else:
-            seg.pop("display_units", None)
-            seg.pop("display_units_source", None)
+        zh_text = apply_translation_result(client, seg, en_text, segment_kind, result)
         update_progress_status(base_dir, "V2_STEP7", json_file.stem, index, total, en_text, zh_text)
+        offset += 1
 
     override_counts = apply_segment_overrides(segments, overrides)
     if override_counts["segments"]:
@@ -1152,7 +1441,8 @@ def main() -> None:
         print("v2 step7 done; all selected Qwen outputs already exist")
         return
 
-    client, proc = get_client(base_dir)
+    qwen_common.configure_qwen_profile(args.qwen_profile, args.qwen_gguf or None)
+    client, proc = qwen_common.get_client(base_dir)
     qwen_start = time.time()
     write_status(
         base_dir,
@@ -1163,7 +1453,14 @@ def main() -> None:
     try:
         for json_file in pending_dialogue:
             out_file = translated_dir / json_file.name
-            translate_dialogue_file(client, base_dir, json_file, out_file)
+            translate_dialogue_file(
+                client,
+                base_dir,
+                json_file,
+                out_file,
+                dialogue_batch_size=max(args.dialogue_batch_size, 1),
+                dialogue_context_size=max(args.dialogue_context_size, 1),
+            )
 
         for raw_file in pending_ocr:
             translate_ocr_and_notes(client, base_dir, work_dir, raw_file)
@@ -1172,7 +1469,7 @@ def main() -> None:
         for translated_file in pending_notes:
             generate_notes(client, base_dir, work_dir, translated_file)
     finally:
-        stop_qwen_server(proc)
+        qwen_common.stop_qwen_server(proc)
 
     elapsed = time.time() - qwen_start
     write_status(base_dir, "V2_STEP7", "", f"DONE Qwen session ({elapsed:.1f}s)")
