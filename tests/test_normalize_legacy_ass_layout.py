@@ -71,6 +71,20 @@ class NormalizeLegacyAssLayoutTests(unittest.TestCase):
         dialogue = next(line for line in result if line.startswith("Dialogue:"))
         self.assertIn(",BILINGUAL_MUSIC,", dialogue)
 
+    def test_zh_en_alias_pair_normalizes_to_current_layout(self):
+        lines = HEADER + [
+            "Dialogue: 0,0:00:01.00,0:00:03.00,ZH,,0,0,0,,把球传过来！",
+            "Dialogue: 0,0:00:01.00,0:00:03.00,EN,,0,0,0,,Pass me the ball!",
+        ]
+
+        result, stats = normalize_legacy_layout(lines)
+
+        dialogues = [line for line in result if line.startswith("Dialogue:")]
+        self.assertEqual(stats["pairs_merged"], 1)
+        self.assertEqual(len(dialogues), 1)
+        self.assertIn(",BILINGUAL,", dialogues[0])
+        self.assertTrue(dialogues[0].endswith(r"把球传过来！\N{\fs34}Pass me the ball!"))
+
 
 if __name__ == "__main__":
     unittest.main()

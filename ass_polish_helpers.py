@@ -66,8 +66,8 @@ OVERLAY_STYLES = {
     "OCR_TRANSLATION": "ocr",
     "EXPLANATION_NOTE": "note",
 }
-LEGACY_PAIRED_SOURCE_STYLES = {"English", "Default"}
-LEGACY_PAIRED_ZH_STYLES = {"Chinese", "Default"}
+LEGACY_PAIRED_SOURCE_STYLES = {"English", "Default", "EN", "EN_i"}
+LEGACY_PAIRED_ZH_STYLES = {"Chinese", "Default", "ZH", "ZH_i"}
 OCR_LOW_VALUE_COMPOUND_RE = re.compile(r"^(?:[东西南北上下左右前后内外里中]|[东西南北](?:塔|门))$")
 OCR_LOW_VALUE_SUFFIXES = ("大道", "大街", "公路", "路口", "中心", "广场")
 
@@ -767,11 +767,18 @@ def extract_legacy_paired_targets(lines: list[str], style_names: set[str]) -> li
         sources = group["sources"][-pair_count:]
         zh_events = group["targets"][-pair_count:]
         for (_source_index, _source_parts, en), (line_index, parts, zh) in zip(sources, zh_events):
+            visible_pair = f"{zh} {en}"
+            if CHANT_SYMBOL in visible_pair:
+                kind = "chant"
+            elif MUSIC_SYMBOL in visible_pair:
+                kind = "lyric"
+            else:
+                kind = "dialogue"
             targets.append(
                 PolishTarget(
                     line_index=line_index,
                     style=parts[3],
-                    kind="dialogue",
+                    kind=kind,
                     start=parts[1],
                     end=parts[2],
                     text_field=parts[9],

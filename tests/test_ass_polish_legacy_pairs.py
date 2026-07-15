@@ -54,6 +54,19 @@ class LegacyPairPolishTests(unittest.TestCase):
             "Dialogue: 0,0:00:01.00,0:00:03.00,Chinese,,0,0,0,,{\\i1}把他拽下来！",
         )
 
+    def test_zh_en_aliases_are_paired_and_music_is_classified(self):
+        lines = [
+            "Dialogue: 0,0:00:01.00,0:00:03.00,EN_i,,0,0,0,,♪ Sing it loud ♪",
+            "Dialogue: 0,0:00:01.00,0:00:03.00,ZH_i,,0,0,0,,♪ 大声唱 ♪",
+        ]
+
+        targets = extract_polish_targets(lines, parse_polish_styles(""))
+
+        self.assertEqual(len(targets), 1)
+        self.assertEqual(targets[0].style, "ZH_i")
+        self.assertEqual(targets[0].kind, "lyric")
+        self.assertEqual(targets[0].en, "♪ Sing it loud ♪")
+
 
 if __name__ == "__main__":
     unittest.main()
