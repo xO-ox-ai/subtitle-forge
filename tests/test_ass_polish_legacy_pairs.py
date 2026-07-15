@@ -1,6 +1,7 @@
 import unittest
 
 from ass_polish_helpers import (
+    DEFAULT_STYLES,
     extract_polish_targets,
     parse_polish_styles,
     replace_target_zh,
@@ -8,6 +9,12 @@ from ass_polish_helpers import (
 
 
 class LegacyPairPolishTests(unittest.TestCase):
+    def test_default_style_list_includes_zh_aliases(self):
+        styles = parse_polish_styles(DEFAULT_STYLES)
+
+        self.assertIn("ZH", styles)
+        self.assertIn("ZH_i", styles)
+
     def test_separate_english_and_chinese_events_become_one_target(self):
         lines = [
             "Dialogue: 0,0:00:01.00,0:00:03.00,English,,0,0,0,,Bring him down!",
