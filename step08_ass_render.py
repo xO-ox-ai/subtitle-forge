@@ -527,7 +527,18 @@ def main() -> None:
     base_dir = Path(args.base_dir).resolve()
     work_dir = work_dir_for(base_dir, args.work_dir)
     translated_dir = work_dir / "translated"
-    stems = {video.stem for video in selected_videos(base_dir, args.chunk, args.target_stem)}
+    try:
+        stems = {video.stem for video in selected_videos(base_dir, args.chunk, args.target_stem)}
+    except FileNotFoundError:
+        # Permit exact translated JSON selection when a subtitle-only project
+        # has no matching video file in the project root.
+        # Preserve dotted stems such as "Movie.2026.SDH" verbatim.
+        requested = {Path(value).name for value in args.target_stem if value}
+        available = {path.stem for path in translated_dir.glob("*.json")}
+        stems = requested & available
+        if not stems:
+            raise
+        print(f"[subtitle-only] selected translated JSON: {', '.join(sorted(stems))}")
     json_files = filter_paths_by_stems(sorted(translated_dir.glob("*.json")), stems)
     if not json_files:
         print(f"[error] no translated files found: {translated_dir}")

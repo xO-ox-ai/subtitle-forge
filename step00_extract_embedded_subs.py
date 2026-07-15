@@ -19,6 +19,7 @@ TIME_RE = re.compile(
     r"(?P<start>\d+:\d{2}:\d{2}[,.]\d{1,3})\s*-->\s*(?P<end>\d+:\d{2}:\d{2}[,.]\d{1,3})"
 )
 TAG_RE = re.compile(r"<[^>]+>")
+ASS_OVERRIDE_RE = re.compile(r"\{\\[^}]*\}")
 ITALIC_RE = re.compile(r"</?\s*i\b[^>]*>", re.IGNORECASE)
 INLINE_LABEL_RE = re.compile(r"[\[(]([^()\[\]\n]{1,90})[\])]")
 SDH_TITLE_RE = re.compile(r"\b(sdh|cc|closed captions?|hearing impaired|hi)\b", re.IGNORECASE)
@@ -446,7 +447,9 @@ def normalize_music_symbols(text: str) -> str:
 
 
 def strip_tags(text: str) -> str:
-    return normalize_music_symbols(TAG_RE.sub("", html.unescape(str(text or ""))))
+    text = html.unescape(str(text or ""))
+    text = ASS_OVERRIDE_RE.sub("", text)
+    return normalize_music_symbols(TAG_RE.sub("", text))
 
 
 def strip_leading_speaker_tag(text: str) -> str:
@@ -468,6 +471,11 @@ def split_sdh_labels(raw_text: str) -> tuple[list[str], str]:
     labels = [match.group(1).strip() for match in INLINE_LABEL_RE.finditer(plain)]
     body = INLINE_LABEL_RE.sub(" ", plain)
     body = normalize_inline_text(body)
+    # A cue containing only SDH labels often leaves one or more dialogue dashes
+    # behind after the labels are removed. Treat punctuation-only remnants as
+    # empty instead of sending strings such as "- -" to the translator.
+    if body and not any(character.isalnum() for character in body) and not has_music_text(body):
+        body = ""
     return labels, body
 
 

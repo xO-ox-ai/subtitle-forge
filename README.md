@@ -23,6 +23,16 @@ python .\run_all.py .
 
 默认工作目录为项目下的 `temp/`。OCR JSON、翻译缓存、Step 9 模型缓存、质量报告、运行日志、状态文件、流程清单和其他中间结果都写入这里；正式 `.ass` 仍输出到素材同目录。OCR 抽帧等短期工作文件建立在 `temp/sub_ocr_*/` 中，并在单集处理完成或抛出异常时自动删除。流水线还会把 `TMP`、`TEMP`、`TMPDIR` 和 Python `tempfile` 统一指向项目 `temp/`，因此自身及其子进程不再使用系统 `%TEMP%`。如需隔离不同任务，可以通过 `--work-dir` 改写步骤数据目录；全局通用临时目录仍由 `SUB_TEMP_DIR` 控制，默认就是项目 `temp/`。
 
+只有英文 SDH SRT、没有视频时，可先导入为 Step 7 的字幕 JSON，再按原流程翻译、生成文化注解并渲染 ASS：
+
+```powershell
+python .\import_english_srt_to_json.py . --work-dir temp --source '.\Movie.SDH.srt' --force
+python .\step07_qwen_all.py . --work-dir temp --source embedded --target-stem 'Movie.SDH' --qwen-profile 80b --dialogue-batch-size 4 --dialogue-context-size 4 --force-dialogue
+python .\step08_ass_render.py . --work-dir temp --target-stem 'Movie.SDH'
+```
+
+该导入器会删除纯音效和说话人标签，保留真正的画外对白；背景音乐标签不会把对白误标成歌词，斜体外语录音也不会仅因斜体而误标成吟唱。没有视频时不运行 OCR 或画面对照。
+
 ## 环境准备
 
 本项目优先面向 Windows + PowerShell。建议使用 Python 3.10 系列环境，并按不同工具拆分虚拟环境，因为 Demucs、WhisperX/pyannote、Whisper-AT、PaddleOCR 的依赖栈经常互相冲突。

@@ -1376,7 +1376,19 @@ def main() -> None:
     ocr_out_dir.mkdir(parents=True, exist_ok=True)
     notes_dir.mkdir(parents=True, exist_ok=True)
 
-    stems = {video.stem for video in selected_videos(base_dir, args.chunk, args.target_stem)}
+    try:
+        stems = {video.stem for video in selected_videos(base_dir, args.chunk, args.target_stem)}
+    except FileNotFoundError:
+        # Subtitle-only projects can intentionally have no video.  An exact
+        # --target-stem may still select a prepared embedded_json file.
+        # --target-stem is already a stem; Path.stem would incorrectly trim a
+        # meaningful final component such as ".SDH".
+        requested = {Path(value).name for value in args.target_stem if value}
+        available = {path.stem for path in embedded_json_dir.glob("*.json")}
+        stems = requested & available
+        if not stems:
+            raise
+        print(f"[subtitle-only] selected prepared dialogue JSON: {', '.join(sorted(stems))}")
     embedded_files = filter_paths_by_stems(sorted(embedded_json_dir.glob("*.json")), stems)
     audio_source_dir = music_marked_dir if music_marked_dir.exists() else diarized_dir
     audio_files = filter_paths_by_stems(sorted(audio_source_dir.glob("*.json")), stems)
