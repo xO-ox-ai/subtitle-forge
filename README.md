@@ -174,7 +174,7 @@ $env:QWEN_80B_BATCH_SIZE = "1024"
 $env:QWEN_80B_UBATCH_SIZE = "256"
 $env:QWEN_80B_THREADS = "16"
 $env:QWEN_80B_THREADS_BATCH = "16"
-$env:QWEN_80B_GPU_LAYERS = "16"
+$env:QWEN_80B_GPU_LAYERS = "22"
 $env:QWEN_80B_FLASH_ATTN = "on"
 $env:QWEN_80B_CACHE_TYPE_K = "q8_0"
 $env:QWEN_80B_CACHE_TYPE_V = "q8_0"
@@ -186,7 +186,7 @@ $env:QWEN_80B_REASONING = "off"
 
 - 配置项使用 `QWEN_80B_*` 或 `QWEN_32B_*` 前缀，互不污染。32B 仍兼容旧的通用 `QWEN_*` 设置；80B 不继承旧的 `QWEN_GPU_LAYERS=all`，防止误把 45GB 模型全量卸载到 24GB 显存。
 - `*_CTX_SIZE`：上下文长度。8192 足够容纳当前每批 4 条对白及前后各 4 条只读上下文；调大只会增加内存占用。
-- `*_GPU_LAYERS`：GPU 承载层数。80B 默认 16 层是稳定性优先的部分卸载；32B 默认 `all`。
+- `*_GPU_LAYERS`：GPU 承载层数。80B 默认 22 层是在本机保留约 2GB 显存余量后的稳定上限；32B 默认 `all`。
 - `*_BATCH_SIZE` / `*_UBATCH_SIZE`：llama.cpp 的 token 计算批大小，不是一次翻译多少条字幕。显存不足时优先降低 `*_UBATCH_SIZE`。
 - `*_THREADS` / `*_THREADS_BATCH`：CPU 线程数。80B 默认 16，给系统和桌面保留调度余量。
 - `*_CACHE_TYPE_K` / `*_CACHE_TYPE_V`：KV cache 精度。`q8_0` 比 `f16` 省显存，质量通常够用。
@@ -194,7 +194,7 @@ $env:QWEN_80B_REASONING = "off"
 
 大致硬件参考：
 
-- 当前 4090 24GB + 64GB 内存：80B 默认配置实测加载稳定，显存约占 16.3GB、保留约 7.8GB，模型驻留后系统可用内存约 17GB；连续结构化翻译请求未崩溃。
+- 当前 4090 24GB + 64GB 内存：80B 的 22 层配置在 6 轮连续四条结构化翻译测试中保持稳定，峰值显存 21,922MiB、最低余量 2,227MiB，最低系统可用内存约 17.5GB。20 层峰值 20,138MiB，可作为更保守的回退；24 层虽完成同样测试，但峰值 23,901MiB、只余 248MiB，不能给桌面和突发分配留足空间，因此不采用。
 - 24GB 显存但系统内存不足 64GB：优先使用 32B，或进一步降低 80B 的 GPU 层数前先确认系统内存余量。
 - 24GB 以上显存：32B 可全量 GPU offload，`QWEN_32B_GPU_LAYERS=all`。
 - 12GB 到 16GB 显存：可以尝试降低 `QWEN_GPU_LAYERS` 和 `QWEN_UBATCH_SIZE`，让一部分层走 CPU；速度会慢。

@@ -16,7 +16,7 @@ class QwenProfileTests(unittest.TestCase):
 
         self.assertEqual(profile["profile"], "80b")
         self.assertTrue(profile["gguf"].endswith("Qwen3-Next-80B-A3B-Instruct-Q4_K_M.gguf"))
-        self.assertEqual(command[command.index("--n-gpu-layers") + 1], "16")
+        self.assertEqual(command[command.index("--n-gpu-layers") + 1], "22")
         self.assertEqual(command[command.index("--threads") + 1], "16")
         self.assertEqual(command[command.index("--cache-ram") + 1], "2048")
 

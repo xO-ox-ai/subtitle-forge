@@ -45,7 +45,7 @@ QWEN_PROFILES = {
         "ubatch_size": 256,
         "threads": 16,
         "threads_batch": 16,
-        "gpu_layers": "16",
+        "gpu_layers": "22",
         "flash_attn": "on",
         "cache_type_k": "q8_0",
         "cache_type_v": "q8_0",

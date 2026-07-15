@@ -1943,5 +1943,121 @@
     "bad_zh": "伤口消失了",
     "style_scope": "all",
     "confidence": "high"
+  },
+  {
+    "term": "psychiatrist",
+    "guidance": "明确指具有医学资质的精神科医师时译为“精神科医生”，不要与 psychologist 或普通心理咨询师混同。",
+    "source_en": "psychiatrist",
+    "bad_zh": "心理医生",
+    "style_scope": "all",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "term": "table read",
+    "guidance": "影视制作语境中译为“围读”或“剧本围读会”，不要拘泥于字面的“桌边朗读”。",
+    "source_en": "table read",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "term": "cast (verb)",
+    "guidance": "影视选角语境中根据句式译为“选定演员”“定下角色”或“确定由某人出演”；谈及确定时间或顺序时优先说“定下来”。",
+    "source_en": "cast",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 6
+  },
+  {
+    "term": "tape deck",
+    "guidance": "指播放或录制盒式磁带的设备时译为“卡带机”或“磁带机”，车载语境优先用“车载卡带机”。",
+    "source_en": "tape deck",
+    "style_scope": "all",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "term": "bad apple",
+    "guidance": "用于比喻群体中的问题人物时译为“害群之马”或“坏分子”，不要按普通淘气者弱化处理。",
+    "source_en": "bad apple",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "term": "homer",
+    "guidance": "棒球语境在中国大陆项目中优先译为“本垒打”；港台常见译法“全垒打”语义正确，只在项目要求大陆术语一致时调整。",
+    "source_en": "homer",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 2
+  },
+  {
+    "term": "the majors",
+    "guidance": "棒球语境指美国职业棒球大联盟，可根据篇幅译为“大联盟”或“美国职业棒球大联盟”。",
+    "source_en": "the majors",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 3
+  },
+  {
+    "term": "moon shot",
+    "guidance": "棒球语境指又高又远的本垒打，宜译为“冲天本垒打”或“超远本垒打”，不要按字面翻译。",
+    "source_en": "moon shot",
+    "bad_zh": "射月全垒打",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "term": "slider",
+    "guidance": "棒球投球术语统一译为“滑球”。",
+    "source_en": "slider",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "term": "bottom of the ninth",
+    "guidance": "棒球局数表述译为“九局下半”，其他局数同样按“某局上半／下半”处理。",
+    "source_en": "bottom of the ninth",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "term": "congregation",
+    "guidance": "基督教礼拜语境指参加礼拜的会众，应译为“会众”，不要笼统处理成“教徒”。",
+    "source_en": "congregation",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "term": "wildcatting",
+    "guidance": "石油行业语境指在未经证实的区域进行探井钻探，可译为“探井钻探”或“钻探预探井”。",
+    "source_en": "wildcatting",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "term": "dinette",
+    "guidance": "家具零售语境中通常指小型餐桌椅组合、简餐区或相应家具，不要译成经营餐饮的“小餐厅”。",
+    "source_en": "dinette",
+    "bad_zh": "小餐厅",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "term": "sectional lounger",
+    "guidance": "按家具结构译作组合式躺椅、带贵妃位的组合沙发等；除非明确具备睡床功能，不要译成“沙发床”。",
+    "source_en": "sectional lounger",
+    "bad_zh": "沙发床",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
   }
 ]

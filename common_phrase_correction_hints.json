@@ -2427,5 +2427,144 @@
     "bad_zh": "好时候太短",
     "style_scope": "dialogue",
     "confidence": "high"
+  },
+  {
+    "phrase": "get the part",
+    "guidance": "影视试镜或选角语境中自然译为“拿到角色”“获得角色”或“被选中出演”，口语访谈中优先用“拿到这个角色”。",
+    "source_en": "get the part",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 2
+  },
+  {
+    "phrase": "give someone a hard time",
+    "guidance": "根据语气译为“为难某人”“刁难某人”“数落某人”或“拿某人开涮”；朋友间打趣时不要误译成严厉刁难。",
+    "source_en": "give someone a hard time",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "put the moves on someone",
+    "guidance": "表示对某人展开暧昧或求爱攻势，根据语气译为“追求某人”“勾搭某人”或“对某人下手”，不要直译为普通的采取行动。",
+    "source_en": "put the moves on someone",
+    "bad_zh": "对某人采取行动",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "what's the harm in doing something",
+    "guidance": "用于反问某事并无明显坏处时，可译为“……有什么不好？”“……又有什么坏处？”或“……有何妨？”，按口吻选择。",
+    "source_en": "what's the harm in giving kids a place to socialize?",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "never say never",
+    "guidance": "表示不要过早断言绝无可能，可译为“别把话说绝”“一切皆有可能”或“永远别说永远”，按人物语气选择。",
+    "source_en": "Never say never.",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "cross your heart and hope to die",
+    "guidance": "这是带童谣色彩的郑重发誓说法，可译为“对天发誓，撒谎就死？”或“你敢发誓吗？”，不要逐词硬译。",
+    "source_en": "Cross your heart and hope to die?",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "get sweet on someone",
+    "guidance": "旧式口语中表示喜欢上、迷恋或追求某人，可译为“喜欢上某人”“看上某人”或“打某人的主意”。",
+    "source_en": "get sweet on someone",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "look out for someone or oneself",
+    "guidance": "根据宾语判断含义：对别人通常译为“照应、关照、替他着想”，对自己通常译为“照顾好自己、保护自己”。",
+    "source_en": "look out for someone / oneself",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 2
+  },
+  {
+    "phrase": "talk some sense to someone",
+    "guidance": "表示劝某人理智行事，可译为“劝劝某人”“跟某人讲明白”或“让某人清醒一点”。",
+    "source_en": "talk some sense to someone",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "not have a nickel to rub together",
+    "guidance": "表示穷得几乎一分钱也没有，可译为“穷得身无分文”“兜里一个子儿也没有”等自然说法。",
+    "source_en": "ain't got a nickel to rub together",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "take it easy on someone",
+    "guidance": "表示对某人手下留情或降低要求，可译为“让着某人”“对某人手下留情”或“别对某人太狠”。",
+    "source_en": "take it easy on someone",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "bring it on",
+    "guidance": "面对挑战时表示接受挑衅，可译为“尽管来”“放马过来”或“来吧”，不要按“把它带来”直译。",
+    "source_en": "Bring it on.",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "don't know spit about something",
+    "guidance": "粗俗口语中表示对某事一窍不通，可译为“对……一窍不通”“根本不懂……”或“懂个屁的……”，按语气强度选择。",
+    "source_en": "don't know spit about something",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "things escalated",
+    "guidance": "表示矛盾或局面迅速恶化时，自然译为“事情闹大了”“局面失控了”或“冲突愈演愈烈”，避免生硬直译“升级”。",
+    "source_en": "things escalated",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "take time off school",
+    "guidance": "指中断学业一段时间时译为“休学”或“暂时停学”；只有短期离校才用“请假”。",
+    "source_en": "take time off school",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "no credit, no problem",
+    "guidance": "消费融资广告中，“credit”指信用记录、信用资质或贷款审批；应表达“没有信用记录或信用不佳也能办理”，不要理解为商家不提供赊账。",
+    "source_en": "no credit, no problem",
+    "bad_zh": "不赊账也没问题",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "get off one's ass",
+    "guidance": "这是带粗俗色彩的催促或斥责，可按语气译为“挪动屁股”“别瘫着了”“赶紧行动”；原文含脏话时不要无故弱化攻击性。",
+    "source_en": "get off their ass",
+    "bad_zh": "懒得动一动",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
   }
 ]

@@ -471,6 +471,10 @@ def split_sdh_labels(raw_text: str) -> tuple[list[str], str]:
     labels = [match.group(1).strip() for match in INLINE_LABEL_RE.finditer(plain)]
     body = INLINE_LABEL_RE.sub(" ", plain)
     body = normalize_inline_text(body)
+    # Parenthesized SDH labels are frequently followed by a colon, for
+    # example ``(SOBBING): Standard?``.  Removing only the label must not
+    # leave the punctuation behind as part of the spoken dialogue.
+    body = re.sub(r"^\s*:\s*", "", body)
     # A cue containing only SDH labels often leaves one or more dialogue dashes
     # behind after the labels are removed. Treat punctuation-only remnants as
     # empty instead of sending strings such as "- -" to the translator.

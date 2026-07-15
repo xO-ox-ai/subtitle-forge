@@ -16,6 +16,24 @@ from step00_extract_embedded_subs import (
 
 VOCAL_MUSIC_RE = re.compile(r"\b(singing|sings?|song|lyrics?|vocal(?:s|izing)?)\b", re.IGNORECASE)
 EDGE_SPEAKER_DASH_RE = re.compile(r"^(?:[-\u2013\u2014]\s*)+|(?:\s*[-\u2013\u2014])+$")
+DESCRIPTIVE_VOICE_TAG = r"(?:FEMALE|MALE)\s+VOICE(?:\s+in\s+[A-Z][A-Za-z -]{1,30})?"
+UPPERCASE_SPEAKER_TAG = r"[A-Z][A-Z0-9 .'-]{1,40}"
+LEADING_SDH_SPEAKER_RE = re.compile(
+    rf"^(?:{DESCRIPTIVE_VOICE_TAG}|{UPPERCASE_SPEAKER_TAG})\s*:\s*"
+)
+INLINE_SDH_SPEAKER_RE = re.compile(
+    rf"\s*(?:-{{1,3}}|[\u2013\u2014])\s*(?:{DESCRIPTIVE_VOICE_TAG}|{UPPERCASE_SPEAKER_TAG})\s*:\s*"
+)
+
+
+def clean_sdh_dialogue_text(text: str) -> str:
+    """Remove SDH speaker attribution while preserving speaker turns."""
+    text = str(text or "").strip()
+    text = re.sub(r"^\s*:\s*", "", text)
+    text = LEADING_SDH_SPEAKER_RE.sub("", text, count=1)
+    text = INLINE_SDH_SPEAKER_RE.sub(" \u2014 ", text)
+    text = re.sub(r"\s+-\s+:\s*", " \u2014 ", text)
+    return re.sub(r"\s+", " ", text).strip()
 
 
 def import_english_sdh_srt(source: Path) -> dict:
@@ -43,6 +61,7 @@ def import_english_sdh_srt(source: Path) -> dict:
             continue
 
         text = EDGE_SPEAKER_DASH_RE.sub("", str(segment.get("text", ""))).strip()
+        text = clean_sdh_dialogue_text(text)
         if not text or not any(character.isalnum() for character in text):
             skipped_non_dialogue += 1
             continue

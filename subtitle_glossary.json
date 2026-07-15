@@ -1,6 +1,6 @@
 {
   "version": "subtitle-cultural-notes-20260712-v2",
-  "updated_at": "2026-07-14 02:48:37",
+  "updated_at": "2026-07-15 15:30:00",
   "usage": "cultural_notes_only",
   "schema": {
     "term": "English cultural reference matched in dialogue or OCR",
@@ -5156,6 +5156,43 @@
       "review_prompt_version": "glossary-review-20260707-v1",
       "review_model": "gpt-5.6-sol",
       "reviewed_at": "2026-07-13 22:04:42"
+    },
+    {
+      "term": "Hello from the children of Planet Earth",
+      "zh": "出自1977年旅行者金唱片的英语问候，由卡尔·萨根之子尼克·萨根录制，代表地球儿童向宇宙致意。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-15 13:10:25"
+    },
+    {
+      "term": "The Backrooms",
+      "zh": "“后室”源自2019年网络都市传说：人会意外脱离现实，坠入无限、空旷而似曾相识的“阈限空间”。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260715-v1",
+      "reviewed_at": "2026-07-15 15:30:00"
+    },
+    {
+      "term": "Cap'n Clark's Ottoman Empire",
+      "zh": "“Ottoman”既指奥斯曼帝国，也指软垫脚凳，店名借此玩家具与帝国的双关。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260715-v1",
+      "reviewed_at": "2026-07-15 15:30:00"
+    },
+    {
+      "term": "5150'd",
+      "zh": "“5150”源自加州法律第5150条，口语中指将可能危及自己、他人或严重失能者送去最长72小时的强制精神评估。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-curation-20260715-v1",
+      "reviewed_at": "2026-07-15 15:30:00"
     }
   ],
   "review_prompt_version": "glossary-review-20260707-v1"
