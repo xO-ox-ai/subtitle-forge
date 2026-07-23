@@ -10,6 +10,7 @@ from ass_polish_helpers import (
     curate_static_hint_files,
     curate_glossary_file,
     parse_polish_styles,
+    parse_polish_origins,
     polish_ass_file,
     polish_ass_files,
 )
@@ -75,7 +76,10 @@ def path_matches_selector(path: Path, selector: str) -> bool:
 
 
 def selected_ass_files(base_dir: Path, chunk: str, target_stems: list[str] | None) -> list[Path]:
-    ass_files = sorted(base_dir.glob("*.ass"))
+    # Videos and their rendered subtitles may live in season or other nested
+    # folders.  Keep discovery consistent with ``selected_videos`` so Step 9
+    # can be resumed independently after Step 8 writes an ASS beside a video.
+    ass_files = sorted(path for path in base_dir.rglob("*.ass") if path.is_file())
     raw_targets = [str(item) for item in (target_stems or []) if item]
     if raw_targets:
         selected = []
@@ -484,6 +488,7 @@ def main() -> None:
     ocr_dir = work_dir / "ocr_translated"
     notes_dir = work_dir / "notes"
     polish_styles = parse_polish_styles(args.polish_styles)
+    polish_origins = parse_polish_origins(args.polish_origins)
     polish_cache_dir = Path(args.polish_cache_dir) if args.polish_cache_dir else work_dir / "polish_cache"
     if not polish_cache_dir.is_absolute():
         polish_cache_dir = work_dir / polish_cache_dir
@@ -613,6 +618,7 @@ def main() -> None:
                 timeout=args.polish_timeout,
                 temperature=args.polish_temperature,
                 style_names=polish_styles,
+                allowed_origins=polish_origins,
                 cache_dir=polish_cache_dir,
                 force=args.polish_force,
                 codex_command=args.polish_codex_command,

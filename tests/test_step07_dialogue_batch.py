@@ -112,6 +112,29 @@ class Step07DialogueBatchTests(unittest.TestCase):
 
         self.assertEqual([[item["id"] for item in payload["items"]] for payload in client.payloads], [[1, 2], [4, 5, 6]])
 
+    def test_existing_chinese_is_preserved_and_only_gaps_are_translated(self):
+        data = segments(4)
+        data[1]["zh"] = "片源原有中文"
+        data[1]["translation_origin"] = "embedded_chinese"
+        client = BatchClient()
+        with tempfile.TemporaryDirectory() as temp_dir:
+            base = Path(temp_dir)
+            source = base / "sample.json"
+            output = base / "translated.json"
+            save_json(source, {"segments": data})
+
+            translate_dialogue_file(client, base, source, output, 4, 4)
+
+            translated = load_json(output, {})["segments"]
+            self.assertEqual(translated[1]["zh"], "片源原有中文")
+            self.assertEqual(translated[1]["translation_origin"], "embedded_chinese")
+            self.assertEqual(translated[0]["translation_origin"], "qwen")
+            self.assertEqual(translated[2]["translation_origin"], "qwen")
+            self.assertEqual(
+                [[item["id"] for item in payload["items"]] for payload in client.payloads],
+                [[1], [3, 4]],
+            )
+
 
 if __name__ == "__main__":
     unittest.main()

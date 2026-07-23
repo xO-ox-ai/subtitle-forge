@@ -38,6 +38,7 @@ ZH_FONT_SIZE = 56
 EN_FONT_SIZE = 34
 MUSIC_SYMBOL = "\u266a"
 CHANT_SYMBOL = "\u2726"
+SONG_TRANSLATIONS_FILE = Path(__file__).resolve().with_name("embedded_song_translations.json")
 ZH_PUNCTUATION = "，。！？；：、,.!?:; "
 EN_TOKEN_RE = re.compile(r"[A-Za-z0-9]+(?:['’][A-Za-z0-9]+)?")
 MOJIBAKE_MUSIC_MARK_RE = re.compile(
@@ -54,8 +55,15 @@ def seconds_to_ass(value: float) -> str:
     return f"{hours}:{minutes:02d}:{seconds:02d}.{centiseconds:02d}"
 
 
-def make_dialogue(start: float, end: float, style: str, text: str, layer: int = 0) -> str:
-    return f"Dialogue: {layer},{seconds_to_ass(start)},{seconds_to_ass(end)},{style},,0,0,0,,{text}"
+def make_dialogue(
+    start: float,
+    end: float,
+    style: str,
+    text: str,
+    layer: int = 0,
+    name: str = "",
+) -> str:
+    return f"Dialogue: {layer},{seconds_to_ass(start)},{seconds_to_ass(end)},{style},{name},0,0,0,,{text}"
 
 
 def normalize_ass_text(text: str) -> str:
@@ -278,6 +286,33 @@ def split_zh_by_ratios(zh_core: str, en_chunks: list[str]) -> list[str]:
     return pieces
 
 
+def coalesce_text_chunks(chunks: list[str], max_chunks: int) -> list[str]:
+    """Merge adjacent untimed clauses into a small number of readable cues."""
+    chunks = [normalize_plain_text(chunk) for chunk in chunks if normalize_plain_text(chunk)]
+    if len(chunks) <= max_chunks or max_chunks <= 0:
+        return chunks
+    total = sum(max(len(chunk), 1) for chunk in chunks)
+    result: list[str] = []
+    current: list[str] = []
+    current_weight = 0
+    consumed = 0
+    for index, chunk in enumerate(chunks):
+        current.append(chunk)
+        weight = max(len(chunk), 1)
+        current_weight += weight
+        consumed += weight
+        groups_left = max_chunks - len(result) - 1
+        items_left = len(chunks) - index - 1
+        target = max((total - (consumed - current_weight)) / max(groups_left + 1, 1), 1)
+        if groups_left > 0 and items_left >= groups_left and current_weight >= target:
+            result.append(" ".join(current))
+            current = []
+            current_weight = 0
+    if current:
+        result.append(" ".join(current))
+    return result
+
+
 def music_core(text: str) -> str:
     return normalize_plain_text(text).strip().strip(MUSIC_SYMBOL).strip()
 
@@ -307,6 +342,29 @@ def has_music_marks(text: str) -> bool:
     return any(symbol in value for symbol in (MUSIC_SYMBOL, "\u266b", "\u266c")) or bool(
         MOJIBAKE_MUSIC_MARK_RE.search(value)
     )
+
+
+def song_translation_key(text: str) -> str:
+    value = normalize_plain_text(text)
+    value = value.replace(MUSIC_SYMBOL, " ").replace("\u266b", " ").replace("\u266c", " ")
+    value = re.sub(r"^\s*[-\u2013\u2014]+\s*", "", value)
+    value = re.sub(r"\s*[-\u2013\u2014]+\s*$", "", value)
+    return re.sub(r"\s+", " ", value).strip()
+
+
+def load_song_translations() -> dict[str, str]:
+    if not SONG_TRANSLATIONS_FILE.exists():
+        return {}
+    try:
+        with SONG_TRANSLATIONS_FILE.open(encoding="utf-8-sig") as file:
+            data = json.load(file)
+    except (OSError, json.JSONDecodeError):
+        return {}
+    return {
+        str(key).strip(): normalize_plain_text(value)
+        for key, value in data.items()
+        if str(key).strip() and normalize_plain_text(value)
+    }
 
 
 def decorate_zh(text: str, is_music: bool, is_chant: bool) -> str:
@@ -430,13 +488,21 @@ def display_parts(seg: dict, start: float, end: float, zh_text: str, en_text: st
         return semantic_parts
 
     needs_split = display_needs_split(duration, zh_core, en_plain, words)
-    if not words and (duration > DISPLAY_MAX_DURATION or len(en_plain) > EN_DISPLAY_MAX_CHARS or len(zh_core) > ZH_DISPLAY_MAX_CHARS):
-        needs_split = True
+    if not words:
+        # Embedded subtitle cues have no word-level timestamps. Splitting a
+        # short but punctuation-heavy cue by character ratio can create a
+        # burst of sub-second fragments (notably rhythmic counting) and leave
+        # some fragments without Chinese. Keep short cues intact and let ASS
+        # wrapping handle their visual width; only time-split genuinely long
+        # cues where the duration provides enough display time.
+        needs_split = duration > DISPLAY_MAX_DURATION
     if not needs_split:
         return [{"start": start, "end": end, "zh": decorate_zh(zh_core, is_music, is_chant), "en": en_plain}]
 
     if not words:
-        en_chunks = [chunk for chunk in re.split(r"(?<=[,.!?;:])\s+", en_plain) if chunk] if len(en_plain) > EN_DISPLAY_MAX_CHARS else [en_plain]
+        en_chunks = [chunk for chunk in re.split(r"(?<=[.!?;:])\s+", en_plain) if chunk] if len(en_plain) > EN_DISPLAY_MAX_CHARS else [en_plain]
+        max_chunks = max(1, int(duration // max(DISPLAY_MIN_DURATION * 1.8, 0.1)))
+        en_chunks = coalesce_text_chunks(en_chunks, max_chunks)
         if len(en_chunks) <= 1:
             return [{"start": start, "end": end, "zh": decorate_zh(zh_core, is_music, is_chant), "en": en_plain}]
         zh_chunks = split_zh_by_ratios(zh_core, en_chunks)
@@ -483,10 +549,17 @@ def render_ass(json_file: Path, out_ass: Path) -> int:
         data = json.load(f)
 
     segments = data.get("segments", [])
+    song_translations = load_song_translations()
     override_counts = apply_segment_overrides(segments, load_overrides(out_ass.parent, json_file.stem))
     if override_counts["segments"]:
         print(f"[overrides] {json_file.name}: {override_counts}")
-    lines = [ASS_HEADER]
+    header = ASS_HEADER
+    if str(data.get("source", "")).startswith("embedded_bilingual"):
+        header = header.replace(
+            "ScriptType: v4.00+",
+            f"; Source: {data.get('source')}\nScriptType: v4.00+",
+        )
+    lines = [header]
     events: list[dict] = []
     for seg in segments:
         start = float(seg.get("start", 0))
@@ -495,13 +568,38 @@ def render_ass(json_file: Path, out_ass: Path) -> int:
         en_text = str(seg.get("en_wrap", seg.get("text", ""))).strip()
         is_music = bool(seg.get("is_music", False)) or has_music_marks(en_text) or has_music_marks(zh_text)
         is_chant = is_chant_segment(seg)
+        origin = str(seg.get("translation_origin", "")).strip().lower()
+        ass_name = (
+            "QWEN_ZH"
+            if origin == "qwen"
+            else (
+                "EMBEDDED_CHINESE"
+                if origin == "embedded_chinese"
+                else ("MANUAL_ZH" if origin == "manual" else "")
+            )
+        )
+        if is_music and not zh_text:
+            zh_text = song_translations.get(song_translation_key(en_text), "")
         if not zh_text and not en_text:
             continue
         style = "BILINGUAL_CHANT" if is_chant and not is_music else ("BILINGUAL_MUSIC" if is_music else "BILINGUAL")
         for part in display_parts(seg, start, end, zh_text, en_text):
             text = make_bilingual_text(part["zh"], part["en"], style)
             if text:
-                events.append({"start": part["start"], "end": part["end"], "style": style, "text": text})
+                events.append(
+                    {
+                        "start": part["start"],
+                        "end": part["end"],
+                        "style": style,
+                        "text": text,
+                        "name": ass_name,
+                    }
+                )
+
+    # A long aligned dialogue segment can contain a shorter music segment.
+    # Expansion into display parts must be re-sorted before collision trimming
+    # so a later dialogue part never precedes the nested music cue.
+    events.sort(key=lambda event: (float(event["start"]), float(event["end"]), str(event["style"])))
 
     written = 0
     for index, event in enumerate(events):
@@ -514,7 +612,7 @@ def render_ass(json_file: Path, out_ass: Path) -> int:
             end = max(start + MIN_TRIMMED_DURATION, next_start - ASS_EVENT_GAP)
         text = event["text"]
         if text:
-            lines.append(make_dialogue(start, end, event["style"], text, layer=0))
+            lines.append(make_dialogue(start, end, event["style"], text, layer=0, name=event.get("name", "")))
             written += 1
 
     with out_ass.open("w", encoding="utf-8-sig") as f:
@@ -527,8 +625,11 @@ def main() -> None:
     base_dir = Path(args.base_dir).resolve()
     work_dir = work_dir_for(base_dir, args.work_dir)
     translated_dir = work_dir / "translated"
+    videos_by_stem: dict[str, Path] = {}
     try:
-        stems = {video.stem for video in selected_videos(base_dir, args.chunk, args.target_stem)}
+        videos = selected_videos(base_dir, args.chunk, args.target_stem)
+        videos_by_stem = {video.stem: video for video in videos}
+        stems = set(videos_by_stem)
     except FileNotFoundError:
         # Permit exact translated JSON selection when a subtitle-only project
         # has no matching video file in the project root.
@@ -546,7 +647,8 @@ def main() -> None:
 
     count = 0
     for json_file in json_files:
-        out_ass = base_dir / f"{json_file.stem}.ass"
+        video = videos_by_stem.get(json_file.stem)
+        out_ass = (video.parent if video else base_dir) / f"{json_file.stem}.ass"
         print(f"[write] {out_ass.name}")
         write_status(base_dir, "V2_STEP8", out_ass.name, "render ASS")
         written = render_ass(json_file, out_ass)

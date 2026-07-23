@@ -1082,6 +1082,7 @@ def clear_empty_segment(seg: dict) -> None:
     seg["is_chant"] = False
     seg.pop("display_units", None)
     seg.pop("display_units_source", None)
+    seg.pop("translation_origin", None)
 
 
 def apply_translation_result(client, seg: dict, en_text: str, segment_kind: str, result: dict) -> str:
@@ -1094,6 +1095,7 @@ def apply_translation_result(client, seg: dict, en_text: str, segment_kind: str,
     seg["is_music"] = is_music
     seg["kind"] = segment_kind
     seg["is_chant"] = segment_kind == "chant"
+    seg["translation_origin"] = "qwen"
     request_display_units = semantic_split_requested(seg, en_text)
     units = clean_display_units(result.get("display_units"), en_text) if request_display_units else []
     if request_display_units and not units:
@@ -1112,6 +1114,8 @@ def consecutive_dialogue_indices(segments: list[dict], start: int, batch_size: i
     cursor = start
     while cursor < len(segments) and len(indices) < max(batch_size, 1):
         seg = segments[cursor]
+        if str(seg.get("zh", "")).strip():
+            break
         en_text = strip_speaker_placeholders(seg.get("text", ""))
         if not en_text:
             clear_empty_segment(seg)
@@ -1150,6 +1154,21 @@ def translate_dialogue_file(
         if not en_text:
             clear_empty_segment(seg)
             update_progress_status(base_dir, "V2_STEP7", json_file.stem, index, total, "", "")
+            offset += 1
+            continue
+
+        existing_zh = str(seg.get("zh", "")).strip()
+        if existing_zh:
+            seg.setdefault("translation_origin", "embedded_chinese")
+            update_progress_status(
+                base_dir,
+                "V2_STEP7",
+                json_file.stem,
+                index,
+                total,
+                en_text,
+                existing_zh,
+            )
             offset += 1
             continue
 
@@ -1439,6 +1458,8 @@ def main() -> None:
     # duplicate work; everything else (embedded subtitles included) is eligible.
     ocr_path_stems = {path.stem for path in pending_ocr}
     def collect_pending_notes() -> list[Path]:
+        if args.skip_ocr:
+            return []
         return [
             translated_dir / path.name
             for path in dialogue_files

@@ -1,6 +1,6 @@
 {
   "version": "subtitle-cultural-notes-20260712-v2",
-  "updated_at": "2026-07-15 15:30:00",
+  "updated_at": "2026-07-23 15:54:54",
   "usage": "cultural_notes_only",
   "schema": {
     "term": "English cultural reference matched in dialogue or OCR",
@@ -5193,6 +5193,294 @@
       "reviewed_by": "codex",
       "review_prompt_version": "manual-curation-20260715-v1",
       "reviewed_at": "2026-07-15 15:30:00"
+    },
+    {
+      "term": "Jesus Christ",
+      "zh": "耶稣基督是基督教核心人物；其名字在英语口语中也常被用作表达震惊、恼怒或无奈的强烈感叹。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-23 10:52:05"
+    },
+    {
+      "term": "California Pizza Kitchen",
+      "zh": "加州比萨厨房是美国休闲餐饮连锁店，以加州风格创意披萨闻名，也是美剧中常见的大众餐饮品牌。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-23 10:52:05"
+    },
+    {
+      "term": "Bachir Gemayel",
+      "zh": "巴希尔·杰马耶勒是黎巴嫩长枪党领袖，1982年当选总统后尚未就职便遇刺，牵动内战局势。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-23 10:52:05"
+    },
+    {
+      "term": "Rosh Hashanah",
+      "zh": "犹太新年是犹太历的重要节日，通常在公历九至十月举行，标志反省、悔改与新一年的开始。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-23 10:52:05"
+    },
+    {
+      "term": "Balfour Declaration",
+      "zh": "贝尔福宣言是英国政府1917年发表的声明，支持在巴勒斯坦建立犹太民族家园，深刻影响巴以历史。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-23 10:52:05"
+    },
+    {
+      "term": "Meal Train",
+      "zh": "Meal Train既指美国互助送餐网站，也指亲友排班为产妇、病患或丧亲家庭送饭的社区互助习俗。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-23 10:52:05"
+    },
+    {
+      "term": "Hebrew Gematria",
+      "zh": "希伯来字母数值法把每个字母对应到数字，用于解释词语间的数值联系，常见于犹太经典与神秘主义。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-23 10:52:05"
+    },
+    {
+      "term": "Holy Spirit",
+      "zh": "圣灵是基督教三位一体中的第三个位格，被理解为上帝在人间的临在，并赐予信徒引导与力量。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-23 10:52:05"
+    },
+    {
+      "term": "MIA",
+      "zh": "MIA原是美军术语，意为行动中失踪；在现代英语口语中常泛指某人突然消失、失联或迟迟未露面。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-23 10:52:05"
+    },
+    {
+      "term": "Max Manus",
+      "zh": "马克斯·曼努斯，挪威二战抵抗战士，以破坏德军舰船等行动闻名，战后成为民族英雄。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-23 15:33:15"
+    },
+    {
+      "term": "Heil Hitler",
+      "zh": "意为“希特勒万岁”，是纳粹德国配合举臂礼使用的效忠口号，在占领区也带有强制服从意味。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-23 15:33:15"
+    },
+    {
+      "term": "8. MAY 1945",
+      "zh": "1945年5月8日德国投降，挪威结束长达五年的纳粹占领；该日后来成为挪威解放日。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-23 15:33:15"
+    },
+    {
+      "term": "Norwegian seamen",
+      "zh": "二战期间，挪威商船海员为盟军运输军需物资，承受重大伤亡，是挪威战争贡献的重要象征。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-23 15:33:15"
+    },
+    {
+      "term": "War Cross",
+      "zh": "战争十字勋章是挪威最高级别的英勇军事勋章，设于二战期间，授予有杰出战功者。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-23 15:33:15"
+    },
+    {
+      "term": "Akershus fortress",
+      "zh": "阿克什胡斯要塞是奥斯陆的中世纪城堡和军事要地，纳粹占领时期曾在此处决挪威抵抗者。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-23 15:33:15"
+    },
+    {
+      "term": "Jens Christian Hauge",
+      "zh": "延斯·克里斯蒂安·豪格曾领导挪威抵抗组织米洛格，战后成为国防部长及重要政治人物。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-23 15:33:15"
+    },
+    {
+      "term": "Distinguished Service Order",
+      "zh": "杰出服务勋章是英国军事勋章，主要授予战时表现卓越的军官，尤重实际作战中的领导功绩。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-23 15:33:15"
+    },
+    {
+      "term": "War Cross with two swords",
+      "zh": "带双剑战争十字勋章表示获授挪威战争十字勋章后再获嘉奖，并非独立的更高勋章等级。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-23 15:33:15"
+    },
+    {
+      "term": "Jaeger Clade",
+      "zh": "耶格·克莱德是剧中主角的名字，名字中的'Jaeger'在德语中意为'猎人'，常用于科幻作品中象征战士或机甲驾驶员。",
+      "source": "qwen",
+      "reviewed": false
+    },
+    {
+      "term": "Searcher Clade",
+      "zh": "索奇·克莱德是主角的儿子，'Searcher'意为探索者，反映其冒险精神，名字延续了家族以职业为名的传统。",
+      "source": "qwen",
+      "reviewed": false
+    },
+    {
+      "term": "Mr Clade",
+      "zh": "剧中人物坚持称主角为'克莱德先生'，体现西方文化中对长辈或上级的尊重，即使对方是父亲也不直呼其名。",
+      "source": "qwen",
+      "reviewed": false
+    },
+    {
+      "term": "PrimaI Outpost",
+      "zh": "《拓荒日记》是剧中虚构的热门生存类节目，类似现实中的《荒野求生》，反映未来社会对极限冒险的娱乐化追捧。",
+      "source": "qwen",
+      "reviewed": false
+    },
+    {
+      "term": "Caspian",
+      "zh": "卡斯宾是剧中粉丝名字，源自《纳尼亚传奇》中的王子名，常用于表达对英雄的仰慕。",
+      "source": "qwen",
+      "reviewed": false
+    },
+    {
+      "term": "Captain Pulk",
+      "zh": "波克船长是任务指挥官，姓氏Pulk可能致敬科幻经典《星际迷航》中的舰长文化。",
+      "source": "qwen",
+      "reviewed": false
+    },
+    {
+      "term": "Atlas Range",
+      "zh": "阿特拉斯山脉之名借自希腊神话中背负苍穹的泰坦阿特拉斯，常象征重担、边界与未知。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-23 15:54:54"
+    },
+    {
+      "term": "Avalonia",
+      "zh": "阿瓦隆是剧中虚构的未来世界，名字源于亚瑟王传说中的神秘岛屿，象征希望与救赎之地。",
+      "source": "qwen",
+      "reviewed": false
+    },
+    {
+      "term": "Rung and Rafters",
+      "zh": "《辐条和椽子》是剧中虚构的儿童动画片，风格类似《小熊维尼》或《海绵宝宝》，代表流行文化。",
+      "source": "qwen",
+      "reviewed": false
+    },
+    {
+      "term": "Candy Jams",
+      "zh": "《糖果堵车》是剧中虚构的喜剧动画，名字融合糖果与交通堵塞，类似《小马宝莉》的幽默设定。",
+      "source": "qwen",
+      "reviewed": false
+    },
+    {
+      "term": "Battle trip",
+      "zh": "《战斗之旅》是剧中虚构的冒险类真人秀，类似《幸存者》或《权力的游戏》的娱乐节目形式。",
+      "source": "qwen",
+      "reviewed": false
+    },
+    {
+      "term": "The Venture",
+      "zh": "勇气号是剧中飞船名称，源自人类探索精神的象征，常见于太空题材作品如《发现号》或《旅行者号",
+      "source": "qwen",
+      "reviewed": false
+    },
+    {
+      "term": "President Mal",
+      "zh": "梅尔是飞船的领袖，名字可能致敬《星际迷航》中的舰长形象，代表权威与担当",
+      "source": "qwen",
+      "reviewed": false
+    },
+    {
+      "term": "Pando",
+      "zh": "潘多是美国犹他州由同一根系相连的巨型颤杨克隆群，被视为地球上规模最大的单一生物体之一。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-23 15:54:54"
+    },
+    {
+      "term": "Callisto",
+      "zh": "卡利斯托是木星第二大卫星，中文名木卫四；名称源自希腊神话中被宙斯追求的宁芙。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-23 15:54:54"
+    },
+    {
+      "term": "Legend",
+      "zh": "传奇是船员对主角的尊称，体现科幻作品中将英雄人物神化的叙事传统",
+      "source": "qwen",
+      "reviewed": false
     }
   ],
   "review_prompt_version": "glossary-review-20260707-v1"

@@ -10,6 +10,7 @@ from difflib import SequenceMatcher
 from pathlib import Path
 
 from common import add_common_args, save_json, selected_videos, work_dir_for, write_status
+from embedded_bitmap_ocr import BITMAP_SUBTITLE_CODECS, extract_bitmap_subtitle
 
 
 TEXT_SUBTITLE_CODECS = {"subrip", "ass", "ssa", "mov_text", "webvtt"}
@@ -181,10 +182,10 @@ CHANT_PHRASES = {
     ("repo", "oma", "dal", "most"),
 }
 SPEAKER_TAG_ONLY_RE = re.compile(
-    r"^(?:[A-Z][A-Z0-9 .'\-]{1,40})(?:\s*\((?:on phone|o\.s\.|v\.o\.|over phone)\))?\s*:?\s*$"
+    r"^(?:[A-Z][A-Z0-9 .'\-\u266a\u266b*?]{1,40})(?:\s*\((?:on phone|o\.s\.|v\.o\.|over phone)\))?\s*:?\s*$"
 )
 LEADING_SPEAKER_TAG_RE = re.compile(
-    r"^(?:[A-Z][A-Z0-9 .'\-]{1,40})(?:\s*\((?:on phone|o\.s\.|v\.o\.|over phone)\))?\s*:\s*"
+    r"^(?:[A-Z][A-Z0-9 .'\-\u266a\u266b*?]{1,40})(?:\s*\((?:on phone|o\.s\.|v\.o\.|over phone)\))?\s*:\s*"
 )
 NON_DIALOGUE_SOUND_WORDS = {
     "alarm",
@@ -376,7 +377,7 @@ def subtitle_streams(video: Path) -> list[dict]:
     streams = []
     for stream in ffprobe_json(video).get("streams", []):
         codec = str(stream.get("codec_name", "")).lower()
-        if codec in TEXT_SUBTITLE_CODECS and is_english_stream(stream):
+        if codec in TEXT_SUBTITLE_CODECS | BITMAP_SUBTITLE_CODECS and is_english_stream(stream):
             streams.append(stream)
     return streams
 
@@ -475,6 +476,10 @@ def split_sdh_labels(raw_text: str) -> tuple[list[str], str]:
     # example ``(SOBBING): Standard?``.  Removing only the label must not
     # leave the punctuation behind as part of the spoken dialogue.
     body = re.sub(r"^\s*:\s*", "", body)
+    # Removing an inline SDH label from a two-speaker cue can leave two
+    # consecutive dialogue dashes (for example ``- [laughs] - Hello``).
+    # Keep the remaining speaker marker, but discard the orphaned one.
+    body = re.sub(r"^\s*[-\u2013\u2014]\s*[-\u2013\u2014]\s*", "- ", body)
     # A cue containing only SDH labels often leaves one or more dialogue dashes
     # behind after the labels are removed. Treat punctuation-only remnants as
     # empty instead of sending strings such as "- -" to the translator.
@@ -561,13 +566,23 @@ def text_similarity(left: str, right: str) -> float:
     return SequenceMatcher(None, left_norm, right_norm).ratio()
 
 
+def normalize_ocr_sdh_label(label: str) -> str:
+    # nOCR commonly renders the narrow capital I in all-caps SDH labels as a
+    # lowercase l (SlNGlNG, MUSlC). Normalizing labels only avoids changing
+    # ordinary dialogue while retaining their semantic music/chant role.
+    return str(label or "").replace("l", "I").replace("1", "I")
+
+
 def label_is_chant(label: str) -> bool:
-    return bool(CHANT_LABEL_RE.search(label or ""))
+    return bool(CHANT_LABEL_RE.search(normalize_ocr_sdh_label(label)))
 
 
 def label_is_music(label: str) -> bool:
-    label = str(label or "")
-    return bool(MUSIC_LABEL_RE.search(label)) and not NON_MUSIC_SOUND_RE.search(label)
+    label = normalize_ocr_sdh_label(label)
+    # Background-score labels such as "(ominous music playing)" are SDH
+    # effects, not lyrics. Preserve only labels that explicitly describe
+    # singing/song text; genuine note-marked lyrics are handled separately.
+    return bool(re.search(r"\b(song|singing|sings|lyrics?|chorus)\b", label, re.IGNORECASE))
 
 
 def has_music_text(text: str) -> bool:
@@ -612,7 +627,7 @@ def looks_like_chant_text(text: str, italic: bool, labels: list[str], repeated_c
     chant_ratio = chant_hits / max(len(words), 1)
     if chant_ratio >= 0.6 or (len(words) <= 4 and chant_hits >= 2):
         return True
-    if repeated_phrase(text) and common_ratio <= 0.45:
+    if italic and repeated_phrase(text) and common_ratio <= 0.45:
         return True
     if italic and repeated_count >= 2:
         return common_ratio <= 0.45
@@ -625,16 +640,22 @@ def collect_sdh_labels(cue: dict, sdh_cues: list[dict]) -> list[str]:
     labels: list[str] = []
     for sdh in sdh_cues:
         cue_overlap = overlap(cue["start"], cue["end"], sdh["start"], sdh["end"])
-        near_before = not bool(sdh.get("pure_label")) and bool(sdh.get("text")) and 0.0 <= cue["start"] - sdh["end"] <= 1.25
-        near_after = not bool(sdh.get("pure_label")) and 0.0 <= sdh["start"] - cue["end"] <= 0.75
+        time_gap = max(cue["start"] - sdh["end"], sdh["start"] - cue["end"], 0.0)
         similar = text_similarity(cue.get("text", ""), sdh.get("text", "")) >= 0.82
-        if cue_overlap >= 0.08 or near_before or near_after or similar:
+        # Standalone SDH/music markers often begin just after the previous
+        # spoken cue. Proximity alone must not transfer them to that dialogue.
+        if cue_overlap >= 0.08 or (time_gap <= 1.25 and similar):
             labels.extend(sdh.get("labels", []))
     return sorted(set(label for label in labels if label))
 
 
 def make_segment(cue: dict, labels: list[str], text_counts: Counter, source: str, index: int) -> dict | None:
     text = strip_leading_speaker_tag(cue.get("text", ""))
+    # An SDH cue can combine an orphaned music marker with the next spoken
+    # line (``- ♪\n- Dialogue``). The marker itself is not a lyric.
+    cleaned_text = re.sub(r"^\s*[-\u2013\u2014]\s*♪\s*[-\u2013\u2014]\s*", "- ", text).strip()
+    orphan_music_marker_removed = cleaned_text != text
+    text = cleaned_text
     if not text:
         return None
     if looks_like_effect_only_text(text, labels):
@@ -644,7 +665,11 @@ def make_segment(cue: dict, labels: list[str], text_counts: Counter, source: str
         english_ratio = sum(1 for word in words if word in COMMON_ENGLISH_WORDS) / max(len(words), 1) if words else 0.0
         if english_ratio >= 0.55 and not repeated_phrase(text):
             labels = [label for label in labels if not label_is_chant(label)]
-    is_music = cue.get("has_music", False) or has_music_text(text) or any(label_is_music(label) for label in labels)
+    is_music = (
+        (cue.get("has_music", False) and not orphan_music_marker_removed)
+        or has_music_text(text)
+        or any(label_is_music(label) for label in labels)
+    )
     if is_music and not WORD_RE.search(text):
         return None
     is_chant = looks_like_chant_text(text, bool(cue.get("italic")), labels, text_counts[normalize_compare(text)])
@@ -723,9 +748,18 @@ def process_video(base_dir: Path, work_dir: Path, video: Path, force: bool, keep
 
     normal_srt = embedded_subs_dir / f"{video.stem}.eng.srt"
     sdh_srt = embedded_subs_dir / f"{video.stem}.eng.sdh.srt"
-    extract_stream(video, normal_stream, normal_srt, force=force)
+    normal_codec = str(normal_stream.get("codec_name", "")).lower()
+    if normal_codec in BITMAP_SUBTITLE_CODECS:
+        extract_bitmap_subtitle(video, normal_stream, normal_srt, work_dir, force=force)
+    else:
+        extract_stream(video, normal_stream, normal_srt, force=force)
     if sdh_stream:
-        extract_stream(video, sdh_stream, sdh_srt, force=force)
+        if sdh_stream.get("index") == normal_stream.get("index"):
+            sdh_srt = normal_srt
+        elif str(sdh_stream.get("codec_name", "")).lower() in BITMAP_SUBTITLE_CODECS:
+            extract_bitmap_subtitle(video, sdh_stream, sdh_srt, work_dir, force=force)
+        else:
+            extract_stream(video, sdh_stream, sdh_srt, force=force)
     else:
         sdh_srt = normal_srt
 
@@ -738,6 +772,7 @@ def process_video(base_dir: Path, work_dir: Path, video: Path, force: bool, keep
 
     data = {
         "video": video.name,
+        "video_path": str(video.relative_to(base_dir)),
         "stem": video.stem,
         "source": "embedded_subtitle",
         "streams": {

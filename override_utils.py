@@ -116,6 +116,7 @@ def apply_segment_overrides(segments: list[dict], overrides: dict) -> dict:
                 applied = True
             if "zh" in item:
                 seg["zh"] = normalize_text(item["zh"])
+                seg["translation_origin"] = str(item.get("translation_origin") or "manual")
                 counts["translations"] += 1
                 applied = True
             if "is_music" in item:

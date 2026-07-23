@@ -1,2105 +1,2105 @@
 [
   {
     "phrase": "come on",
-    "support_count": 1,
-    "guidance": "高频口语，常按语气译成行了吧/得了吧/拜托/快点，别机械译成来吧。"
+    "guidance": "高频口语，常按语气译成行了吧/得了吧/拜托/快点，别机械译成来吧。",
+    "support_count": 1
   },
   {
     "phrase": "give me a break",
-    "support_count": 1,
-    "guidance": "通常是饶了吧/少来了/别闹了，不是字面让我休息一下。"
+    "guidance": "通常是饶了吧/少来了/别闹了，不是字面让我休息一下。",
+    "support_count": 1
   },
   {
     "phrase": "cut me some slack",
-    "support_count": 1,
-    "guidance": "通常是放我一马/别这么苛刻/通融一下。"
+    "guidance": "通常是放我一马/别这么苛刻/通融一下。",
+    "support_count": 1
   },
   {
     "phrase": "get over yourself",
-    "support_count": 1,
-    "guidance": "口语里多为别太把自己当回事/别这么自恋，不要直译成克服自己。"
+    "guidance": "口语里多为别太把自己当回事/别这么自恋，不要直译成克服自己。",
+    "support_count": 1
   },
   {
     "phrase": "i'm good",
-    "support_count": 1,
-    "guidance": "常按语境译成不用了/我没事/我挺好，不要总译成我很好。"
+    "guidance": "常按语境译成不用了/我没事/我挺好，不要总译成我很好。",
+    "support_count": 1
   },
   {
     "phrase": "i hear you",
-    "support_count": 1,
-    "guidance": "通常是我懂你意思/我明白，不是我听见你了。"
+    "guidance": "通常是我懂你意思/我明白，不是我听见你了。",
+    "support_count": 1
   },
   {
     "phrase": "fair enough",
-    "support_count": 1,
-    "guidance": "通常译成有道理/也行/这倒也是。"
+    "guidance": "通常译成有道理/也行/这倒也是。",
+    "support_count": 1
   },
   {
     "phrase": "what do you want me to say",
-    "support_count": 1,
-    "guidance": "口语里常是那你要我怎么说/我还能说什么。"
+    "guidance": "口语里常是那你要我怎么说/我还能说什么。",
+    "support_count": 1
   },
   {
     "phrase": "own it",
-    "support_count": 1,
-    "guidance": "通常是认了吧/坦然承认/别躲，别译成拥有它。"
+    "guidance": "通常是认了吧/坦然承认/别躲，别译成拥有它。",
+    "support_count": 1
   },
   {
     "phrase": "screw up",
-    "support_count": 1,
-    "guidance": "通常是搞砸/犯浑/出岔子。"
+    "guidance": "通常是搞砸/犯浑/出岔子。",
+    "support_count": 1
   },
   {
     "phrase": "get a room",
-    "support_count": 1,
-    "guidance": "调侃口吻通常是要不你俩开个房去/注意点影响，不是单纯去找房间。"
+    "guidance": "调侃口吻通常是要不你俩开个房去/注意点影响，不是单纯去找房间。",
+    "support_count": 1
   },
   {
     "phrase": "do me a favor",
-    "support_count": 1,
-    "guidance": "常按语气译成帮我个忙/拜托你了；有时也是否定口气的得了吧。"
+    "guidance": "常按语气译成帮我个忙/拜托你了；有时也是否定口气的得了吧。",
+    "support_count": 1
   },
   {
     "phrase": "play nice",
-    "support_count": 1,
-    "guidance": "通常是客气点/别闹/好好相处，不是玩得开心。"
+    "guidance": "通常是客气点/别闹/好好相处，不是玩得开心。",
+    "support_count": 1
   },
   {
     "phrase": "hold my spot",
-    "support_count": 1,
-    "guidance": "通常是给我留个位置/先替我占着。"
+    "guidance": "通常是给我留个位置/先替我占着。",
+    "support_count": 1
   },
   {
     "phrase": "cut a record",
-    "support_count": 1,
-    "guidance": "音乐行业里通常指录唱片/录专辑，不是切唱片。"
+    "guidance": "音乐行业里通常指录唱片/录专辑，不是切唱片。",
+    "support_count": 1
   },
   {
     "phrase": "cut vocals",
-    "support_count": 1,
-    "guidance": "录音语境通常指录人声/录主唱，不是切分声轨。"
+    "guidance": "录音语境通常指录人声/录主唱，不是切分声轨。",
+    "support_count": 1
   },
   {
     "phrase": "rough demo",
-    "support_count": 1,
-    "guidance": "通常是粗 demo/小样/初版试唱，不要直译成粗糙演示。"
+    "guidance": "通常是粗 demo/小样/初版试唱，不要直译成粗糙演示。",
+    "support_count": 1
   },
   {
     "phrase": "radio single",
-    "support_count": 1,
-    "guidance": "通常指主打电台单曲/送电台主打歌。"
+    "guidance": "通常指主打电台单曲/送电台主打歌。",
+    "support_count": 1
   },
   {
     "phrase": "lead single",
-    "support_count": 1,
-    "guidance": "通常指首支主打单曲/先行单曲。"
+    "guidance": "通常指首支主打单曲/先行单曲。",
+    "support_count": 1
   },
   {
     "phrase": "showcase",
-    "support_count": 1,
-    "guidance": "音乐行业里常指展示演出/试演场/行业 showcase，不是陈列柜。"
+    "guidance": "音乐行业里常指展示演出/试演场/行业 showcase，不是陈列柜。",
+    "support_count": 1
   },
   {
     "phrase": "soundcheck",
-    "support_count": 1,
-    "guidance": "演出流程通常译作试音/彩排试音，不是声音检查；只有上下文明确指名为 Soundcheck 的场地时才保留英文。"
+    "guidance": "演出流程通常译作试音/彩排试音，不是声音检查；只有上下文明确指名为 Soundcheck 的场地时才保留英文。",
+    "support_count": 1
   },
   {
     "phrase": "write with",
-    "support_count": 1,
-    "guidance": "写歌语境通常是跟某人一起写歌/合写，不是写给。"
+    "guidance": "写歌语境通常是跟某人一起写歌/合写，不是写给。",
+    "support_count": 1
   },
   {
     "phrase": "publishing deal",
-    "support_count": 1,
-    "guidance": "音乐行业里通常是版权发行合约/出版约，不是出版交易。"
+    "guidance": "音乐行业里通常是版权发行合约/出版约，不是出版交易。",
+    "support_count": 1
   },
   {
     "phrase": "get dropped",
-    "support_count": 1,
-    "guidance": "行业里常指被公司放弃/被解约/被撤下，不是掉下来。"
+    "guidance": "行业里常指被公司放弃/被解约/被撤下，不是掉下来。",
+    "support_count": 1
   },
   {
     "phrase": "backup singer",
-    "support_count": 1,
-    "guidance": "通常是伴唱/和声歌手，不是后备歌手。"
+    "guidance": "通常是伴唱/和声歌手，不是后备歌手。",
+    "support_count": 1
   },
   {
     "phrase": "headliner",
-    "support_count": 1,
-    "guidance": "演出语境通常是主咖/压轴/领衔艺人。"
+    "guidance": "演出语境通常是主咖/压轴/领衔艺人。",
+    "support_count": 1
   },
   {
     "phrase": "lineup",
-    "support_count": 1,
-    "guidance": "演出语境通常是阵容/演出名单/排班，不是排成一列。"
+    "guidance": "演出语境通常是阵容/演出名单/排班，不是排成一列。",
+    "support_count": 1
   },
   {
     "phrase": "back home",
-    "support_count": 1,
-    "guidance": "标题或包装语境通常是回家/重返家乡，不必译成生硬的回到家中。"
+    "guidance": "标题或包装语境通常是回家/重返家乡，不必译成生硬的回到家中。",
+    "support_count": 1
   },
   {
     "phrase": "number one single",
-    "support_count": 1,
-    "guidance": "榜单语境通常是冠军单曲/单曲登顶，不宜硬译成单曲冠军。"
+    "guidance": "榜单语境通常是冠军单曲/单曲登顶，不宜硬译成单曲冠军。",
+    "support_count": 1
   },
   {
     "phrase": "number one spot",
-    "support_count": 1,
-    "guidance": "通常是登顶/拿下榜首，不要总译成第一名位置。"
+    "guidance": "通常是登顶/拿下榜首，不要总译成第一名位置。",
+    "support_count": 1
   },
   {
     "phrase": "claimed the number one single spot",
-    "support_count": 1,
-    "guidance": "新闻口吻通常是单曲登顶/拿下单曲榜冠军。"
+    "guidance": "新闻口吻通常是单曲登顶/拿下单曲榜冠军。",
+    "support_count": 1
   },
   {
     "phrase": "previously on",
-    "support_count": 1,
-    "guidance": "前情提要"
+    "guidance": "前情提要",
+    "support_count": 1
   },
   {
     "phrase": "the future of",
-    "support_count": 1,
-    "guidance": "下一个"
+    "guidance": "下一个",
+    "support_count": 1
   },
   {
     "phrase": "move records",
-    "support_count": 1,
-    "guidance": "卖唱片"
+    "guidance": "卖唱片",
+    "support_count": 1
   },
   {
     "phrase": "protect your voice",
-    "support_count": 1,
-    "guidance": "保护好嗓子"
+    "guidance": "保护好嗓子",
+    "support_count": 1
   },
   {
     "phrase": "plug it in",
-    "support_count": 1,
-    "guidance": "插电"
+    "guidance": "插电",
+    "support_count": 1
   },
   {
     "phrase": "off on the wrong foot",
-    "support_count": 1,
-    "guidance": "一开始就不太对付"
+    "guidance": "一开始就不太对付",
+    "support_count": 1
   },
   {
     "phrase": "owe someone a record",
-    "support_count": 1,
-    "guidance": "欠某人一张专辑"
+    "guidance": "欠某人一张专辑",
+    "support_count": 1
   },
   {
     "phrase": "buy yourself out",
-    "support_count": 1,
-    "guidance": "花钱赎身"
+    "guidance": "花钱赎身",
+    "support_count": 1
   },
   {
     "phrase": "get stood up",
-    "support_count": 1,
-    "guidance": "被放鸽子"
+    "guidance": "被放鸽子",
+    "support_count": 1
   },
   {
     "phrase": "give us a minute",
-    "support_count": 1,
-    "guidance": "回避一下"
+    "guidance": "回避一下",
+    "support_count": 1
   },
   {
     "phrase": "take some of the pressure off",
-    "support_count": 1,
-    "guidance": "减轻一些压力"
+    "guidance": "减轻一些压力",
+    "support_count": 1
   },
   {
     "phrase": "singing somebody else's hits",
-    "support_count": 1,
-    "guidance": "唱别人的热门歌"
+    "guidance": "唱别人的热门歌",
+    "support_count": 1
   },
   {
     "phrase": "fresh, new talent",
-    "support_count": 1,
-    "guidance": "新鲜血液"
+    "guidance": "新鲜血液",
+    "support_count": 1
   },
   {
     "phrase": "reboot of the label",
-    "support_count": 1,
-    "guidance": "重启厂牌"
+    "guidance": "重启厂牌",
+    "support_count": 1
   },
   {
     "phrase": "shake hands with some suits",
-    "support_count": 1,
-    "guidance": "跟一些高管打交道"
+    "guidance": "跟一些高管打交道",
+    "support_count": 1
   },
   {
     "phrase": "get them excited about",
-    "support_count": 1,
-    "guidance": "让他们看好、支持"
+    "guidance": "让他们看好、支持",
+    "support_count": 1
   },
   {
     "phrase": "There she is.",
-    "support_count": 1,
-    "guidance": "她来了。"
+    "guidance": "她来了。",
+    "support_count": 1
   },
   {
     "phrase": "You obviously have your priorities.",
-    "support_count": 1,
-    "guidance": "看来你有更要紧的事。"
+    "guidance": "看来你有更要紧的事。",
+    "support_count": 1
   },
   {
     "phrase": "get back in the studio",
-    "support_count": 1,
-    "guidance": "回录音室"
+    "guidance": "回录音室",
+    "support_count": 1
   },
   {
     "phrase": "make something of",
-    "support_count": 1,
-    "guidance": "把……活出点名堂/做出点成果"
+    "guidance": "把……活出点名堂/做出点成果",
+    "support_count": 1
   },
   {
     "phrase": "court-appointed attorney",
-    "support_count": 1,
-    "guidance": "法院指派的律师"
+    "guidance": "法院指派的律师",
+    "support_count": 1
   },
   {
     "phrase": "throw my hat in the ring",
-    "support_count": 1,
-    "guidance": "参选；加入竞争"
+    "guidance": "参选；加入竞争",
+    "support_count": 1
   },
   {
     "phrase": "poll numbers are up",
-    "support_count": 1,
-    "guidance": "民调支持率上升"
+    "guidance": "民调支持率上升",
+    "support_count": 1
   },
   {
     "phrase": "push a date",
-    "support_count": 1,
-    "guidance": "改期；推迟档期"
+    "guidance": "改期；推迟档期",
+    "support_count": 1
   },
   {
     "phrase": "plug a new label",
-    "support_count": 1,
-    "guidance": "为新厂牌宣传；给新厂牌站台"
+    "guidance": "为新厂牌宣传；给新厂牌站台",
+    "support_count": 1
   },
   {
     "phrase": "lost my voice",
-    "support_count": 1,
-    "guidance": "歌手语境下常指失去嗓音，不是抽象的“声音”"
+    "guidance": "歌手语境下常指失去嗓音，不是抽象的“声音”",
+    "support_count": 1
   },
   {
     "phrase": "be up for it",
-    "support_count": 1,
-    "guidance": "有意愿；状态允许"
+    "guidance": "有意愿；状态允许",
+    "support_count": 1
   },
   {
     "phrase": "write someone off",
-    "support_count": 1,
-    "guidance": "不管某人；放弃某人"
+    "guidance": "不管某人；放弃某人",
+    "support_count": 1
   },
   {
     "phrase": "plead guilty",
-    "support_count": 1,
-    "guidance": "认罪"
+    "guidance": "认罪",
+    "support_count": 1
   },
   {
     "phrase": "recant",
-    "support_count": 1,
-    "guidance": "翻供；收回证词"
+    "guidance": "翻供；收回证词",
+    "support_count": 1
   },
   {
     "phrase": "read the instruction booklet",
-    "support_count": 1,
-    "guidance": "自然译为“研究一下说明书/看看说明书”，不宜生硬译“阅读小册子”"
+    "guidance": "自然译为“研究一下说明书/看看说明书”，不宜生硬译“阅读小册子”",
+    "support_count": 1
   },
   {
     "phrase": "it feels tight",
-    "support_count": 1,
-    "guidance": "身体或嗓音状态可译“发紧”"
+    "guidance": "身体或嗓音状态可译“发紧”",
+    "support_count": 1
   },
   {
     "phrase": "healing is halted by anxiety",
-    "support_count": 1,
-    "guidance": "自然译为“焦虑会影响恢复/康复”"
+    "guidance": "自然译为“焦虑会影响恢复/康复”",
+    "support_count": 1
   },
   {
     "phrase": "live in the moment",
-    "support_count": 1,
-    "guidance": "活在当下"
+    "guidance": "活在当下",
+    "support_count": 1
   },
   {
     "phrase": "get rid of her",
-    "support_count": 1,
-    "guidance": "按语境可译“甩掉她/摆脱她”"
+    "guidance": "按语境可译“甩掉她/摆脱她”",
+    "support_count": 1
   },
   {
     "phrase": "she's overthinking it",
-    "support_count": 1,
-    "guidance": "她想多了"
+    "guidance": "她想多了",
+    "support_count": 1
   },
   {
     "phrase": "make my entrance",
-    "support_count": 1,
-    "guidance": "舞台语境译“出场/登场”"
+    "guidance": "舞台语境译“出场/登场”",
+    "support_count": 1
   },
   {
     "phrase": "goodwill from the fans",
-    "support_count": 1,
-    "guidance": "粉丝的好感/善意"
+    "guidance": "粉丝的好感/善意",
+    "support_count": 1
   },
   {
     "phrase": "tip of the iceberg",
-    "support_count": 1,
-    "guidance": "冰山一角"
+    "guidance": "冰山一角",
+    "support_count": 1
   },
   {
     "phrase": "red carpet stuff",
-    "support_count": 1,
-    "guidance": "红毯的事"
+    "guidance": "红毯的事",
+    "support_count": 1
   },
   {
     "phrase": "smooth it over",
-    "support_count": 1,
-    "guidance": "摆平/把事情圆过去"
+    "guidance": "摆平/把事情圆过去",
+    "support_count": 1
   },
   {
     "phrase": "get wind of",
-    "support_count": 1,
-    "guidance": "得知风声/听到消息"
+    "guidance": "得知风声/听到消息",
+    "support_count": 1
   },
   {
     "phrase": "gag order",
-    "support_count": 1,
-    "guidance": "封口令"
+    "guidance": "封口令",
+    "support_count": 1
   },
   {
     "phrase": "co-conspirator",
-    "support_count": 1,
-    "guidance": "共谋者"
+    "guidance": "共谋者",
+    "support_count": 1
   },
   {
     "phrase": "take the deal",
-    "support_count": 1,
-    "guidance": "接受这笔交易/接受条件"
+    "guidance": "接受这笔交易/接受条件",
+    "support_count": 1
   },
   {
     "phrase": "To what do I owe the pleasure of your company?",
-    "support_count": 1,
-    "guidance": "自然口语可译“什么风把你吹来了？”"
+    "guidance": "自然口语可译“什么风把你吹来了？”",
+    "support_count": 1
   },
   {
     "phrase": "be my own boss",
-    "support_count": 1,
-    "guidance": "自己当老板"
+    "guidance": "自己当老板",
+    "support_count": 1
   },
   {
     "phrase": "twirl your hair",
-    "support_count": 1,
-    "guidance": "用手指卷头发"
+    "guidance": "用手指卷头发",
+    "support_count": 1
   },
   {
     "phrase": "come off as aloof",
-    "support_count": 1,
-    "guidance": "显得高冷/不好接近"
+    "guidance": "显得高冷/不好接近",
+    "support_count": 1
   },
   {
     "phrase": "give it up for",
-    "support_count": 1,
-    "guidance": "把掌声送给"
+    "guidance": "把掌声送给",
+    "support_count": 1
   },
   {
     "phrase": "if you'll have us",
-    "support_count": 1,
-    "guidance": "如果你愿意接纳我们"
+    "guidance": "如果你愿意接纳我们",
+    "support_count": 1
   },
   {
     "phrase": "highest honor",
-    "support_count": 1,
-    "guidance": "最高荣誉/莫大的荣幸"
+    "guidance": "最高荣誉/莫大的荣幸",
+    "support_count": 1
   },
   {
     "phrase": "come out on the road",
-    "support_count": 1,
-    "guidance": "跟着一起巡演"
+    "guidance": "跟着一起巡演",
+    "support_count": 1
   },
   {
     "phrase": "get booked as",
-    "support_count": 1,
-    "guidance": "被安排为；接到……演出"
+    "guidance": "被安排为；接到……演出",
+    "support_count": 1
   },
   {
     "phrase": "featured performer",
-    "support_count": 1,
-    "guidance": "特邀表演嘉宾"
+    "guidance": "特邀表演嘉宾",
+    "support_count": 1
   },
   {
     "phrase": "pre-opener",
-    "support_count": 1,
-    "guidance": "最早的暖场歌手"
+    "guidance": "最早的暖场歌手",
+    "support_count": 1
   },
   {
     "phrase": "Nashville tastemakers",
-    "support_count": 1,
-    "guidance": "纳什维尔的行家／业内意见领袖"
+    "guidance": "纳什维尔的行家／业内意见领袖",
+    "support_count": 1
   },
   {
     "phrase": "buyout offer",
-    "support_count": 1,
-    "guidance": "买断报价"
+    "guidance": "买断报价",
+    "support_count": 1
   },
   {
     "phrase": "assets have been frozen",
-    "support_count": 1,
-    "guidance": "资产被冻结"
+    "guidance": "资产被冻结",
+    "support_count": 1
   },
   {
     "phrase": "old money",
-    "support_count": 1,
-    "guidance": "老钱；老牌富豪阶层"
+    "guidance": "老钱；老牌富豪阶层",
+    "support_count": 1
   },
   {
     "phrase": "rub elbows with",
-    "support_count": 1,
-    "guidance": "与……套近乎；结交"
+    "guidance": "与……套近乎；结交",
+    "support_count": 1
   },
   {
     "phrase": "not at liberty to comment",
-    "support_count": 1,
-    "guidance": "不便置评"
+    "guidance": "不便置评",
+    "support_count": 1
   },
   {
     "phrase": "by the book",
-    "support_count": 1,
-    "guidance": "完全合规；按规矩办"
+    "guidance": "完全合规；按规矩办",
+    "support_count": 1
   },
   {
     "phrase": "pleaded not guilty",
-    "support_count": 1,
-    "guidance": "表示不认罪"
+    "guidance": "表示不认罪",
+    "support_count": 1
   },
   {
     "phrase": "bail hearing",
-    "support_count": 1,
-    "guidance": "保释听证会"
+    "guidance": "保释听证会",
+    "support_count": 1
   },
   {
     "phrase": "unknown quantity",
-    "support_count": 1,
-    "guidance": "没什么知名度；前景难料的人"
+    "guidance": "没什么知名度；前景难料的人",
+    "support_count": 1
   },
   {
     "phrase": "take a chance",
-    "support_count": 1,
-    "guidance": "冒险给机会"
+    "guidance": "冒险给机会",
+    "support_count": 1
   },
   {
     "phrase": "stay tuned for your chance to win",
-    "support_count": 1,
-    "guidance": "继续收听，就有机会赢取奖品或门票"
+    "guidance": "继续收听，就有机会赢取奖品或门票",
+    "support_count": 1
   },
   {
     "phrase": "see it in writing",
-    "support_count": 1,
-    "guidance": "看到白纸黑字"
+    "guidance": "看到白纸黑字",
+    "support_count": 1
   },
   {
     "phrase": "swing by and say hello",
-    "support_count": 1,
-    "guidance": "顺路来打个招呼"
+    "guidance": "顺路来打个招呼",
+    "support_count": 1
   },
   {
     "phrase": "kill it",
-    "support_count": 1,
-    "guidance": "表现出色、惊艳全场"
+    "guidance": "表现出色、惊艳全场",
+    "support_count": 1
   },
   {
     "phrase": "play by their rules",
-    "support_count": 1,
-    "guidance": "按他们的规矩来"
+    "guidance": "按他们的规矩来",
+    "support_count": 1
   },
   {
     "phrase": "show of support",
-    "support_count": 1,
-    "guidance": "表态支持"
+    "guidance": "表态支持",
+    "support_count": 1
   },
   {
     "phrase": "go out on the road",
-    "support_count": 1,
-    "guidance": "去巡演"
+    "guidance": "去巡演",
+    "support_count": 1
   },
   {
     "phrase": "on the road with",
-    "support_count": 1,
-    "guidance": "跟……一起巡演"
+    "guidance": "跟……一起巡演",
+    "support_count": 1
   },
   {
     "phrase": "opening for",
-    "support_count": 1,
-    "guidance": "给……当开场嘉宾"
+    "guidance": "给……当开场嘉宾",
+    "support_count": 1
   },
   {
     "phrase": "tour bus",
-    "support_count": 1,
-    "guidance": "巡演巴士"
+    "guidance": "巡演巴士",
+    "support_count": 1
   },
   {
     "phrase": "knock boots with",
-    "support_count": 1,
-    "guidance": "和……上床"
+    "guidance": "和……上床",
+    "support_count": 1
   },
   {
     "phrase": "drop down to A",
-    "support_count": 1,
-    "guidance": "降到A调"
+    "guidance": "降到A调",
+    "support_count": 1
   },
   {
     "phrase": "fit my brand",
-    "support_count": 1,
-    "guidance": "贴合我的品牌形象"
+    "guidance": "贴合我的品牌形象",
+    "support_count": 1
   },
   {
     "phrase": "open the doors",
-    "support_count": 1,
-    "guidance": "开门放观众进场"
+    "guidance": "开门放观众进场",
+    "support_count": 1
   },
   {
     "phrase": "get back to somebody",
-    "support_count": 1,
-    "guidance": "回复某人的消息"
+    "guidance": "回复某人的消息",
+    "support_count": 1
   },
   {
     "phrase": "hired hand",
-    "support_count": 1,
-    "guidance": "雇工"
+    "guidance": "雇工",
+    "support_count": 1
   },
   {
     "phrase": "put me on speakerphone",
-    "support_count": 1,
-    "guidance": "开免提"
+    "guidance": "开免提",
+    "support_count": 1
   },
   {
     "phrase": "headline",
-    "support_count": 1,
-    "guidance": "担任压轴；压轴演出"
+    "guidance": "担任压轴；压轴演出",
+    "support_count": 1
   },
   {
     "phrase": "acts performing",
-    "support_count": 1,
-    "guidance": "演出的艺人/组合"
+    "guidance": "演出的艺人/组合",
+    "support_count": 1
   },
   {
     "phrase": "make the space for someone",
-    "support_count": 1,
-    "guidance": "给某人安排位置/名额"
+    "guidance": "给某人安排位置/名额",
+    "support_count": 1
   },
   {
     "phrase": "build a life together",
-    "support_count": 1,
-    "guidance": "一起过日子"
+    "guidance": "一起过日子",
+    "support_count": 1
   },
   {
     "phrase": "Here's the thing.",
-    "support_count": 1,
-    "guidance": "是这样。"
+    "guidance": "是这样。",
+    "support_count": 1
   },
   {
     "phrase": "pull the plug",
-    "support_count": 1,
-    "guidance": "叫停；中止"
+    "guidance": "叫停；中止",
+    "support_count": 1
   },
   {
     "phrase": "girl code",
-    "support_count": 1,
-    "guidance": "姐妹规矩；女生之间的规矩"
+    "guidance": "姐妹规矩；女生之间的规矩",
+    "support_count": 1
   },
   {
     "phrase": "play games",
-    "support_count": 1,
-    "guidance": "玩感情游戏"
+    "guidance": "玩感情游戏",
+    "support_count": 1
   },
   {
     "phrase": "be worth your while",
-    "support_count": 1,
-    "guidance": "不会让你后悔；值得你花时间"
+    "guidance": "不会让你后悔；值得你花时间",
+    "support_count": 1
   },
   {
     "phrase": "play the festival",
-    "support_count": 1,
-    "guidance": "在音乐节演出"
+    "guidance": "在音乐节演出",
+    "support_count": 1
   },
   {
     "phrase": "come on board",
-    "support_count": 1,
-    "guidance": "加入；参与进来"
+    "guidance": "加入；参与进来",
+    "support_count": 1
   },
   {
     "phrase": "pull some strings",
-    "support_count": 1,
-    "guidance": "托关系；动用关系"
+    "guidance": "托关系；动用关系",
+    "support_count": 1
   },
   {
     "phrase": "get the message",
-    "support_count": 1,
-    "guidance": "明白对方的意思；识趣"
+    "guidance": "明白对方的意思；识趣",
+    "support_count": 1
   },
   {
     "phrase": "have merit",
-    "support_count": 1,
-    "guidance": "有根据"
+    "guidance": "有根据",
+    "support_count": 1
   },
   {
     "phrase": "screw someone over",
-    "support_count": 1,
-    "guidance": "摆某人一道；坑某人"
+    "guidance": "摆某人一道；坑某人",
+    "support_count": 1
   },
   {
     "phrase": "run the numbers",
-    "support_count": 1,
-    "guidance": "算过账；核算过"
+    "guidance": "算过账；核算过",
+    "support_count": 1
   },
   {
     "phrase": "make my quarter",
-    "support_count": 1,
-    "guidance": "完成我这个季度的业绩"
+    "guidance": "完成我这个季度的业绩",
+    "support_count": 1
   },
   {
     "phrase": "back up",
-    "support_count": 1,
-    "guidance": "退后"
+    "guidance": "退后",
+    "support_count": 1
   },
   {
     "phrase": "take this personally",
-    "support_count": 1,
-    "guidance": "往心里去"
+    "guidance": "往心里去",
+    "support_count": 1
   },
   {
     "phrase": "left a couple messages",
-    "support_count": 1,
-    "guidance": "留了几条留言"
+    "guidance": "留了几条留言",
+    "support_count": 1
   },
   {
     "phrase": "be swamped",
-    "support_count": 1,
-    "guidance": "忙得不可开交"
+    "guidance": "忙得不可开交",
+    "support_count": 1
   },
   {
     "phrase": "up to speed on everything",
-    "support_count": 1,
-    "guidance": "了解全部情况"
+    "guidance": "了解全部情况",
+    "support_count": 1
   },
   {
     "phrase": "new material",
-    "support_count": 1,
-    "guidance": "新歌；新作品"
+    "guidance": "新歌；新作品",
+    "support_count": 1
   },
   {
     "phrase": "skim the surface",
-    "support_count": 1,
-    "guidance": "浮于表面；浅尝辄止"
+    "guidance": "浮于表面；浅尝辄止",
+    "support_count": 1
   },
   {
     "phrase": "get this verse down",
-    "support_count": 1,
-    "guidance": "把这段歌词记下来"
+    "guidance": "把这段歌词记下来",
+    "support_count": 1
   },
   {
     "phrase": "return my calls",
-    "support_count": 1,
-    "guidance": "回我电话"
+    "guidance": "回我电话",
+    "support_count": 1
   },
   {
     "phrase": "record my song",
-    "support_count": 1,
-    "guidance": "录我的歌"
+    "guidance": "录我的歌",
+    "support_count": 1
   },
   {
     "phrase": "website up",
-    "support_count": 1,
-    "guidance": "网站上线"
+    "guidance": "网站上线",
+    "support_count": 1
   },
   {
     "phrase": "put out a blurb",
-    "support_count": 1,
-    "guidance": "发通稿；发声明"
+    "guidance": "发通稿；发声明",
+    "support_count": 1
   },
   {
     "phrase": "sequence the album",
-    "support_count": 1,
-    "guidance": "给专辑排曲序"
+    "guidance": "给专辑排曲序",
+    "support_count": 1
   },
   {
     "phrase": "the record comes out",
-    "support_count": 1,
-    "guidance": "专辑发行"
+    "guidance": "专辑发行",
+    "support_count": 1
   },
   {
     "phrase": "number one party",
-    "support_count": 1,
-    "guidance": "冠军单曲庆功派对"
+    "guidance": "冠军单曲庆功派对",
+    "support_count": 1
   },
   {
     "phrase": "unique tweets",
-    "support_count": 1,
-    "guidance": "提到某人的不同推文"
+    "guidance": "提到某人的不同推文",
+    "support_count": 1
   },
   {
     "phrase": "get to sleep in my own bed",
-    "support_count": 1,
-    "guidance": "终于能睡自己的床"
+    "guidance": "终于能睡自己的床",
+    "support_count": 1
   },
   {
     "phrase": "write some time",
-    "support_count": 1,
-    "guidance": "改天一起写歌"
+    "guidance": "改天一起写歌",
+    "support_count": 1
   },
   {
     "phrase": "grab a room",
-    "support_count": 1,
-    "guidance": "找个房间"
+    "guidance": "找个房间",
+    "support_count": 1
   },
   {
     "phrase": "make noise in this marketplace",
-    "support_count": 1,
-    "guidance": "在这个市场闹出点动静"
+    "guidance": "在这个市场闹出点动静",
+    "support_count": 1
   },
   {
     "phrase": "break out",
-    "support_count": 1,
-    "guidance": "打出名堂"
+    "guidance": "打出名堂",
+    "support_count": 1
   },
   {
     "phrase": "press tour",
-    "support_count": 1,
-    "guidance": "媒体宣传"
+    "guidance": "媒体宣传",
+    "support_count": 1
   },
   {
     "phrase": "lay something down",
-    "support_count": 1,
-    "guidance": "先录点东西"
+    "guidance": "先录点东西",
+    "support_count": 1
   },
   {
     "phrase": "work around your schedule",
-    "support_count": 1,
-    "guidance": "配合你的时间"
+    "guidance": "配合你的时间",
+    "support_count": 1
   },
   {
     "phrase": "get my album on the shelf",
-    "support_count": 1,
-    "guidance": "让我的专辑上架"
+    "guidance": "让我的专辑上架",
+    "support_count": 1
   },
   {
     "phrase": "give them a nod",
-    "support_count": 1,
-    "guidance": "冲他们点个头"
+    "guidance": "冲他们点个头",
+    "support_count": 1
   },
   {
     "phrase": "stay off the grid",
-    "support_count": 1,
-    "guidance": "断联一阵子；不宜直译为离网"
+    "guidance": "断联一阵子；不宜直译为离网",
+    "support_count": 1
   },
   {
     "phrase": "shoestring budget",
-    "support_count": 1,
-    "guidance": "预算很紧"
+    "guidance": "预算很紧",
+    "support_count": 1
   },
   {
     "phrase": "dry run",
-    "support_count": 1,
-    "guidance": "排一遍；预演"
+    "guidance": "排一遍；预演",
+    "support_count": 1
   },
   {
     "phrase": "take someone on",
-    "support_count": 1,
-    "guidance": "跟某人一较高下"
+    "guidance": "跟某人一较高下",
+    "support_count": 1
   },
   {
     "phrase": "pale in comparison",
-    "support_count": 1,
-    "guidance": "相比之下黯然失色"
+    "guidance": "相比之下黯然失色",
+    "support_count": 1
   },
   {
     "phrase": "let someone walk",
-    "support_count": 1,
-    "guidance": "就这么放了某人；让某人逍遥法外"
+    "guidance": "就这么放了某人；让某人逍遥法外",
+    "support_count": 1
   },
   {
     "phrase": "bounce off the walls",
-    "support_count": 1,
-    "guidance": "太闹腾；兴奋过头"
+    "guidance": "太闹腾；兴奋过头",
+    "support_count": 1
   },
   {
     "phrase": "smother someone",
-    "support_count": 1,
-    "guidance": "围着某人不放；过度关照"
+    "guidance": "围着某人不放；过度关照",
+    "support_count": 1
   },
   {
     "phrase": "be in your corner",
-    "support_count": 1,
-    "guidance": "站在你这边；支持你"
+    "guidance": "站在你这边；支持你",
+    "support_count": 1
   },
   {
     "phrase": "media blackout",
-    "support_count": 1,
-    "guidance": "媒体封锁；拒绝接受媒体曝光"
+    "guidance": "媒体封锁；拒绝接受媒体曝光",
+    "support_count": 1
   },
   {
     "phrase": "keep under wraps",
-    "support_count": 1,
-    "guidance": "暂时保密"
+    "guidance": "暂时保密",
+    "support_count": 1
   },
   {
     "phrase": "sold out the Bluebird",
-    "support_count": 1,
-    "guidance": "在蓝鸟咖啡馆演出满场"
+    "guidance": "在蓝鸟咖啡馆演出满场",
+    "support_count": 1
   },
   {
     "phrase": "booking agent",
-    "support_count": 1,
-    "guidance": "演出经纪人"
+    "guidance": "演出经纪人",
+    "support_count": 1
   },
   {
     "phrase": "dinky little dive",
-    "support_count": 1,
-    "guidance": "破小酒吧"
+    "guidance": "破小酒吧",
+    "support_count": 1
   },
   {
     "phrase": "wouldn't touch someone with a barge pole",
-    "support_count": 1,
-    "guidance": "对某人避之不及"
+    "guidance": "对某人避之不及",
+    "support_count": 1
   },
   {
     "phrase": "bounce a check",
-    "support_count": 1,
-    "guidance": "支票跳票；开空头支票"
+    "guidance": "支票跳票；开空头支票",
+    "support_count": 1
   },
   {
     "phrase": "jump on the bandwagon",
-    "support_count": 1,
-    "guidance": "跟风；蹭热度"
+    "guidance": "跟风；蹭热度",
+    "support_count": 1
   },
   {
     "phrase": "right off the bat",
-    "support_count": 1,
-    "guidance": "一上来；一开始就"
+    "guidance": "一上来；一开始就",
+    "support_count": 1
   },
   {
     "phrase": "something came up",
-    "support_count": 1,
-    "guidance": "临时有事"
+    "guidance": "临时有事",
+    "support_count": 1
   },
   {
     "phrase": "can't make it",
-    "support_count": 1,
-    "guidance": "去不了；来不了"
+    "guidance": "去不了；来不了",
+    "support_count": 1
   },
   {
     "phrase": "be good for it",
-    "support_count": 1,
-    "guidance": "肯定会付；有能力支付"
+    "guidance": "肯定会付；有能力支付",
+    "support_count": 1
   },
   {
     "phrase": "discretion on that",
-    "support_count": 1,
-    "guidance": "替这件事保密"
+    "guidance": "替这件事保密",
+    "support_count": 1
   },
   {
     "phrase": "take someone on the road",
-    "support_count": 1,
-    "guidance": "带某人去巡演"
+    "guidance": "带某人去巡演",
+    "support_count": 1
   },
   {
     "phrase": "book a gig",
-    "support_count": 1,
-    "guidance": "订演出"
+    "guidance": "订演出",
+    "support_count": 1
   },
   {
     "phrase": "hit the ground running",
-    "support_count": 1,
-    "guidance": "一开始就全速推进"
+    "guidance": "一开始就全速推进",
+    "support_count": 1
   },
   {
     "phrase": "make a big splash",
-    "support_count": 1,
-    "guidance": "高调造势；大张旗鼓地宣传"
+    "guidance": "高调造势；大张旗鼓地宣传",
+    "support_count": 1
   },
   {
     "phrase": "play our cards right",
-    "support_count": 1,
-    "guidance": "把牌打好；安排得当"
+    "guidance": "把牌打好；安排得当",
+    "support_count": 1
   },
   {
     "phrase": "bad blood",
-    "support_count": 1,
-    "guidance": "闹僵；结下梁子"
+    "guidance": "闹僵；结下梁子",
+    "support_count": 1
   },
   {
     "phrase": "keep this casual",
-    "support_count": 1,
-    "guidance": "别太当回事；保持轻松随意"
+    "guidance": "别太当回事；保持轻松随意",
+    "support_count": 1
   },
   {
     "phrase": "stamp of approval",
-    "support_count": 1,
-    "guidance": "背书；认可"
+    "guidance": "背书；认可",
+    "support_count": 1
   },
   {
     "phrase": "get back into everybody's good graces",
-    "support_count": 1,
-    "guidance": "重新赢回大家的好感"
+    "guidance": "重新赢回大家的好感",
+    "support_count": 1
   },
   {
     "phrase": "hold off on talking about",
-    "support_count": 1,
-    "guidance": "暂时先别提"
+    "guidance": "暂时先别提",
+    "support_count": 1
   },
   {
     "phrase": "spice things up",
-    "support_count": 1,
-    "guidance": "添点情趣；增加新鲜感"
+    "guidance": "添点情趣；增加新鲜感",
+    "support_count": 1
   },
   {
     "phrase": "make a strong case for oneself",
-    "support_count": 1,
-    "guidance": "把自己推销得很到位；有力证明自己"
+    "guidance": "把自己推销得很到位；有力证明自己",
+    "support_count": 1
   },
   {
     "phrase": "the name of the game",
-    "support_count": 1,
-    "guidance": "这就是行规"
+    "guidance": "这就是行规",
+    "support_count": 1
   },
   {
     "phrase": "blow over",
-    "support_count": 1,
-    "guidance": "平息过去"
+    "guidance": "平息过去",
+    "support_count": 1
   },
   {
     "phrase": "out of pocket",
-    "support_count": 1,
-    "guidance": "自掏腰包"
+    "guidance": "自掏腰包",
+    "support_count": 1
   },
   {
     "phrase": "best man",
-    "support_count": 1,
-    "guidance": "伴郎"
+    "guidance": "伴郎",
+    "support_count": 1
   },
   {
     "phrase": "travel day",
-    "support_count": 1,
-    "guidance": "赶路日"
+    "guidance": "赶路日",
+    "support_count": 1
   },
   {
     "phrase": "make some noise",
-    "support_count": 1,
-    "guidance": "闹出点声势"
+    "guidance": "闹出点声势",
+    "support_count": 1
   },
   {
     "phrase": "he's a ham",
-    "support_count": 1,
-    "guidance": "他很会抢镜"
+    "guidance": "他很会抢镜",
+    "support_count": 1
   },
   {
     "phrase": "cover for someone",
-    "support_count": 1,
-    "guidance": "替某人打掩护"
+    "guidance": "替某人打掩护",
+    "support_count": 1
   },
   {
     "phrase": "dead room",
-    "support_count": 1,
-    "guidance": "空场、冷场"
+    "guidance": "空场、冷场",
+    "support_count": 1
   },
   {
     "phrase": "take it down",
-    "support_count": 1,
-    "guidance": "删掉；撤下"
+    "guidance": "删掉；撤下",
+    "support_count": 1
   },
   {
     "phrase": "let it speak for itself",
-    "support_count": 1,
-    "guidance": "让表现说明一切"
+    "guidance": "让表现说明一切",
+    "support_count": 1
   },
   {
     "phrase": "be a united front",
-    "support_count": 1,
-    "guidance": "口径一致；统一立场"
+    "guidance": "口径一致；统一立场",
+    "support_count": 1
   },
   {
     "phrase": "on a bender",
-    "support_count": 1,
-    "guidance": "喝得烂醉；酗酒放纵"
+    "guidance": "喝得烂醉；酗酒放纵",
+    "support_count": 1
   },
   {
     "phrase": "wide-eyed hick from the sticks",
-    "support_count": 1,
-    "guidance": "没见过世面的乡下土包子"
+    "guidance": "没见过世面的乡下土包子",
+    "support_count": 1
   },
   {
     "phrase": "good riddance",
-    "support_count": 1,
-    "guidance": "走了也好"
+    "guidance": "走了也好",
+    "support_count": 1
   },
   {
     "phrase": "slow news day",
-    "support_count": 1,
-    "guidance": "没新闻可报"
+    "guidance": "没新闻可报",
+    "support_count": 1
   },
   {
     "phrase": "get the job done",
-    "support_count": 1,
-    "guidance": "能用；管用"
+    "guidance": "能用；管用",
+    "support_count": 1
   },
   {
     "phrase": "off limits",
-    "support_count": 1,
-    "guidance": "不能牵扯；不许碰"
+    "guidance": "不能牵扯；不许碰",
+    "support_count": 1
   },
   {
     "phrase": "national television",
-    "support_count": 1,
-    "guidance": "全国电视"
+    "guidance": "全国电视",
+    "support_count": 1
   },
   {
     "phrase": "save the day",
-    "support_count": 1,
-    "guidance": "救场；挽回局面"
+    "guidance": "救场；挽回局面",
+    "support_count": 1
   },
   {
     "phrase": "get checked out",
-    "support_count": 1,
-    "guidance": "做检查"
+    "guidance": "做检查",
+    "support_count": 1
   },
   {
     "phrase": "real hospital",
-    "support_count": 1,
-    "guidance": "正规医院"
+    "guidance": "正规医院",
+    "support_count": 1
   },
   {
     "phrase": "keep someone away from the press",
-    "support_count": 1,
-    "guidance": "让某人避开媒体"
+    "guidance": "让某人避开媒体",
+    "support_count": 1
   },
   {
     "phrase": "ride with someone",
-    "support_count": 1,
-    "guidance": "陪某人坐车；跟某人一起去"
+    "guidance": "陪某人坐车；跟某人一起去",
+    "support_count": 1
   },
   {
     "phrase": "got this under control",
-    "support_count": 1,
-    "guidance": "能处理好；局面在掌控中"
+    "guidance": "能处理好；局面在掌控中",
+    "support_count": 1
   },
   {
     "phrase": "take it back to the top",
-    "support_count": 1,
-    "guidance": "从头再来；回到开头"
+    "guidance": "从头再来；回到开头",
+    "support_count": 1
   },
   {
     "phrase": "downplay it",
-    "support_count": 1,
-    "guidance": "淡化处理"
+    "guidance": "淡化处理",
+    "support_count": 1
   },
   {
     "phrase": "trust fund guy",
-    "support_count": 1,
-    "guidance": "信托基金少爷"
+    "guidance": "信托基金少爷",
+    "support_count": 1
   },
   {
     "phrase": "first available flight",
-    "support_count": 1,
-    "guidance": "最早的一班航班"
+    "guidance": "最早的一班航班",
+    "support_count": 1
   },
   {
     "phrase": "off the road",
-    "support_count": 1,
-    "guidance": "不用巡演；结束巡演"
+    "guidance": "不用巡演；结束巡演",
+    "support_count": 1
   },
   {
     "phrase": "pick up where you left off",
-    "support_count": 1,
-    "guidance": "从停下的地方接着来"
+    "guidance": "从停下的地方接着来",
+    "support_count": 1
   },
   {
     "phrase": "let alone",
-    "support_count": 1,
-    "guidance": "更别说"
+    "guidance": "更别说",
+    "support_count": 1
   },
   {
     "phrase": "all set",
-    "support_count": 1,
-    "guidance": "都好了；都准备好了"
+    "guidance": "都好了；都准备好了",
+    "support_count": 1
   },
   {
     "phrase": "spend the night with someone",
-    "support_count": 1,
-    "guidance": "在某人那儿过夜"
+    "guidance": "在某人那儿过夜",
+    "support_count": 1
   },
   {
     "phrase": "shook me up",
-    "support_count": 1,
-    "guidance": "让我很受冲击"
+    "guidance": "让我很受冲击",
+    "support_count": 1
   },
   {
     "phrase": "kick this thing off on the right foot",
-    "support_count": 1,
-    "guidance": "开个好头"
+    "guidance": "开个好头",
+    "support_count": 1
   },
   {
     "phrase": "get bumped from",
-    "support_count": 1,
-    "guidance": "通告或档期被取消，不是被解雇"
+    "guidance": "通告或档期被取消，不是被解雇",
+    "support_count": 1
   },
   {
     "phrase": "promise someone the moon",
-    "support_count": 1,
-    "guidance": "许下天大的好处"
+    "guidance": "许下天大的好处",
+    "support_count": 1
   },
   {
     "phrase": "launch week",
-    "support_count": 1,
-    "guidance": "专辑发行周"
+    "guidance": "专辑发行周",
+    "support_count": 1
   },
   {
     "phrase": "get the word out",
-    "support_count": 1,
-    "guidance": "把消息放出去"
+    "guidance": "把消息放出去",
+    "support_count": 1
   },
   {
     "phrase": "wait for my cue",
-    "support_count": 1,
-    "guidance": "等我信号"
+    "guidance": "等我信号",
+    "support_count": 1
   },
   {
     "phrase": "come through for someone",
-    "support_count": 1,
-    "guidance": "帮某人解围或兑现承诺"
+    "guidance": "帮某人解围或兑现承诺",
+    "support_count": 1
   },
   {
     "phrase": "hit the charts",
-    "support_count": 1,
-    "guidance": "冲上榜单"
+    "guidance": "冲上榜单",
+    "support_count": 1
   },
   {
     "phrase": "the future of [artist]",
-    "support_count": 1,
-    "guidance": "下一个某某；有望成为某某那样的人"
+    "guidance": "下一个某某；有望成为某某那样的人",
+    "support_count": 1
   },
   {
     "phrase": "get stood up at the airport",
-    "support_count": 1,
-    "guidance": "在机场被放鸽子"
+    "guidance": "在机场被放鸽子",
+    "support_count": 1
   },
   {
     "phrase": "deliver the album",
-    "support_count": 1,
-    "guidance": "交出/交付专辑，履行唱片合约"
+    "guidance": "交出/交付专辑，履行唱片合约",
+    "support_count": 1
   },
   {
     "phrase": "see the place",
-    "support_count": 1,
-    "guidance": "参观一下；作客场景不要直译为看这个地方"
+    "guidance": "参观一下；作客场景不要直译为看这个地方",
+    "support_count": 1
   },
   {
     "phrase": "can't get enough of this song",
-    "support_count": 1,
-    "guidance": "这首歌怎么都听不够"
+    "guidance": "这首歌怎么都听不够",
+    "support_count": 1
   },
   {
     "phrase": "Here's [artist]",
-    "support_count": 1,
-    "guidance": "电台介绍歌曲时可译为“下面请听[艺人]”"
+    "guidance": "电台介绍歌曲时可译为“下面请听[艺人]”",
+    "support_count": 1
   },
   {
     "phrase": "catch up",
-    "support_count": 1,
-    "guidance": "叙旧，聊聊近况"
+    "guidance": "叙旧，聊聊近况",
+    "support_count": 1
   },
   {
     "phrase": "press thing",
-    "support_count": 1,
-    "guidance": "媒体活动"
+    "guidance": "媒体活动",
+    "support_count": 1
   },
   {
     "phrase": "blow off",
-    "support_count": 1,
-    "guidance": "放鸽子，临时推掉"
+    "guidance": "放鸽子，临时推掉",
+    "support_count": 1
   },
   {
     "phrase": "courting you",
-    "support_count": 1,
-    "guidance": "讨好你，巴结你"
+    "guidance": "讨好你，巴结你",
+    "support_count": 1
   },
   {
     "phrase": "get your band together",
-    "support_count": 1,
-    "guidance": "组好你的乐队"
+    "guidance": "组好你的乐队",
+    "support_count": 1
   },
   {
     "phrase": "be covered",
-    "support_count": 1,
-    "guidance": "有人顶上，有人帮忙撑场"
+    "guidance": "有人顶上，有人帮忙撑场",
+    "support_count": 1
   },
   {
     "phrase": "one more",
-    "support_count": 1,
-    "guidance": "再来一首"
+    "guidance": "再来一首",
+    "support_count": 1
   },
   {
     "phrase": "dedicate this one to",
-    "support_count": 1,
-    "guidance": "把这首献给"
+    "guidance": "把这首献给",
+    "support_count": 1
   },
   {
     "phrase": "push my set back",
-    "support_count": 1,
-    "guidance": "拖慢我的布景进度"
+    "guidance": "拖慢我的布景进度",
+    "support_count": 1
   },
   {
     "phrase": "have a show to do",
-    "support_count": 1,
-    "guidance": "还要演出"
+    "guidance": "还要演出",
+    "support_count": 1
   },
   {
     "phrase": "keep herself busy",
-    "support_count": 1,
-    "guidance": "够她忙的"
+    "guidance": "够她忙的",
+    "support_count": 1
   },
   {
     "phrase": "talk someone into doing something",
-    "support_count": 1,
-    "guidance": "劝某人做某事"
+    "guidance": "劝某人做某事",
+    "support_count": 1
   },
   {
     "phrase": "get going",
-    "support_count": 1,
-    "guidance": "该走了"
+    "guidance": "该走了",
+    "support_count": 1
   },
   {
     "phrase": "sack out on the couch",
-    "support_count": 1,
-    "guidance": "睡沙发"
+    "guidance": "睡沙发",
+    "support_count": 1
   },
   {
     "phrase": "bad influence",
-    "support_count": 1,
-    "guidance": "带坏人的人"
+    "guidance": "带坏人的人",
+    "support_count": 1
   },
   {
     "phrase": "back to work",
-    "support_count": 1,
-    "guidance": "接着干活"
+    "guidance": "接着干活",
+    "support_count": 1
   },
   {
     "phrase": "hit the trades",
-    "support_count": 1,
-    "guidance": "上行业媒体；被行业媒体报道"
+    "guidance": "上行业媒体；被行业媒体报道",
+    "support_count": 1
   },
   {
     "phrase": "spin it like",
-    "support_count": 1,
-    "guidance": "把话说成；包装成"
+    "guidance": "把话说成；包装成",
+    "support_count": 1
   },
   {
     "phrase": "what single we're gonna use",
-    "support_count": 1,
-    "guidance": "要主打哪首单曲"
+    "guidance": "要主打哪首单曲",
+    "support_count": 1
   },
   {
     "phrase": "clear one's head",
-    "support_count": 1,
-    "guidance": "散散心；冷静一下"
+    "guidance": "散散心；冷静一下",
+    "support_count": 1
   },
   {
     "phrase": "cross that bridge when we come to it",
-    "support_count": 1,
-    "guidance": "到时候再说"
+    "guidance": "到时候再说",
+    "support_count": 1
   },
   {
     "phrase": "crack the charts",
-    "support_count": 1,
-    "guidance": "上榜"
+    "guidance": "上榜",
+    "support_count": 1
   },
   {
     "phrase": "be all over someone",
-    "support_count": 1,
-    "guidance": "缠着某人不放；紧追某人"
+    "guidance": "缠着某人不放；紧追某人",
+    "support_count": 1
   },
   {
     "phrase": "tightening the chain",
-    "support_count": 1,
-    "guidance": "把人管得更紧"
+    "guidance": "把人管得更紧",
+    "support_count": 1
   },
   {
     "phrase": "big ticket outfits",
-    "support_count": 1,
-    "guidance": "大公司；大机构"
+    "guidance": "大公司；大机构",
+    "support_count": 1
   },
   {
     "phrase": "wave from the audience",
-    "support_count": 1,
-    "guidance": "坐在观众席挥手"
+    "guidance": "坐在观众席挥手",
+    "support_count": 1
   },
   {
     "phrase": "good for it",
-    "support_count": 1,
-    "guidance": "有能力付钱；肯定会付"
+    "guidance": "有能力付钱；肯定会付",
+    "support_count": 1
   },
   {
     "phrase": "keep your phone close",
-    "support_count": 1,
-    "guidance": "手机别离身"
+    "guidance": "手机别离身",
+    "support_count": 1
   },
   {
     "phrase": "get called away to another project",
-    "support_count": 1,
-    "guidance": "被叫去忙另一个项目"
+    "guidance": "被叫去忙另一个项目",
+    "support_count": 1
   },
   {
     "phrase": "be gone a whole lot",
-    "support_count": 1,
-    "guidance": "最近老是不在家"
+    "guidance": "最近老是不在家",
+    "support_count": 1
   },
   {
     "phrase": "grades have been slipping",
-    "support_count": 1,
-    "guidance": "成绩最近有点下滑"
+    "guidance": "成绩最近有点下滑",
+    "support_count": 1
   },
   {
     "phrase": "positive influence",
-    "support_count": 1,
-    "guidance": "正面影响"
+    "guidance": "正面影响",
+    "support_count": 1
   },
   {
     "phrase": "charm offensive",
-    "support_count": 1,
-    "guidance": "亲和攻势"
+    "guidance": "亲和攻势",
+    "support_count": 1
   },
   {
     "phrase": "sign on with",
-    "support_count": 1,
-    "guidance": "签约加入"
+    "guidance": "签约加入",
+    "support_count": 1
   },
   {
     "phrase": "win back country",
-    "support_count": 1,
-    "guidance": "赢回乡村音乐市场"
+    "guidance": "赢回乡村音乐市场",
+    "support_count": 1
   },
   {
     "phrase": "get back on track",
-    "support_count": 1,
-    "guidance": "重回正轨"
+    "guidance": "重回正轨",
+    "support_count": 1
   },
   {
     "phrase": "make a strong case for himself",
-    "support_count": 1,
-    "guidance": "把自己推销得很到位"
+    "guidance": "把自己推销得很到位",
+    "support_count": 1
   },
   {
     "phrase": "open for someone",
-    "support_count": 1,
-    "guidance": "给某人当开场嘉宾；给某人暖场"
+    "guidance": "给某人当开场嘉宾；给某人暖场",
+    "support_count": 1
   },
   {
     "phrase": "go back out on the road",
-    "support_count": 1,
-    "guidance": "重新出去巡演"
+    "guidance": "重新出去巡演",
+    "support_count": 1
   },
   {
     "phrase": "tour dates",
-    "support_count": 1,
-    "guidance": "巡演场次"
+    "guidance": "巡演场次",
+    "support_count": 1
   },
   {
     "phrase": "crank out [song]",
-    "support_count": 1,
-    "guidance": "唱/演奏某首歌"
+    "guidance": "唱/演奏某首歌",
+    "support_count": 1
   },
   {
     "phrase": "the opera",
-    "support_count": 1,
-    "guidance": "乡村音乐语境中若指Opry，应译为大奥普里，不要译作歌剧"
+    "guidance": "乡村音乐语境中若指Opry，应译为大奥普里，不要译作歌剧",
+    "support_count": 1
   },
   {
     "phrase": "one city at a time",
-    "support_count": 1,
-    "guidance": "一座城市一座城市地"
+    "guidance": "一座城市一座城市地",
+    "support_count": 1
   },
   {
     "phrase": "Didn't mean anything.",
-    "support_count": 1,
-    "guidance": "那根本不算什么。"
+    "guidance": "那根本不算什么。",
+    "support_count": 1
   },
   {
     "phrase": "We're done.",
-    "support_count": 1,
-    "guidance": "我们完了。"
+    "guidance": "我们完了。",
+    "support_count": 1
   },
   {
     "phrase": "The thing is",
-    "support_count": 1,
-    "guidance": "其实"
+    "guidance": "其实",
+    "support_count": 1
   },
   {
     "phrase": "get crazy",
-    "support_count": 1,
-    "guidance": "失控"
+    "guidance": "失控",
+    "support_count": 1
   },
   {
     "phrase": "take advantage of the time off",
-    "support_count": 1,
-    "guidance": "利用这段休假"
+    "guidance": "利用这段休假",
+    "support_count": 1
   },
   {
     "phrase": "stop trying to push this",
-    "support_count": 1,
-    "guidance": "别再逼这件事了"
+    "guidance": "别再逼这件事了",
+    "support_count": 1
   },
   {
     "phrase": "it doesn't seem like an unreasonable request",
-    "support_count": 1,
-    "guidance": "这要求也不算过分"
+    "guidance": "这要求也不算过分",
+    "support_count": 1
   },
   {
     "phrase": "be dangerously close to stalking",
-    "support_count": 1,
-    "guidance": "都快成跟踪了"
+    "guidance": "都快成跟踪了",
+    "support_count": 1
   },
   {
     "phrase": "train has left the station",
-    "support_count": 1,
-    "guidance": "事情已经启动；这趟车已经开动了"
+    "guidance": "事情已经启动；这趟车已经开动了",
+    "support_count": 1
   },
   {
     "phrase": "bust my balls",
-    "support_count": 1,
-    "guidance": "找我茬；刁难我"
+    "guidance": "找我茬；刁难我",
+    "support_count": 1
   },
   {
     "phrase": "call the cops kind of situation",
-    "support_count": 1,
-    "guidance": "需要报警的情况"
+    "guidance": "需要报警的情况",
+    "support_count": 1
   },
   {
     "phrase": "ill will toward",
-    "support_count": 1,
-    "guidance": "对……心怀怨恨"
+    "guidance": "对……心怀怨恨",
+    "support_count": 1
   },
   {
     "phrase": "be in the zone",
-    "support_count": 1,
-    "guidance": "正来灵感；进入状态"
+    "guidance": "正来灵感；进入状态",
+    "support_count": 1
   },
   {
     "phrase": "dig deep",
-    "support_count": 1,
-    "guidance": "往深了挖；深入挖掘内心"
+    "guidance": "往深了挖；深入挖掘内心",
+    "support_count": 1
   },
   {
     "phrase": "take the girls home",
-    "support_count": 1,
-    "guidance": "把孩子们送回家"
+    "guidance": "把孩子们送回家",
+    "support_count": 1
   },
   {
     "phrase": "cash poor",
-    "support_count": 1,
-    "guidance": "有资产但手头现金紧"
+    "guidance": "有资产但手头现金紧",
+    "support_count": 1
   },
   {
     "phrase": "kiss the ring",
-    "support_count": 1,
-    "guidance": "拜码头；向权威人物示好"
+    "guidance": "拜码头；向权威人物示好",
+    "support_count": 1
   },
   {
     "phrase": "fall off the turnip truck",
-    "support_count": 1,
-    "guidance": "刚进城的傻子；别把我当傻子"
+    "guidance": "刚进城的傻子；别把我当傻子",
+    "support_count": 1
   },
   {
     "phrase": "be nice",
-    "support_count": 1,
-    "guidance": "态度好点；友好点"
+    "guidance": "态度好点；友好点",
+    "support_count": 1
   },
   {
     "phrase": "get us in",
-    "support_count": 1,
-    "guidance": "带我们进去；帮我们入场"
+    "guidance": "带我们进去；帮我们入场",
+    "support_count": 1
   },
   {
     "phrase": "I write poetry",
-    "support_count": 1,
-    "guidance": "我写诗"
+    "guidance": "我写诗",
+    "support_count": 1
   },
   {
     "phrase": "somebody's got to work around here",
-    "support_count": 1,
-    "guidance": "家里总得有人工作"
+    "guidance": "家里总得有人工作",
+    "support_count": 1
   },
   {
     "phrase": "bad manners to talk about money",
-    "support_count": 1,
-    "guidance": "谈钱不礼貌"
+    "guidance": "谈钱不礼貌",
+    "support_count": 1
   },
   {
     "phrase": "you're burning it up out there",
-    "support_count": 1,
-    "guidance": "你在台上很火"
+    "guidance": "你在台上很火",
+    "support_count": 1
   },
   {
     "phrase": "you probably got to go on soon",
-    "support_count": 1,
-    "guidance": "你快该上场了吧"
+    "guidance": "你快该上场了吧",
+    "support_count": 1
   },
   {
     "phrase": "drop out of the race",
-    "support_count": 1,
-    "guidance": "退出竞选"
+    "guidance": "退出竞选",
+    "support_count": 1
   },
   {
     "phrase": "get leaked to the press",
-    "support_count": 1,
-    "guidance": "被捅给媒体"
+    "guidance": "被捅给媒体",
+    "support_count": 1
   },
   {
     "phrase": "get it over with",
-    "support_count": 1,
-    "guidance": "赶紧弄完"
+    "guidance": "赶紧弄完",
+    "support_count": 1
   },
   {
     "phrase": "back on",
-    "support_count": 1,
-    "guidance": "恢复进行"
+    "guidance": "恢复进行",
+    "support_count": 1
   },
   {
     "phrase": "give someone a piece of my mind",
-    "support_count": 1,
-    "guidance": "跟某人理论理论"
+    "guidance": "跟某人理论理论",
+    "support_count": 1
   },
   {
     "phrase": "sleep on it",
-    "support_count": 1,
-    "guidance": "睡一觉再考虑"
+    "guidance": "睡一觉再考虑",
+    "support_count": 1
   },
   {
     "phrase": "hit the road with someone",
-    "support_count": 1,
-    "guidance": "跟某人一起巡演"
+    "guidance": "跟某人一起巡演",
+    "support_count": 1
   },
   {
     "phrase": "hang up his strap",
-    "support_count": 1,
-    "guidance": "退下来；不再巡演"
+    "guidance": "退下来；不再巡演",
+    "support_count": 1
   },
   {
     "phrase": "dirty up the vocals",
-    "support_count": 1,
-    "guidance": "让人声更粗粝一点"
+    "guidance": "让人声更粗粝一点",
+    "support_count": 1
   },
   {
     "phrase": "the real deal",
-    "support_count": 1,
-    "guidance": "来真的；真有本事的人"
+    "guidance": "来真的；真有本事的人",
+    "support_count": 1
   },
   {
     "phrase": "holler at you real quick",
-    "support_count": 1,
-    "guidance": "单独聊两句"
+    "guidance": "单独聊两句",
+    "support_count": 1
   },
   {
     "phrase": "that's my man",
-    "support_count": 1,
-    "guidance": "这才是我的哥们"
+    "guidance": "这才是我的哥们",
+    "support_count": 1
   },
   {
     "phrase": "I don't deserve you",
+    "guidance": "我配不上你",
     "source_en": "I don't deserve you",
     "bad_zh": "我不值得拥有你",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "我配不上你"
+    "support_count": 1
   },
   {
     "phrase": "where we stand",
+    "guidance": "我们的关系算什么；我们现在是什么关系；事情发展到哪一步了",
     "source_en": "where we stand",
     "bad_zh": "我们站在哪里",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "我们的关系算什么；我们现在是什么关系；事情发展到哪一步了"
+    "support_count": 1
   },
   {
     "phrase": "go down the aisle",
+    "guidance": "举行婚礼；步入婚姻殿堂；结婚",
     "source_en": "go down the aisle",
     "bad_zh": "走下过道",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 2,
-    "guidance": "举行婚礼；步入婚姻殿堂；结婚"
+    "support_count": 2
   },
   {
     "phrase": "give me a minute",
+    "guidance": "给我点时间；让我缓一缓；让我静一会儿",
     "source_en": "give me a minute",
     "bad_zh": "给我一分钟",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "给我点时间；让我缓一缓；让我静一会儿"
+    "support_count": 1
   },
   {
     "phrase": "Tell me I heard wrong.",
+    "guidance": "告诉我，是我听错了；告诉我我没听明白",
     "source_en": "Tell me I heard wrong.",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "告诉我，是我听错了；告诉我我没听明白"
+    "support_count": 1
   },
   {
     "phrase": "square with someone",
+    "guidance": "跟某人说好了；跟某人谈妥了；跟某人打过招呼了",
     "source_en": "square with someone",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "跟某人说好了；跟某人谈妥了；跟某人打过招呼了"
+    "support_count": 1
   },
   {
     "phrase": "timing is everything",
+    "guidance": "时机最重要；成败全看时机；时机决定一切",
     "source_en": "timing is everything",
     "bad_zh": "时机就是一切",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "时机最重要；成败全看时机；时机决定一切"
+    "support_count": 1
   },
   {
     "phrase": "sick to my stomach",
+    "guidance": "恶心得反胃；难受得想吐；恶心透了",
     "source_en": "sick to my stomach",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "恶心得反胃；难受得想吐；恶心透了"
+    "support_count": 1
   },
   {
     "phrase": "can't stand the sight of someone",
+    "guidance": "一看见某人就受不了；根本不想见到某人；看见某人就烦",
     "source_en": "can't stand the sight of someone",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "一看见某人就受不了；根本不想见到某人；看见某人就烦"
+    "support_count": 1
   },
   {
     "phrase": "the first time around",
+    "guidance": "第一次时；当初；头一回的时候",
     "source_en": "the first time around",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "第一次时；当初；头一回的时候"
+    "support_count": 1
   },
   {
     "phrase": "There's nothing left for me here.",
+    "guidance": "我在这儿已经没什么可留恋的了。；这里已经没有值得我留下的了。",
     "source_en": "There's nothing left for me here.",
     "bad_zh": "这里对我来说已经什么都没有了。",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 2,
-    "guidance": "我在这儿已经没什么可留恋的了。；这里已经没有值得我留下的了。"
+    "support_count": 2
   },
   {
     "phrase": "start someplace else",
+    "guidance": "去别处重新开始；换个地方从头开始",
     "source_en": "I gotta start someplace else.",
     "bad_zh": "从别的地方开始",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "去别处重新开始；换个地方从头开始"
+    "support_count": 1
   },
   {
     "phrase": "crash someone's event",
+    "guidance": "不请自来；跑来搅局；贸然闯进人家的活动",
     "source_en": "I wasn't sure they'd be okay with us crashing their event.",
     "bad_zh": "参加他们的活动",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "不请自来；跑来搅局；贸然闯进人家的活动"
+    "support_count": 1
   },
   {
     "phrase": "come through these doors",
+    "guidance": "曾在这里登台；曾来这里演出；曾经来过这里",
     "source_en": "A lot of artists that I respect have come through these doors.",
     "bad_zh": "从这些门走进来",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "曾在这里登台；曾来这里演出；曾经来过这里"
+    "support_count": 1
   },
   {
     "phrase": "I haven't heard that one before.",
+    "guidance": "这首我以前没听过；这歌我没听过；这说法我倒没听过",
     "source_en": "I haven't heard that one before.",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "这首我以前没听过；这歌我没听过；这说法我倒没听过"
+    "support_count": 1
   },
   {
     "phrase": "take it back",
+    "guidance": "反悔；收回那句话；撤回",
     "source_en": "take it back",
     "bad_zh": "把它拿回来",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "反悔；收回那句话；撤回"
+    "support_count": 1
   },
   {
     "phrase": "overreact",
+    "guidance": "反应过度；反应太大；反应过激",
     "source_en": "overreact",
     "bad_zh": "太激动",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "反应过度；反应太大；反应过激"
+    "support_count": 1
   },
   {
     "phrase": "damn near",
+    "guidance": "几乎；差不多；简直快要",
     "source_en": "damn near",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "几乎；差不多；简直快要"
+    "support_count": 1
   },
   {
     "phrase": "debut a song",
+    "guidance": "首次演唱这首歌；第一次公开唱这首歌",
     "source_en": "debut a song",
     "bad_zh": "首演一首歌",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "首次演唱这首歌；第一次公开唱这首歌"
+    "support_count": 1
   },
   {
     "phrase": "play at someone's house",
+    "guidance": "在某人家弹琴；在某人家演奏；在某人家唱歌",
     "source_en": "play at someone's house",
     "bad_zh": "在某人家玩",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "在某人家弹琴；在某人家演奏；在某人家唱歌"
+    "support_count": 1
   },
   {
     "phrase": "be up for an award",
+    "guidance": "入围……奖；获得……项提名",
     "source_en": "be up for [an award / number of awards]",
     "bad_zh": "要……个奖",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 3,
-    "guidance": "入围……奖；获得……项提名"
+    "support_count": 3
   },
   {
     "phrase": "the full package",
+    "guidance": "各方面都很出色；条件样样都好；是个十足的理想人选",
     "source_en": "the full package",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "各方面都很出色；条件样样都好；是个十足的理想人选"
+    "support_count": 1
   },
   {
     "phrase": "have each other's backs",
+    "guidance": "互相支持；互相撑腰；彼此照应",
     "source_en": "have each other's backs",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "互相支持；互相撑腰；彼此照应"
+    "support_count": 1
   },
   {
     "phrase": "take home a trophy",
+    "guidance": "拿到奖杯；捧得奖杯；获奖",
     "source_en": "take home a trophy",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "拿到奖杯；捧得奖杯；获奖"
+    "support_count": 1
   },
   {
     "phrase": "power couple",
+    "guidance": "金童玉女；强强联合的一对；明星情侣",
     "source_en": "power couple",
     "bad_zh": "权力夫妻",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "金童玉女；强强联合的一对；明星情侣"
+    "support_count": 1
   },
   {
     "phrase": "give a shout-out to",
+    "guidance": "向……致意；特别感谢……；为……加油",
     "source_en": "give a shout-out to",
     "bad_zh": "打个招呼",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "向……致意；特别感谢……；为……加油"
+    "support_count": 1
   },
   {
     "phrase": "get dressed",
+    "guidance": "换衣服；穿好衣服；打扮好",
     "source_en": "get dressed",
     "bad_zh": "穿衣服",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "换衣服；穿好衣服；打扮好"
+    "support_count": 1
   },
   {
     "phrase": "no-show",
+    "guidance": "没有出席；缺席；爽约没来",
     "source_en": "be a no-show",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "没有出席；缺席；爽约没来"
+    "support_count": 1
   },
   {
     "phrase": "out of the blue",
+    "guidance": "突然；出乎意料；毫无征兆",
     "source_en": "out of the blue",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "突然；出乎意料；毫无征兆"
+    "support_count": 1
   },
   {
     "phrase": "root for someone",
+    "guidance": "给某人加油；支持某人；盼着某人赢",
     "source_en": "root for someone",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "给某人加油；支持某人；盼着某人赢"
+    "support_count": 1
   },
   {
     "phrase": "a given",
+    "guidance": "理所当然的事；默认如此；板上钉钉的事",
     "source_en": "a given",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "理所当然的事；默认如此；板上钉钉的事"
+    "support_count": 1
   },
   {
     "phrase": "take something seriously",
+    "guidance": "认真对待；把它当回事；否定式 don't take it seriously 才译成别当真",
     "source_en": "take something seriously",
     "bad_zh": "不可能把它当真",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "认真对待；把它当回事；否定式 don't take it seriously 才译成别当真"
+    "support_count": 1
   },
   {
     "phrase": "need a breather",
+    "guidance": "需要喘口气；想缓一缓；需要歇一会儿",
     "source_en": "need a little breather",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "需要喘口气；想缓一缓；需要歇一会儿"
+    "support_count": 1
   },
   {
     "phrase": "I couldn't be prouder",
+    "guidance": "我再骄傲不过了；我无比自豪",
     "source_en": "I couldn't be prouder",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "我再骄傲不过了；我无比自豪"
+    "support_count": 1
   },
   {
     "phrase": "Didn't think so",
+    "guidance": "我就知道；果然如此；我想也是",
     "source_en": "Didn't think so",
     "bad_zh": "我也没那么想",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "我就知道；果然如此；我想也是"
+    "support_count": 1
   },
   {
     "phrase": "be backed up",
+    "guidance": "忙不过来；堵住了；积压了",
     "source_en": "be backed up",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "忙不过来；堵住了；积压了"
+    "support_count": 1
   },
   {
     "phrase": "roots and weeds",
+    "guidance": "根与杂草",
     "source_en": "roots and weeds",
     "bad_zh": "扎根和展翅；根与翅膀",
     "style_scope": "lyrics",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "根与杂草"
+    "support_count": 1
   },
   {
     "phrase": "short of treatment",
+    "guidance": "在不接受治疗的情况下；除治疗以外",
     "source_en": "short of treatment",
     "bad_zh": "除了接受治疗",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "在不接受治疗的情况下；除治疗以外"
+    "support_count": 1
   },
   {
     "phrase": "a song about mine",
+    "guidance": "唱一首关于我的歌",
     "source_en": "sing a song about mine",
     "bad_zh": "唱出自己的故事",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "唱一首关于我的歌"
+    "support_count": 1
   },
   {
     "phrase": "check in",
+    "guidance": "打来问问；联系一下看看情况；来问问进展",
     "source_en": "Just checking in from New York",
     "bad_zh": "确认一下",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "打来问问；联系一下看看情况；来问问进展"
+    "support_count": 1
   },
   {
     "phrase": "deserve each other",
+    "guidance": "他俩真是绝配；他俩正好配一对；他俩谁也别嫌谁",
     "source_en": "They deserve each other.",
     "bad_zh": "他们互相伤害",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "他俩真是绝配；他俩正好配一对；他俩谁也别嫌谁"
+    "support_count": 1
   },
   {
     "phrase": "on your radar",
+    "guidance": "想提醒你留意一下；想让你注意到这件事；先跟你通个气",
     "source_en": "I just wanted it on your radar.",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "想提醒你留意一下；想让你注意到这件事；先跟你通个气"
+    "support_count": 1
   },
   {
     "phrase": "as good as can be expected",
+    "guidance": "情况已经算不错了；也只能这样了；以目前情况来说还算好",
     "source_en": "She is as good as can be expected.",
     "bad_zh": "情况在预料之中",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "情况已经算不错了；也只能这样了；以目前情况来说还算好"
+    "support_count": 1
   },
   {
     "phrase": "sign the papers",
+    "guidance": "把手续签了；把协议签了；签字办完手续",
     "source_en": "Let's just sign the papers.",
     "bad_zh": "签文件",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "把手续签了；把协议签了；签字办完手续"
+    "support_count": 1
   },
   {
     "phrase": "stay with me",
+    "guidance": "按语境选择：撑住；坚持住；陪着我；留在我身边",
     "source_en": "stay with me",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 4,
-    "guidance": "按语境选择：撑住；坚持住；陪着我；留在我身边"
+    "support_count": 4
   },
   {
     "phrase": "pull the trigger",
+    "guidance": "按语境选择：作出决定；正式启动；扣动扳机",
     "source_en": "pull the trigger",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "按语境选择：作出决定；正式启动；扣动扳机"
+    "support_count": 1
   },
   {
     "phrase": "pull for someone",
+    "guidance": "盼着你好起来；为你加油；支持你；希望你挺过去",
     "source_en": "pulling for you",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "盼着你好起来；为你加油；支持你；希望你挺过去"
+    "support_count": 1
   },
   {
     "phrase": "on the horizon",
+    "guidance": "近期有望出现；眼下可能到来；已经露出苗头",
     "source_en": "on the horizon",
     "bad_zh": "在地平线上",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "近期有望出现；眼下可能到来；已经露出苗头"
+    "support_count": 1
   },
   {
     "phrase": "bumps in the road",
+    "guidance": "一点坎坷；暂时的困难；小波折",
     "source_en": "bumps in the road",
     "bad_zh": "路上的小颠簸",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "一点坎坷；暂时的困难；小波折"
+    "support_count": 1
   },
   {
     "phrase": "in a bad way",
+    "guidance": "情况很糟；状态很差；伤势严重",
     "source_en": "in a bad way",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "情况很糟；状态很差；伤势严重"
+    "support_count": 1
   },
   {
     "phrase": "make it",
+    "guidance": "按语境选择：赶上；及时到；做到；成功；挺过去",
     "source_en": "make it",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "按语境选择：赶上；及时到；做到；成功；挺过去"
+    "support_count": 1
   },
   {
     "phrase": "pull up",
+    "guidance": "按语境选择：到了；停车；调出；拉起",
     "source_en": "pull up",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "按语境选择：到了；停车；调出；拉起"
+    "support_count": 1
   },
   {
     "phrase": "I need a minute",
+    "guidance": "让我缓一会儿；让我静一静；给我一点时间",
     "source_en": "I need a minute",
     "bad_zh": "我需要一分钟",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "让我缓一会儿；让我静一静；给我一点时间"
+    "support_count": 1
   },
   {
     "phrase": "catch you later",
+    "guidance": "回头见；待会儿见；之后再找你",
     "source_en": "catch you later",
     "bad_zh": "之后抓住你",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "回头见；待会儿见；之后再找你"
+    "support_count": 1
   },
   {
     "phrase": "full house",
+    "guidance": "座无虚席；全场满座；客满",
     "source_en": "full house",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "座无虚席；全场满座；客满"
+    "support_count": 1
   },
   {
     "phrase": "pre-show jitters",
+    "guidance": "演出前紧张；上台前有点紧张",
     "source_en": "pre-show jitters",
     "bad_zh": "开场前的小紧张",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "演出前紧张；上台前有点紧张"
+    "support_count": 1
   },
   {
     "phrase": "first ... in two years",
+    "guidance": "时隔两年的首次……；两年来的第一场……",
     "source_en": "first ... in two years",
     "bad_zh": "首次……推迟两年",
     "style_scope": "all",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "时隔两年的首次……；两年来的第一场……"
+    "support_count": 1
   },
   {
     "phrase": "kickoff of a tour",
+    "guidance": "巡演首秀；巡演首场；巡演启动",
     "source_en": "kickoff of a tour",
     "bad_zh": "巡演的启动仪式",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "巡演首秀；巡演首场；巡演启动"
+    "support_count": 1
   },
   {
     "phrase": "know better",
@@ -2173,63 +2173,63 @@
   },
   {
     "phrase": "nothing personal",
+    "guidance": "自然处理为“不是针对你”“我不是对你有意见”或“没有针对你的意思”，根据语气选择。",
     "source_en": "It's nothing personal.",
     "bad_zh": "这不是针对你个人。",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "自然处理为“不是针对你”“我不是对你有意见”或“没有针对你的意思”，根据语气选择。"
+    "support_count": 1
   },
   {
     "phrase": "forget I even asked",
+    "guidance": "表示收回刚才的请求，译为“就当我没问过”“当我没说”或“忘了我问过吧”，不要误成让对方别再提。",
     "source_en": "You can forget I even asked.",
     "bad_zh": "你别提这事了。",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "表示收回刚才的请求，译为“就当我没问过”“当我没说”或“忘了我问过吧”，不要误成让对方别再提。"
+    "support_count": 1
   },
   {
     "phrase": "take it out on someone",
+    "guidance": "表示把对别人的怒气发泄到某人身上，译为“拿某人撒气”或“把气撒在某人身上”。",
     "source_en": "I took it out on Georgie.",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "表示把对别人的怒气发泄到某人身上，译为“拿某人撒气”或“把气撒在某人身上”。"
+    "support_count": 1
   },
   {
     "phrase": "give someone another shot",
+    "guidance": "表示再给一次尝试或挽回的机会，译为“再给某人一次机会”或“让某人再试一次”。",
     "source_en": "Thanks again for giving me another shot.",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "表示再给一次尝试或挽回的机会，译为“再给某人一次机会”或“让某人再试一次”。"
+    "support_count": 1
   },
   {
     "phrase": "go ahead",
+    "guidance": "表示准许或鼓励对方继续时，按语境译为“你继续吧”“你尽管来”“你喝吧”或“不用管我”，不要脱离上下文一律译成“你去吧”。",
     "source_en": "You go ahead.",
     "bad_zh": "你去吧。",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "表示准许或鼓励对方继续时，按语境译为“你继续吧”“你尽管来”“你喝吧”或“不用管我”，不要脱离上下文一律译成“你去吧”。"
+    "support_count": 1
   },
   {
     "phrase": "I insist",
+    "guidance": "口语中表示坚持请客、安排或要求时，译为“听我的”“一定得这样”或“我说真的”，避免生硬直译为“我坚持”。",
     "source_en": "I insist.",
     "bad_zh": "我坚持。",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "口语中表示坚持请客、安排或要求时，译为“听我的”“一定得这样”或“我说真的”，避免生硬直译为“我坚持”。"
+    "support_count": 1
   },
   {
     "phrase": "spoil an episode",
+    "guidance": "指提前透露影视剧情时译为“剧透这一集”“提前把剧情说出来”或“把这一集的结局说破”。",
     "source_en": "spoil the episode",
     "style_scope": "dialogue",
     "confidence": "high",
-    "support_count": 1,
-    "guidance": "指提前透露影视剧情时译为“剧透这一集”“提前把剧情说出来”或“把这一集的结局说破”。"
+    "support_count": 1
   },
   {
     "phrase": "language",
@@ -2362,71 +2362,71 @@
   },
   {
     "phrase": "just in time",
-    "support_count": 1,
     "guidance": "按语境译为“你来得正好”“正赶上”或“来得正是时候”，不要擅自补出具体赶上的事情。",
     "source_en": "You're just in time.",
     "style_scope": "dialogue",
-    "confidence": "high"
+    "confidence": "high",
+    "support_count": 1
   },
   {
     "phrase": "Easy.",
-    "support_count": 1,
     "guidance": "作为制止或安抚用语时，可译为“别冲动”“慢点”“放轻松”或“稳住”，根据对象和动作选择。",
     "source_en": "Easy.",
     "bad_zh": "小心别让她抓到你",
     "style_scope": "dialogue",
-    "confidence": "high"
+    "confidence": "high",
+    "support_count": 1
   },
   {
     "phrase": "not your fight",
-    "support_count": 1,
     "guidance": "通常表示“不关你的事”“这事你别插手”或“这不是你该管的”，不要机械译成“不是你的战斗”。",
     "source_en": "This is not your fight.",
     "style_scope": "dialogue",
-    "confidence": "high"
+    "confidence": "high",
+    "support_count": 1
   },
   {
     "phrase": "On whose authority?",
-    "support_count": 1,
     "guidance": "质问执法、命令或行动依据时，译为“奉谁的命令？”“谁授权的？”等正式问法。",
     "source_en": "On whose authority?",
     "style_scope": "dialogue",
-    "confidence": "high"
+    "confidence": "high",
+    "support_count": 1
   },
   {
     "phrase": "fairy-tales",
-    "support_count": 1,
     "guidance": "用于讥讽对方编造说辞时，译为“鬼话”“瞎话”或“编出来的故事”，不要按儿童文学义直译。",
     "source_en": "What other fairy-tales do you have to tell us?",
     "bad_zh": "童话故事",
     "style_scope": "dialogue",
-    "confidence": "high"
+    "confidence": "high",
+    "support_count": 1
   },
   {
     "phrase": "have someone beat",
-    "support_count": 1,
     "guidance": "比赛或棋局语境表示胜券在握，可译为“再几步我就赢了”“我赢定了”，避免使用带杀戮意味的表达。",
     "source_en": "I've got you beat in two moves.",
     "bad_zh": "两步之内我就能灭了你",
     "style_scope": "dialogue",
-    "confidence": "high"
+    "confidence": "high",
+    "support_count": 1
   },
   {
     "phrase": "What did I tell you?",
-    "support_count": 1,
     "guidance": "用于印证先前判断时，可译为“我说什么来着？”“早跟你说了吧”，不要机械理解为询问说过的具体内容。",
     "source_en": "What did I tell you?",
     "style_scope": "dialogue",
-    "confidence": "high"
+    "confidence": "high",
+    "support_count": 1
   },
   {
     "phrase": "good while it lasted",
-    "support_count": 1,
     "guidance": "表达一段好时光已经结束，可译为“之前倒也挺好”“好景不长”或结合语气译成“好日子到头了”。",
     "source_en": "It was good while it lasted.",
     "bad_zh": "好时候太短",
     "style_scope": "dialogue",
-    "confidence": "high"
+    "confidence": "high",
+    "support_count": 1
   },
   {
     "phrase": "get the part",
@@ -2563,6 +2563,95 @@
     "guidance": "这是带粗俗色彩的催促或斥责，可按语气译为“挪动屁股”“别瘫着了”“赶紧行动”；原文含脏话时不要无故弱化攻击性。",
     "source_en": "get off their ass",
     "bad_zh": "懒得动一动",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "solve the puzzle",
+    "guidance": "在猜词或转盘类节目中按“猜答案、说出答案”处理，不要机械译成破解谜题。",
+    "source_en": "solve the puzzle",
+    "bad_zh": "解开这个谜题",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 2
+  },
+  {
+    "phrase": "go someone's way",
+    "guidance": "表示事情按某人希望的方向发展，可根据语气译作“如愿、进展顺利、按预期发展、对某人有利”。",
+    "source_en": "go someone's way",
+    "bad_zh": "走某人的路",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "poison the board against someone",
+    "guidance": "在组织决策语境中表示煽动或影响理事会、董事会反对某人，应译出“让整个委员会反对某人”的意思，不要逐词翻译。",
+    "source_en": "poison the board against someone",
+    "bad_zh": "毒害调音台",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "keep it clean",
+    "guidance": "在投票、评审或利益冲突语境中表示避嫌并维持程序公正，可译作“为了避嫌、免得落人口实、保证程序公正”；其他语境需按字面或具体含义判断。",
+    "source_en": "keep it clean",
+    "bad_zh": "保持干净",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "That is not how it works.",
+    "guidance": "根据语境译为“不是这么回事”“事情不是这么算的”“这可不是这么运作的”，不要机械套用“这么做”。",
+    "source_en": "That is not how it works.",
+    "bad_zh": "事情不是这么做的",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "send a message",
+    "guidance": "表示通过行动表明立场时，可译为“发出信号”“传达态度”“让大家看到我们的态度”；表示发送具体消息时再译为“传递消息”。",
+    "source_en": "To send a message.",
+    "bad_zh": "传递一个信号",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "enjoy it while you can",
+    "guidance": "译出“趁现在还有机会”的含义，可用“趁还能……多……一会儿”“能享受的时候就好好享受”“趁现在好好享受吧”。",
+    "source_en": "Enjoy it while you can.",
+    "bad_zh": "趁早享受吧",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "give talks on",
+    "guidance": "主语向听众介绍某主题时，应译为“作关于……的演讲”“向……讲述……”，不要误作双方举行会谈。",
+    "source_en": "hold talks on Norwegian resistance movement",
+    "bad_zh": "就……举行会谈",
+    "style_scope": "all",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "do something active",
+    "guidance": "译为“采取实际行动”“真正做点事”或“主动采取行动”，避免“做点实际行动”这种搭配。",
+    "source_en": "We must do something active.",
+    "bad_zh": "做点实际行动",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "It depends on...",
+    "guidance": "口语中可自然译为“那得看……”“要看……再说”或“这取决于……”，根据语气选择。",
+    "source_en": "It depends on the weather.",
     "style_scope": "dialogue",
     "confidence": "high",
     "support_count": 1

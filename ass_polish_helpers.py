@@ -85,6 +85,7 @@ class PolishTarget:
     text_field: str
     zh: str
     en: str
+    origin: str = "unknown"
 
 
 @dataclass
@@ -317,6 +318,11 @@ def add_polish_args(parser) -> None:
         help="Comma-separated ASS styles to polish, or 'all'.",
     )
     parser.add_argument(
+        "--polish-origins",
+        default=os.environ.get("SUB_POLISH_ORIGINS", "all"),
+        help="Comma-separated translation origins to polish: qwen, ocr, note, unknown, or all.",
+    )
+    parser.add_argument(
         "--polish-cache-dir",
         default=os.environ.get("SUB_POLISH_CACHE_DIR", ""),
         help="Cache directory for polish results. Defaults to WORK_DIR/polish_cache.",
@@ -367,6 +373,14 @@ def parse_polish_styles(value: str) -> set[str]:
     return {item.strip() for item in text.split(",") if item.strip()} & all_styles
 
 
+def parse_polish_origins(value: str) -> set[str] | None:
+    text = str(value or "").strip().lower()
+    if not text or text == "all":
+        return None
+    allowed = {"qwen", "ocr", "note", "original", "manual", "unknown"}
+    return {item.strip() for item in text.split(",") if item.strip()} & allowed
+
+
 def polish_ass_file(
     ass_file: Path,
     base_dir: Path,
@@ -380,6 +394,7 @@ def polish_ass_file(
     timeout: int,
     temperature: float,
     style_names: set[str],
+    allowed_origins: set[str] | None = None,
     cache_dir: Path | None = None,
     force: bool = False,
     codex_command: str = "codex",
@@ -397,6 +412,7 @@ def polish_ass_file(
         timeout=timeout,
         temperature=temperature,
         style_names=style_names,
+        allowed_origins=allowed_origins,
         cache_dir=cache_dir,
         force=force,
         codex_command=codex_command,
@@ -418,6 +434,7 @@ def polish_ass_files(
     timeout: int,
     temperature: float,
     style_names: set[str],
+    allowed_origins: set[str] | None = None,
     cache_dir: Path | None = None,
     force: bool = False,
     codex_command: str = "codex",
@@ -438,6 +455,7 @@ def polish_ass_files(
             prepare_polish_file_state(
                 ass_file,
                 style_names,
+                allowed_origins,
                 cache_dir,
                 provider,
                 model_label,
@@ -525,6 +543,7 @@ def make_polish_stats() -> dict:
 def prepare_polish_file_state(
     ass_file: Path,
     style_names: set[str],
+    allowed_origins: set[str] | None,
     cache_dir: Path,
     provider: str,
     model_label: str,
@@ -532,7 +551,7 @@ def prepare_polish_file_state(
 ) -> PolishFileState:
     stats = make_polish_stats()
     lines = ass_file.read_text(encoding="utf-8-sig").splitlines()
-    targets = extract_polish_targets(lines, style_names)
+    targets = extract_polish_targets(lines, style_names, allowed_origins)
     stats["targets"] = len(targets)
     cache_file = cache_dir / f"{ass_file.stem}.json"
     cache = load_polish_cache(cache_file)
@@ -686,7 +705,26 @@ def normalize_bilingual_presentation(lines: list[str], style_names: set[str]) ->
     return changed
 
 
-def extract_polish_targets(lines: list[str], style_names: set[str]) -> list[PolishTarget]:
+def dialogue_origin(parts: list[str], style: str) -> str:
+    name = parts[4].strip().upper()
+    if name == "QWEN_ZH":
+        return "qwen"
+    if name == "EMBEDDED_CHINESE":
+        return "original"
+    if name == "MANUAL_ZH":
+        return "manual"
+    if style == "OCR_TRANSLATION":
+        return "ocr"
+    if style == "EXPLANATION_NOTE":
+        return "note"
+    return "unknown"
+
+
+def extract_polish_targets(
+    lines: list[str],
+    style_names: set[str],
+    allowed_origins: set[str] | None = None,
+) -> list[PolishTarget]:
     targets: list[PolishTarget] = []
     for line_index, line in enumerate(lines):
         parts = split_dialogue(line)
@@ -697,6 +735,9 @@ def extract_polish_targets(lines: list[str], style_names: set[str]) -> list[Poli
             continue
         kind = BILINGUAL_STYLES.get(style) or OVERLAY_STYLES.get(style)
         if not kind:
+            continue
+        origin = dialogue_origin(parts, style)
+        if allowed_origins is not None and origin not in allowed_origins:
             continue
         text_field = parts[9]
         if style in BILINGUAL_STYLES:
@@ -727,9 +768,11 @@ def extract_polish_targets(lines: list[str], style_names: set[str]) -> list[Poli
                 text_field=text_field,
                 zh=zh,
                 en=en,
+                origin=origin,
             )
         )
-    targets.extend(extract_legacy_paired_targets(lines, style_names))
+    if allowed_origins is None or "unknown" in allowed_origins:
+        targets.extend(extract_legacy_paired_targets(lines, style_names))
     return sorted(targets, key=lambda item: item.line_index)
 
 

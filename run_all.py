@@ -60,6 +60,8 @@ STEP_SEQUENCE = [
 ]
 
 TEXT_SUBTITLE_CODECS = {"subrip", "ass", "ssa", "mov_text", "webvtt"}
+BITMAP_SUBTITLE_CODECS = {"hdmv_pgs_subtitle", "dvd_subtitle", "dvb_subtitle"}
+CHINESE_SUBTITLE_LANGUAGES = {"chi", "zho", "zh", "chs", "cmn", "chinese"}
 EXTERNAL_SUBTITLE_EXTS = {".ass", ".ssa", ".srt", ".vtt"}
 ASS_EXTS = {".ass", ".ssa"}
 HAN_RE = re.compile(r"[\u4e00-\u9fff]")
@@ -97,9 +99,9 @@ def parse_args() -> argparse.Namespace:
         choices=["auto", "audio", "embedded"],
         default="auto",
         help=(
-            "Subtitle source. auto groups videos by existing subtitles: bilingual ASS goes to Step9, "
-            "external monolingual subtitles are imported then Step6-Step8, embedded subtitles use Step0 then Step6-Step8, "
-            "and videos without subtitles use Step1-Step8."
+            "Subtitle source. auto detects existing ASS, external subtitles, embedded bilingual tracks, "
+            "embedded English-only tracks, and videos without subtitles; each group is dispatched to its "
+            "matching extraction/translation/OCR/render/polish flow."
         ),
     )
     parser.add_argument("--force-embedded", action="store_true", help="Regenerate embedded subtitle extraction outputs.")
@@ -305,6 +307,10 @@ def is_bilingual_ass(path: Path) -> bool:
     return bool(re.search(r"\\N\s*\{\\fs\d+", text))
 
 
+def is_direct_embedded_bilingual_ass(path: Path) -> bool:
+    return path.suffix.lower() in ASS_EXTS and "; Source: embedded_bilingual" in read_text(path)
+
+
 def find_bilingual_ass(video: Path) -> Path | None:
     return next((path for path in external_subtitle_candidates(video) if is_bilingual_ass(path)), None)
 
@@ -313,7 +319,7 @@ def find_external_mono_subtitle(video: Path) -> Path | None:
     return next((path for path in external_subtitle_candidates(video) if not is_bilingual_ass(path)), None)
 
 
-def video_has_embedded_text_subtitle(video: Path) -> bool:
+def embedded_subtitle_languages(video: Path) -> tuple[bool, bool]:
     cmd = [
         "ffprobe",
         "-v",
@@ -328,21 +334,29 @@ def video_has_embedded_text_subtitle(video: Path) -> bool:
     result = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, encoding="utf-8")
     if result.returncode != 0:
         print(f"  [warning] ffprobe subtitle scan failed for {video.name}: {result.stderr.strip()}")
-        return False
+        return False, False
     try:
         streams = json.loads(result.stdout or "{}").get("streams", [])
     except json.JSONDecodeError:
-        return False
+        return False, False
+    has_english = False
+    has_chinese = False
     for stream in streams:
         codec = str(stream.get("codec_name", "")).lower()
-        if codec not in TEXT_SUBTITLE_CODECS:
+        if codec not in TEXT_SUBTITLE_CODECS | BITMAP_SUBTITLE_CODECS:
             continue
         tags = stream.get("tags") or {}
         lang = str(tags.get("language", "")).strip().lower()
         title = str(tags.get("title", "")).strip().lower()
         if lang in {"", "eng", "en", "english"} or "english" in title:
-            return True
-    return False
+            has_english = True
+        if lang in CHINESE_SUBTITLE_LANGUAGES or "chinese" in title or "中文" in title:
+            has_chinese = has_chinese or codec in TEXT_SUBTITLE_CODECS
+    return has_english, has_chinese
+
+
+def video_has_embedded_text_subtitle(video: Path) -> bool:
+    return embedded_subtitle_languages(video)[0]
 
 
 def parse_ass_time(value: str) -> float | None:
@@ -517,7 +531,7 @@ def run_qwen_step(
     run_step(base_dir, work_dir, "V2_STEP7", label, "step07_qwen_all.py", stems, extra, dry_run)
 
 
-def step9_extra_args(args: argparse.Namespace) -> list[str]:
+def step9_extra_args(args: argparse.Namespace, polish_origins: str = "all") -> list[str]:
     extra: list[str] = []
     if not args.no_polish:
         extra.append("--polish-backend")
@@ -533,6 +547,7 @@ def step9_extra_args(args: argparse.Namespace) -> list[str]:
             extra.extend(["--polish-file-batch-size", str(args.polish_file_batch_size)])
         if args.polish_styles:
             extra.extend(["--polish-styles", args.polish_styles])
+        extra.extend(["--polish-origins", polish_origins])
         if args.polish_force:
             extra.append("--polish-force")
         effective_reasoning = args.polish_codex_reasoning_effort or DEFAULT_CODEX_REASONING_EFFORT
@@ -568,7 +583,7 @@ def target_selector_text(target: str) -> str:
 
 
 def ass_files_for_auto(base_dir: Path, target_stems: list[str] | None = None, chunk: str = "0") -> list[Path]:
-    ass_files = sorted(path for path in base_dir.glob("*.ass") if path.is_file())
+    ass_files = sorted(path for path in base_dir.rglob("*.ass") if path.is_file())
     raw_targets = [str(stem) for stem in (target_stems or []) if stem]
     if raw_targets:
         selected: list[Path] = []
@@ -593,20 +608,29 @@ def ass_files_for_auto(base_dir: Path, target_stems: list[str] | None = None, ch
 
 def auto_groups(videos: list[Path]) -> dict[str, list[Path]]:
     groups = {
+        "direct_bilingual_done": [],
         "ready_bilingual": [],
         "external_mono": [],
+        "embedded_bilingual": [],
         "embedded_only": [],
         "no_subtitles": [],
     }
     for video in videos:
-        if find_bilingual_ass(video):
+        existing_bilingual = find_bilingual_ass(video)
+        if existing_bilingual and is_direct_embedded_bilingual_ass(existing_bilingual):
+            groups["direct_bilingual_done"].append(video)
+        elif existing_bilingual:
             groups["ready_bilingual"].append(video)
         elif find_external_mono_subtitle(video):
             groups["external_mono"].append(video)
-        elif video_has_embedded_text_subtitle(video):
-            groups["embedded_only"].append(video)
         else:
-            groups["no_subtitles"].append(video)
+            has_english, has_chinese = embedded_subtitle_languages(video)
+            if has_english and has_chinese:
+                groups["embedded_bilingual"].append(video)
+            elif has_english:
+                groups["embedded_only"].append(video)
+            else:
+                groups["no_subtitles"].append(video)
     return groups
 
 
@@ -691,6 +715,31 @@ def run_embedded_generation_group(
     run_external_or_embedded_post_steps(args, base_dir, stems, seen)
 
 
+def run_embedded_bilingual_generation_group(
+    args: argparse.Namespace,
+    base_dir: Path,
+    videos: list[Path],
+    seen: dict[str, bool],
+) -> None:
+    stems = video_stems(videos)
+    if not stems:
+        return
+    if should_run("V2_STEP0", args.start_at, args.stop_after, seen):
+        extra = ["--force"] if args.force_embedded else []
+        run_step(
+            base_dir,
+            args.work_dir,
+            "V2_STEP0",
+            "extract and align embedded English SDH + Chinese subtitles",
+            "step00_extract_embedded_bilingual.py",
+            stems,
+            extra,
+            args.dry_run,
+        )
+        mark_stop("V2_STEP0", args.stop_after, seen)
+    run_external_or_embedded_post_steps(args, base_dir, stems, seen)
+
+
 def run_external_or_embedded_post_steps(
     args: argparse.Namespace,
     base_dir: Path,
@@ -737,12 +786,17 @@ def run_smart_auto_flow(
     seen: dict[str, bool],
 ) -> None:
     groups = auto_groups(videos)
+    if args.force_embedded and groups["direct_bilingual_done"]:
+        groups["embedded_bilingual"].extend(groups["direct_bilingual_done"])
+        groups["direct_bilingual_done"] = []
     print()
     print("========================================")
     print("Auto subtitle grouping")
+    print_group("Already generated from embedded bilingual tracks; protected Step09", groups["direct_bilingual_done"])
     print_group("Already has bilingual ASS; Step09 only", groups["ready_bilingual"])
     print_group("Has external monolingual subtitles; import then Step6-Step8", groups["external_mono"])
-    print_group("Has embedded subtitles only; Step0 then Step6-Step8", groups["embedded_only"])
+    print_group("Has embedded English + Chinese subtitles; align, fill gaps, OCR, Step8-Step9", groups["embedded_bilingual"])
+    print_group("Has embedded English subtitles only; extract, translate, OCR, Step8-Step9", groups["embedded_only"])
     print_group("No embedded/external subtitles; Step1-Step8", groups["no_subtitles"])
     print("========================================")
 
@@ -750,41 +804,60 @@ def run_smart_auto_flow(
         print("\n[auto] Group 1: no subtitles -> Step1-Step8")
         run_audio_generation_group(args, base_dir, groups["no_subtitles"], seen)
 
+    if groups["embedded_bilingual"] and not seen.get("stopped"):
+        print("\n[auto] Group 2: embedded English + Chinese -> Step0, optional OCR, fill missing Chinese, Step8")
+        run_embedded_bilingual_generation_group(args, base_dir, groups["embedded_bilingual"], seen)
+
     if groups["embedded_only"] and not seen.get("stopped"):
-        print("\n[auto] Group 2: embedded subtitles -> Step0, Step6-Step8")
+        print("\n[auto] Group 3: embedded English only -> Step0, optional OCR, translate, Step8")
         run_embedded_generation_group(args, base_dir, groups["embedded_only"], seen)
 
     if groups["external_mono"] and not seen.get("stopped"):
-        print("\n[auto] Group 3: external monolingual subtitles -> import, Step6-Step8")
+        print("\n[auto] Group 4: external monolingual subtitles -> import, Step6-Step8")
         imported = import_external_subtitles(base_dir, work_dir, groups["external_mono"], args.force_embedded, args.dry_run)
         run_external_or_embedded_post_steps(args, base_dir, imported, seen)
 
-    all_stems = video_stems(videos)
-    if all_stems and not seen.get("stopped"):
-        step9_extra = step9_extra_args(args)
+    generated_regular_videos = [
+        video
+        for key in ("external_mono", "embedded_only", "no_subtitles")
+        for video in groups[key]
+    ]
+    generated_regular_stems = video_stems(generated_regular_videos)
+    protected_bilingual_stems = video_stems(groups["embedded_bilingual"] + groups["direct_bilingual_done"])
+    ready_bilingual_stems = video_stems(groups["ready_bilingual"])
+    step9_batches = [
+        ("newly translated ASS subtitles", generated_regular_stems, "qwen,ocr"),
+        ("partially translated embedded bilingual ASS subtitles", protected_bilingual_stems, "qwen,ocr"),
+        ("existing bilingual ASS subtitles", ready_bilingual_stems, "all"),
+    ]
+    for batch_label, batch_stems, polish_origins in step9_batches:
+        if not batch_stems or seen.get("stopped"):
+            continue
+        step9_extra = step9_extra_args(args, polish_origins)
         if should_run("V2_STEP9", args.start_at, args.stop_after, seen):
-            label = "polish all ASS subtitles with backend model" if not args.no_polish else "merge OCR/notes overlays and filter ASS"
+            label = f"polish {batch_label}" if not args.no_polish else f"merge/filter {batch_label}"
             run_step(
                 base_dir,
                 args.work_dir,
                 "V2_STEP9",
                 label,
                 "step09_overlay_filter.py",
-                all_stems,
+                batch_stems,
                 step9_extra,
                 dry_run=args.dry_run,
             )
             mark_stop("V2_STEP9", args.stop_after, seen)
 
-    if all_stems and not args.skip_quality and not seen.get("stopped") and should_run("V2_STEP10", args.start_at, args.stop_after, seen):
+    regular_stems = generated_regular_stems + protected_bilingual_stems + ready_bilingual_stems
+    if regular_stems and not args.skip_quality and not seen.get("stopped") and should_run("V2_STEP10", args.start_at, args.stop_after, seen):
         extra = ["--max-screenshots", str(args.max_report_screenshots)]
         if args.report_screenshots:
             extra.append("--screenshots")
-        run_step(base_dir, args.work_dir, "V2_STEP10", "quality report and manifest", "step10_quality_report.py", all_stems, extra, args.dry_run)
+        run_step(base_dir, args.work_dir, "V2_STEP10", "quality report and manifest", "step10_quality_report.py", regular_stems, extra, args.dry_run)
         mark_stop("V2_STEP10", args.stop_after, seen)
 
-    if all_stems and not args.no_cleanup and not seen.get("stopped") and should_run("V2_STEP11", args.start_at, args.stop_after, seen):
-        run_step(base_dir, args.work_dir, "V2_STEP11", "remove v2 intermediate files", "step11_cleanup.py", all_stems, dry_run=args.dry_run)
+    if regular_stems and not args.no_cleanup and not seen.get("stopped") and should_run("V2_STEP11", args.start_at, args.stop_after, seen):
+        run_step(base_dir, args.work_dir, "V2_STEP11", "remove v2 intermediate files", "step11_cleanup.py", regular_stems, dry_run=args.dry_run)
         mark_stop("V2_STEP11", args.stop_after, seen)
 
 
@@ -877,6 +950,8 @@ def main() -> None:
 
                 if should_run("V2_STEP0", args.start_at, args.stop_after, seen):
                     extra = []
+                    if args.source == "embedded":
+                        extra.append("--prefer-sdh")
                     if args.force_embedded:
                         extra.append("--force")
                     if args.keep_sdh_cues:

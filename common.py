@@ -58,7 +58,7 @@ def runtime_file_for(base_dir: Path, name: str) -> Path:
 def iter_videos(base_dir: Path) -> list[Path]:
     return sorted(
         path
-        for path in base_dir.iterdir()
+        for path in base_dir.rglob("*")
         if path.is_file() and path.suffix.lower() in VIDEO_EXTS
     )
 

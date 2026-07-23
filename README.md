@@ -12,14 +12,29 @@
 python .\run_all.py .
 ```
 
-自动流程会按素材状态分组：
+入口会递归扫描素材目录及其子文件夹，再按每个视频实际拥有的字幕来源自动分批：
 
-- 没有内嵌字幕、也没有外部字幕的视频：跑 Step 1 到 Step 8，再跑 Step 9
-- 没有外部字幕、但有内嵌字幕的视频：先跑 Step 0 提取字幕，再跑 Step 6 到 Step 8，最后跑 Step 9
-- 已有外部单语字幕的视频：跑 Step 6 到 Step 8，再跑 Step 9
-- 已有双语 ASS 字幕：只跑 Step 9 调优
+| 素材状态 | 自动流程 |
+| --- | --- |
+| 内嵌英文 SDH + 中文 | Step 0 提取并合并双语，Step 6 OCR，Step 7 只翻译缺失的中文与 OCR，Step 8 渲染，Step 9 只调优 Qwen/OCR 译文 |
+| 只有内嵌英文 SDH | Step 0 提取英文，Step 6 OCR，Step 7 本地翻译，Step 8 渲染，Step 9 调优 Qwen/OCR 译文 |
+| 有外部单语字幕 | 导入字幕，Step 6 OCR，Step 7 本地翻译，Step 8 渲染，Step 9 调优 Qwen/OCR 译文 |
+| 没有可用字幕 | Step 1 到 Step 8 完整音频识别、OCR 与翻译流程，再跑 Step 9 |
+| 已有普通双语 ASS | 只跑 Step 9，允许调优全部中文 |
+| 已由本流水线生成的内嵌双语 ASS | 不重复提取；只跑受保护的 Step 9，原有中文不参与调优 |
 
-默认保留中间文件。Step 10 清理缓存不会默认执行，需要显式调用。
+内嵌双语合并以英文 SDH 时间轴为准，容忍中英文几十毫秒级偏差，也能把同一句被拆成多条的英文重新合并后匹配中文。纯音效、无意义说话人标签等 SDH 冗余会删除；歌曲、吟唱和咒语仍按 SDH 标记保留。内嵌中文缺失的歌曲或咒语会进入 Step 7 翻译，并可优先复用 `embedded_song_translations.json` 中的人工校订译文。
+
+自动分流下，内嵌双语、内嵌英文和外部单语批次默认也执行 OCR，用于补充片名、地点、招牌等画面文字。只想处理新增的非 OCR 批次时可重复使用 `--target-stem` 并加 `--skip-ocr`：
+
+```powershell
+python .\run_all.py . `
+  --target-stem "Movie.With.Embedded.Bilingual" `
+  --target-stem "Movie.With.English.Only" `
+  --skip-ocr
+```
+
+默认生成 Step 10 质量报告并保留中间文件。Step 11 清理不会默认执行，需要显式传入 `--cleanup`。
 
 默认工作目录为项目下的 `temp/`。OCR JSON、翻译缓存、Step 9 模型缓存、质量报告、运行日志、状态文件、流程清单和其他中间结果都写入这里；正式 `.ass` 仍输出到素材同目录。OCR 抽帧等短期工作文件建立在 `temp/sub_ocr_*/` 中，并在单集处理完成或抛出异常时自动删除。流水线还会把 `TMP`、`TEMP`、`TMPDIR` 和 Python `tempfile` 统一指向项目 `temp/`，因此自身及其子进程不再使用系统 `%TEMP%`。如需隔离不同任务，可以通过 `--work-dir` 改写步骤数据目录；全局通用临时目录仍由 `SUB_TEMP_DIR` 控制，默认就是项目 `temp/`。
 
@@ -43,6 +58,7 @@ python .\step08_ass_render.py . --work-dir temp --target-stem 'Movie.SDH'
 - llama.cpp 的 `llama-server.exe`，用于 Step 7 本地 Qwen 翻译
 - whisper.cpp 的 `whisper-server.exe`，用于 Step 3 英文转写
 - `codex.exe`，或一个 OpenAI-compatible API，用于 Step 9 后端调优
+- 可选的 Subtitle Edit `seconv.exe`，用于识别 PGS/DVD/DVB 位图内嵌英文字幕；未配置时会下载到工作目录
 
 脚本不会再假定工具安装在固定盘符。外部程序优先从当前 `PATH` 查找；先确认这些命令可以直接执行：
 
@@ -163,6 +179,8 @@ $env:PADDLEOCR_VERSION = "PP-OCRv6"
 $env:OCR_MIN_CONFIDENCE = "0.45"
 ```
 
+这里的 Step 6 OCR 指视频画面文字。Step 0 遇到 PGS、DVD 或 DVB 位图英文字幕时，会另外调用 Subtitle Edit nOCR，必要时回退 PaddleOCR；可用 `SUB_SECONV_EXE` 指定现有的 `seconv.exe`，否则所需程序、Latin nOCR 数据库和英文词典会下载到 `temp/tools/`。
+
 ## 常用参数和硬件建议
 
 Qwen / llama.cpp 参数。默认配置已按当前 4090 24GB + 64GB 内存主机测试：
@@ -270,20 +288,28 @@ python .\run_all.py . --dry-run
 python .\run_all.py . --target-stem "Nashville.S01E01"
 python .\run_all.py . --qwen-profile 80b
 python .\run_all.py . --qwen-profile 32b
+python .\run_all.py . --skip-ocr
+python .\run_all.py . --force-embedded
 python .\run_all.py . --no-polish
 python .\run_all.py . --cleanup
+python .\run_all.py . --start-at V2_STEP9 --stop-after V2_STEP10
 ```
 
 - `--dry-run`：只打印计划执行的步骤，不真正跑流程。
 - `--target-stem`：只处理指定文件名主干，可重复传入。
 - `--qwen-profile`：选择 Step 7 的 `80b` 高质量配置或 `32b` 低内存回退配置；默认 `80b`。
+- `--skip-ocr`：当前批次不做画面 OCR 提取、翻译、注解或叠加。
+- `--ocr-over-embedded`：在手动 `--source embedded` 流程中也启用 OCR；智能自动分流已经默认对内嵌字幕批次启用 OCR。
+- `--force-embedded`：忽略已生成的内嵌字幕结果并重新提取、对齐。
 - `--no-polish`：跳过 Step 9 后端大模型调优，只做合并和过滤。
+- `--start-at` / `--stop-after`：从指定步骤继续或在指定步骤后停止，例如 `V2_STEP9`。
 - `--cleanup`：显式执行清理；默认不会清理中间文件。
 
 ## 模型流程
 
-- Step 7 使用本地 Qwen 模型翻译对白、歌词、OCR，并生成文化注解。普通对白每批翻译 4 条，前后各附 4 条只读上下文；响应必须逐条返回原 ID，缺失、重复或空结果会按对应 ID 回退为单条重译。歌词和咒语仍按单条处理，避免跨类型合并影响韵律或专门用词。
-- Step 9 使用后端大模型做最终润色、OCR 去噪和可复用 hint 提取。
+- Step 7 使用本地 Qwen 模型翻译对白、歌词、OCR，并生成文化注解。内嵌双语来源只翻译没有中文的段落，不覆盖片源已有中文。普通对白每批翻译 4 条，前后各附 4 条只读上下文；响应必须逐条返回原 ID，缺失、重复或空结果会按对应 ID 回退为单条重译。歌词和咒语仍按单条处理，避免跨类型合并影响韵律或专门用词。
+- Step 8 会把中文来源写入 ASS 事件元数据：片源中文、Qwen 译文、人工译文和 OCR 译文各自可追踪。
+- Step 9 使用后端大模型做最终润色、OCR 去噪和可复用 hint 提取。自动分流会按来源传入 `--polish-origins`：内嵌双语成品只调优 `qwen,ocr`，不会改动片源原有中文；普通已有双语 ASS 则按 `all` 处理。
 - Step 9 同时支持单条 `中文\\N英文` 事件，以及时间轴完全相同、分别使用 `English`/`Chinese`（或 `Default`）样式的旧式双语事件；后者只更新中文事件，不改英文行和时间轴。
 - 旧式分离事件完成调优后，可运行 `python normalize_legacy_ass_layout.py . --glob "剧集匹配式*.ass" --backup-dir temp/ass_layout_backup`，将精确同时间轴的中英文合并为当前 `BILINGUAL` 单事件样式；未配对事件会保留，备份也只写入项目 `temp`。
 - Step 9 沉淀出的 hint 会回流给 Step 7；Step 7 只按当前台词检索相关提示，不会全量塞进 prompt。
@@ -294,6 +320,7 @@ python .\run_all.py . --cleanup
 - `subtitle_terminology.json`：固定译名和剧集术语；`preferred_zh` 是可直接用于字幕的标准译名，`note` 只说明适用条件，绝不能写入字幕正文
 - `common_mistranslation_hints.json`：常见误译陷阱；`guidance` 是编辑指引，不是直接替换文本
 - `common_phrase_correction_hints.json`：口语短语和行业表达倾向；`guidance` 可列出多个候选，必须按上下文选择
+- `embedded_song_translations.json`：内嵌双语轨缺失中文时，供歌曲、吟唱和咒语精确复用的校订译文
 - `ocr_low_value_short_texts.json`：单独出现时通常应删除的低价值 OCR 碎片
 
 `subtitle_terminology.json` 的条目可用 `series` 按文件名限定剧集，用 `scope` 限定对白、歌词、咒语、OCR 或注解。文化注解词库不会再作为翻译术语提示传入 Step 7/Step 9。
