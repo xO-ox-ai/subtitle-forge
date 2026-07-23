@@ -27,6 +27,7 @@ configure_environment()
 
 
 SCRIPT_DIR = Path(__file__).resolve().parent
+PIPELINE_VERSION = (SCRIPT_DIR / "VERSION").read_text(encoding="utf-8").strip()
 EPISODE_CODE_RE = re.compile(r"s\d{2}e\d{2}", re.IGNORECASE)
 KNOWN_TARGET_SUFFIXES = {
     ".ass", ".srt", ".vtt", ".ssa", ".sub",
@@ -77,6 +78,7 @@ SRT_TIME_RE = re.compile(
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Run the v2 subtitle generation pipeline.")
+    parser.add_argument("--version", action="version", version=f"%(prog)s {PIPELINE_VERSION}")
     parser.add_argument("base_dir", help="Directory containing videos")
     parser.add_argument(
         "--work-dir",
