@@ -12,12 +12,16 @@
 python .\run_all.py .
 ```
 
+本项目最便捷的使用方式，是先将仓库拉取到本地，再让 Codex 等具备终端和文件操作能力的大模型代理自动检查并安装运行环境、识别当前素材类型、调用对应脚本生成字幕，最后审查 ASS 成品并按影片语境补译、纠错和完善文化注解。
+
 入口会递归扫描素材目录及其子文件夹，再按每个视频实际拥有的字幕来源自动分批：
 
 | 素材状态 | 自动流程 |
 | --- | --- |
-| 内嵌英文 SDH + 中文 | Step 0 提取并合并双语，Step 6 OCR，Step 7 只翻译缺失的中文与 OCR，Step 8 渲染，Step 9 只调优 Qwen/OCR 译文 |
-| 只有内嵌英文 SDH | Step 0 提取英文，Step 6 OCR，Step 7 本地翻译，Step 8 渲染，Step 9 调优 Qwen/OCR 译文 |
+| 内嵌英文（文本或 PGS/DVD/DVB 位图）+ 中文文本 | Step 0 优先选择英文 SDH 和简体中文轨，提取并按英文时间轴合并；Step 6 OCR；Step 7 只翻译缺失的中文与 OCR；Step 8 渲染；Step 9 只调优 Qwen/OCR 译文 |
+| 只有内嵌英文文本字幕 | Step 0 提取并清理英文 SDH；Step 6 OCR；Step 7 翻译全部缺失中文；Step 8 渲染；Step 9 调优 Qwen/OCR 译文 |
+| 只有内嵌英文 PGS/DVD/DVB 位图字幕 | Step 0 调用 Subtitle Edit nOCR 识别，必要时回退 PaddleOCR，再做 SDH 清理；后续与“只有英文文本字幕”相同 |
+| 英文可用，但中文只有位图字幕 | 当前不把中文位图轨作为可合并中文；按“只有英文字幕”批次处理，从英文重新翻译中文 |
 | 有外部单语字幕 | 导入字幕，Step 6 OCR，Step 7 本地翻译，Step 8 渲染，Step 9 调优 Qwen/OCR 译文 |
 | 没有可用字幕 | Step 1 到 Step 8 完整音频识别、OCR 与翻译流程，再跑 Step 9 |
 | 已有普通双语 ASS | 只跑 Step 9，允许调优全部中文 |
