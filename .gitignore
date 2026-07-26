@@ -26,6 +26,10 @@ __pycache__/
 tools/
 models/
 wheels/
+build/
+dist/
+installer-output/
+portable-assets/
 
 # Local runtime state
 subtitle_status.txt

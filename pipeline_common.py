@@ -6,7 +6,7 @@ import tempfile
 from pathlib import Path
 
 
-PROJECT_ROOT = Path(__file__).resolve().parent
+PROJECT_ROOT = Path(os.environ.get("SUB_APP_ROOT") or Path(__file__).resolve().parent).expanduser().resolve(strict=False)
 
 
 def resolve_project_path(value: str | Path) -> Path:

@@ -99,6 +99,21 @@ def selected_videos(
         for video in videos:
             for target in raw_targets:
                 target_path = Path(target)
+                # A UI may pass a relative path instead of a bare stem so two
+                # same-named episodes in different subdirectories can be
+                # selected independently. Preserve the historical fuzzy stem
+                # matching for CLI selectors that do not contain a directory.
+                if target_path.is_absolute() or target_path.parent != Path("."):
+                    exact_target = (
+                        target_path.resolve(strict=False)
+                        if target_path.is_absolute()
+                        else (base_dir / target_path).resolve(strict=False)
+                    )
+                    if exact_target.exists():
+                        if video.resolve(strict=False) == exact_target:
+                            selected.append(video)
+                            break
+                        continue
                 candidates = {target, target_path.name}
                 if target_path.suffix.lower() in VIDEO_EXTS:
                     candidates.add(target_path.stem)
