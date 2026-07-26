@@ -2655,5 +2655,45 @@
     "style_scope": "dialogue",
     "confidence": "high",
     "support_count": 1
+  },
+  {
+    "phrase": "tag along",
+    "guidance": "表示非核心成员总跟着别人行动，可译为“总跟在……后面”“总跟着……混”或“总是跟着一起去”。",
+    "source_en": "Tagging along were always...",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "rush things",
+    "guidance": "表示急于推进尚未到时机的事情，可译为“别这么着急”“别急着来”或“别操之过急”。",
+    "source_en": "Stop trying to rush things.",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "keep your mouth shut",
+    "guidance": "威胁或警告对方保密时，可译为“把嘴闭紧”“不许说出去”或“都给我闭嘴”，不要只按停止说话处理。",
+    "source_en": "Keep your mouths shut.",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "be on someone's ass",
+    "guidance": "按语境处理：正在追捕可译为“在后面追我”，持续盯梢可译为“死死盯着我”，不断催逼可译为“紧咬着我不放”。",
+    "source_en": "The cops are on my ass!",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "what do you have in mind",
+    "guidance": "询问对方的主意或打算，可译为“你有什么主意”“你是怎么打算的”或“你想怎么做”。",
+    "source_en": "What you got in mind?",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
   }
 ]

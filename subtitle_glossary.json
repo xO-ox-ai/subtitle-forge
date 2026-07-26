@@ -1,6 +1,6 @@
 {
   "version": "subtitle-cultural-notes-20260712-v2",
-  "updated_at": "2026-07-23 15:54:54",
+  "updated_at": "2026-07-26 16:42:09",
   "usage": "cultural_notes_only",
   "schema": {
     "term": "English cultural reference matched in dialogue or OCR",
@@ -5481,6 +5481,150 @@
       "zh": "传奇是船员对主角的尊称，体现科幻作品中将英雄人物神化的叙事传统",
       "source": "qwen",
       "reviewed": false
+    },
+    {
+      "term": "Tender Trio",
+      "zh": "“Tender Trio”是电影《上帝之城》中由 Shaggy、Clipper 和 Goose 组成的虚构三人团伙，抢劫后会把部分赃款分给社区居民。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-review-20260726-v1",
+      "reviewed_at": "2026-07-26 16:42:09"
+    },
+    {
+      "term": "City of God",
+      "zh": "上帝之城是里约热内卢西区的社区，因贫困和帮派暴力闻名，并成为同名小说与电影的背景。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-26 01:20:34"
+    },
+    {
+      "term": "Jerry Adriani",
+      "zh": "杰里·阿德里亚尼是巴西歌手、演员，1960年代青春卫队流行音乐浪潮的代表人物之一。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-26 01:20:34"
+    },
+    {
+      "term": "The Runts",
+      "zh": "“The Runts”是电影《上帝之城》中一群年幼街头儿童组成的帮派，中文可译为“小鬼帮”。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-review-20260726-v1",
+      "reviewed_at": "2026-07-26 16:42:09"
+    },
+    {
+      "term": "Sao Paulo",
+      "zh": "圣保罗与里约热内卢是巴西长期被并置比较的两座大城市；片中关于“圣保罗人”的台词借用了两地之间的地域调侃。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-review-20260726-v1",
+      "reviewed_at": "2026-07-26 16:42:09"
+    },
+    {
+      "term": "The Star of David",
+      "zh": "大卫星由两个交叠的等边三角形组成，是犹太教、犹太民族身份及以色列的重要象征。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-26 01:20:34"
+    },
+    {
+      "term": "Our Father who art in heaven",
+      "zh": "我们在天上的父是基督教主祷文的开篇，源自马太福音，是各教派广泛使用的核心祷词。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-26 01:20:34"
+    },
+    {
+      "term": "Rogerio Reis",
+      "zh": "罗热里奥·雷斯是巴西纪实摄影师，长期记录里约街头和社会生活，以新闻摄影与城市影像闻名。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-26 01:20:34"
+    },
+    {
+      "term": "Uncle Sam",
+      "zh": "影片中的军火商绰号“山姆大叔”，借用了美国国家与联邦政府的拟人形象，也呼应其出售美国枪械的情节。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-review-20260726-v1",
+      "reviewed_at": "2026-07-26 16:42:09"
+    },
+    {
+      "term": "Ruger",
+      "zh": "鲁格是美国斯特姆－鲁格公司的枪械品牌，以手枪、左轮手枪和步枪著称，常见于美国影视作品。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-26 01:20:34"
+    },
+    {
+      "term": "AR-15",
+      "zh": "AR-15是源自阿玛莱特设计的半自动步枪平台，在美国十分普及，也是枪支管制争论的焦点。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-26 01:20:34"
+    },
+    {
+      "term": "Red Brigade",
+      "zh": "红色旅是意大利极左翼武装组织，活跃于20世纪七八十年代，曾绑架并杀害前总理阿尔多·莫罗。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-26 01:20:34"
+    },
+    {
+      "term": "China-Man",
+      "zh": "China-Man（通常写作 Chinaman）在片中是帮派成员绰号；该词历史上用于称呼华人男性，如今通常被视为带有种族冒犯色彩。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-review-20260726-v1",
+      "reviewed_at": "2026-07-26 16:42:09"
+    },
+    {
+      "term": "CIDADE DE DEUS",
+      "zh": "Cidade de Deus是葡萄牙语上帝之城，既指里约同名社区，也是2002年巴西经典犯罪片的原名。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-26 01:20:34"
+    },
+    {
+      "term": "A HISTORIA DA BOCA DOS APÊS",
+      "zh": "“Boca dos Apês”指公寓区的毒品销售点；巴西葡语俚语“boca”在此指毒品交易据点。",
+      "source": "curated",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "manual-review-20260726-v1",
+      "reviewed_at": "2026-07-26 16:42:09"
     }
   ],
   "review_prompt_version": "glossary-review-20260707-v1"
