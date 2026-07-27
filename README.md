@@ -4,7 +4,7 @@
 
 目标输出是可直接播放的中英双语 `.ass` 字幕。
 
-当前版本：`1.0.3`。`VERSION` 是版本号的唯一来源；以后每次向远端推送前，将最后一位补丁版本加 1，并在同一提交中同步这里显示的版本号。可运行 `python .\run_all.py --version` 查看当前版本。
+当前版本：`1.0.4`。`VERSION` 是版本号的唯一来源；以后每次向远端推送前，将最后一位补丁版本加 1，并在同一提交中同步这里显示的版本号。可运行 `python .\run_all.py --version` 查看当前版本。
 
 ## 主入口
 
@@ -321,9 +321,9 @@ python .\run_all.py . --start-at V2_STEP9 --stop-after V2_STEP10
 
 ## 模型流程
 
-- Step 7 使用本地 Qwen 模型翻译对白、歌词、OCR，并生成文化注解。内嵌双语来源只翻译没有中文的段落，不覆盖片源已有中文。普通对白每批翻译 4 条，前后各附 4 条只读上下文；响应必须逐条返回原 ID，缺失、重复或空结果会按对应 ID 回退为单条重译。歌词和咒语仍按单条处理，避免跨类型合并影响韵律或专门用词。
+- Step 7 使用本地 Qwen 模型翻译对白、歌词、OCR，并生成文化注解。开始翻译前会扫描整部影片或单集中的重复人物名，将高置信度映射缓存到 `temp/terminology/`，供后续所有翻译批次共享。内嵌双语来源只翻译没有中文的段落，不覆盖片源原有语义，但仍会执行固定译名归一化。普通对白每批翻译 4 条，前后各附 4 条只读上下文；响应必须逐条返回原 ID，缺失、重复或空结果会按对应 ID 回退为单条重译。歌词和咒语仍按单条处理，避免跨类型合并影响韵律或专门用词。
 - Step 8 会把中文来源写入 ASS 事件元数据：片源中文、Qwen 译文、人工译文和 OCR 译文各自可追踪。
-- Step 9 使用后端大模型做最终润色、OCR 去噪和可复用 hint 提取。自动分流会按来源传入 `--polish-origins`：内嵌双语成品只调优 `qwen,ocr`，不会改动片源原有中文；普通已有双语 ASS 则按 `all` 处理。
+- Step 9 使用后端大模型做最终润色、OCR 去噪和可复用 hint 提取。润色写回前会再次按项目术语表和该文件的人名映射做确定性校验；模型改用别名时会强制归一化，丢失固定译名时会回退润色前文本，仍不满足时明确报错而不会静默生成不一致成片。自动分流会按来源传入 `--polish-origins`：内嵌双语成品只调优 `qwen,ocr`，不会改动片源原有中文；普通已有双语 ASS 则按 `all` 处理。
 - Step 9 同时支持单条 `中文\\N英文` 事件，以及时间轴完全相同、分别使用 `English`/`Chinese`（或 `Default`）样式的旧式双语事件；后者只更新中文事件，不改英文行和时间轴。
 - 旧式分离事件完成调优后，可运行 `python normalize_legacy_ass_layout.py . --glob "剧集匹配式*.ass" --backup-dir temp/ass_layout_backup`，将精确同时间轴的中英文合并为当前 `BILINGUAL` 单事件样式；未配对事件会保留，备份也只写入项目 `temp`。
 - Step 9 沉淀出的 hint 会回流给 Step 7；Step 7 只按当前台词检索相关提示，不会全量塞进 prompt。
@@ -331,13 +331,13 @@ python .\run_all.py . --start-at V2_STEP9 --stop-after V2_STEP10
 ## 可复用字典文件
 
 - `subtitle_glossary.json`：仅存放需要显示在屏幕上的文化注解；`zh` 是完整注解正文，不参与台词翻译替换
-- `subtitle_terminology.json`：固定译名和剧集术语；`preferred_zh` 是可直接用于字幕的标准译名，`note` 只说明适用条件，绝不能写入字幕正文
+- `subtitle_terminology.json`：人工确认的固定译名和剧集术语，优先级高于自动识别结果；`preferred_zh` 是强制使用的标准译名，`zh_aliases` 列出需要归一化的旧译名，`note` 只说明适用条件，绝不能写入字幕正文
 - `common_mistranslation_hints.json`：常见误译陷阱；`guidance` 是编辑指引，不是直接替换文本
 - `common_phrase_correction_hints.json`：口语短语和行业表达倾向；`guidance` 可列出多个候选，必须按上下文选择
 - `embedded_song_translations.json`：内嵌双语轨缺失中文时，供歌曲、吟唱和咒语精确复用的校订译文
 - `ocr_low_value_short_texts.json`：单独出现时通常应删除的低价值 OCR 碎片
 
-`subtitle_terminology.json` 的条目可用 `series` 按文件名限定剧集，用 `scope` 限定对白、歌词、咒语、OCR 或注解。文化注解词库不会再作为翻译术语提示传入 Step 7/Step 9。
+`subtitle_terminology.json` 的条目可用 `series` 按文件名限定剧集，用 `scope` 限定对白、歌词、咒语、OCR 或注解。自动人物名映射只保存在当前工作目录的 `temp/terminology/`，不会覆盖人工术语；若同名条目冲突，以 `subtitle_terminology.json` 为准。文化注解词库不会再作为翻译术语提示传入 Step 7/Step 9。
 
 ## 注意事项
 

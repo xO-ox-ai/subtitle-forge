@@ -12,6 +12,7 @@ from urllib.request import Request, urlopen
 
 from ass_filter_helpers import has_chinese
 from ass_overlay_helpers import ass_escape, break_zh, load_json
+import terminology_consistency as terminology
 
 
 PROMPT_VERSION = "ass-polish-20260712-v7"
@@ -100,6 +101,7 @@ class PolishFileState:
     delete_lines: set[int]
     pending: list[PolishTarget]
     stats: dict
+    terminology: list[dict]
 
 
 def _module_dir() -> Path:
@@ -381,6 +383,53 @@ def parse_polish_origins(value: str) -> set[str] | None:
     return {item.strip() for item in text.split(",") if item.strip()} & allowed
 
 
+def enforce_ass_file_terminology(
+    ass_file: Path,
+    base_dir: Path,
+    work_dir: Path,
+    *,
+    style_names: set[str] | None = None,
+    allowed_origins: set[str] | None = None,
+) -> dict[str, int]:
+    style_names = style_names or parse_polish_styles("all")
+    lines = ass_file.read_text(encoding="utf-8-sig").splitlines()
+    targets = extract_polish_targets(lines, style_names, allowed_origins)
+    known_lines = {target.line_index for target in targets}
+    targets.extend(
+        target
+        for target in extract_all_bilingual_name_targets(lines)
+        if target.line_index not in known_lines
+    )
+    entries = terminology.merge_terminology_entries(
+        terminology.load_project_terminology(base_dir, ass_file.name),
+        terminology.load_file_terminology(work_dir, ass_file.stem),
+    )
+    changed = 0
+    matched = 0
+    for target in targets:
+        relevant = terminology.matching_terminology(entries, target.en, target.kind, target.zh)
+        if not relevant:
+            continue
+        matched += 1
+        parts = split_dialogue(lines[target.line_index])
+        if not parts:
+            continue
+        split = split_bilingual_text(parts[9])
+        if split:
+            zh_fragment, en_fragment = split
+            fixed_zh = terminology.canonicalize_known_variants(zh_fragment, relevant)
+            new_text = fixed_zh + r"\N" + en_fragment
+        else:
+            new_text = terminology.canonicalize_known_variants(parts[9], relevant)
+        if new_text != parts[9]:
+            parts[9] = new_text
+            lines[target.line_index] = ",".join(parts)
+            changed += 1
+    if changed:
+        ass_file.write_text("\n".join(lines) + "\n", encoding="utf-8-sig")
+    return {"targets": len(targets), "matched": matched, "changed": changed}
+
+
 def polish_ass_file(
     ass_file: Path,
     base_dir: Path,
@@ -421,6 +470,95 @@ def polish_ass_file(
     return results.get(ass_file, make_polish_stats())
 
 
+def request_file_name_terminology(
+    client,
+    model: str,
+    source_name: str,
+    candidates: list[dict],
+    temperature: float,
+) -> list[dict]:
+    payload = terminology.name_terminology_payload(source_name, candidates)
+    response = client.chat_json(
+        model=model,
+        messages=[
+            {"role": "system", "content": terminology.name_terminology_system_prompt()},
+            {
+                "role": "user",
+                "content": "Identify recurring person names and choose one binding Chinese rendering:\n"
+                + json.dumps(payload, ensure_ascii=False, separators=(",", ":")),
+            },
+        ],
+        temperature=min(max(float(temperature), 0.0), 0.2),
+        max_tokens=min(1800, 300 + len(candidates) * 45),
+    )
+    content = response.get("choices", [{}])[0].get("message", {}).get("content", "")
+    parsed = parse_json_response(content)
+    if not isinstance(parsed, dict) or not isinstance(parsed.get("entries"), list):
+        raise RuntimeError(
+            f"name terminology response for {source_name} does not contain an entries array"
+        )
+    raw_entries = parsed["entries"]
+    return terminology.normalize_reviewed_name_entries(
+        raw_entries,
+        candidates,
+        review_source="polish-file-name-review",
+    )
+
+
+def load_or_create_file_name_terminology(
+    client,
+    model: str,
+    work_dir: Path,
+    state: PolishFileState,
+    temperature: float,
+) -> list[dict]:
+    candidate_items = [
+        {"en": target.en, "zh": target.zh}
+        for target in extract_all_bilingual_name_targets(state.lines)
+        if target.en
+    ]
+    candidates = terminology.extract_recurring_name_candidates(candidate_items)
+    digest = terminology.terminology_source_digest(state.ass_file.stem, candidates, model)
+    cache_path = terminology.file_terminology_path(work_dir, state.ass_file.stem)
+    cached = load_json(cache_path, {})
+    if (
+        isinstance(cached, dict)
+        and cached.get("prompt_version") == terminology.NAME_TERMINOLOGY_PROMPT_VERSION
+        and cached.get("source_digest") == digest
+    ):
+        return terminology.valid_terminology_entries(cached.get("entries"))
+
+    entries = request_file_name_terminology(
+        client,
+        model,
+        state.ass_file.stem,
+        candidates,
+        temperature,
+    ) if candidates else []
+    cache_path.parent.mkdir(parents=True, exist_ok=True)
+    cache_path.write_text(
+        json.dumps(
+            {
+                "prompt_version": terminology.NAME_TERMINOLOGY_PROMPT_VERSION,
+                "source_name": state.ass_file.stem,
+                "model": model,
+                "source_digest": digest,
+                "updated_at": time.strftime("%Y-%m-%d %H:%M:%S"),
+                "entries": entries,
+            },
+            ensure_ascii=False,
+            indent=2,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
+    print(
+        f"  [terminology] {state.ass_file.name}: "
+        f"candidates={len(candidates)}, names={len(entries)}"
+    )
+    return entries
+
+
 def polish_ass_files(
     ass_files: list[Path],
     base_dir: Path,
@@ -451,6 +589,10 @@ def polish_ass_files(
     base_label = "codex-cli" if provider == "codex-cli" else base_url
 
     for ass_file in ass_files:
+        binding_terminology = terminology.merge_terminology_entries(
+            terminology.load_project_terminology(base_dir, ass_file.name),
+            terminology.load_file_terminology(work_dir, ass_file.stem),
+        )
         states.append(
             prepare_polish_file_state(
                 ass_file,
@@ -460,7 +602,31 @@ def polish_ass_files(
                 provider,
                 model_label,
                 force,
+                binding_terminology,
             )
+        )
+
+    client = build_polish_client(
+        provider,
+        base_url,
+        api_key,
+        timeout,
+        cache_dir=cache_dir,
+        cwd=base_dir,
+        codex_command=codex_command,
+        codex_reasoning_effort=codex_reasoning_effort,
+    )
+    for state in states:
+        file_name_terminology = load_or_create_file_name_terminology(
+            client,
+            effective_model,
+            work_dir,
+            state,
+            temperature,
+        )
+        state.terminology = terminology.merge_terminology_entries(
+            terminology.load_project_terminology(base_dir, state.ass_file.name),
+            file_name_terminology,
         )
 
     pending_pairs: list[tuple[PolishFileState, PolishTarget]] = [
@@ -469,16 +635,6 @@ def polish_ass_files(
         for target in state.pending
     ]
     if pending_pairs:
-        client = build_polish_client(
-            provider,
-            base_url,
-            api_key,
-            timeout,
-            cache_dir=cache_dir,
-            cwd=base_dir,
-            codex_command=codex_command,
-            codex_reasoning_effort=codex_reasoning_effort,
-        )
         effective_batch_size = len(pending_pairs) if batch_size <= 0 else max(batch_size, 1)
         for batch_offset in range(0, len(pending_pairs), effective_batch_size):
             batch_pairs = pending_pairs[batch_offset : batch_offset + effective_batch_size]
@@ -536,6 +692,7 @@ def make_polish_stats() -> dict:
         "changed": 0,
         "failed": 0,
         "batches": 0,
+        "terminology_corrected": 0,
     }
     return stats
 
@@ -548,6 +705,7 @@ def prepare_polish_file_state(
     provider: str,
     model_label: str,
     force: bool,
+    binding_terminology: list[dict] | None = None,
 ) -> PolishFileState:
     stats = make_polish_stats()
     lines = ass_file.read_text(encoding="utf-8-sig").splitlines()
@@ -591,6 +749,7 @@ def prepare_polish_file_state(
         delete_lines=delete_lines,
         pending=pending,
         stats=stats,
+        terminology=binding_terminology or [],
     )
 
 
@@ -642,7 +801,21 @@ def finalize_polish_file_state(
     for target in state.targets:
         if target.line_index in state.delete_lines:
             continue
-        zh = normalize_series_terms(state.updates.get(target.line_index, target.zh), target.en)
+        proposed_zh = normalize_series_terms(state.updates.get(target.line_index, target.zh), target.en)
+        zh, missing_terms = terminology.enforce_terminology(
+            proposed_zh,
+            target.en,
+            state.terminology,
+            segment_kind=target.kind,
+            fallback_text=target.zh,
+        )
+        if missing_terms:
+            raise RuntimeError(
+                f"binding terminology validation failed for {state.ass_file.name} "
+                f"at {target.start}-{target.end}: missing {', '.join(missing_terms)}"
+            )
+        if zh != proposed_zh:
+            state.stats["terminology_corrected"] += 1
         new_line = replace_target_zh(state.lines[target.line_index], target, zh)
         if new_line and new_line != state.lines[target.line_index]:
             state.lines[target.line_index] = new_line
@@ -835,6 +1008,44 @@ def extract_legacy_paired_targets(lines: list[str], style_names: set[str]) -> li
     return targets
 
 
+def extract_all_bilingual_name_targets(lines: list[str]) -> list[PolishTarget]:
+    targets: list[PolishTarget] = []
+    for line_index, line in enumerate(lines):
+        parts = split_dialogue(line)
+        if not parts:
+            continue
+        split = split_bilingual_text(parts[9])
+        if not split:
+            continue
+        zh_fragment, en_fragment = split
+        zh = visible_ass_text(zh_fragment)
+        en = visible_ass_text(en_fragment)
+        if not en:
+            continue
+        style = parts[3].strip()
+        style_lower = style.lower()
+        if "chant" in style_lower:
+            kind = "chant"
+        elif any(token in style_lower for token in ("lyric", "music", "song")):
+            kind = "lyric"
+        else:
+            kind = BILINGUAL_STYLES.get(style, "dialogue")
+        targets.append(
+            PolishTarget(
+                line_index=line_index,
+                style=style,
+                kind=kind,
+                start=parts[1],
+                end=parts[2],
+                text_field=parts[9],
+                zh=zh,
+                en=en,
+                origin=dialogue_origin(parts, style),
+            )
+        )
+    return targets
+
+
 def request_polish_batch(
     client: OpenAICompatibleClient,
     model: str,
@@ -996,6 +1207,8 @@ def replace_target_zh(line: str, target: PolishTarget, zh: str) -> str:
         replaced = replace_leading_tagged_text(parts[9], break_zh(zh, max_chars=24))
     elif target.style in LEGACY_PAIRED_ZH_STYLES:
         replaced = leading_tags(parts[9]) + ass_escape(zh)
+    elif split_bilingual_text(parts[9]):
+        replaced = replace_bilingual_zh(parts[9], zh)
     else:
         return line
     parts[9] = replaced
@@ -1840,10 +2053,16 @@ def load_relevant_terminology(
     pairs: list[tuple[PolishFileState, PolishTarget]],
     limit: int = 32,
 ) -> list[dict]:
-    data = load_json(base_dir / SUBTITLE_TERMINOLOGY_FILE, {})
-    entries = data.get("entries") if isinstance(data, dict) else []
-    if not isinstance(entries, list):
-        return []
+    state_entries: list[dict] = []
+    for state, _target in pairs:
+        state_entries.extend(getattr(state, "terminology", []) or [])
+    if state_entries:
+        entries = terminology.merge_terminology_entries(state_entries)
+    else:
+        data = load_json(base_dir / SUBTITLE_TERMINOLOGY_FILE, {})
+        entries = data.get("entries") if isinstance(data, dict) else []
+        if not isinstance(entries, list):
+            return []
     haystack = "\n".join(f"{target.en}\n{target.zh}" for _, target in pairs)
     file_haystack = "\n".join(
         re.sub(r"[._-]+", " ", state.ass_file.name)
@@ -1851,6 +2070,7 @@ def load_relevant_terminology(
     ).lower()
     target_kinds = {target.kind for _, target in pairs}
     selected: list[dict] = []
+    seen: set[str] = set()
     for item in entries:
         if not isinstance(item, dict):
             continue
@@ -1866,6 +2086,10 @@ def load_relevant_terminology(
         if not terminology_scope_matches(item, target_kinds):
             continue
         if terminology_entry_matches(item, haystack):
+            key = source_en.casefold()
+            if key in seen:
+                continue
+            seen.add(key)
             entry = {"source_en": source_en, "preferred_zh": preferred_zh}
             note = str(item.get("note") or "").strip()
             if note:

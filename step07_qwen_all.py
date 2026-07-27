@@ -21,6 +21,7 @@ from common import (
 )
 import qwen_common
 from override_utils import apply_segment_overrides, load_overrides
+import terminology_consistency as terminology
 
 try:
     from ocr_translate_helpers import (
@@ -437,6 +438,77 @@ def load_step09_guidance(base_dir: Path, source_name: str = "") -> dict:
     }
 
 
+def request_file_name_terminology(client, source_name: str, candidates: list[dict]) -> list[dict]:
+    payload = terminology.name_terminology_payload(source_name, candidates)
+    try:
+        response = client.chat.completions.create(
+            model=qwen_common.QWEN_MODEL,
+            messages=[
+                {"role": "system", "content": terminology.name_terminology_system_prompt()},
+                {
+                    "role": "user",
+                    "content": "Identify recurring person names and choose one binding Chinese rendering:\n"
+                    + json.dumps(payload, ensure_ascii=False, separators=(",", ":")),
+                },
+            ],
+            temperature=0.1,
+            max_tokens=min(1800, 300 + len(candidates) * 45),
+        )
+        content = (response.choices[0].message.content or "").strip()
+        parsed = parse_json_response(content)
+        if not isinstance(parsed, dict) or not isinstance(parsed.get("entries"), list):
+            raise ValueError("name terminology response does not contain an entries array")
+    except Exception as exc:
+        raise RuntimeError(f"Qwen name terminology review failed for {source_name}") from exc
+
+    raw_entries = parsed["entries"]
+    return terminology.normalize_reviewed_name_entries(
+        raw_entries,
+        candidates,
+        review_source="qwen-file-name-review",
+    )
+
+
+def load_or_create_file_name_terminology(
+    client,
+    work_dir: Path,
+    source_name: str,
+    segments: list[dict],
+) -> list[dict]:
+    candidate_items = [
+        {
+            "en": strip_speaker_placeholders(segment.get("text", "")),
+            "zh": normalize_inline_text(segment.get("zh", "")),
+        }
+        for segment in segments
+    ]
+    candidates = terminology.extract_recurring_name_candidates(candidate_items)
+    digest = terminology.terminology_source_digest(source_name, candidates, qwen_common.QWEN_MODEL)
+    cache_path = terminology.file_terminology_path(work_dir, source_name)
+    cached = load_json(cache_path, {})
+    if (
+        isinstance(cached, dict)
+        and cached.get("prompt_version") == terminology.NAME_TERMINOLOGY_PROMPT_VERSION
+        and cached.get("source_digest") == digest
+    ):
+        return terminology.valid_terminology_entries(cached.get("entries"))
+
+    entries = request_file_name_terminology(client, source_name, candidates) if candidates else []
+    save_json(
+        cache_path,
+        {
+            "prompt_version": terminology.NAME_TERMINOLOGY_PROMPT_VERSION,
+            "source_name": source_name,
+            "model": qwen_common.QWEN_MODEL,
+            "source_digest": digest,
+            "updated_at": time.strftime("%Y-%m-%d %H:%M:%S"),
+            "entries": entries,
+        },
+    )
+    print(f"[terminology] {source_name}: candidates={len(candidates)}, names={len(entries)}")
+    return entries
+
+
 def normalize_hint_match_text(text: str) -> str:
     return re.sub(r"\s+", " ", str(text or "").replace(r"\N", " ")).strip().lower()
 
@@ -578,15 +650,33 @@ def collect_matching_terminology_items(
         if key in seen:
             continue
         seen.add(key)
-        selected.append(
-            {
-                "source": source,
-                "preferred_zh": preferred_zh,
-                "note": normalize_inline_text(item.get("note", "")),
-                "confidence": item.get("confidence", ""),
-                "support_count": hint_support_count(item),
-            }
-        )
+        selected_item = {
+            "source": source,
+            "preferred_zh": preferred_zh,
+            "note": normalize_inline_text(item.get("note", "")),
+            "confidence": item.get("confidence", ""),
+            "support_count": hint_support_count(item),
+            "case_sensitive": item.get("case_sensitive") is True,
+        }
+        raw_source_aliases = item.get("aliases") or []
+        source_aliases = raw_source_aliases if isinstance(raw_source_aliases, list) else [raw_source_aliases]
+        normalized_source_aliases = [
+            normalize_inline_text(alias)
+            for alias in source_aliases
+            if normalize_inline_text(alias)
+        ]
+        if normalized_source_aliases:
+            selected_item["aliases"] = normalized_source_aliases
+        raw_zh_aliases = item.get("zh_aliases") or []
+        zh_aliases = raw_zh_aliases if isinstance(raw_zh_aliases, list) else [raw_zh_aliases]
+        normalized_zh_aliases = [
+            normalize_inline_text(alias)
+            for alias in zh_aliases
+            if normalize_inline_text(alias)
+        ]
+        if normalized_zh_aliases:
+            selected_item["zh_aliases"] = normalized_zh_aliases
+        selected.append(selected_item)
     return sort_guidance_items(selected)[:limit]
 
 
@@ -1085,9 +1175,27 @@ def clear_empty_segment(seg: dict) -> None:
     seg.pop("translation_origin", None)
 
 
-def apply_translation_result(client, seg: dict, en_text: str, segment_kind: str, result: dict) -> str:
+def apply_translation_result(
+    client,
+    seg: dict,
+    en_text: str,
+    segment_kind: str,
+    result: dict,
+    terminology_entries: list[dict] | None = None,
+) -> str:
     is_music = segment_kind == "lyric" or bool(seg.get("is_music", False))
     zh_text = normalize_music_marks(strip_speaker_placeholders(result.get("zh", en_text)), is_music)
+    zh_text, missing_terms = terminology.enforce_terminology(
+        zh_text,
+        en_text,
+        terminology_entries or [],
+        segment_kind=segment_kind,
+    )
+    if missing_terms:
+        raise RuntimeError(
+            "Qwen translation violated binding terminology for "
+            f"{status_preview(en_text, 80)}: missing {', '.join(missing_terms)}"
+        )
     formatted_zh = format_zh_text(zh_text, is_music)
     seg["text"] = en_text
     seg["zh"] = formatted_zh
@@ -1098,8 +1206,10 @@ def apply_translation_result(client, seg: dict, en_text: str, segment_kind: str,
     seg["translation_origin"] = "qwen"
     request_display_units = semantic_split_requested(seg, en_text)
     units = clean_display_units(result.get("display_units"), en_text) if request_display_units else []
+    units = enforce_display_unit_terminology(units, terminology_entries or [], segment_kind)
     if request_display_units and not units:
         units = retry_display_units(client, en_text, formatted_zh, is_music, segment_kind)
+        units = enforce_display_unit_terminology(units, terminology_entries or [], segment_kind)
     if units:
         seg["display_units"] = units
         seg["display_units_source"] = "qwen"
@@ -1107,6 +1217,25 @@ def apply_translation_result(client, seg: dict, en_text: str, segment_kind: str,
         seg.pop("display_units", None)
         seg.pop("display_units_source", None)
     return zh_text
+
+
+def enforce_display_unit_terminology(
+    units: list[dict],
+    terminology_entries: list[dict],
+    segment_kind: str,
+) -> list[dict]:
+    enforced: list[dict] = []
+    for unit in units:
+        zh, missing = terminology.enforce_terminology(
+            unit.get("zh", ""),
+            unit.get("en", ""),
+            terminology_entries,
+            segment_kind=segment_kind,
+        )
+        if missing:
+            return []
+        enforced.append({"en": unit.get("en", ""), "zh": zh})
+    return enforced
 
 
 def consecutive_dialogue_indices(segments: list[dict], start: int, batch_size: int) -> tuple[list[int], int]:
@@ -1136,6 +1265,7 @@ def translate_dialogue_file(
     out_file: Path,
     dialogue_batch_size: int = DEFAULT_DIALOGUE_BATCH_SIZE,
     dialogue_context_size: int = DEFAULT_DIALOGUE_CONTEXT_SIZE,
+    work_dir: Path | None = None,
 ) -> None:
     print(f"\n[dialogue] {json_file.name}")
     data = load_json(json_file, {"segments": []})
@@ -1143,7 +1273,18 @@ def translate_dialogue_file(
     overrides = load_overrides(base_dir, json_file.stem)
     total = len(segments)
     translation_cache: dict[tuple[str, str, bool], dict] = {}
+    work_dir = Path(work_dir) if work_dir is not None else base_dir / "temp"
     step09_guidance = load_step09_guidance(base_dir, json_file.stem)
+    file_name_terminology = load_or_create_file_name_terminology(
+        client,
+        work_dir,
+        json_file.stem,
+        segments,
+    )
+    step09_guidance["terminology"] = terminology.merge_terminology_entries(
+        step09_guidance.get("terminology", []),
+        file_name_terminology,
+    )
     update_progress_status(base_dir, "V2_STEP7", json_file.stem, 0, total, "", "")
 
     offset = 0
@@ -1159,6 +1300,19 @@ def translate_dialogue_file(
 
         existing_zh = str(seg.get("zh", "")).strip()
         if existing_zh:
+            segment_kind = segment_translation_kind(seg, bool(seg.get("is_music", False)))
+            existing_zh, missing_terms = terminology.enforce_terminology(
+                existing_zh,
+                en_text,
+                step09_guidance.get("terminology", []),
+                segment_kind=segment_kind,
+            )
+            if missing_terms:
+                raise RuntimeError(
+                    "Existing translation violated binding terminology for "
+                    f"{status_preview(en_text, 80)}: missing {', '.join(missing_terms)}"
+                )
+            seg["zh"] = existing_zh
             seg.setdefault("translation_origin", "embedded_chinese")
             update_progress_status(
                 base_dir,
@@ -1192,16 +1346,16 @@ def translate_dialogue_file(
                 item = segments[item_index]
                 item_id = item_index + 1
                 item_en = strip_speaker_placeholders(item.get("text", ""))
+                context = translation_context(segments, item_index, dialogue_context_size)
+                translation_hints = select_step09_translation_guidance(
+                    step09_guidance,
+                    item_en,
+                    context,
+                    "dialogue",
+                )
                 fixed_recap = fixed_recap_translation(item_en)
                 result = {"zh": fixed_recap} if fixed_recap else batch_results.get(item_id)
                 if result is None:
-                    context = translation_context(segments, item_index, dialogue_context_size)
-                    translation_hints = select_step09_translation_guidance(
-                        step09_guidance,
-                        item_en,
-                        context,
-                        "dialogue",
-                    )
                     result = translate_segment(
                         client,
                         item_en,
@@ -1211,7 +1365,14 @@ def translate_dialogue_file(
                         kind="dialogue",
                         translation_hints=translation_hints,
                     )
-                zh_text = apply_translation_result(client, item, item_en, "dialogue", result)
+                zh_text = apply_translation_result(
+                    client,
+                    item,
+                    item_en,
+                    "dialogue",
+                    result,
+                    translation_hints.get("terminology", []),
+                )
                 update_progress_status(
                     base_dir,
                     "V2_STEP7",
@@ -1243,7 +1404,14 @@ def translate_dialogue_file(
             )
             if segment_kind == "chant":
                 translation_cache[cache_key] = copy.deepcopy(result)
-        zh_text = apply_translation_result(client, seg, en_text, segment_kind, result)
+        zh_text = apply_translation_result(
+            client,
+            seg,
+            en_text,
+            segment_kind,
+            result,
+            translation_hints.get("terminology", []),
+        )
         update_progress_status(base_dir, "V2_STEP7", json_file.stem, index, total, en_text, zh_text)
         offset += 1
 
@@ -1493,6 +1661,7 @@ def main() -> None:
                 out_file,
                 dialogue_batch_size=max(args.dialogue_batch_size, 1),
                 dialogue_context_size=max(args.dialogue_context_size, 1),
+                work_dir=work_dir,
             )
 
         for raw_file in pending_ocr:

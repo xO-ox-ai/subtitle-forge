@@ -9,6 +9,7 @@ from ass_polish_helpers import (
     build_polish_client,
     curate_static_hint_files,
     curate_glossary_file,
+    enforce_ass_file_terminology,
     parse_polish_styles,
     parse_polish_origins,
     polish_ass_file,
@@ -554,6 +555,7 @@ def main() -> None:
     total_polish_deleted = 0
     total_polish_changed = 0
     total_polish_failed = 0
+    total_terminology_corrected = 0
     total_ocr_repair_changed = 0
     total_ocr_repair_split = 0
     total_ocr_repair_added = 0
@@ -561,6 +563,7 @@ def main() -> None:
     total_dedup_ocr = 0
     total_dedup_notes = 0
     total_note_duration_changed = 0
+    total_binding_terminology_changed = 0
     file_stats = []
     for ass_file in ass_files:
         raw_ocr_file = find_sidecar_file(raw_ocr_dir, ass_file)
@@ -583,6 +586,7 @@ def main() -> None:
             "deleted": 0,
             "changed": 0,
             "failed": 0,
+            "terminology_corrected": 0,
         }
         file_stats.append(
             {
@@ -693,6 +697,13 @@ def main() -> None:
         removed += removed_after
         credits += credits_after
         note_duration_stats = expand_note_durations(ass_file)
+        binding_terminology_stats = enforce_ass_file_terminology(
+            ass_file,
+            base_dir,
+            work_dir,
+            style_names=parse_polish_styles("all"),
+            allowed_origins=None,
+        )
         total_overlay += overlay_count
         total_ocr += ocr_count
         total_removed += removed
@@ -705,6 +716,7 @@ def main() -> None:
         total_polish_deleted += polish_stats.get("deleted", 0)
         total_polish_changed += polish_stats["changed"]
         total_polish_failed += polish_stats["failed"]
+        total_terminology_corrected += polish_stats.get("terminology_corrected", 0)
         total_ocr_repair_changed += repair_stats["changed"]
         total_ocr_repair_split += repair_stats["split"]
         total_ocr_repair_added += repair_stats["added"]
@@ -712,6 +724,7 @@ def main() -> None:
         total_dedup_ocr += dedup_stats["ocr_duplicates"]
         total_dedup_notes += dedup_stats["note_duplicates"]
         total_note_duration_changed += note_duration_stats["changed"]
+        total_binding_terminology_changed += binding_terminology_stats["changed"]
         polish_suffix = ""
         if args.polish_backend:
             polish_suffix = (
@@ -722,6 +735,7 @@ def main() -> None:
                 f"polish_unchanged={polish_stats.get('unchanged', 0)}, "
                 f"polish_deleted={polish_stats.get('deleted', 0)}, "
                 f"polish_changed={polish_stats['changed']}, "
+                f"terminology_corrected={polish_stats.get('terminology_corrected', 0)}, "
                 f"polish_failed={polish_stats['failed']}"
             )
         repair_suffix = ""
@@ -743,10 +757,17 @@ def main() -> None:
         note_duration_suffix = ""
         if note_duration_stats["changed"]:
             note_duration_suffix = f", note_duration_changed={note_duration_stats['changed']}"
+        binding_terminology_suffix = ""
+        if binding_terminology_stats["matched"] or binding_terminology_stats["changed"]:
+            binding_terminology_suffix = (
+                f", terminology_matched={binding_terminology_stats['matched']}, "
+                f"terminology_changed={binding_terminology_stats['changed']}"
+            )
         print(
             f"[done] {ass_file.name}: overlay={overlay_count}, "
             f"OCR_TRANSLATION={ocr_count}, removed_non_chinese={removed}, removed_credits={credits}"
             f"{polish_suffix}{repair_suffix}{dedup_suffix}{ocr_duration_suffix}{note_duration_suffix}"
+            f"{binding_terminology_suffix}"
         )
 
     polish_done = ""
@@ -756,7 +777,9 @@ def main() -> None:
             f"polish_cache={total_polish_cache}, polish_already={total_polish_already}, "
             f"polish_unchanged={total_polish_unchanged}, "
             f"polish_deleted={total_polish_deleted}, "
-            f"polish_changed={total_polish_changed}, polish_failed={total_polish_failed}"
+            f"polish_changed={total_polish_changed}, "
+            f"terminology_corrected={total_terminology_corrected}, "
+            f"polish_failed={total_polish_failed}"
         )
     repair_done = ""
     if total_ocr_repair_changed:
@@ -774,11 +797,14 @@ def main() -> None:
     note_duration_done = ""
     if total_note_duration_changed:
         note_duration_done = f", note_duration_changed={total_note_duration_changed}"
+    binding_terminology_done = ""
+    if total_binding_terminology_changed:
+        binding_terminology_done = f", terminology_changed={total_binding_terminology_changed}"
     write_status(
         base_dir,
         "V2_STEP9",
         f"{len(ass_files)} files",
-        f"DONE overlay={total_overlay}, ocr={total_ocr}, removed={total_removed}, credits={total_credits}{polish_done}{repair_done}{ocr_duration_done}{dedup_done}{note_duration_done}",
+        f"DONE overlay={total_overlay}, ocr={total_ocr}, removed={total_removed}, credits={total_credits}{polish_done}{repair_done}{ocr_duration_done}{dedup_done}{note_duration_done}{binding_terminology_done}",
     )
     print(
         f"v2 step9 done; files={len(ass_files)}, "

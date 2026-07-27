@@ -1,11 +1,12 @@
 {
-  "version": "subtitle-terminology-20260712-v1",
-  "updated_at": "2026-07-14 21:45:00",
+  "version": "subtitle-terminology-20260727-v3",
+  "updated_at": "2026-07-27 11:30:00",
   "schema": {
     "source_en": "English term matched as a whole word or phrase",
     "preferred_zh": "Literal preferred subtitle wording only",
     "note": "Optional usage instruction; never copy into subtitle text",
     "aliases": "Optional source variants that share the same preferred wording",
+    "zh_aliases": "Optional known Chinese variants deterministically normalized to preferred_zh",
     "case_sensitive": "Optional true for proper terms whose lowercase form has an ordinary meaning",
     "series": "Optional filename-based series scope",
     "scope": "Optional dialogue/lyric/chant/ocr/note/all scope"
@@ -532,6 +533,174 @@
       "note": "摩德西斯使用的武器；不要保留英文或泛译成普通魔杖",
       "series": "Legend of the Seeker",
       "scope": "dialogue",
+      "reviewed": true
+    },
+    {
+      "source_en": "Rocket",
+      "preferred_zh": "阿炮",
+      "zh_aliases": ["火箭", "罗克特", "罗基特"],
+      "note": "《上帝之城》主角绰号；采用更符合影片街头语感的“阿炮”",
+      "series": "City of God",
+      "scope": "all",
+      "case_sensitive": true,
+      "reviewed": true
+    },
+    {
+      "source_en": "Goose",
+      "preferred_zh": "阿鹅",
+      "zh_aliases": ["古斯"],
+      "note": "《上帝之城》角色绰号；采用更符合影片街头语感的“阿鹅”",
+      "series": "City of God",
+      "scope": "all",
+      "case_sensitive": true,
+      "reviewed": true
+    },
+    {
+      "source_en": "Li'l Zé",
+      "aliases": ["Zé"],
+      "preferred_zh": "小泽",
+      "zh_aliases": ["小齐", "小霸王", "泽"],
+      "note": "《上帝之城》角色名；由 Li'l Dice 政名而来",
+      "series": "City of God",
+      "scope": "all",
+      "case_sensitive": true,
+      "reviewed": true
+    },
+    {
+      "source_en": "Li'l Dice",
+      "preferred_zh": "小骰子",
+      "zh_aliases": ["小豆子"],
+      "note": "《上帝之城》角色早期绰号",
+      "series": "City of God",
+      "scope": "all",
+      "case_sensitive": true,
+      "reviewed": true
+    },
+    {
+      "source_en": "Shaggy",
+      "preferred_zh": "沙吉",
+      "zh_aliases": ["阿毛", "沙奇"],
+      "series": "City of God",
+      "scope": "all",
+      "case_sensitive": true,
+      "reviewed": true
+    },
+    {
+      "source_en": "Clipper",
+      "preferred_zh": "克利珀",
+      "zh_aliases": ["克莱珀"],
+      "series": "City of God",
+      "scope": "all",
+      "case_sensitive": true,
+      "reviewed": true
+    },
+    {
+      "source_en": "Shorty",
+      "preferred_zh": "肖蒂",
+      "zh_aliases": ["矮子"],
+      "series": "City of God",
+      "scope": "all",
+      "case_sensitive": true,
+      "reviewed": true
+    },
+    {
+      "source_en": "Blacky",
+      "preferred_zh": "黑仔",
+      "zh_aliases": ["小黑", "黑子", "布莱基"],
+      "series": "City of God",
+      "scope": "all",
+      "case_sensitive": true,
+      "reviewed": true
+    },
+    {
+      "source_en": "Tuba",
+      "preferred_zh": "图巴",
+      "zh_aliases": ["大号"],
+      "series": "City of God",
+      "scope": "all",
+      "case_sensitive": true,
+      "reviewed": true
+    },
+    {
+      "source_en": "Big Boy",
+      "preferred_zh": "大个子",
+      "zh_aliases": ["大块头"],
+      "series": "City of God",
+      "scope": "all",
+      "case_sensitive": true,
+      "reviewed": true
+    },
+    {
+      "source_en": "Melonhead",
+      "preferred_zh": "瓜头",
+      "zh_aliases": ["大头", "西瓜头"],
+      "series": "City of God",
+      "scope": "all",
+      "case_sensitive": true,
+      "reviewed": true
+    },
+    {
+      "source_en": "Knockout Ned",
+      "aliases": ["Knockout", "Ned"],
+      "preferred_zh": "帅哥奈德",
+      "zh_aliases": ["奈德"],
+      "series": "City of God",
+      "scope": "all",
+      "case_sensitive": true,
+      "reviewed": true
+    },
+    {
+      "source_en": "Max Manus",
+      "preferred_zh": "马克斯·马努斯",
+      "zh_aliases": ["马克斯·曼努斯"],
+      "note": "真实人物及影片通行译名",
+      "series": "Max Manus",
+      "scope": "all",
+      "case_sensitive": true,
+      "reviewed": true
+    },
+    {
+      "source_en": "Manus",
+      "preferred_zh": "马努斯",
+      "zh_aliases": ["曼努斯"],
+      "note": "与全名“马克斯·马努斯”保持一致",
+      "series": "Max Manus",
+      "scope": "all",
+      "case_sensitive": true,
+      "reviewed": true
+    },
+    {
+      "source_en": "Edvard Tallaksen",
+      "preferred_zh": "爱德华·塔拉克森",
+      "zh_aliases": ["埃德瓦尔·塔拉克森"],
+      "series": "Max Manus",
+      "scope": "all",
+      "case_sensitive": true,
+      "reviewed": true
+    },
+    {
+      "source_en": "Edvard",
+      "preferred_zh": "爱德华",
+      "zh_aliases": ["埃德瓦尔"],
+      "series": "Max Manus",
+      "scope": "all",
+      "case_sensitive": true,
+      "reviewed": true
+    },
+    {
+      "source_en": "Greg",
+      "preferred_zh": "格雷格",
+      "series": "Max Manus",
+      "scope": "all",
+      "case_sensitive": true,
+      "reviewed": true
+    },
+    {
+      "source_en": "Gregers",
+      "preferred_zh": "格雷格斯",
+      "series": "Max Manus",
+      "scope": "all",
+      "case_sensitive": true,
       "reviewed": true
     }
   ]

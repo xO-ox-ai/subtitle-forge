@@ -29,6 +29,11 @@ class BatchClient:
 
     def create(self, **kwargs):
         prompt = kwargs["messages"][-1]["content"]
+        if "Identify recurring person names" in prompt:
+            content = json.dumps({"entries": []}, ensure_ascii=False)
+            return SimpleNamespace(
+                choices=[SimpleNamespace(message=SimpleNamespace(content=content))]
+            )
         if "payload.items" not in prompt:
             content = json.dumps({"zh": "歌词译文"}, ensure_ascii=False)
             return SimpleNamespace(
