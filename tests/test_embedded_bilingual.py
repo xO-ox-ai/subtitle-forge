@@ -126,6 +126,25 @@ class EmbeddedBilingualTests(unittest.TestCase):
         self.assertEqual(len(parts), 1)
         self.assertIn("一、二、三", parts[0]["zh"])
 
+    def test_long_embedded_bilingual_block_is_not_split_by_character_ratio(self):
+        segment = {
+            "text": (
+                "Of course they were entertained. It was like true modern society. "
+                "Drama, suspense! Politics are a real goldmine. "
+                "I'm relieved that 8th Floor doesn't seem upset."
+            ),
+            "zh": "怎么不算呢？我从昨天开始就忙着四处拉票。8楼看上去没有不高兴。",
+            "translation_origin": "embedded_chinese",
+            "is_music": False,
+            "is_chant": False,
+        }
+
+        parts = display_parts(segment, 10.0, 21.5, segment["zh"], segment["text"])
+
+        self.assertEqual(len(parts), 1)
+        self.assertEqual(parts[0]["zh"], segment["zh"])
+        self.assertEqual(parts[0]["en"], segment["text"])
+
     def test_untimed_long_dialogue_limits_display_chunks(self):
         chunks = [f"Sentence {index}." for index in range(12)]
 

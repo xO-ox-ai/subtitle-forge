@@ -487,6 +487,22 @@ def display_parts(seg: dict, start: float, end: float, zh_text: str, en_text: st
             part["zh"] = decorate_zh(part["zh"], is_music, is_chant)
         return semantic_parts
 
+    # Embedded Chinese and English tracks can have different cue boundaries.
+    # Step 0 aligns them into one semantically complete segment, but without
+    # word timestamps there is no reliable way to split that segment back into
+    # matching bilingual sub-cues. Character-ratio splitting can pair a lone
+    # floor number with an unrelated English sentence. Preserve the aligned
+    # block intact and let ASS/player wrapping handle its visual width.
+    if not words and str(seg.get("translation_origin", "")).strip().lower() == "embedded_chinese":
+        return [
+            {
+                "start": start,
+                "end": end,
+                "zh": decorate_zh(zh_core, is_music, is_chant),
+                "en": en_plain,
+            }
+        ]
+
     needs_split = display_needs_split(duration, zh_core, en_plain, words)
     if not words:
         # Embedded subtitle cues have no word-level timestamps. Splitting a

@@ -2695,5 +2695,32 @@
     "style_scope": "dialogue",
     "confidence": "high",
     "support_count": 1
+  },
+  {
+    "phrase": "I don't do it because I like it.",
+    "guidance": "表达并非自愿时，可译为“又不是我想这样”“我也不愿意这么做”或“我这么做又不是因为喜欢”，根据语气选择。",
+    "source_en": "I don't do it because I like it.",
+    "bad_zh": "我不是喜欢才这么做的。",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "modern medicine can't help someone",
+    "guidance": "医疗语境中的help应按病情译为“救不了”“无法医治”或“已经无能为力”，避免直译成“帮不了”。",
+    "source_en": "Modern medicine can't help her.",
+    "bad_zh": "现代医学帮不了她。",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "phrase": "look depressed",
+    "guidance": "描述情绪低落时，宜译为“看起来很消沉”“怎么闷闷不乐的”或“看起来情绪很低落”；没有依据时不要擅自引申为有心事。",
+    "source_en": "You look depressed.",
+    "bad_zh": "看起来心事重重",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
   }
 ]

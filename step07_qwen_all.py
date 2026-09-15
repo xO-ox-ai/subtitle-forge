@@ -452,7 +452,7 @@ def request_file_name_terminology(client, source_name: str, candidates: list[dic
                 },
             ],
             temperature=0.1,
-            max_tokens=min(1800, 300 + len(candidates) * 45),
+            max_tokens=min(1000, 240 + len(candidates) * 24),
         )
         content = (response.choices[0].message.content or "").strip()
         parsed = parse_json_response(content)
@@ -482,7 +482,14 @@ def load_or_create_file_name_terminology(
         }
         for segment in segments
     ]
-    candidates = terminology.extract_recurring_name_candidates(candidate_items)
+    # The local Qwen service normally runs with an 8K context. Keep enough
+    # headroom for the reviewed JSON response even when subtitle examples are
+    # long; the highest-frequency candidates still cover the principal cast.
+    candidates = terminology.extract_recurring_name_candidates(
+        candidate_items,
+        max_candidates=48,
+        max_examples=4,
+    )
     digest = terminology.terminology_source_digest(source_name, candidates, qwen_common.QWEN_MODEL)
     cache_path = terminology.file_terminology_path(work_dir, source_name)
     cached = load_json(cache_path, {})
@@ -1275,6 +1282,7 @@ def translate_dialogue_file(
     translation_cache: dict[tuple[str, str, bool], dict] = {}
     work_dir = Path(work_dir) if work_dir is not None else base_dir / "temp"
     step09_guidance = load_step09_guidance(base_dir, json_file.stem)
+    project_terminology = list(step09_guidance.get("terminology", []))
     file_name_terminology = load_or_create_file_name_terminology(
         client,
         work_dir,
@@ -1304,7 +1312,7 @@ def translate_dialogue_file(
             existing_zh, missing_terms = terminology.enforce_terminology(
                 existing_zh,
                 en_text,
-                step09_guidance.get("terminology", []),
+                project_terminology,
                 segment_kind=segment_kind,
             )
             if missing_terms:

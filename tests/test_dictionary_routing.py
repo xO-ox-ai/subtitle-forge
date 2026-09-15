@@ -305,6 +305,51 @@ class DictionaryRoutingTests(unittest.TestCase):
         self.assertIn("Goose", names)
         self.assertNotIn("You", names)
 
+    def test_floor_label_is_not_treated_as_an_auto_person_name(self):
+        candidates = terminology.extract_recurring_name_candidates(
+            [
+                {"en": "Ask 1st Floor.", "zh": "问问1楼。"},
+                {"en": "Tell 8th Floor.", "zh": "告诉8楼。"},
+                {"en": "Floor, can you hear me?", "zh": "楼，你听得到吗？"},
+            ]
+        )
+        stale_entries = terminology.valid_terminology_entries(
+            [
+                {
+                    "source_en": "Floor",
+                    "preferred_zh": "楼",
+                    "zh_aliases": ["1楼", "8楼"],
+                    "reviewed": True,
+                    "source": "qwen-file-name-review",
+                },
+                {
+                    "source_en": "Twenty Questions",
+                    "preferred_zh": "二十问",
+                    "reviewed": True,
+                    "source": "qwen-file-name-review",
+                },
+            ]
+        )
+
+        self.assertNotIn("Floor", {item["source_en"] for item in candidates})
+        self.assertEqual(stale_entries, [])
+
+    def test_auto_name_alias_does_not_strip_an_honorific(self):
+        entries = terminology.valid_terminology_entries(
+            [
+                {
+                    "source_en": "Yu",
+                    "preferred_zh": "俞",
+                    "zh_aliases": ["俞先生", "俞导"],
+                    "reviewed": True,
+                    "source": "qwen-file-name-review",
+                }
+            ]
+        )
+
+        self.assertEqual(len(entries), 1)
+        self.assertNotIn("zh_aliases", entries[0])
+
     def test_recurring_name_examples_sample_late_occurrences(self):
         candidates = terminology.extract_recurring_name_candidates(
             [

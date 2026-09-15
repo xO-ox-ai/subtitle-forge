@@ -1,6 +1,6 @@
 {
   "version": "subtitle-cultural-notes-20260712-v2",
-  "updated_at": "2026-07-26 16:42:09",
+  "updated_at": "2026-09-09 19:59:06",
   "usage": "cultural_notes_only",
   "schema": {
     "term": "English cultural reference matched in dialogue or OCR",
@@ -5375,42 +5375,6 @@
       "reviewed_at": "2026-07-23 15:33:15"
     },
     {
-      "term": "Jaeger Clade",
-      "zh": "耶格·克莱德是剧中主角的名字，名字中的'Jaeger'在德语中意为'猎人'，常用于科幻作品中象征战士或机甲驾驶员。",
-      "source": "qwen",
-      "reviewed": false
-    },
-    {
-      "term": "Searcher Clade",
-      "zh": "索奇·克莱德是主角的儿子，'Searcher'意为探索者，反映其冒险精神，名字延续了家族以职业为名的传统。",
-      "source": "qwen",
-      "reviewed": false
-    },
-    {
-      "term": "Mr Clade",
-      "zh": "剧中人物坚持称主角为'克莱德先生'，体现西方文化中对长辈或上级的尊重，即使对方是父亲也不直呼其名。",
-      "source": "qwen",
-      "reviewed": false
-    },
-    {
-      "term": "PrimaI Outpost",
-      "zh": "《拓荒日记》是剧中虚构的热门生存类节目，类似现实中的《荒野求生》，反映未来社会对极限冒险的娱乐化追捧。",
-      "source": "qwen",
-      "reviewed": false
-    },
-    {
-      "term": "Caspian",
-      "zh": "卡斯宾是剧中粉丝名字，源自《纳尼亚传奇》中的王子名，常用于表达对英雄的仰慕。",
-      "source": "qwen",
-      "reviewed": false
-    },
-    {
-      "term": "Captain Pulk",
-      "zh": "波克船长是任务指挥官，姓氏Pulk可能致敬科幻经典《星际迷航》中的舰长文化。",
-      "source": "qwen",
-      "reviewed": false
-    },
-    {
       "term": "Atlas Range",
       "zh": "阿特拉斯山脉之名借自希腊神话中背负苍穹的泰坦阿特拉斯，常象征重担、边界与未知。",
       "source": "qwen",
@@ -5419,42 +5383,6 @@
       "review_prompt_version": "glossary-review-20260707-v1",
       "review_model": "gpt-5.6-sol",
       "reviewed_at": "2026-07-23 15:54:54"
-    },
-    {
-      "term": "Avalonia",
-      "zh": "阿瓦隆是剧中虚构的未来世界，名字源于亚瑟王传说中的神秘岛屿，象征希望与救赎之地。",
-      "source": "qwen",
-      "reviewed": false
-    },
-    {
-      "term": "Rung and Rafters",
-      "zh": "《辐条和椽子》是剧中虚构的儿童动画片，风格类似《小熊维尼》或《海绵宝宝》，代表流行文化。",
-      "source": "qwen",
-      "reviewed": false
-    },
-    {
-      "term": "Candy Jams",
-      "zh": "《糖果堵车》是剧中虚构的喜剧动画，名字融合糖果与交通堵塞，类似《小马宝莉》的幽默设定。",
-      "source": "qwen",
-      "reviewed": false
-    },
-    {
-      "term": "Battle trip",
-      "zh": "《战斗之旅》是剧中虚构的冒险类真人秀，类似《幸存者》或《权力的游戏》的娱乐节目形式。",
-      "source": "qwen",
-      "reviewed": false
-    },
-    {
-      "term": "The Venture",
-      "zh": "勇气号是剧中飞船名称，源自人类探索精神的象征，常见于太空题材作品如《发现号》或《旅行者号",
-      "source": "qwen",
-      "reviewed": false
-    },
-    {
-      "term": "President Mal",
-      "zh": "梅尔是飞船的领袖，名字可能致敬《星际迷航》中的舰长形象，代表权威与担当",
-      "source": "qwen",
-      "reviewed": false
     },
     {
       "term": "Pando",
@@ -5475,12 +5403,6 @@
       "review_prompt_version": "glossary-review-20260707-v1",
       "review_model": "gpt-5.6-sol",
       "reviewed_at": "2026-07-23 15:54:54"
-    },
-    {
-      "term": "Legend",
-      "zh": "传奇是船员对主角的尊称，体现科幻作品中将英雄人物神化的叙事传统",
-      "source": "qwen",
-      "reviewed": false
     },
     {
       "term": "Tender Trio",
@@ -5625,6 +5547,26 @@
       "reviewed_by": "codex",
       "review_prompt_version": "manual-review-20260726-v1",
       "reviewed_at": "2026-07-26 16:42:09"
+    },
+    {
+      "term": "Prime Minister Okada",
+      "zh": "冈田启介是1934至1936年任职的日本首相，二二六兵变中遭叛军追杀，因叛军误杀其妹夫而脱身。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-09-09 18:40:04"
+    },
+    {
+      "term": "Mermaid Forest",
+      "zh": "《人鱼之森》是高桥留美子《人鱼系列》的核心篇章，以食用人鱼肉获得不老不死及其悲剧代价为主题。",
+      "source": "qwen",
+      "reviewed": true,
+      "reviewed_by": "codex",
+      "review_prompt_version": "glossary-review-20260707-v1",
+      "review_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-09-09 18:40:04"
     }
   ],
   "review_prompt_version": "glossary-review-20260707-v1"

@@ -6,7 +6,7 @@ from pathlib import Path
 
 SUBTITLE_TERMINOLOGY_FILE = "subtitle_terminology.json"
 FILE_TERMINOLOGY_DIR = "terminology"
-NAME_TERMINOLOGY_PROMPT_VERSION = "name-terminology-20260727-v3"
+NAME_TERMINOLOGY_PROMPT_VERSION = "name-terminology-20260727-v4"
 
 _NAME_TOKEN_RE = re.compile(r"(?<![A-Za-zÀ-ÖØ-öø-ÿ])(?:[A-Z][A-Za-zÀ-ÖØ-öø-ÿ]*|[A-Z]{2,})(?:['’][A-Za-zÀ-ÖØ-öø-ÿ]+)?")
 _SPACE_RE = re.compile(r"\s+")
@@ -41,6 +41,7 @@ _COMMON_CAPITALIZED_WORDS = {
     "Don",
     "Even",
     "For",
+    "Floor",
     "From",
     "Get",
     "Give",
@@ -124,6 +125,9 @@ _COMMON_CAPITALIZED_WORDS = {
     "You",
     "Your",
 }
+_AUTO_NAME_REVIEW_BLOCKLIST = {
+    "Twenty Questions",
+}
 
 
 def normalize_inline_text(value) -> str:
@@ -195,8 +199,32 @@ def valid_terminology_entries(entries) -> list[dict]:
             continue
         source = normalize_inline_text(item.get("source_en") or item.get("source") or item.get("term"))
         preferred = normalize_inline_text(item.get("preferred_zh"))
+        is_auto_review = str(item.get("source") or "").strip() in {
+            "qwen-file-name-review",
+            "polish-file-name-review",
+        }
+        if is_auto_review and (
+            source in _COMMON_CAPITALIZED_WORDS
+            or source in _AUTO_NAME_REVIEW_BLOCKLIST
+        ):
+            continue
         if source and preferred:
-            result.append(dict(item))
+            normalized = dict(item)
+            if is_auto_review:
+                raw_aliases = normalized.get("zh_aliases") or []
+                aliases = raw_aliases if isinstance(raw_aliases, list) else [raw_aliases]
+                safe_aliases = [
+                    normalize_inline_text(alias)
+                    for alias in aliases
+                    if normalize_inline_text(alias)
+                    and preferred not in normalize_inline_text(alias)
+                    and normalize_inline_text(alias) not in preferred
+                ]
+                if safe_aliases:
+                    normalized["zh_aliases"] = safe_aliases
+                else:
+                    normalized.pop("zh_aliases", None)
+            result.append(normalized)
     return result
 
 
@@ -472,6 +500,8 @@ def normalize_reviewed_name_entries(
                 for alias in zh_aliases
                 if normalize_inline_text(alias)
                 and normalize_inline_text(alias) != preferred
+                and preferred not in normalize_inline_text(alias)
+                and normalize_inline_text(alias) not in preferred
                 and re.search(r"[\u4e00-\u9fff]", normalize_inline_text(alias))
             }
         )

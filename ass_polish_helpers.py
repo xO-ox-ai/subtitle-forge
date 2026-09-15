@@ -638,7 +638,7 @@ def polish_ass_files(
         effective_batch_size = len(pending_pairs) if batch_size <= 0 else max(batch_size, 1)
         for batch_offset in range(0, len(pending_pairs), effective_batch_size):
             batch_pairs = pending_pairs[batch_offset : batch_offset + effective_batch_size]
-            terminology = load_relevant_terminology(base_dir, batch_pairs)
+            batch_terminology = load_relevant_terminology(base_dir, batch_pairs)
             mistranslation_hints = select_mistranslation_hints([target for _, target in batch_pairs])
             phrase_hints = select_phrase_correction_hints([target for _, target in batch_pairs])
             result = request_polish_batch(
@@ -648,7 +648,7 @@ def polish_ass_files(
                     (state.ass_file.name, target)
                     for state, target in batch_pairs
                 ],
-                terminology,
+                batch_terminology,
                 mistranslation_hints,
                 phrase_hints,
                 temperature,

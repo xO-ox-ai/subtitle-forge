@@ -2174,5 +2174,32 @@
     "style_scope": "dialogue",
     "confidence": "high",
     "support_count": 1
+  },
+  {
+    "term": "two of a kind",
+    "guidance": "表示两人本质或脾性相同，应译为“我们是同类”“我们是一路人”等自然说法。",
+    "source_en": "We're two of a kind.",
+    "bad_zh": "我们是一类人。",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
+  },
+  {
+    "term": "wash someone's back",
+    "guidance": "洗澡语境下通常译为“给某人搓背”，不要机械译成“洗背”。",
+    "source_en": "Shall I wash your back?",
+    "bad_zh": "洗背",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 2
+  },
+  {
+    "term": "heart attack",
+    "guidance": "应使用规范说法“心脏病发作”或按语境译为“突发心脏病”。",
+    "source_en": "She had a heart attack.",
+    "bad_zh": "心脏病发了",
+    "style_scope": "dialogue",
+    "confidence": "high",
+    "support_count": 1
   }
 ]

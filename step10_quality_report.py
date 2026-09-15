@@ -249,6 +249,9 @@ def capture_screenshot(video: Path, ass_file: Path, timestamp: float, out_file: 
         "-hide_banner",
         "-loglevel",
         "error",
+        # ASS events use the original video timeline. Input seeking otherwise
+        # rebases the frame to zero and silently produces unsubtitled QA shots.
+        "-copyts",
         "-ss",
         f"{max(0.0, timestamp):.3f}",
         "-i",

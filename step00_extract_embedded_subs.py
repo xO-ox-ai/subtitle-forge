@@ -385,6 +385,9 @@ def subtitle_streams(video: Path) -> list[dict]:
 def choose_streams(streams: list[dict], prefer_sdh: bool = False) -> tuple[dict | None, dict | None]:
     if not streams:
         return None, None
+    # Prefer lossless text extraction within each SDH category. Matroska files
+    # can put a DVD bitmap track before an equivalent unstyled text track.
+    streams = sorted(streams, key=lambda stream: str(stream.get("codec_name", "")).lower() in BITMAP_SUBTITLE_CODECS)
     normal = next((stream for stream in streams if not is_sdh_stream(stream)), None)
     sdh = next((stream for stream in streams if is_sdh_stream(stream)), None)
     if prefer_sdh and sdh is not None:
